@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:08:21",
-  "epoch": 1795298901,
+  "updated_at": "21. 11. 2026 ob 22:08:46",
+  "epoch": 1795298926,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -5544,27 +5544,27 @@
       "tier": "A2_GLOBAL",
       "roic": 18.54,
       "p": 2781.0,
-      "v1": 55.8,
-      "v2": 32.84,
-      "buy": 22.99,
+      "v1": 0.56,
+      "v2": 0.33,
+      "buy": 0.23,
       "mos": -8368.77,
       "dpct": -41.1,
-      "dusd": -22.96,
+      "dusd": -0.23,
       "oey": 0.12,
       "oem": 2444.3,
       "rdcf": 60.0,
-      "mcap": 2110523.1,
+      "mcap": 2110523.3,
       "z": "SHORT",
-      "pess": 12.9,
-      "real": 33.36,
-      "opt": 51.74,
+      "pess": 0.13,
+      "real": 0.33,
+      "opt": 0.52,
       "ec": 912.9,
       "nc": -11207.2,
       "rev": 19662.0,
       "tax": 0.23,
       "da": 0.032,
       "nwc": 0.065,
-      "sh": 758.908,
+      "sh": 75890.807,
       "wacc": 0.1,
       "tg": 0.02,
       "gvec": [
@@ -5581,53 +5581,53 @@
         0.1732,
         0.1732
       ],
-      "short_p": 11.35,
-      "short_down": -99.6,
+      "short_p": 1.0,
+      "short_down": -96.4,
       "short_score": 98,
       "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
       "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 18.5 %.",
-      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $55.80/delnico ob 0.12 % Owner Earnings donosnosti.",
-      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -41.1 % ($55.80 → $32.84); MoS = -8368.8 % (PRECENJENO / VALUE TRAP).",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $0.56/delnico ob 0.12 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -41.1 % ($0.56 → $0.33); MoS = -8368.8 % (PRECENJENO / VALUE TRAP).",
       "s_flags": "Forenzični rez Agenta 2 (-41.1 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
-      "s_moat": "Pri trenutnem tečaju ($2781.00) trg vračunava +60.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
-      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -11207.20 M GBp.",
+      "s_moat": "Pri trenutnem tečaju ($27.81) trg vračunava +60.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -11207.20 M GBP.",
       "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
       "steps": [
         {
           "step": "Izhodišče (v1)",
           "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
-          "iv": 55.8,
-          "d": 39.06
+          "iv": 0.56,
+          "d": 0.39
         },
         {
           "step": "Korak 1",
-          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 196.62 M na 688.17 M GBp ter posodobitev razredčenih delnic na 758.908 M",
-          "iv": 54.17,
-          "d": -1.63
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 196.62 M na 688.17 M GBP ter posodobitev razredčenih delnic na 75890.807 M",
+          "iv": 0.54,
+          "d": -0.02
         },
         {
           "step": "Korak 2",
           "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
-          "iv": 52.21,
-          "d": -1.96
+          "iv": 0.52,
+          "d": -0.02
         },
         {
           "step": "Korak 3",
           "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
-          "iv": 46.38,
-          "d": -5.83
+          "iv": 0.46,
+          "d": -0.06
         },
         {
           "step": "Korak 4 (v2)",
           "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
-          "iv": 32.84,
-          "d": -13.54
+          "iv": 0.33,
+          "d": -0.13
         },
         {
           "step": "Skupaj (v1 → v2)",
           "desc": "Skupni učinek forenzične revizije Agenta 2",
-          "iv": 32.84,
-          "d": -22.96
+          "iv": 0.33,
+          "d": -0.23
         }
       ],
       "forensic": {
@@ -5722,7 +5722,7 @@
           }
         ]
       },
-      "reviewed_at": "2026-11-21 22:02"
+      "reviewed_at": "2026-11-21 22:08"
     }
   ],
   "hunter_queue": [
@@ -5929,6 +5929,24 @@
   ],
   "agent_logs": [
     {
+      "ts": "2026-11-21 22:08:45",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "IMB.L",
+      "msg": "Izdelana Short kontra-teza za Imperial Brands PLC (IMB.L): Tečaj $27.81 -> Ciljna Short cena $1.00 (-96.4%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:08:45",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "IMB.L",
+      "msg": "Presojen model za Imperial Brands PLC (IMB.L): v1 $0.56 -> v2 $0.33 (-41.1%). MoS v2 = -8368.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:08:45",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "IMB.L",
+      "msg": "Odkrit kandidat Imperial Brands PLC (IMB.L) iz svetovne baze: Tečaj $27.81 vs v1 IV $0.56 (MoS -4883.5%). Predano Agentu 2 v presojo modela."
+    },
+    {
       "ts": "2026-11-21 22:08:21",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
       "t": "VVV",
@@ -6089,24 +6107,6 @@
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
       "t": "WU",
       "msg": "Izdelana Short kontra-teza za The Western Union Company (WU): Tečaj $5.92 -> Ciljna Short cena $1.00 (-83.1%). Short Score: 73/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "PYPL",
-      "msg": "Izdelana Short kontra-teza za PayPal Holdings, Inc. (PYPL): Tečaj $53.29 -> Ciljna Short cena $38.97 (-26.9%). Short Score: 31/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "PRDO",
-      "msg": "Izdelana Short kontra-teza za Perdoceo Education Corporation (PRDO): Tečaj $27.47 -> Ciljna Short cena $21.37 (-22.2%). Short Score: 25/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "PANW",
-      "msg": "Izdelana Short kontra-teza za Palo Alto Networks, Inc. (PANW): Tečaj $343.32 -> Ciljna Short cena $31.27 (-90.9%). Short Score: 83/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
     }
   ]
 }
