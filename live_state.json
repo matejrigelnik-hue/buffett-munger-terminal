@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:08:46",
-  "epoch": 1795298926,
+  "updated_at": "21. 11. 2026 ob 22:08:53",
+  "epoch": 1795298933,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -5025,6 +5025,193 @@
       "reviewed_at": "2026-11-21 20:48"
     },
     {
+      "t": "CLAS-B.ST",
+      "n": "Clas Ohlson AB (publ)",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A2_GLOBAL",
+      "roic": 21.73,
+      "p": 539.5,
+      "v1": 352.25,
+      "v2": 228.8,
+      "buy": 160.16,
+      "mos": -135.79,
+      "dpct": -35.0,
+      "dusd": -123.45,
+      "oey": 2.94,
+      "oem": 1025.9,
+      "rdcf": 15.9,
+      "mcap": 34910.0,
+      "z": "SHORT",
+      "pess": 124.86,
+      "real": 231.64,
+      "opt": 327.07,
+      "ec": 1552.1,
+      "nc": -961.3,
+      "rev": 12977.8,
+      "tax": 0.23,
+      "da": 0.032,
+      "nwc": 0.065,
+      "sh": 64.708,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.1153,
+        0.1153,
+        0.1153,
+        0.1153,
+        0.1153
+      ],
+      "short_p": 109.88,
+      "short_down": -79.6,
+      "short_score": 98,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 21.7 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $352.25/delnico ob 2.94 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -35.0 % ($352.25 → $228.80); MoS = -135.8 % (PRECENJENO / VALUE TRAP).",
+      "s_flags": "Forenzični rez Agenta 2 (-35.0 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($539.50) trg vračunava +15.9 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -961.28 M SEK.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 352.25,
+          "d": 246.58
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 129.78 M na 454.22 M SEK ter posodobitev razredčenih delnic na 64.708 M",
+          "iv": 341.01,
+          "d": -11.24
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 330.32,
+          "d": -10.69
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 300.22,
+          "d": -30.1
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 228.8,
+          "d": -71.42
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 228.8,
+          "d": -123.45
+        }
+      ],
+      "forensic": {
+        "beneish_m": -1.58,
+        "beneish_flag": "MANIPULACIJSKI ALARM",
+        "altman_z": 5.03,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 5.0,
+        "finra_short_float_pct": 15.8,
+        "days_to_cover": 6.6,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 271.0
+          },
+          {
+            "q": "22Q2",
+            "p": 324.45
+          },
+          {
+            "q": "22Q3",
+            "p": 373.15
+          },
+          {
+            "q": "22Q4",
+            "p": 399.03
+          },
+          {
+            "q": "23Q1",
+            "p": 394.32
+          },
+          {
+            "q": "23Q2",
+            "p": 365.92
+          },
+          {
+            "q": "23Q3",
+            "p": 332.16
+          },
+          {
+            "q": "23Q4",
+            "p": 313.64
+          },
+          {
+            "q": "24Q1",
+            "p": 322.93
+          },
+          {
+            "q": "24Q2",
+            "p": 358.55
+          },
+          {
+            "q": "24Q3",
+            "p": 406.41
+          },
+          {
+            "q": "24Q4",
+            "p": 447.66
+          },
+          {
+            "q": "25Q1",
+            "p": 468.97
+          },
+          {
+            "q": "25Q2",
+            "p": 469.37
+          },
+          {
+            "q": "25Q3",
+            "p": 460.31
+          },
+          {
+            "q": "25Q4",
+            "p": 458.83
+          },
+          {
+            "q": "26Q1",
+            "p": 477.65
+          },
+          {
+            "q": "26Q2",
+            "p": 517.58
+          },
+          {
+            "q": "26Q3",
+            "p": 566.57
+          },
+          {
+            "q": "26Q4",
+            "p": 539.5
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:08"
+    },
+    {
       "t": "WWD",
       "n": "Woodward, Inc.",
       "sec": "Technology / Industrials · Compounder",
@@ -5847,14 +6034,6 @@
       "p": 169.5
     },
     {
-      "t": "CLAS-B.ST",
-      "n": "Clas Ohlson AB (publ)",
-      "tier": "A2_GLOBAL",
-      "roic": 21.7,
-      "fcf_y": 5.65,
-      "p": 539.5
-    },
-    {
       "t": "1YD.DE",
       "n": "Broadcom Inc.",
       "tier": "A2_GLOBAL",
@@ -5925,9 +6104,35 @@
       "roic": 13.9,
       "fcf_y": 7.5,
       "p": 93.92
+    },
+    {
+      "t": "2020.OL",
+      "n": "2020 Bulkers Ltd.",
+      "tier": "A2_GLOBAL",
+      "roic": 13.5,
+      "fcf_y": 7.5,
+      "p": 16.59
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-21 22:08:53",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "CLAS-B.ST",
+      "msg": "Izdelana Short kontra-teza za Clas Ohlson AB (publ) (CLAS-B.ST): Tečaj $539.50 -> Ciljna Short cena $109.88 (-79.6%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:08:53",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "CLAS-B.ST",
+      "msg": "Presojen model za Clas Ohlson AB (publ) (CLAS-B.ST): v1 $352.25 -> v2 $228.80 (-35.0%). MoS v2 = -135.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:08:53",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "CLAS-B.ST",
+      "msg": "Odkrit kandidat Clas Ohlson AB (publ) (CLAS-B.ST) iz svetovne baze: Tečaj $539.50 vs v1 IV $352.25 (MoS -53.2%). Predano Agentu 2 v presojo modela."
+    },
     {
       "ts": "2026-11-21 22:08:45",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
@@ -6089,24 +6294,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "NVO",
       "msg": "Odkrit kandidat NOVO NORDISK A S (NVO) iz svetovne baze: Tečaj $37.82 vs v1 IV $416.84 (MoS +90.9%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "YELP",
-      "msg": "Izdelana Short kontra-teza za Yelp Inc. (YELP): Tečaj $18.19 -> Ciljna Short cena $3.69 (-79.7%). Short Score: 84/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "WWD",
-      "msg": "Izdelana Short kontra-teza za Woodward, Inc. (WWD): Tečaj $326.56 -> Ciljna Short cena $61.10 (-81.3%). Short Score: 95/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
-    },
-    {
-      "ts": "2026-11-21 21:08:07",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "WU",
-      "msg": "Izdelana Short kontra-teza za The Western Union Company (WU): Tečaj $5.92 -> Ciljna Short cena $1.00 (-83.1%). Short Score: 73/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
     }
   ]
 }
