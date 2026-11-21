@@ -1,8 +1,8 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:14:01",
-  "epoch": 1795299241,
-  "total_db_companies": 13747,
-  "scanned_fundamentals": 251,
+  "updated_at": "21. 11. 2026 ob 22:15:17",
+  "epoch": 1795299317,
+  "total_db_companies": 13947,
+  "scanned_fundamentals": 261,
   "companies": [
     {
       "t": "NVO",
@@ -6286,6 +6286,193 @@
       "reviewed_at": "2026-11-21 17:36"
     },
     {
+      "t": "SECT-B.ST",
+      "n": "Sectra AB (publ)",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A2_GLOBAL",
+      "roic": 78.13,
+      "p": 330.2,
+      "v1": 62.94,
+      "v2": 44.39,
+      "buy": 31.07,
+      "mos": -643.94,
+      "dpct": -29.5,
+      "dusd": -18.55,
+      "oey": 0.78,
+      "oem": 507.1,
+      "rdcf": 33.87,
+      "mcap": 64763.8,
+      "z": "SHORT",
+      "pess": 28.5,
+      "real": 44.8,
+      "opt": 59.45,
+      "ec": 1565.3,
+      "nc": 1250.4,
+      "rev": 3744.09,
+      "tax": 0.23,
+      "da": 0.032,
+      "nwc": 0.065,
+      "sh": 196.135,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.1875,
+        0.1875,
+        0.1875,
+        0.1875,
+        0.1875
+      ],
+      "short_p": 27.07,
+      "short_down": -91.8,
+      "short_score": 93,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 78.1 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $62.94/delnico ob 0.78 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -29.5 % ($62.94 → $44.39); MoS = -643.9 % (PRECENJENO / VALUE TRAP).",
+      "s_flags": "Forenzični rez Agenta 2 (-29.5 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($330.20) trg vračunava +33.9 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša +1250.44 M SEK.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 62.94,
+          "d": 44.06
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 37.44 M na 131.04 M SEK ter posodobitev razredčenih delnic na 196.135 M",
+          "iv": 61.35,
+          "d": -1.59
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 59.8,
+          "d": -1.55
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 55.14,
+          "d": -4.66
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 44.39,
+          "d": -10.75
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 44.39,
+          "d": -18.55
+        }
+      ],
+      "forensic": {
+        "beneish_m": -1.58,
+        "beneish_flag": "MANIPULACIJSKI ALARM",
+        "altman_z": 8.49,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 5.0,
+        "finra_short_float_pct": 24.5,
+        "days_to_cover": 10.3,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 147.87
+          },
+          {
+            "q": "22Q2",
+            "p": 176.07
+          },
+          {
+            "q": "22Q3",
+            "p": 210.96
+          },
+          {
+            "q": "22Q4",
+            "p": 240.25
+          },
+          {
+            "q": "23Q1",
+            "p": 253.64
+          },
+          {
+            "q": "23Q2",
+            "p": 248.17
+          },
+          {
+            "q": "23Q3",
+            "p": 229.88
+          },
+          {
+            "q": "23Q4",
+            "p": 210.76
+          },
+          {
+            "q": "24Q1",
+            "p": 202.68
+          },
+          {
+            "q": "24Q2",
+            "p": 211.5
+          },
+          {
+            "q": "24Q3",
+            "p": 234.35
+          },
+          {
+            "q": "24Q4",
+            "p": 261.63
+          },
+          {
+            "q": "25Q1",
+            "p": 282.4
+          },
+          {
+            "q": "25Q2",
+            "p": 290.42
+          },
+          {
+            "q": "25Q3",
+            "p": 287.37
+          },
+          {
+            "q": "25Q4",
+            "p": 281.8
+          },
+          {
+            "q": "26Q1",
+            "p": 284.06
+          },
+          {
+            "q": "26Q2",
+            "p": 300.36
+          },
+          {
+            "q": "26Q3",
+            "p": 328.93
+          },
+          {
+            "q": "26Q4",
+            "p": 330.2
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:15"
+    },
+    {
       "t": "VVV",
       "n": "VALVOLINE INC",
       "sec": "Technology / Industrials · Compounder",
@@ -6499,14 +6686,6 @@
       "p": 25.0
     },
     {
-      "t": "SECT-B.ST",
-      "n": "Sectra AB (publ)",
-      "tier": "A2_GLOBAL",
-      "roic": 78.1,
-      "fcf_y": 1.43,
-      "p": 330.2
-    },
-    {
       "t": "CTO.DE",
       "n": "Costco Wholesale Corporation",
       "tier": "A2_GLOBAL",
@@ -6555,12 +6734,28 @@
       "p": 186.0
     },
     {
+      "t": "NOVO-B.CO",
+      "n": "Novo Nordisk A/S",
+      "tier": "A2_GLOBAL",
+      "roic": 53.9,
+      "fcf_y": 7.5,
+      "p": 264.5
+    },
+    {
       "t": "WAVE.PA",
       "n": "Wavestone SA",
       "tier": "A2_GLOBAL",
       "roic": 12.8,
       "fcf_y": 15.99,
       "p": 33.0
+    },
+    {
+      "t": "MPCC.OL",
+      "n": "MPC Container Ships ASA",
+      "tier": "A2_GLOBAL",
+      "roic": 35.6,
+      "fcf_y": 7.5,
+      "p": 24.57
     },
     {
       "t": "HAUTO.OL",
@@ -6665,17 +6860,27 @@
       "roic": 11.9,
       "fcf_y": 7.5,
       "p": 50.6
-    },
-    {
-      "t": "AAF.L",
-      "n": "Airtel Africa Plc",
-      "tier": "A2_GLOBAL",
-      "roic": 11.5,
-      "fcf_y": 7.5,
-      "p": 2.74
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-21 22:15:17",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "SECT-B.ST",
+      "msg": "Izdelana Short kontra-teza za Sectra AB (publ) (SECT-B.ST): Tečaj $330.20 -> Ciljna Short cena $27.07 (-91.8%). Short Score: 93/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:15:17",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "SECT-B.ST",
+      "msg": "Presojen model za Sectra AB (publ) (SECT-B.ST): v1 $62.94 -> v2 $44.39 (-29.5%). MoS v2 = -643.9% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:15:16",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "SECT-B.ST",
+      "msg": "Odkrit kandidat Sectra AB (publ) (SECT-B.ST) iz svetovne baze: Tečaj $330.20 vs v1 IV $62.94 (MoS -424.6%). Predano Agentu 2 v presojo modela."
+    },
     {
       "ts": "2026-11-21 22:10:54",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
@@ -6837,24 +7042,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "ENR.SW",
       "msg": "Odkrit kandidat Siemens Energy AG (ENR.SW) iz svetovne baze: Tečaj $110.42 vs v1 IV $89.80 (MoS -23.0%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 22:03:19",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "VK.PA",
-      "msg": "Izdelana Short kontra-teza za Vallourec S.A. (VK.PA): Tečaj $15.48 -> Ciljna Short cena $10.08 (-34.9%). Short Score: 40/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
-    },
-    {
-      "ts": "2026-11-21 22:03:19",
-      "ag": "Agent 2 · Forenzični Presojevalec",
-      "t": "VK.PA",
-      "msg": "Presojen model za Vallourec S.A. (VK.PA): v1 $32.39 -> v2 $21.14 (-34.7%). MoS v2 = +26.8% (POTRJENO PODCENJENO — ČAKA NAKUPNO MEJO <= 14.80 EUR)."
-    },
-    {
-      "ts": "2026-11-21 22:03:18",
-      "ag": "Agent 1 · Globalni Lovec",
-      "t": "VK.PA",
-      "msg": "Odkrit kandidat Vallourec S.A. (VK.PA) iz svetovne baze: Tečaj $15.48 vs v1 IV $32.39 (MoS +52.2%). Predano Agentu 2 v presojo modela."
     }
   ]
 }
