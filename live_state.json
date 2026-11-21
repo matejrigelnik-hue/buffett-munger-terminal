@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:09:54",
-  "epoch": 1795298994,
+  "updated_at": "21. 11. 2026 ob 22:10:24",
+  "epoch": 1795299024,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -1964,6 +1964,193 @@
         ]
       },
       "reviewed_at": "2026-11-21 20:07"
+    },
+    {
+      "t": "IMB.L",
+      "n": "Imperial Brands PLC",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A2_GLOBAL",
+      "roic": 18.54,
+      "p": 2781.0,
+      "v1": 55.8,
+      "v2": 32.84,
+      "buy": 22.99,
+      "mos": 15.31,
+      "dpct": -41.1,
+      "dusd": -22.96,
+      "oey": 11.58,
+      "oem": 2444.3,
+      "rdcf": 2.51,
+      "mcap": 21105.2,
+      "z": "UNDER",
+      "pess": 12.9,
+      "real": 33.36,
+      "opt": 51.74,
+      "ec": 912.9,
+      "nc": -11207.2,
+      "rev": 19662.0,
+      "tax": 0.23,
+      "da": 0.032,
+      "nwc": 0.065,
+      "sh": 758.908,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.1732,
+        0.1732,
+        0.1732,
+        0.1732,
+        0.1732
+      ],
+      "short_p": 11.35,
+      "short_down": -59.2,
+      "short_score": 46,
+      "short_verdict": "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 18.5 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $55.80/delnico ob 11.58 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -41.1 % ($55.80 → $32.84); MoS = +15.3 % (PODCENJENO (0–30% MoS)).",
+      "s_flags": "Forenzični rez Agenta 2 (-41.1 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($27.81) trg vračunava +2.5 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -11207.20 M GBP.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 55.8,
+          "d": 39.06
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 196.62 M na 688.17 M GBP ter posodobitev razredčenih delnic na 758.908 M",
+          "iv": 54.17,
+          "d": -1.63
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 52.21,
+          "d": -1.96
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 46.38,
+          "d": -5.83
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 32.84,
+          "d": -13.54
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 32.84,
+          "d": -22.96
+        }
+      ],
+      "forensic": {
+        "beneish_m": -2.0,
+        "beneish_flag": "POZOR (ACCRUALS)",
+        "altman_z": 3.43,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 2.2,
+        "finra_short_float_pct": 5.9,
+        "days_to_cover": 2.5,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 3837.74
+          },
+          {
+            "q": "22Q2",
+            "p": 3942.23
+          },
+          {
+            "q": "22Q3",
+            "p": 4099.47
+          },
+          {
+            "q": "22Q4",
+            "p": 4205.75
+          },
+          {
+            "q": "23Q1",
+            "p": 4175.93
+          },
+          {
+            "q": "23Q2",
+            "p": 3987.96
+          },
+          {
+            "q": "23Q3",
+            "p": 3695.14
+          },
+          {
+            "q": "23Q4",
+            "p": 3399.48
+          },
+          {
+            "q": "24Q1",
+            "p": 3200.03
+          },
+          {
+            "q": "24Q2",
+            "p": 3143.61
+          },
+          {
+            "q": "24Q3",
+            "p": 3203.57
+          },
+          {
+            "q": "24Q4",
+            "p": 3297.53
+          },
+          {
+            "q": "25Q1",
+            "p": 3333.9
+          },
+          {
+            "q": "25Q2",
+            "p": 3261.99
+          },
+          {
+            "q": "25Q3",
+            "p": 3098.51
+          },
+          {
+            "q": "25Q4",
+            "p": 2916.51
+          },
+          {
+            "q": "26Q1",
+            "p": 2802.89
+          },
+          {
+            "q": "26Q2",
+            "p": 2807.91
+          },
+          {
+            "q": "26Q3",
+            "p": 2914.33
+          },
+          {
+            "q": "26Q4",
+            "p": 2781.0
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:10"
     },
     {
       "t": "PRDO",
@@ -6099,193 +6286,6 @@
       "reviewed_at": "2026-11-21 22:08"
     },
     {
-      "t": "IMB.L",
-      "n": "Imperial Brands PLC",
-      "sec": "Technology / Industrials · Compounder",
-      "tier": "A2_GLOBAL",
-      "roic": 18.54,
-      "p": 2781.0,
-      "v1": 0.56,
-      "v2": 0.33,
-      "buy": 0.23,
-      "mos": -8368.77,
-      "dpct": -41.1,
-      "dusd": -0.23,
-      "oey": 0.12,
-      "oem": 2444.3,
-      "rdcf": 60.0,
-      "mcap": 2110523.3,
-      "z": "SHORT",
-      "pess": 0.13,
-      "real": 0.33,
-      "opt": 0.52,
-      "ec": 912.9,
-      "nc": -11207.2,
-      "rev": 19662.0,
-      "tax": 0.23,
-      "da": 0.032,
-      "nwc": 0.065,
-      "sh": 75890.807,
-      "wacc": 0.1,
-      "tg": 0.02,
-      "gvec": [
-        0.045,
-        0.045,
-        0.04,
-        0.04,
-        0.035
-      ],
-      "mvec": [
-        0.1732,
-        0.1732,
-        0.1732,
-        0.1732,
-        0.1732
-      ],
-      "short_p": 1.0,
-      "short_down": -96.4,
-      "short_score": 98,
-      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
-      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 18.5 %.",
-      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $0.56/delnico ob 0.12 % Owner Earnings donosnosti.",
-      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -41.1 % ($0.56 → $0.33); MoS = -8368.8 % (PRECENJENO / VALUE TRAP).",
-      "s_flags": "Forenzični rez Agenta 2 (-41.1 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
-      "s_moat": "Pri trenutnem tečaju ($27.81) trg vračunava +60.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
-      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -11207.20 M GBP.",
-      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
-      "steps": [
-        {
-          "step": "Izhodišče (v1)",
-          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
-          "iv": 0.56,
-          "d": 0.39
-        },
-        {
-          "step": "Korak 1",
-          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 196.62 M na 688.17 M GBP ter posodobitev razredčenih delnic na 75890.807 M",
-          "iv": 0.54,
-          "d": -0.02
-        },
-        {
-          "step": "Korak 2",
-          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
-          "iv": 0.52,
-          "d": -0.02
-        },
-        {
-          "step": "Korak 3",
-          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
-          "iv": 0.46,
-          "d": -0.06
-        },
-        {
-          "step": "Korak 4 (v2)",
-          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
-          "iv": 0.33,
-          "d": -0.13
-        },
-        {
-          "step": "Skupaj (v1 → v2)",
-          "desc": "Skupni učinek forenzične revizije Agenta 2",
-          "iv": 0.33,
-          "d": -0.23
-        }
-      ],
-      "forensic": {
-        "beneish_m": -1.58,
-        "beneish_flag": "MANIPULACIJSKI ALARM",
-        "altman_z": 4.9,
-        "altman_flag": "TRDNA BILANCA (>3.0)",
-        "sloan_accrual_pct": 7.3,
-        "finra_short_float_pct": 24.5,
-        "days_to_cover": 10.3,
-        "form4_insider": "NEVTRALNO (FORM 4)",
-        "price_history": [
-          {
-            "q": "22Q1",
-            "p": 1251.41
-          },
-          {
-            "q": "22Q2",
-            "p": 1492.03
-          },
-          {
-            "q": "22Q3",
-            "p": 1785.39
-          },
-          {
-            "q": "22Q4",
-            "p": 2027.79
-          },
-          {
-            "q": "23Q1",
-            "p": 2134.09
-          },
-          {
-            "q": "23Q2",
-            "p": 2082.24
-          },
-          {
-            "q": "23Q3",
-            "p": 1925.55
-          },
-          {
-            "q": "23Q4",
-            "p": 1766.01
-          },
-          {
-            "q": "24Q1",
-            "p": 1702.68
-          },
-          {
-            "q": "24Q2",
-            "p": 1782.38
-          },
-          {
-            "q": "24Q3",
-            "p": 1978.47
-          },
-          {
-            "q": "24Q4",
-            "p": 2208.55
-          },
-          {
-            "q": "25Q1",
-            "p": 2381.05
-          },
-          {
-            "q": "25Q2",
-            "p": 2445.26
-          },
-          {
-            "q": "25Q3",
-            "p": 2417.9
-          },
-          {
-            "q": "25Q4",
-            "p": 2372.02
-          },
-          {
-            "q": "26Q1",
-            "p": 2394.52
-          },
-          {
-            "q": "26Q2",
-            "p": 2535.67
-          },
-          {
-            "q": "26Q3",
-            "p": 2778.21
-          },
-          {
-            "q": "26Q4",
-            "p": 2781.0
-          }
-        ]
-      },
-      "reviewed_at": "2026-11-21 22:08"
-    },
-    {
       "t": "SGE.L",
       "n": "The Sage Group plc",
       "sec": "Technology / Industrials · Compounder",
@@ -6677,6 +6677,24 @@
   ],
   "agent_logs": [
     {
+      "ts": "2026-11-21 22:10:24",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "IMB.L",
+      "msg": "Izdelana Short kontra-teza za Imperial Brands PLC (IMB.L): Tečaj $27.81 -> Ciljna Short cena $11.35 (-59.2%). Short Score: 46/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
+    },
+    {
+      "ts": "2026-11-21 22:10:24",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "IMB.L",
+      "msg": "Presojen model za Imperial Brands PLC (IMB.L): v1 $55.80 -> v2 $32.84 (-41.1%). MoS v2 = +15.3% (POTRJENO PODCENJENO — ČAKA NAKUPNO MEJO <= 22.99 GBP)."
+    },
+    {
+      "ts": "2026-11-21 22:10:23",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "IMB.L",
+      "msg": "Odkrit kandidat Imperial Brands PLC (IMB.L) iz svetovne baze: Tečaj $27.81 vs v1 IV $55.80 (MoS +50.2%). Predano Agentu 2 v presojo modela."
+    },
+    {
       "ts": "2026-11-21 22:09:54",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
       "t": "HD",
@@ -6837,24 +6855,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "IMB.L",
       "msg": "Odkrit kandidat Imperial Brands PLC (IMB.L) iz svetovne baze: Tečaj $2781.00 vs v1 IV $55.80 (MoS -4883.5%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 22:02:46",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "TRI.PA",
-      "msg": "Izdelana Short kontra-teza za Trigano S.A. (TRI.PA): Tečaj $125.60 -> Ciljna Short cena $81.86 (-34.8%). Short Score: 40/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
-    },
-    {
-      "ts": "2026-11-21 22:02:46",
-      "ag": "Agent 2 · Forenzični Presojevalec",
-      "t": "TRI.PA",
-      "msg": "Presojen model za Trigano S.A. (TRI.PA): v1 $262.84 -> v2 $171.50 (-34.8%). MoS v2 = +26.8% (POTRJENO PODCENJENO — ČAKA NAKUPNO MEJO <= 120.05 EUR)."
-    },
-    {
-      "ts": "2026-11-21 22:02:46",
-      "ag": "Agent 1 · Globalni Lovec",
-      "t": "TRI.PA",
-      "msg": "Odkrit kandidat Trigano S.A. (TRI.PA) iz svetovne baze: Tečaj $125.60 vs v1 IV $262.84 (MoS +52.2%). Predano Agentu 2 v presojo modela."
     }
   ]
 }
