@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buffett–Munger Forensic Terminal v4.5 — 3-Agent Long/Short Workstation</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --background: #070A0F;
+      --card: #0D131C;
+      --border: #1E293B;
+      --card-border: #1E293B;
+      --foreground: #F8FAFC;
+      --muted-foreground: #94A3B8;
+      --primary: #0EA5E9;
+      --primary-foreground: #FFFFFF;
+      --secondary: #162032;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --error: #F43F5E;
+    }
+    body { background-color: #070A0F; color: #F8FAFC; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-variant-numeric: tabular-nums; }
+    .pulse-live { animation: pulseLive 1.8s infinite; }
+    @keyframes pulseLive {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.25); }
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased m-0 p-3 md:p-4 select-none">
+
+  <!-- 1. ZGORNJA KOMANDNA VRSTICA (INSTITUTIONAL 3-AGENT WORKSTATION HEADER) -->
+  <header class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5 mb-3 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-[var(--background)] border border-[var(--border)] flex items-center justify-center font-extrabold text-sm mono" style="color:var(--success)">
+        BM
+      </div>
+      <div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <h1 class="text-sm md:text-base font-extrabold tracking-tight uppercase m-0">
+            Buffett–Munger <span style="color:var(--success)">3-Agent Long/Short Terminal</span> <span class="text-xs font-normal text-[var(--muted-foreground)] mono">v4.5</span>
+          </h1>
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-[var(--background)] border border-[var(--border)] mono" style="color:var(--success)">
+            <span class="w-2 h-2 rounded-full pulse-live" style="background:var(--success)"></span>
+            3 AGENTI AKTIVNI
+          </span>
+          <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[11px] bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] mono">
+            GitHub Core: TradingAgents (123k★) · ai-hedge-fund (64k★) · OpenBB (75k★) · edgartools
+          </span>
+        </div>
+        <div class="text-[11px] text-[var(--muted-foreground)] mt-0.5 flex flex-wrap items-center gap-2">
+          <span>Svetovni univerzum: <b class="text-[var(--foreground)] mono">13.547</b> delnic (38 držav)</span>
+          <span>·</span>
+          <span>Agent 1 (Lovec v1) &rarr; Agent 2 (Presojevalec v2) &rarr; <b style="color:var(--error)">Agent 3 (Short Kontra-Teza v3)</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preklopnik glavnih pogledov delovne postaje -->
+    <div class="flex flex-wrap items-center gap-2">
+      <div class="inline-flex rounded-lg bg-[var(--background)] p-1 border border-[var(--border)] text-xs font-semibold">
+        <button id="nav-WORKSTATION" onclick="switchView('WORKSTATION')" class="px-3 py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] font-bold transition">
+          1 · Spekter &amp; 3-Agentni Inšpektor
+        </button>
+        <button id="nav-AGENTS" onclick="switchView('AGENTS')" class="px-3 py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">
+          2 · Komandni Center 3 Agentov
+        </button>
+        <button id="nav-GITHUB" onclick="switchView('GITHUB')" class="px-3 py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">
+          3 · GitHub Arhitektura &amp; ROIC Matrika
+        </button>
+      </div>
+      <button onclick="runAutonomousNextCycle()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[var(--card)] hover:bg-[var(--secondary)] border border-[var(--border)] mono transition" style="color:var(--success)">
+        &#9889; Poženi 3-Agentni Cikel (1&rarr;2&rarr;3)
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. TRAK S 6 KLJUČNIMI KAZALNIKI (DOLGE PRILOŽNOSTI PROTI SHORT KANDIDATOM) -->
+  <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 mb-3">
+    <div onclick="setZoneFilter('BUY')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider" style="color:var(--success)">
+        <span>1 · Strong Buy (&ge;30% MoS)</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono">LONG</span>
+      </div>
+      <div id="kpi-buy-cnt" class="text-lg font-extrabold mono mt-0.5">2 delnici</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Potrjeni s strani Agenta 1 in 2</div>
+    </div>
+
+    <div onclick="setZoneFilter('UNDER')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider" style="color:var(--primary)">
+        <span>2 · Podcenjene (MoS &gt; 0%)</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono">WATCH</span>
+      </div>
+      <div id="kpi-under-cnt" class="text-lg font-extrabold mono mt-0.5">11 delnic</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Tečaj pod Munger v2 IV</div>
+    </div>
+
+    <div onclick="setZoneFilter('SHORT')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider" style="color:var(--error)">
+        <span>3 · Top Short Kandidati</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono">AGENT 3 SHORT</span>
+      </div>
+      <div id="kpi-short-cnt" class="text-lg font-extrabold mono mt-0.5">10 aktivnih</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Short Score &ge; 70/100 (Padec -50..90%)</div>
+    </div>
+
+    <div onclick="setZoneFilter('TRAP')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider" style="color:var(--warning)">
+        <span>4 · Vse Precenjene / Pasti</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono">MoS &le; 0%</span>
+      </div>
+      <div id="kpi-trap-cnt" class="text-lg font-extrabold mono mt-0.5">15 delnic</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Razkrite v Krogu 2 in Krogu 3</div>
+    </div>
+
+    <div onclick="switchView('AGENTS')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">
+        <span>5 · Globalna Čakalnica</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono" style="color:var(--primary)">38 DRŽAV</span>
+      </div>
+      <div id="kpi-queue-cnt" class="text-lg font-extrabold mono mt-0.5">4 v vrsti</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Visok ROIC + FCF za 3-agentni cikel</div>
+    </div>
+
+    <div onclick="setZoneFilter('ALL')" class="cursor-pointer bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 transition hover:border-[var(--primary)]">
+      <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">
+        <span>6 · Vsi 3-Agentni Dosjeji</span>
+        <span class="px-1.5 py-0.2 rounded bg-[var(--background)] mono">v1+v2+v3</span>
+      </div>
+      <div id="kpi-all-cnt" class="text-lg font-extrabold mono mt-0.5">26 dosjejev</div>
+      <div class="text-[11px] text-[var(--muted-foreground)] truncate">Vsak ima Long v1, Audit v2 in Short v3</div>
+    </div>
+  </section>
+
+  <!-- =============================================================================================== -->
+  <!-- POGLED 1: GLAVNA DELOVNA POSTAJA (LEVO: SPEKTER LONG/SHORT, DESNO: 3-AGENTNI INŠPEKTOR)         -->
+  <!-- =============================================================================================== -->
+  <main id="view-WORKSTATION" class="grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-start">
+
+    <!-- LEVI PANEL (7 STOLPCEV): ZEMLJEVID PODCENJENOSTI, PRECENJENOSTI IN SHORT KANDIDATOV -->
+    <section class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5">
+      <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-[var(--card-border)]">
+        <div class="flex flex-wrap items-center gap-1.5 text-xs">
+          <button onclick="setZoneFilter('ALL')" id="zbtn-ALL" class="px-2.5 py-1 rounded-md font-bold bg-[var(--primary)] text-[var(--primary-foreground)]">
+            Vse (<span id="zcnt-ALL">26</span>)
+          </button>
+          <button onclick="setZoneFilter('BUY')" id="zbtn-BUY" class="px-2.5 py-1 rounded-md font-semibold bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+            Nakupna Cona &ge;30% (<span id="zcnt-BUY">2</span>)
+          </button>
+          <button onclick="setZoneFilter('UNDER')" id="zbtn-UNDER" class="px-2.5 py-1 rounded-md font-semibold bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+            Podcenjene &gt;0% (<span id="zcnt-UNDER">11</span>)
+          </button>
+          <button onclick="setZoneFilter('SHORT')" id="zbtn-SHORT" class="px-2.5 py-1 rounded-md font-semibold bg-[var(--background)] border border-[var(--border)]" style="color:var(--error)">
+            &#128293; Top Short Kandidati (<span id="zcnt-SHORT">10</span>)
+          </button>
+          <button onclick="setZoneFilter('TRAP')" id="zbtn-TRAP" class="px-2.5 py-1 rounded-md font-semibold bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]">
+            Vse Precenjene &le;0% (<span id="zcnt-TRAP">15</span>)
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input id="search-input" oninput="renderSpectrumList()" type="text" placeholder="Išči ticker, panogo ali short razlog..." class="px-2.5 py-1 rounded-md text-xs bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)] w-44 mono" />
+          <div class="inline-flex rounded-md bg-[var(--background)] p-0.5 border border-[var(--border)] text-[11px] font-bold mono">
+            <button id="lmode-CARDS" onclick="setListMode('CARDS')" class="px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]">KARTICE</button>
+            <button id="lmode-TABLE" onclick="setListMode('TABLE')" class="px-2 py-0.5 rounded text-[var(--muted-foreground)]">TABELA</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legenda 4-točkovnega Football Field termometra -->
+      <div class="flex flex-wrap items-center justify-between gap-2 py-2 text-[11px] text-[var(--muted-foreground)] border-b border-[var(--card-border)]">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="font-semibold text-[var(--foreground)]">3-Agentni merilnik:</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-[var(--foreground)] inline-block"></span> Tržni tečaj ($)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-1 h-3 inline-block" style="background:var(--error)"></span> Agent 3 Short Tarča ($)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2 rounded-sm inline-block" style="background:var(--success);opacity:0.45"></span> Nakupna cona (&le;Meja 30%)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-1 h-3 inline-block" style="background:var(--primary)"></span> Agent 2 (v2 IV)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-1 h-3 inline-block" style="background:var(--warning)"></span> Agent 1 (v1 IV)</span>
+        </div>
+      </div>
+
+      <div id="spectrum-container" class="mt-2.5 space-y-2.5 max-h-[700px] overflow-y-auto pr-1"></div>
+    </section>
+
+    <!-- DESNI PANEL (5 STOLPCEV): 3-AGENTNI FORENZIČNI INŠPEKTOR (LONG TEZA vs PRESOJA vs SHORT KONTRA-TEZA) -->
+    <aside class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5 space-y-3">
+      <!-- Glava izbranega podjetja -->
+      <div class="flex flex-wrap items-start justify-between gap-2 pb-2.5 border-b border-[var(--card-border)]">
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span id="insp-ticker" class="px-2 py-0.5 rounded text-xs font-extrabold bg-[var(--background)] border border-[var(--border)] mono">BBWI</span>
+            <h2 id="insp-name" class="text-sm md:text-base font-extrabold m-0">Bath &amp; Body Works, Inc.</h2>
+            <span id="insp-badge" class="px-2 py-0.5 rounded text-[11px] font-bold mono">—</span>
+          </div>
+          <div id="insp-sub" class="text-[11px] text-[var(--muted-foreground)] mt-0.5 mono">SEC EDGAR A1 XBRL · 10Y ROIC: 36.2%</div>
+        </div>
+        <span id="insp-short-pill" class="px-2 py-1 rounded text-[11px] font-extrabold bg-[var(--background)] border border-[var(--border)] mono">—</span>
+      </div>
+
+      <!-- 4 Ključne Številke: Tržni Tečaj | Agent 1 (v1 Long) | Agent 2 (v2 Presoja) | Agent 3 (Short Tarča & Padec) -->
+      <div class="grid grid-cols-4 gap-2 mono">
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2">
+          <div class="text-[10px] text-[var(--muted-foreground)] uppercase font-sans">Tržni Tečaj</div>
+          <div id="insp-price" class="text-sm md:text-base font-extrabold mt-0.5">$18.66</div>
+          <div id="insp-buy-line" class="text-[10px] mt-0.5" style="color:var(--success)">Meja 30%: $27.01</div>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2">
+          <div class="text-[10px] uppercase font-sans" style="color:var(--warning)">Agent 1 (Lovec v1)</div>
+          <div id="insp-v1" class="text-sm md:text-base font-extrabold mt-0.5" style="color:var(--warning)">$66.78</div>
+          <div class="text-[10px] text-[var(--muted-foreground)] mt-0.5">Dolga teza</div>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2">
+          <div class="text-[10px] uppercase font-sans" style="color:var(--primary)">Agent 2 (Revizor v2)</div>
+          <div id="insp-v2" class="text-sm md:text-base font-extrabold mt-0.5" style="color:var(--primary)">$38.59</div>
+          <div id="insp-mos" class="text-[10px] font-bold mt-0.5">MoS: +51.6%</div>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2">
+          <div class="text-[10px] uppercase font-sans" style="color:var(--error)">Agent 3 (Short Tarča)</div>
+          <div id="insp-short-target" class="text-sm md:text-base font-extrabold mt-0.5" style="color:var(--error)">$12.56</div>
+          <div id="insp-short-down" class="text-[10px] font-bold mt-0.5" style="color:var(--error)">Padec: -32.7%</div>
+        </div>
+      </div>
+
+      <!-- 4 Zavihki znotraj 3-Agentnega Inšpektorja -->
+      <div class="grid grid-cols-4 gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-[11px] font-semibold">
+        <button id="itab-BRIEF" onclick="switchInspectorTab('BRIEF')" class="py-1.5 px-1.5 rounded bg-[var(--card)] text-[var(--foreground)] font-bold">
+          1 · Agent 1 &amp; 2
+        </button>
+        <button id="itab-SHORT" onclick="switchInspectorTab('SHORT')" class="py-1.5 px-1.5 rounded text-[var(--muted-foreground)]" style="color:var(--error)">
+          2 · Agent 3 Short
+        </button>
+        <button id="itab-SCENARIOS" onclick="switchInspectorTab('SCENARIOS')" class="py-1.5 px-1.5 rounded text-[var(--muted-foreground)]">
+          3 · Scenariji/SOTP
+        </button>
+        <button id="itab-SIM" onclick="switchInspectorTab('SIM')" class="py-1.5 px-1.5 rounded text-[var(--muted-foreground)]">
+          4 · DCF Simulator
+        </button>
+      </div>
+
+      <!-- ZAVIHEK 1: KAJ & ZAKAJ + FORENZIČNA REKONCILIACIJA AGENTA 1 IN 2 (v1 -> v2) -->
+      <div id="ipane-BRIEF" class="space-y-2.5 text-xs">
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[10px] font-bold uppercase text-[var(--muted-foreground)]">1 · Kaj podjetje počne &amp; Ekonomski jarek (Moat)</div>
+          <p id="insp-what" class="mt-0.5 leading-relaxed m-0">—</p>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[10px] font-bold uppercase" style="color:var(--warning)">2 · Agent 1 (Globalni Lovec Podcenjenih — Krog 1 Dolga Teza)</div>
+          <p id="insp-why1" class="mt-0.5 leading-relaxed m-0">—</p>
+        </div>
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[10px] font-bold uppercase" style="color:var(--primary)">3 · Agent 2 (Forenzični Presojevalec — Preverba Modela v1 &rarr; v2)</div>
+          <p id="insp-why2" class="mt-0.5 leading-relaxed m-0">—</p>
+        </div>
+
+        <!-- SVG Primerjava Tečaj vs Agent 1 vs Agent 2 vs Agent 3 Short -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[11px] font-extrabold uppercase">Primerjava Vseh 3 Agentov proti Tržnemu Tečaju</span>
+            <span class="text-[10px] text-[var(--muted-foreground)] mono">03_valuation_engine.py</span>
+          </div>
+          <div id="svg-waterfall-box" class="w-full"></div>
+          <div id="recon-steps-box" class="mt-2 space-y-1.5 max-h-40 overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+
+      <!-- ZAVIHEK 2: AGENT 3 — AKTIVISTIČNA SHORT-SELLING KONTRA-TEZA & INVERZIJA -->
+      <div id="ipane-SHORT" class="hidden space-y-2.5 text-xs">
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[var(--card-border)]">
+            <div>
+              <div class="text-[10px] font-bold uppercase" style="color:var(--error)">AGENT 3 · SHORT-SELLING INVERZIJA (KONTRA-TEZA)</div>
+              <div id="short-verdict-title" class="text-sm font-extrabold mono mt-0.5" style="color:var(--error)">—</div>
+            </div>
+            <div class="text-right mono">
+              <span class="text-[10px] text-[var(--muted-foreground)] block">Short Conviction Score</span>
+              <b id="short-score-val" class="text-base" style="color:var(--error)">— / 100</b>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 my-2.5 mono text-[11px]">
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Trenutni Tečaj</span>
+              <b id="short-cur-p">$—</b>
+            </div>
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Ciljna Short Cena</span>
+              <b id="short-tgt-p" style="color:var(--error)">$—</b>
+            </div>
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Potencial Padca</span>
+              <b id="short-down-pct" style="color:var(--error)">—%</b>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="bg-[var(--card)] p-2.5 rounded border border-[var(--card-border)]">
+              <div class="text-[10px] font-bold uppercase" style="color:var(--error)">A · Računovodske Rdeče Zastavice &amp; Manipulacije Izkazov:</div>
+              <p id="short-red-flags" class="mt-0.5 leading-relaxed m-0">—</p>
+            </div>
+            <div class="bg-[var(--card)] p-2.5 rounded border border-[var(--card-border)]">
+              <div class="text-[10px] font-bold uppercase" style="color:var(--warning)">B · Lomljenje Poslovnega Modela (Moat Destruction &amp; Bear Thesis):</div>
+              <p id="short-moat-break" class="mt-0.5 leading-relaxed m-0">—</p>
+            </div>
+            <div class="bg-[var(--card)] p-2.5 rounded border border-[var(--card-border)]">
+              <div class="text-[10px] font-bold uppercase text-[var(--muted-foreground)]">C · Bilanca Stanja, Dolžniški Zid &amp; Stres v Recesiji:</div>
+              <p id="short-debt-bomb" class="mt-0.5 leading-relaxed m-0">—</p>
+            </div>
+            <div class="bg-[var(--card)] p-2.5 rounded border border-[var(--card-border)]">
+              <div class="text-[10px] font-bold uppercase" style="color:var(--primary)">D · Konkretni Katalizatorji za Short &amp; Sprožilci v 10-Q/10-K:</div>
+              <p id="short-catalysts" class="mt-0.5 leading-relaxed m-0">—</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZAVIHEK 3: SCENARIJI (P/R/O), SOTP BILANCA & 5-FAKTORSKA DEKOMPOZICIJA (ai-hedge-fund standard) -->
+      <div id="ipane-SCENARIOS" class="hidden space-y-2.5 text-xs">
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[11px] font-extrabold uppercase mb-1.5">Razpon Scenarijev (Short Tarča · Pesimist · Meja 30% · Tečaj · Realist · Optimist)</div>
+          <div id="svg-scenarios-box" class="w-full"></div>
+        </div>
+
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[11px] font-extrabold uppercase mb-1.5">Bilanca Stanja SOTP &amp; Denarna Ustvarjalnost</div>
+          <div id="sotp-metrics-box" class="grid grid-cols-2 gap-2 mono"></div>
+        </div>
+
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-2.5">
+          <div class="text-[11px] font-extrabold uppercase mb-1.5">Projekcija Rasti Prihodkov &amp; GAAP EBIT Marže (L1–L5)</div>
+          <div id="svg-trajectory-box" class="w-full"></div>
+        </div>
+      </div>
+
+      <!-- ZAVIHEK 4: ŽIVI INTERAKTIVNI WHAT-IF DCF SIMULATOR -->
+      <div id="ipane-SIM" class="hidden space-y-2.5 text-xs">
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-extrabold uppercase">Interaktivni What-If DCF &amp; SOTP Simulator</div>
+              <div class="text-[10px] text-[var(--muted-foreground)]">Premakni drsnike za takojšen preračun notranje vrednosti in MoS %</div>
+            </div>
+            <button onclick="resetSim()" class="px-2 py-0.5 rounded text-[10px] font-bold bg-[var(--card)] border border-[var(--border)] mono">
+              Ponastavi na v2
+            </button>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Diskontna stopnja (WACC):</span>
+              <b id="lbl-wacc" class="mono" style="color:var(--primary)">10.00%</b>
+            </div>
+            <input id="rng-wacc" type="range" min="7.0" max="15.0" step="0.25" value="10.0" oninput="updateSim()" class="w-full accent-[var(--primary)]" />
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Terminalna rast (g):</span>
+              <b id="lbl-tg" class="mono" style="color:var(--primary)">2.00%</b>
+            </div>
+            <input id="rng-tg" type="range" min="0.0" max="4.0" step="0.25" value="2.0" oninput="updateSim()" class="w-full accent-[var(--primary)]" />
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Prilagoditev operativne EBIT marže (glede na v2):</span>
+              <b id="lbl-opm" class="mono" style="color:var(--success)">+0.0%pt</b>
+            </div>
+            <input id="rng-opm" type="range" min="-8.0" max="8.0" step="0.5" value="0.0" oninput="updateSim()" class="w-full accent-[var(--primary)]" />
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Prilagoditev 10-letne rasti prihodkov (glede na v2):</span>
+              <b id="lbl-gr" class="mono" style="color:var(--success)">+0.0%pt</b>
+            </div>
+            <input id="rng-gr" type="range" min="-6.0" max="6.0" step="0.5" value="0.0" oninput="updateSim()" class="w-full accent-[var(--primary)]" />
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 pt-2 border-t border-[var(--card-border)] mono">
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Simulirana IV</span>
+              <b id="sim-iv" class="text-base" style="color:var(--primary)">—</b>
+            </div>
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Meja (30% MoS)</span>
+              <b id="sim-buy" class="text-base" style="color:var(--success)">—</b>
+            </div>
+            <div class="bg-[var(--card)] p-2 rounded border border-[var(--border)]">
+              <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Simuliran MoS</span>
+              <b id="sim-mos" class="text-base">—</b>
+            </div>
+          </div>
+          <div id="sim-verdict" class="p-2 rounded text-center font-bold mono text-[11px] bg-[var(--card)] border border-[var(--border)]">—</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- =============================================================================================== -->
+  <!-- POGLED 2: KOMANDNI CENTER 3 AVTONOMNIH AGENTOV (LOVEC -> PRESOJEVALEC -> SHORT-SELLER)          -->
+  <!-- =============================================================================================== -->
+  <section id="view-AGENTS" class="hidden space-y-3.5">
+    <!-- Kartice 3 Agentov -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5" style="border-top: 4px solid var(--warning)">
+        <div class="flex items-center justify-between text-[11px] mono">
+          <span class="font-bold" style="color:var(--warning)">AGENT 1 · KROG 1</span>
+          <span class="text-[var(--muted-foreground)]">lovec_podcenjenih</span>
+        </div>
+        <h3 class="text-sm font-extrabold mt-1 m-0">Globalni Lovec Podcenjenih (38 Držav)</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1 m-0 leading-relaxed">
+          Prečesava 13.547 delnic po svetu (`perpetuum_buffett.db`, `FinanceDatabase`, `SEC EDGAR XBRL`, `EU ESEF`), išče kombinacijo `10Y ROIC >= 15%` in `FCF Donos >= 6%` ter zgradi osnovni 10-letni DCF model `v1_buffett_teza.md`.
+        </p>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5" style="border-top: 4px solid var(--primary)">
+        <div class="flex items-center justify-between text-[11px] mono">
+          <span class="font-bold" style="color:var(--primary)">AGENT 2 · KROG 2</span>
+          <span class="text-[var(--muted-foreground)]">forenzicni_revizor</span>
+        </div>
+        <h3 class="text-sm font-extrabold mt-1 m-0">Forenzični Presojevalec Modela (Munger)</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1 m-0 leading-relaxed">
+          Presoja, ali je analiza Agenta 1 metodološko zdržna po 32 pravilih (`pravila_iz_napak.md`): preveri TSM/RSU razredčitev delnic, SOTP skrite obveznosti, 20% odbitek na naložbe, 100% SBC, davek in 10L mediano marž (`v2_munger_revidirana.md`).
+        </p>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5" style="border-top: 4px solid var(--error)">
+        <div class="flex items-center justify-between text-[11px] mono">
+          <span class="font-bold" style="color:var(--error)">AGENT 3 · KROG 3</span>
+          <span class="text-[var(--muted-foreground)]">short_seller_inverzija</span>
+        </div>
+        <h3 class="text-sm font-extrabold mt-1 m-0">Aktivistični Short-Seller (Kontra-Teza)</h3>
+        <p class="text-xs text-[var(--muted-foreground)] mt-1 m-0 leading-relaxed">
+          Deluje kot institucionalni Short-Seller (*Hindenburg / Chanos*): išče računovodske manipulacije, lomljenje jarka in dolžniški zid, izračuna **Ciljno Short Ceno (`$`)**, **Potencial padca (`-%`)** in **Short Score (`0–100`)** v `v3_short_kontra_teza.md`.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-3.5">
+      <!-- Čakalna vrsta iz svetovnega univerzuma -->
+      <div class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+        <div class="text-xs font-extrabold uppercase mb-2">Naslednji Globalni Kandidati v Bazi za 3-Agentni Cikel (Agent 1 &rarr; Agent 2 &rarr; Agent 3):</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead class="border-b border-[var(--card-border)] text-[11px] text-[var(--muted-foreground)] uppercase">
+              <tr>
+                <th class="py-2 px-2">Ticker</th>
+                <th class="py-2 px-2">Podjetje</th>
+                <th class="py-2 px-2">Vir</th>
+                <th class="py-2 px-2 text-right">10Y ROIC</th>
+                <th class="py-2 px-2 text-right">FCF Donos</th>
+                <th class="py-2 px-2 text-right">Tečaj</th>
+                <th class="py-2 px-2 text-right">3-Agentni Zagon</th>
+              </tr>
+            </thead>
+            <tbody id="agent1-queue-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Živi dnevnik vseh 3 agentov -->
+      <div class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+        <div class="text-xs font-extrabold uppercase mb-2">Živi Dnevnik Trikrožne Debatne Zanke (Agent 1 &rarr; Agent 2 &rarr; Agent 3):</div>
+        <div id="agent-log-box" class="space-y-2 max-h-[340px] overflow-y-auto pr-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================================================== -->
+  <!-- POGLED 3: GITHUB BEST-PRACTICES ARHITEKTURA, ROIC KVADRANT & 32 FORENZIČNIH PRAVIL              -->
+  <!-- =============================================================================================== -->
+  <section id="view-GITHUB" class="hidden space-y-3.5">
+    <!-- Vgrajene najboljše prakse z GitHuba -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+      <div class="text-xs font-extrabold uppercase mb-2">Vgrajene Arhitekturne in Vizualne Prakse iz Vodilnih Odprtokodnih GitHub Projektov</div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs">
+        <div class="bg-[var(--background)] p-3 rounded-lg border border-[var(--border)]">
+          <div class="flex items-center justify-between font-mono text-[11px]">
+            <b style="color:var(--primary)">TauricResearch/TradingAgents</b>
+            <span style="color:var(--warning)">123.3k ★</span>
+          </div>
+          <div class="font-bold mt-1">Adversarial Bull vs. Bear Debate &amp; 5-Tier Rating</div>
+          <p class="text-[var(--muted-foreground)] mt-1 m-0 leading-snug">
+            Strukturirano soočenje med Bull Researcherjem (Agent 1), Risk/Model Verifierjem (Agent 2) in Bear/Short Researcherjem (Agent 3) s kanonično 5-stopenjsko lestvico (`Strong Buy`, `Overweight`, `Hold`, `Value Trap`, `High-Conviction Short`).
+          </p>
+        </div>
+
+        <div class="bg-[var(--background)] p-3 rounded-lg border border-[var(--border)]">
+          <div class="flex items-center justify-between font-mono text-[11px]">
+            <b style="color:var(--primary)">virattt/ai-hedge-fund</b>
+            <span style="color:var(--warning)">64.8k ★</span>
+          </div>
+          <div class="font-bold mt-1">Signal Conviction Schema &amp; Hash-Chained Ledger</div>
+          <p class="text-[var(--muted-foreground)] mt-1 m-0 leading-snug">
+            Standardiziran izpis `Signal(conviction 0–100, reasoning, components)` za Buffett, Munger in Contrarian Short agenta ter beleženje odločitev v `shadow_portfolio` z 252-dnevnim horizontom preverjanja uspešnosti.
+          </p>
+        </div>
+
+        <div class="bg-[var(--background)] p-3 rounded-lg border border-[var(--border)]">
+          <div class="flex items-center justify-between font-mono text-[11px]">
+            <b style="color:var(--primary)">openbq-org/OpenBB</b>
+            <span style="color:var(--warning)">75.6k ★</span>
+          </div>
+          <div class="font-bold mt-1">Institutional Workstation &amp; Football Field UI</div>
+          <p class="text-[var(--muted-foreground)] mt-1 m-0 leading-snug">
+            Split-screen analitična delovna postaja s takojšnjim vizualnim razponom scenarijev (*Football Field*), divergentnim merilnikom podcenjenosti/precenjenosti in koračnim forenzičnim slapom (`Waterfall Bridge`).
+          </p>
+        </div>
+
+        <div class="bg-[var(--background)] p-3 rounded-lg border border-[var(--border)]">
+          <div class="flex items-center justify-between font-mono text-[11px]">
+            <b style="color:var(--primary)">dgunning/edgartools &amp; FinanceDB</b>
+            <span style="color:var(--warning)">12.5k ★</span>
+          </div>
+          <div class="font-bold mt-1">Global 38-Country Discovery &amp; Filing-Aware XBRL</div>
+          <p class="text-[var(--muted-foreground)] mt-1 m-0 leading-snug">
+            Rotacijsko odkrivanje globalnih delnic brez fiksnih seznamov (`NULLS FIRST`) in neposredno branje primarnih SEC EDGAR XBRL ter EU ESEF iXBRL postavk brez računanja na pamet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-3.5">
+      <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+        <div class="text-xs font-extrabold uppercase">1 · Celoten Spekter Vrednotenja (Dolga Varnostna Razlika +MoS % proti Short Precenjenosti -MoS %)</div>
+        <div class="text-[11px] text-[var(--muted-foreground)] mb-2">Klikni na poljuben stolpec za takojšnje odprtje delnice v 3-Agentnem Inšpektorju</div>
+        <div id="svg-full-spectrum" class="w-full overflow-x-auto"></div>
+      </div>
+      <div class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+        <div class="text-xs font-extrabold uppercase">2 · Kakovostni Kvadrant: 10Y Mediana ROIC (%) vs. Owner Earnings Donos (%)</div>
+        <div class="text-[11px] text-[var(--muted-foreground)] mb-2">Zeleno = Nakupna cona · Modro = Podcenjeno · Rdeče = Short kandidat / Precenjeno</div>
+        <div id="svg-roic-scatter" class="w-full"></div>
+      </div>
+    </div>
+
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+        <div>
+          <div class="text-xs font-extrabold uppercase">3 · Mungerjev &amp; Short-Sellerjev Forenzični Spomin (32 Pravil iz `pravila_iz_napak.md`)</div>
+          <div class="text-[11px] text-[var(--muted-foreground)]">Pravila, po katerih Agent 2 in Agent 3 iščeta računovodske manipulacije in skrite obveznosti</div>
+        </div>
+        <input id="rule-search" oninput="renderRules()" type="text" placeholder="Filtriraj pravila (npr. SBC, FIN 48, kapitalizacija, carine)..." class="px-2.5 py-1 rounded text-xs bg-[var(--background)] border border-[var(--border)] w-64 mono" />
+      </div>
+      <div id="rules-grid" class="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-[300px] overflow-y-auto pr-1 text-xs"></div>
+    </div>
+  </section>
+
+<script>
+const COMPANIES = [
+  { t: "BBWI", n: "Bath & Body Works, Inc.", sec: "Consumer Specialty Retail", roic: 36.21, p: 18.66, v1: 66.78, v2: 38.59, buy: 27.01, mos: 51.64, dpct: -42.2, dusd: -28.19, oey: 19.11, oem: 731.84, rdcf: -1.63, mcap: 3830.4, z: "BUY", pess: 14.27, real: 39.29, opt: 61.51, ec: 588.45, nc: -3388.1, rev: 7291.0, tax: 0.23, da: 0.0715, nwc: 0.065, sh: 205.275, wacc: 0.1, tg: 0.02, gvec: [0.045, 0.045, 0.04, 0.04, 0.035], mvec: [0.1405, 0.1405, 0.1405, 0.1405, 0.1405],
+    short_p: 12.56, short_down: -32.7, short_score: 29, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Vodilna ameriška veriga in blagovna znamka za dišave za dom, mila in nego telesa (Bath & Body Works) z >80 % vertikalno dobavno verigo v Ohiu in 38M+ aktivnih članov zvestobe.",
+    why_v1: "Izjemen prosti denarni tok (~23 % FCF donosnost na tržno kapitalizacijo) in 36,2 % 10-letna mediana ROIC sta v osnovnem modelu Agenta 1 dala v1 = $66,78.",
+    why_v2: "Agent 2 (Forenzični Presojevalec) znižal IV za -42,2 % ($66,78 → $38,59) zaradi $4,6 mrd finančnega dolga + najemov trgovin in pritiska na potrošnika, a pri tečaju $18,66 ostaja globoko V NAKUPNI CONI (+51,6 % MoS, meja $27,01).",
+    s_flags: "Visok finančni vzvod iz časa delitve od L Brands: $4,6 mrd skupnega finančnega dolga in kapitaliziranih najemov trgovin v nakupovalnih središčih.",
+    s_moat: "Diskrecijska potrošnja (dišeče sveče, losjoni) je v recesiji izpostavljena promocijskemu zniževanju cen; odvisnost od prometa v ameriških nakupovalnih središčih.",
+    s_debt: "Čisti SOTP neto dolg z najemi znaša -3,39 mrd USD; v primeru -15 % padca prodaje v recesiji bi fiksne najemnine stisnile operativno maržo pod 9 %.",
+    s_cat: "Padec primerljive prodaje v trgovinah (Same-Store Sales) za >-5 % YoY in padec bruto marže pod 41 % zaradi popustov.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1 (Globalni Lovec)", iv: 66.78, d: 0 },
+      { step: "Korak 1 (SOTP & Delnice)", desc: "Povečanje pogojnih obveznosti in najemov ter TSM razredčitev delnic na 205.28M", iv: 65.10, d: -1.68 },
+      { step: "Korak 2 (Strukturni davek)", desc: "Dvig efektivne davčne stopnje na 23.0% in višja vezava obratnega kapitala", iv: 61.85, d: -3.25 },
+      { step: "Korak 3 (Normalizacija marže)", desc: "Normalizacija operativne EBIT marže na 14.05% za cikel in najemnine", iv: 51.40, d: -10.45 },
+      { step: "Korak 4 (WACC 10% & Rast)", desc: "Dvig WACC na 10.0% in znižanje 10L rasti prihodkov za -100 bps", iv: 38.59, d: -12.81 }
+    ]
+  },
+  { t: "INTU", n: "Intuit Inc.", sec: "Enterprise FinTech / SaaS", roic: 16.62, p: 270.44, v1: 296.12, v2: 414.25, buy: 289.97, mos: 34.71, dpct: 39.9, dusd: 118.13, oey: 6.93, oem: 5191.0, rdcf: 3.07, mcap: 74911.9, z: "BUY", pess: 276.11, real: 394.98, opt: 590.92, ec: 6771.04, nc: -1649.96, rev: 21448.0, tax: 0.21, da: 0.025, nwc: -0.01, sh: 277.0, wacc: 0.095, tg: 0.03, gvec: [0.095, 0.09, 0.085, 0.08, 0.075], mvec: [0.3, 0.3, 0.3, 0.3, 0.3],
+    short_p: 242.98, short_down: -10.2, short_score: 27, short_verdict: "TRDNJAVA — NE SHORTAJ (SHORT-SQUEEZE TVEGANJE)",
+    what: "Dominantni davčni in računovodski finančni ekosistem v ZDA (TurboTax, QuickBooks, Credit Karma, Mailchimp) z 80%+ bruto maržo in visokimi stroški zamenjave.",
+    why_v1: "Močna rast AI-asistiranega knjigovodstva (Intuit Assist) in TurboTax Live ter negativni obratni kapital.",
+    why_v2: "Agent 2 po rekonciliaciji Q1 FY27 bilance (posodobljeni prihodki $21,45 mrd, 30 % GAAP EBIT marža po polnem odštetju SBC) potrdil V NAKUPNI CONI (+34,7 % MoS, meja $289,97).",
+    s_flags: "Visok SBC (~$1,9 mrd/leto) ter šibkost v segmentu Mailchimp in potrošniškem kreditiranju Credit Karma ob visokih obrestnih merah.",
+    s_moat: "Dolgoročno tveganje, da davčna uprava (IRS Direct File) razširi brezplačno državno oddajo davčnih napovedi ali da vertikalni AI agenti avtomatizirajo knjigovodstvo malih podjetij.",
+    s_debt: "Zelo nizko bilančno tveganje (SOTP neto dolg le -1,65 mrd USD proti $5,19 mrd letnih Owner Earnings — shortanje pri trenutni ceni je visoko tvegano).",
+    s_cat: "Upad rasti QuickBooks Online ekosistema pod +12 % YoY ali regulatorni poseg v TurboTax.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Začetni model Agenta 1 na starejši osnovi prihodkov", iv: 296.12, d: 0 },
+      { step: "Korak 1 (Posodobitev TTM A1)", desc: "Uskladitev z najnovejšim FY26/Q1 10-K/10-Q prihodkom $21.45 mrd in SOTP neto dolgom -$1.65 mrd", iv: 368.40, d: 72.28 },
+      { step: "Korak 2 (GAAP EBIT po SBC)", desc: "Polno odštetje SBC v 30.0% GAAP operativni marži in WACC 9.5%", iv: 414.25, d: 45.85 }
+    ]
+  },
+  { t: "PYPL", n: "PayPal Holdings, Inc.", sec: "Global Payments Network", roic: 24.19, p: 53.29, v1: 77.4, v2: 72.38, buy: 50.66, mos: 26.37, dpct: -6.5, dusd: -5.02, oey: 9.54, oem: 4361.0, rdcf: -1.18, mcap: 45722.8, z: "UNDER", pess: 44.28, real: 72.9, opt: 99.41, ec: 9616.56, nc: -5634.44, rev: 33172.0, tax: 0.21, da: 0.029, nwc: 0.03, sh: 858.0, wacc: 0.095, tg: 0.02, gvec: [0.035, 0.04, 0.04, 0.035, 0.035], mvec: [0.164, 0.162, 0.16, 0.16, 0.158],
+    short_p: 38.97, short_down: -26.9, short_score: 31, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Globalno dvostransko plačilno omrežje (430M+ aktivnih računov, PayPal, Braintree, Venmo) z masivnim prostim denarnim tokom in kanibalskim odkupovanjem delnic.",
+    why_v1: "Trguje pri 9,54 % Owner Earnings donosnosti; vodstvo odkupilo 94M delnic za $4,55 mrd (imenovalec znižan na 858M delnic).",
+    why_v2: "Agent 2 znižal IV za -6,5 % ($77,40 → $72,38) zaradi vključitve $13,47 mrd celotnega dolga iz Q3 2026 in krčenja GAAP EBIT marže na 16,3 %. MoS +26,4 % (čaka ceno <= $50,66).",
+    s_flags: "Agresivna poraba celotnega FCF za odkupe delnic ob hkratnem povečanju bruto finančnega dolga v Q3 2026 na $13,47 mrd ter razlika med Non-GAAP in GAAP dobičkom zaradi SBC.",
+    s_moat: "Apple Pay in Google Pay na mobilnih napravah odžirata tržni delež visokomaržnemu gumbu 'PayPal Branded Checkout', medtem ko nizkomaržni Braintree redči transakcijsko maržo.",
+    s_debt: "Po odštetju sredstev strank in 5 % operativnega blažilnika je čisti SOTP neto dolg -5,63 mrd USD.",
+    s_cat: "Padec transakcijske marže (Transaction Margin $) v negativno območje ali izguba tržnega deleža pri praznični spletni prodaji.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1 na FY25 bilanci", iv: 77.40, d: 0 },
+      { step: "Korak 1 (Q3 2026 Dolg & SOTP)", desc: "Vključitev $13.47 mrd celotnega dolga + najemov in 858M delnic ter 20% odbitek na $4.78 mrd dolgoročnih naložb", iv: 75.12, d: -2.28 },
+      { step: "Korak 2 (Pritisk na maržo)", desc: "Znižanje GAAP EBIT marže na 16.4% -> 15.8% in 21% davčna stopnja", iv: 72.38, d: -2.74 }
+    ]
+  },
+  { t: "ADBE", n: "Adobe Inc.", sec: "Creative & Document SaaS", roic: 43.41, p: 217.71, v1: 324.88, v2: 291.85, buy: 204.3, mos: 25.4, dpct: -10.2, dusd: -33.03, oey: 8.45, oem: 7276.0, rdcf: 0.39, mcap: 86104.3, z: "UNDER", pess: 175.9, real: 300.85, opt: 389.8, ec: 5163.62, nc: -1938.38, rev: 23769.0, tax: 0.22, da: 0.023, nwc: 0.0, sh: 395.5, wacc: 0.095, tg: 0.025, gvec: [0.105, 0.075, 0.065, 0.055, 0.05], mvec: [0.35, 0.34, 0.34, 0.338, 0.336],
+    short_p: 154.79, short_down: -28.9, short_score: 31, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Svetovni standard za digitalno ustvarjanje in dokumentne tokove (Creative Cloud, Photoshop, Acrobat/PDF, Firefly AI) s 88 % bruto maržo.",
+    why_v1: "Elitni ROIC (43,4 %) in 8,45 % Owner Earnings donosnost; Reverse DCF v ceno $217,71 vračunava vsega +0,39 % letno rast.",
+    why_v2: "Agent 2 znižal IV za -10,2 % ($324,88 → $291,85) zaradi polnega odštetja SBC, 22 % davčne stopnje in počasnejše monetizacije Firefly AI. MoS +25,4 % (čaka mejo $204,30).",
+    s_flags: "Visok strošek delniških nagrad (SBC ~$1,8 mrd/leto) in visoke cene naročnin, ki so sprožile tožbo FTC glede oteženega odpovedovanja letnih naročnin.",
+    s_moat: "Odprtokodni in konkurenčni generativni AI modeli za sliko in video (Midjourney, Canva, Sora, Figma) zmanjšujejo potrebo po polnih licencah Creative Cloud pri neprofesionalnih uporabnikih.",
+    s_debt: "SOTP neto dolg (-1,94 mrd USD po odbitku 5 % operativnega denarnega blažilnika), a izjemen denarni tok (>7,2 mrd USD Owner Earnings) ščiti pred likvidnostnim tveganjem.",
+    s_cat: "Upad rasti Digital Media ARR pod +9 % YoY ali prisilna sprememba naročniških pogojev s strani FTC.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 324.88, d: 0 },
+      { step: "Korak 1 (SOTP & SBC)", desc: "Polno odštetje SBC in vključitev celotnega dolga ter odloženih davčnih obveznosti", iv: 306.40, d: -18.48 },
+      { step: "Korak 2 (Inverzija AI rasti)", desc: "Konzervativnejša rast prihodkov (10.5% -> 5.0%) in znižanje EBIT marže na 33.6%", iv: 291.85, d: -14.55 }
+    ]
+  },
+  { t: "DECK", n: "Deckers Outdoor Corp", sec: "Branded Footwear (HOKA / UGG)", roic: 38.45, p: 77.94, v1: 124.75, v2: 104.27, buy: 72.99, mos: 25.25, dpct: -16.4, dusd: -20.48, oey: 9.38, oem: 989.19, rdcf: -2.01, mcap: 10545.3, z: "UNDER", pess: 67.19, real: 104.11, opt: 141.67, ec: 1084.25, nc: 464.04, rev: 5577.0, tax: 0.23, da: 0.013, nwc: 0.05, sh: 135.3, wacc: 0.095, tg: 0.025, gvec: [0.05, 0.05, 0.05, 0.045, 0.045], mvec: [0.215, 0.21, 0.205, 0.2, 0.2],
+    short_p: 63.83, short_down: -18.1, short_score: 19, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Lastnik globalnih visokomaržnih obutvenih znamk HOKA in UGG z izjemno kapitalsko lahkotnostjo (38,5 % ROIC), 57 % bruto maržo in +$464M čiste neto gotovine.",
+    why_v1: "Dvomestna organska rast znamke HOKA, 9,38 % Owner Earnings donosnost in bilanca brez finančnega dolga.",
+    why_v2: "Agent 2 znižal IV za -16,4 % ($124,75 → $104,27): zavrnil projekcijo rekordne 23,6 % ciklične EBIT marže v neskončnost in jo znižal proti 20,0 % ob upoštevanju carin. MoS +25,3 % (čaka mejo $72,99).",
+    s_flags: "Trenutna operativna EBIT marža (~21,5–23,6 %) je na zgodovinskem cikličnem vrhu; v obutveni industriji nobena modna/tekaška znamka ne ohrani >22 % marže brez povratka k povprečju.",
+    s_moat: "Zaostritev konkurence v tekaški obutvi (On Holding, Nike obnovitev linij, Brooks, New Balance) in ohlajanje rasti DTC prodaje pri znamki HOKA.",
+    s_debt: "Bilanca je brez dolga (+464M USD čiste neto gotovine po odbitku najemov trgovin), zato je tveganje izključno v kompresiji večkratnika in marže.",
+    s_cat: "Upad rasti znamke HOKA pod +12 % YoY ali kopičenje zalog pri veleprodajnih partnerjih.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 124.75, d: 0 },
+      { step: "Korak 1 (SOTP & Najemi)", desc: "Odštetje operativnih najemov trgovin in davčnih rezervacij (neto gotovina +$464M)", iv: 120.15, d: -4.60 },
+      { step: "Korak 2 (Normalizacija marže)", desc: "Znižanje rekordne EBIT marže z 23.6% na 21.5% -> 20.0% (Pravilo #7)", iv: 104.27, d: -15.88 }
+    ]
+  },
+  { t: "MMS", n: "Maximus, Inc.", sec: "Government Health Services", roic: 12.38, p: 62.79, v1: 86.83, v2: 83.87, buy: 58.71, mos: 25.13, dpct: -3.4, dusd: -2.96, oey: 11.06, oem: 368.74, rdcf: 2.61, mcap: 3335.4, z: "UNDER", pess: 43.97, real: 84.46, opt: 122.57, ec: 175.35, nc: -2203.34, rev: 5230.79, tax: 0.25, da: 0.0215, nwc: 0.08, sh: 53.12, wacc: 0.095, tg: 0.02, gvec: [0.061, 0.035, 0.03, 0.025, 0.025], mvec: [0.1, 0.102, 0.103, 0.103, 0.1],
+    short_p: 38.69, short_down: -38.4, short_score: 31, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Ključni izvajalec administracije zdravstvenih in socialnih programov (Medicaid, Medicare, VA klinične ocene) za zvezno in državne vlade ZDA.",
+    why_v1: "Visoka 11,06 % Owner Earnings donosnost in dolgoročne pogodbe z državo.",
+    why_v2: "Agent 2 znižal IV za -3,4 % ($86,83 → $83,87) po strogi vključitvi -$2,20 mrd neto dolga in tveganja krčenja zveznega proračuna. MoS +25,1 % (čaka mejo $58,71).",
+    s_flags: "Visoka koncentracija prihodkov pri zvezni in državnih vladah ZDA; zamiki pri plačilih državnih pogodb hitro napihnejo terjatve (DSO).",
+    s_moat: "Iniciative za krčenje zvezne administracije (DOGE) in avtomatizacija preverjanja upravičencev Medicaid/Medicare lahko znižajo obseg zunanjega izvajanja.",
+    s_debt: "Čisti SOTP neto dolg z operativnimi najemi znaša -2,20 mrd USD, zato je podjetje občutljivo na izgubo katere od 3 največjih zveznih pogodb.",
+    s_cat: "Izguba razpisa pri CMS (Centers for Medicare & Medicaid Services) ali padec operativne marže pod 9 %.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 86.83, d: 0 },
+      { step: "Korak 1 (Vladne terjatve & Dolg)", desc: "Prilagoditev SOTP neto dolga (-$2.20 mrd) in 25% davčna stopnja", iv: 83.87, d: -2.96 }
+    ]
+  },
+  { t: "GNTX", n: "Gentex Corporation", sec: "Auto Tech & Aerospace Monopoly", roic: 21.8, p: 18.75, v1: 30.03, v2: 23.19, buy: 16.23, mos: 19.14, dpct: -22.8, dusd: -6.84, oey: 8.99, oem: 350.85, rdcf: 0.13, mcap: 3901.9, z: "UNDER", pess: 14.43, real: 23.09, opt: 32.14, ec: 97.46, nc: -15.09, rev: 2618.85, tax: 0.185, da: 0.0391, nwc: 0.06, sh: 208.1, wacc: 0.1, tg: 0.02, gvec: [0.025, 0.03, 0.03, 0.03, 0.03], mvec: [0.175, 0.175, 0.175, 0.175, 0.172],
+    short_p: 12.70, short_down: -32.3, short_score: 44, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "90 % svetovni monopolist pri samozatemnitvenih (elektrokromatskih) avtomobilskih ogledalih, digitalnih ogledalih Full Display Mirror (FDM) in zatemnitvenih oknih za Boeing/Airbus.",
+    why_v1: "Ničelni finančni dolg ($0), ~9 % Owner Earnings donosnost, agresiven odkup 9,6 % lastnih delnic v 21 mesecih in 3–4x višja cena na enoto pri FDM.",
+    why_v2: "Agent 2 znižal IV za -22,8 % ($30,03 → $23,19): upošteval 20 % odbitek na Level 2 obveznice, $105M pogojnih obveznosti VOXX, VC odpise vodstva ($36M) ter padec na Kitajskem/VW. MoS +19,1 % (čaka mejo $16,23).",
+    s_flags: "Vodstvo je v 9M 2026 odpisalo $36,03M na netržnih VC naložbah in posojilih zagonskim podjetjem (Vaporsens $5,8M + $16,9M oslabitve startupov + $13,3M kreditnih izgub), prevzem VOXX pa redči maržo.",
+    s_moat: "Padec prihodkov na Kitajskem za -28,2 % YoY in v Nemčiji za -29,5 % YoY (izguba programa pri Volkswagnu -16,6M USD v Q3 2026) ter dolgoročna zamenjava ogledal s kamerami.",
+    s_debt: "Bilanca je brez bančnega dolga (0 USD), a pogojne obveznosti VOXX, deklarirana dividenda in FIN 48 rezervacije znašajo $105M.",
+    s_cat: "Nadaljnja izguba OEM programov pri evropskih proizvajalcih vozil ali novi odpisi v portfelju Technology Investments.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 30.03, d: 0 },
+      { step: "Korak 1 (SOTP & VOXX obveznosti)", desc: "20% odbitek na $103.4M obveznic, $105M pogojnih obveznosti VOXX in 208.1M delnic", iv: 29.71, d: -0.32 },
+      { step: "Korak 2 (Omejitev FDII olajšave)", desc: "Dvig davčne stopnje s 17.5% na 18.5% ob padcu izvoza na Kitajsko", iv: 29.34, d: -0.37 },
+      { step: "Korak 3 (Redčenje marže VOXX & VC)", desc: "Znižanje EBIT marže z 18.5–19.0% na 17.5% -> 17.0%", iv: 27.36, d: -1.98 },
+      { step: "Korak 4 (WACC 10% & VW/Kitajska)", desc: "Znižanje rasti na 2.5–3.0% (g_term 2.0%) in dvig WACC na 10.0%", iv: 23.19, d: -4.17 }
+    ]
+  },
+  { t: "CTSH", n: "Cognizant Technology", sec: "IT Services & Engineering", roic: 18.45, p: 58.06, v1: 90.58, v2: 71.66, buy: 50.16, mos: 18.98, dpct: -20.9, dusd: -18.92, oey: 9.36, oem: 2446.0, rdcf: -0.38, mcap: 26127.0, z: "UNDER", pess: 47.26, real: 72.35, opt: 94.68, ec: 1114.18, nc: -1873.82, rev: 21891.0, tax: 0.26, da: 0.0262, nwc: 0.08, sh: 450.0, wacc: 0.095, tg: 0.02, gvec: [0.03, 0.03, 0.03, 0.028, 0.025], mvec: [0.154, 0.154, 0.153, 0.152, 0.151],
+    short_p: 41.59, short_down: -28.4, short_score: 44, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Globalni ponudnik IT svetovanja, modernizacije jedrnih sistemov in digitalnega inženiringa za zdravstvo in finančne institucije (Fortune 500).",
+    why_v1: "9,36 % Owner Earnings donosnost in negativna implicirana rast v tržnem tečaju (-0,38 %/l).",
+    why_v2: "Agent 2 znižal IV za -20,9 % ($90,58 → $71,66) zaradi pritiska AI avtomatizacije na obračun ur, 26 % davčne stopnje (indijski spori) in dolga po prevzemu Belcan. MoS +19,0 % (čaka mejo $50,16).",
+    s_flags: "Rastoči davčni spori v Indiji in ZDA (26 % efektivna davčna stopnja) ter povečanje dolga po prevzemu inženirskega podjetja Belcan za $1,3 mrd.",
+    s_moat: "Strukturna nevarnost, da generativna AI zmanjša potrebo po velikih ekipah zunanjih razvijalcev v Indiji za 25–40 % v naslednjih 5 letih.",
+    s_debt: "Po odštetju 5 % operativnega denarnega blažilnika ($1,09 mrd) in dolga/najemov je SOTP neto položaj -1,87 mrd USD.",
+    s_cat: "Krčenje organskih prihodkov v finančnem in zdravstvenem sektorju ter dvig fluktuacije zaposlenih.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 90.58, d: 0 },
+      { step: "Korak 1 (Belcan dolg & Indijski davki)", desc: "Vključitev -$1.87 mrd neto dolga/pogojnih davčnih obveznosti in 26% davčne stopnje", iv: 81.20, d: -9.38 },
+      { step: "Korak 2 (AI deflacija IT storitev)", desc: "Znižanje rasti prihodkov na 2.5–3.0% in EBIT marže na 15.1%", iv: 71.66, d: -9.54 }
+    ]
+  },
+  { t: "PRDO", n: "Perdoceo Education Corp", sec: "Accredited Online Universities", roic: 32.8, p: 27.47, v1: 36.91, v2: 31.42, buy: 21.99, mos: 12.57, dpct: -14.9, dusd: -5.49, oey: 8.54, oem: 148.46, rdcf: -3.5, mcap: 1737.5, z: "UNDER", pess: 22.78, real: 31.93, opt: 39.04, ec: 612.86, nc: 451.54, rev: 862.6, tax: 0.265, da: 0.0145, nwc: 0.04, sh: 63.251, wacc: 0.1, tg: 0.015, gvec: [0.02, 0.02, 0.02, 0.018, 0.018], mvec: [0.235, 0.228, 0.222, 0.216, 0.21],
+    short_p: 21.37, short_down: -22.2, short_score: 25, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Operater akreditiranih spletnih univerz (CTU, AIU System) z visoko FCF konverzijo in +$451,5M čiste neto gotovine (~26 % tržne kapitalizacije po odbitku regulatornega blažilnika).",
+    why_v1: "Izjemno nizko vrednotenje operativnega posla po odštetju neto gotovine (Reverse DCF = -3,5 %/leto).",
+    why_v2: "Agent 2 znižal IV za -14,9 % ($36,91 → $31,42): odkril $7,58M črpanja rezervacij za slabe študentske terjatve (Note 5), -7,3 % padec Billings in regulatorni blažilnik Title IV. MoS +12,6 %.",
+    s_flags: "V Note 5 odkrito $7,58M enkratnega črpanja rezervacij za slabe študentske terjatve (knjiženi strošek $15,45M proti $23,03M dejanskih odpisov v 9M 2026) ter -7,3 % YoY padec zaračunanih šolnin (Billings).",
+    s_moat: "Visoka regulatorna odvisnost od zveznega financiranja študentov (Title IV / pravilo 90/10 in GI Bill / DoD šolnine); vsaka zaostritev pravil Ministrstva za izobraževanje ZDA neposredno ogrozi vpis.",
+    s_debt: "Čeprav ima +451,5M USD čiste neto gotovine, mora vzdrževati visok regulatorni likvidnostni blažilnik (Title IV Composite Score >= 1,5).",
+    s_cat: "Nadaljnji padec Billings za >-8 % YoY v naslednjem 10-Q ali preiskava Department of Education glede rekrutiranja študentov.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 36.91, d: 0 },
+      { step: "Korak 1 (Title IV blažilnik & FIN 48)", desc: "Zaklep regulatornega denarnega blažilnika in FIN 48 obresti (neto gotovina +$451.5M)", iv: 34.80, d: -2.11 },
+      { step: "Korak 2 (Črpanje rezervacij terjatev)", desc: "Odštetje $7.58M črpanja Allowance for Credit Losses in upočasnitev Billings (-7.3%)", iv: 31.42, d: -3.38 }
+    ]
+  },
+  { t: "HRMY", n: "Harmony Biosciences", sec: "Orphan Neurology BioPharma", roic: 48.5, p: 32.59, v1: 46.5, v2: 36.27, buy: 25.39, mos: 10.15, dpct: -22.0, dusd: -10.23, oey: 9.24, oem: 183.17, rdcf: -5.92, mcap: 1983.1, z: "UNDER", pess: 23.96, real: 34.13, opt: 52.88, ec: 1001.61, nc: 703.92, rev: 989.36, tax: 0.23, da: 0.015, nwc: 0.05, sh: 60.85, wacc: 0.105, tg: 0.015, gvec: [0.095, 0.075, 0.04, -0.12, -0.28], mvec: [0.235, 0.24, 0.235, 0.19, 0.15],
+    short_p: 22.76, short_down: -30.2, short_score: 36, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Specializirano biofarmacevtsko podjetje za redke nevrološke motnje; komercializira WAKIX (pitolisant) — edino ne-stimulativno zdravilo za narkolepsijo.",
+    why_v1: "+$704M čiste neto gotovine (~36 % tržne kapitalizacije), 9,24 % Owner Earnings donosnost in Reverse DCF -5,92 %/l.",
+    why_v2: "Agent 2 znižal IV za -22,0 % ($46,50 → $36,27) zaradi patentnega klifa WAKIX leta 2030, skoka licenčnin na 29,1 % prihodkov in $140M razvojnih mejnikov. MoS +10,2 % (čaka mejo $25,39).",
+    s_flags: "100 % prihodkov prihaja iz ene same molekule (WAKIX / pitolisant), kjer so licenčnine Bioprojetu, Novitiumu in MSN-ju v Q3 2026 poskočile na 29,12 % prihodkov (bruto marža padla za -509 bps YoY na 70,0 %).",
+    s_moat: "Trdi patentni klif leta 2030: po poravnavah z generiki (Novitium, MSN, Lupin) generični pitolisant vstopi na trg marca/julija 2030, 100 % prodaje pa teče prek le 3 PBM distributerjev.",
+    s_debt: "Čeprav ima podjetje +703,9M USD čiste neto gotovine, ima $428,25M pogodbenih razvojnih mejnikov in tveganje neuspeha Faze 3 za Pitolisant HD.",
+    s_cat: "Morebitni neuspeh klinične študije Faze 3 za Pitolisant HD ali Fragile X (ZYN002) ter pritisk PBM-jev na neto rabate.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 46.50, d: 0 },
+      { step: "Korak 1 (SOTP mejniki $140M & delnice)", desc: "Povečanje rezervacije za Bioprojet/Epygenix/MSN/Novitium mejnike na $140M in 60.85M delnic", iv: 45.30, d: -1.20 },
+      { step: "Korak 2 (Strukturni davek 23%)", desc: "Dvig davčne stopnje po izteku vrha Orphan Drug olajšav Faze 3", iv: 44.69, d: -0.61 },
+      { step: "Korak 3 (Padec bruto marže na 70%)", desc: "Skok licenčnin Novitium/MSN/Bioprojet na 29.1% prihodkov in stalni IPR&D", iv: 40.11, d: -4.58 },
+      { step: "Korak 4 (Patentni klif WAKIX 2030)", desc: "Modeliranje padca prihodkov 2030–2032 (-12% / -28% / -12%) ob vstopu generikov", iv: 36.27, d: -3.84 }
+    ]
+  },
+  { t: "BRBR", n: "BellRing Brands, Inc.", sec: "Active Nutrition (Premier Protein)", roic: 42.91, p: 14.57, v1: 25.95, v2: 14.66, buy: 10.26, mos: 0.59, dpct: -43.5, dusd: -11.29, oey: 10.3, oem: 177.85, rdcf: 5.38, mcap: 1726.3, z: "UNDER", pess: 4.97, real: 14.92, opt: 23.82, ec: 0.0, nc: -1165.52, rev: 2398.4, tax: 0.23, da: 0.015, nwc: 0.065, sh: 118.483, wacc: 0.1, tg: 0.02, gvec: [0.045, 0.045, 0.04, 0.04, 0.035], mvec: [0.1054, 0.1054, 0.1054, 0.1054, 0.1054],
+    short_p: 4.37, short_down: -70.0, short_score: 52, short_verdict: "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    what: "Vodilni ameriški proizvajalec beljakovinskih napitkov (Premier Protein, Dymatize) z asset-light modelom pogodbenega polnjenja in 42,9 % mediano ROIC.",
+    why_v1: "Močna rast kategorije RTD beljakovinskih napitkov in visok ROIC sta v Krogu 1 nakazovala v1 = $25,95.",
+    why_v2: "Agent 2 znižal IV za -43,5 % ($25,95 → $14,66): upošteval -$1,17 mrd neto dolga, inflacijo sirotkinih beljakovin in >65 % koncentracijo kupcev (Costco/Walmart). Poštena cena (+0,6 % MoS).",
+    s_flags: "Ekstremna koncentracija kupcev: dva trgovca (Costco in Walmart/Sam's Club) predstavljata >65 % celotne prodaje Premier Protein napitkov.",
+    s_moat: "Inflacija cen sirotkinih beljakovin (whey protein) in vstop trgovskih lastnih blagovnih znamk (Kirkland / Great Value RTD protein) lahko stisneta bruto maržo za 400–600 bps.",
+    s_debt: "Visok čisti SOTP neto dolg (-1,17 mrd USD) in dolgoročne pogodbene zaveze zunanjim polnilcem (co-packers).",
+    s_cat: "Izguba promocijskega prostora v Costco katalogu ali skok stroškov surovin nad 35 % prodaje.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 25.95, d: 0 },
+      { step: "Korak 1 (SOTP neto dolg -$1.17 mrd)", desc: "Polna obremenitev finančnega dolga, najemov in pogodbenih zavez polnilcem", iv: 24.10, d: -1.85 },
+      { step: "Korak 2 (Inflacija sirotke & marža)", desc: "Normalizacija EBIT marže in WACC 10.0%", iv: 14.66, d: -9.44 }
+    ]
+  },
+  { t: "CBT", n: "Cabot Corporation", sec: "Specialty Chemicals & Carbons", roic: 17.71, p: 70.48, v1: 89.45, v2: 65.61, buy: 45.93, mos: -7.42, dpct: -26.7, dusd: -23.84, oey: 5.33, oem: 196.0, rdcf: 11.1, mcap: 3679.1, z: "TRAP", pess: 30.82, real: 63.93, opt: 103.76, ec: 179.12, nc: -1543.88, rev: 3744.0, tax: 0.28, da: 0.051, nwc: 0.08, sh: 52.2, wacc: 0.095, tg: 0.02, gvec: [0.03, 0.03, 0.03, 0.03, 0.03], mvec: [0.13, 0.13, 0.13, 0.13, 0.13],
+    short_p: 27.12, short_down: -61.5, short_score: 65, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Vodilni globalni proizvajalec saj za pnevmatike (Reinforcing Carbons) in specialnih kemikalij / prevodnih ogljikov za baterije.",
+    why_v1: "Stabilen oligopolni položaj pri pnevmatikah je v v1 dal $89,45.",
+    why_v2: "RAZKRIT PRECENJEN / CIKLIČNI VRH (MoS -7,4 %, v2 = $65,61 vs tečaj $70,48): Agent 2 odštel obvezni okoljski EPA CapEx, -$1,54 mrd neto dolga in 28 % davčno stopnjo.",
+    s_flags: "Kapitalsko intenzivna kemična proizvodnja saj (Carbon Black), kjer okolijski predpisi EPA zahtevajo stotine milijonov dolarjev neproduktivnega vzdrževalnega CapExa za čistilne naprave.",
+    s_moat: "Uvoz cenejših pnevmatik iz Azije in počasnejši prehod na električna vozila (kjer je Cabot stavil na baterijske prevodne ogljike) zavirata rast.",
+    s_debt: "Visok čisti SOTP neto dolg (-1,54 mrd USD) in visoka 28 % efektivna davčna stopnja.",
+    s_cat: "Padec marže v segmentu Reinforcement Materials ob ohlajanju avtomobilske industrije.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 89.45, d: 0 },
+      { step: "Korak 1 (EPA CapEx & Neto dolg)", desc: "Vključitev -$1.54 mrd neto dolga in višjega vzdrževalnega/okoljskega CapExa", iv: 74.20, d: -15.25 },
+      { step: "Korak 2 (28% Davek & Ciklična marža)", desc: "Normalizacija EBIT marže na 13.0% in 28% efektivni davek", iv: 65.61, d: -8.59 }
+    ]
+  },
+  { t: "IESC", n: "IES Holdings, Inc.", sec: "Data Center & Electrical Infra", roic: 31.06, p: 156.06, v1: 145.06, v2: 141.86, buy: 99.3, mos: -10.01, dpct: -2.2, dusd: -3.2, oey: 2.91, oem: 188.12, rdcf: 13.49, mcap: 6457.5, z: "TRAP", pess: 68.84, real: 136.9, opt: 224.78, ec: 354.47, nc: -271.71, rev: 4477.91, tax: 0.257, da: 0.01, nwc: 0.08, sh: 41.378, wacc: 0.095, tg: 0.025, gvec: [0.15, 0.12, 0.09, 0.07, 0.06], mvec: [0.12, 0.11, 0.1, 0.09, 0.085],
+    short_p: 60.58, short_down: -61.2, short_score: 57, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Izvajalec elektroinštalacij, podatkovnih centrov ter stanovanjskih in industrijskih infrastrukturnih sistemov v ZDA.",
+    why_v1: "Eksplozivna rast naročil za gradnjo AI podatkovnih centrov (v1 = $145,06).",
+    why_v2: "PRECENJENO NA VRHU CIKLA (MoS -10,0 %, v2 = $141,86 vs tečaj $156,06): Agent 2 odštel odkupno vrednost neobvladujočih deležev (NCI) in normaliziral rekordne gradbene marže (12 % → 8,5 %).",
+    s_flags: "Tržni tečaj (156,06 USD) projicira rekordne 12 % gradbene in elektroinštalacijske marže v neskončnost (+2 standardna odklona nad 10-letno mediano ~6–7 %).",
+    s_moat: "Močna odvisnost od cikla gradnje hiperskaler podatkovnih centrov in ameriškega stanovanjskega trga; ob umiritvi AI CapEx mrzlice se marže elektroinštalaterjev vrnejo na 7–8 %.",
+    s_debt: "Obveznosti za odkup neobvladujočih manjšinskih deležev (NCI redeemable interests) v hčerinskih družbah znižujejo lastniško vrednost za navadne delničarje.",
+    s_cat: "Upad rasti naročil (Backlog) v segmentu Communications / Data Centers in padec operativne marže pod 10 %.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 145.06, d: 0 },
+      { step: "Korak 1 (NCI obveznosti & Cikel marž)", desc: "Odbitek neobvladujočih deležev (NCI) in konvergenca marže k 10L mediani", iv: 141.86, d: -3.20 }
+    ]
+  },
+  { t: "CROX", n: "Crocs, Inc.", sec: "Global Footwear (Crocs & HeyDude)", roic: 26.4, p: 154.67, v1: 181.29, v2: 138.84, buy: 97.19, mos: -11.4, dpct: -23.4, dusd: -42.45, oey: 7.91, oem: 586.87, rdcf: 3.88, mcap: 7417.1, z: "TRAP", pess: 76.09, real: 141.12, opt: 197.03, ec: 63.66, nc: -1735.88, rev: 4101.15, tax: 0.23, da: 0.0142, nwc: 0.05, sh: 47.954, wacc: 0.095, tg: 0.02, gvec: [0.028, 0.028, 0.025, 0.025, 0.025], mvec: [0.21, 0.208, 0.205, 0.202, 0.2],
+    short_p: 66.96, short_down: -56.7, short_score: 59, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Svetovni proizvajalec obutve Crocs (visokomaržni Croslite modeli) in prevzete znamke HeyDude.",
+    why_v1: "V1 ($181,29) je temeljil na visoki 24 %+ operativni marži blagovne znamke Crocs in nizkem P/E večkratniku.",
+    why_v2: "RAZKRIT VALUE TRAP (MoS -11,4 %, v2 = $138,84 vs tečaj $154,67): Agent 2 v Note 13 odkril $641M dolgoročnih davčnih obveznosti IP, $66,7M neplačanih tekočih davkov v OCF ter trajno krčenje znamke HeyDude.",
+    s_flags: "V Note 13 odkritih $641,56M dolgoročnih davčnih obveznosti iz internih prenosov IP pravic ter +$69,3M umetnega dviga 9M 2026 OCF zaradi zadrževanja plačil tekočih davkov.",
+    s_moat: "Prevzeta znamka HeyDude (kupljena za $2,5 mrd) doživlja strukturno krčenje prodaje v veleprodaji, medtem ko osnovna znamka Crocs v Severni Ameriki dosega zasičenost.",
+    s_debt: "SOTP neto dolg z najemi in davčnimi obveznostmi znaša -1,74 mrd USD; modni cikel obutve se lahko obrne v 2 četrtletjih.",
+    s_cat: "Nadaljnji dvomestni padec prihodkov znamke HeyDude (>-10 % YoY) in plačilo zadržanih denarnih davkov v Q4/Q1.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1 (izgledal +14.7% podcenjen)", iv: 181.29, d: 0 },
+      { step: "Korak 1 (Davčni dolg IP & OCF davki)", desc: "Vključitev neplačanih tekočih davkov ($66.7M), FIN 48 obresti in -$1.74 mrd neto dolga", iv: 168.40, d: -12.89 },
+      { step: "Korak 2 (23% GAAP davek & HeyDude)", desc: "Dvig davka z 18% Non-GAAP na 23% GAAP ter znižanje marže na 21% -> 20%", iv: 138.84, d: -29.56 }
+    ]
+  },
+  { t: "ACN", n: "Accenture plc", sec: "Global IT Consulting", roic: 26.69, p: 221.17, v1: 241.4, v2: 195.37, buy: 136.76, mos: -13.21, dpct: -19.1, dusd: -46.03, oey: 5.67, oem: 7589.59, rdcf: 6.03, mcap: 133869.8, z: "TRAP", pess: 133.93, real: 195.55, opt: 256.44, ec: 11354.1, nc: -5613.62, rev: 74183.45, tax: 0.251, da: 0.0078, nwc: 0.03, sh: 605.28, wacc: 0.095, tg: 0.025, gvec: [0.038, 0.038, 0.035, 0.035, 0.032], mvec: [0.159, 0.156, 0.154, 0.152, 0.15],
+    short_p: 117.86, short_down: -46.7, short_score: 51, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Največja svetovna družba za IT svetovanje, sistemsko integracijo in upravljane storitve.",
+    why_v1: "Vrhunska bilanca, visok ROIC in vodilna vloga pri korporativnih AI projektih (v1 = $241,40).",
+    why_v2: "PRECENJENO (MoS -13,2 %, v2 = $195,37 vs tečaj $221,17): Agent 2 odštel serijske M&A prevzeme (~$3–4 mrd/l kot prikriti vzdrževalni CapEx za ohranjanje rasti) in polni strošek SBC.",
+    s_flags: "Podjetje porabi večino prostega denarnega toka (~3–4 mrd USD/leto) za serijske prevzeme manjših IT agencij, kar prikazuje kot 'organsko' rast, v resnici pa gre za prikriti vzdrževalni CapEx.",
+    s_moat: "Generativna AI neposredno deflacionira model obračunavanja inženirskih ur (Time & Materials); naročniki zahtevajo 20–30 % nižje cene za vzdrževanje kode.",
+    s_debt: "Po odštetju operativnega denarnega blažilnika (5 % od $74,2 mrd = $3,71 mrd), najemov in odloženih obveznosti je SOTP neto položaj negativen (-5,61 mrd USD).",
+    s_cat: "Padec novih rezervacij (New Bookings) v svetovalnem segmentu in kompresija GAAP operativne marže pod 14,5 %.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 241.40, d: 0 },
+      { step: "Korak 1 (M&A kot prikriti CapEx & SBC)", desc: "Odštetje serijskih prevzemov iz prostega denarnega toka in 25.1% davčna stopnja", iv: 195.37, d: -46.03 }
+    ]
+  },
+  { t: "CARG", n: "CarGurus, Inc.", sec: "Auto Marketplace SaaS", roic: 34.5, p: 31.8, v1: 37.94, v2: 27.38, buy: 19.16, mos: -16.15, dpct: -27.8, dusd: -10.56, oey: 6.03, oem: 172.72, rdcf: 5.11, mcap: 2865.9, z: "TRAP", pess: 15.86, real: 27.88, opt: 37.9, ec: 119.39, nc: -83.4, rev: 993.99, tax: 0.235, da: 0.0308, nwc: 0.04, sh: 90.121, wacc: 0.095, tg: 0.02, gvec: [0.07, 0.06, 0.05, 0.045, 0.04], mvec: [0.245, 0.24, 0.235, 0.23, 0.225],
+    short_p: 13.96, short_down: -56.1, short_score: 63, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Največja spletna tržnica rabljenih vozil v ZDA (CarGurus Marketplace) z naročniškim modelom za trgovce.",
+    why_v1: "V1 ($37,94) je po zaprtju izgubarske divizije CarOffer projiciral skokovito rast čistih SaaS marž.",
+    why_v2: "RAČUNOVODSKA PAST KAPITALIZACIJE (MoS -16,2 %, v2 = $27,38 vs tečaj $31,80): Agent 2 v Note 2/6 odkril $18,9M razkorak med agresivno kapitalizacijo razvoja ($34,5M/l) in zakasnjeno amortizacijo ($15,6M/l).",
+    s_flags: "Agresivna računovodska kapitalizacija razvoja spletnih strani in oblačnega gostovanja (Note 2 & 6): v FY25 kapitaliziranih $34,50M proti le $15,60M amortizacije (+18,9M umetni dvig GAAP EBIT!). V Q3 2026 je amortizacija že poskočila za +92 % YoY.",
+    s_moat: "Avtomobilski trgovci ob pritisku na marže rabljenih vozil krčijo oglaševalske proračune in prehajajo na cenejše kanale ali Carvana/AutoTrader.",
+    s_debt: "Enkratni denarni učinek porabe predplačanih davkov ($19,4M Prepaid taxes v 9M 2026) je izčrpan, zato bo v naslednjih četrtletjih denarni davek skočil na polnih 23,5 %.",
+    s_cat: "Nadaljnji +50 % YoY skok amortizacije kapitaliziranega razvoja v Cost of Revenue in stagnacija povprečnega prihodka na trgovca (QARSD).",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1 (izgledal +16.2% podcenjen)", iv: 37.94, d: 0 },
+      { step: "Korak 1 (Kapitalizacija razvoja = CapEx)", desc: "Zajem polnih $36.6M/l kapitaliziranega razvoja in gostovanja v CapEx (Pravilo #32)", iv: 31.20, d: -6.74 },
+      { step: "Korak 2 (Skok amortizacije & davek)", desc: "Konvergenca amortizacije v Cost of Revenue in poraba Prepaid taxes", iv: 27.38, d: -3.82 }
+    ]
+  },
+  { t: "DHI", n: "D.R. Horton, Inc.", sec: "US Residential Homebuilder", roic: 14.3, p: 145.44, v1: 159.59, v2: 122.26, buy: 85.58, mos: -18.96, dpct: -23.4, dusd: -37.33, oey: 5.58, oem: 2256.1, rdcf: 7.44, mcap: 40417.8, z: "TRAP", pess: 68.66, real: 122.69, opt: 174.98, ec: 1399.53, nc: -5327.17, rev: 33043.4, tax: 0.255, da: 0.0035, nwc: 0.12, sh: 277.9, wacc: 0.095, tg: 0.02, gvec: [-0.062, 0.035, 0.04, 0.04, 0.035], mvec: [0.11, 0.12, 0.125, 0.125, 0.125],
+    short_p: 60.42, short_down: -58.5, short_score: 65, short_verdict: "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    what: "Največji gradbinec stanovanjskih hiš v ZDA s poudarkom na cenovno dostopnih prvih domovih.",
+    why_v1: "V1 ($159,59) je projiciral nadaljevanje nadpovprečnih post-COVID gradbenih marž.",
+    why_v2: "CIKLIČNA PRECENJENOST (MoS -19,0 %, v2 = $122,26 vs tečaj $145,44): Agent 2 normaliziral maržo na 11–12,5 % zaradi stroškov subvencioniranja hipotek kupcem (rate buydowns) in 12 % vezave NWC v zemljiščih.",
+    s_flags: "Bruto marže gradbincev hiš so umetno podprte z agresivnim subvencioniranjem hipotekarnih obrestnih mer kupcem (mortgage rate buydowns), kar pri visokih obrestnih merah vse bolj nažira dobiček.",
+    s_moat: "Ciklična panoga z visoko vezavo kapitala v parcelah in nedokončanih hišah (12 % Δ prihodkov gre v NWC); ob rasti brezposelnosti se prodaja prvih domov ustavi.",
+    s_debt: "SOTP neto dolg in obveznosti (-5,33 mrd USD) ob velikih pogodbenih zavezah za odkup zemljiških opcij (Land option contracts).",
+    s_cat: "Rast odpovedi pogodb kupcev (Cancellation rate > 23 %) in padec bruto marže pri prodaji hiš pod 21 %.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 159.59, d: 0 },
+      { step: "Korak 1 (Subvencije hipotek & NWC)", desc: "Znižanje EBIT marže na 11–12.5% in -$5.33 mrd neto dolga", iv: 122.26, d: -37.33 }
+    ]
+  },
+  { t: "WU", n: "Western Union Co.", sec: "Cross-Border Remittances", roic: 55.32, p: 5.92, v1: 9.51, v2: 4.55, buy: 3.18, mos: -30.11, dpct: -52.2, dusd: -4.96, oey: 14.06, oem: 261.0, rdcf: 5.48, mcap: 1855.9, z: "SHORT", pess: -0.69, real: 4.15, opt: 10.58, ec: 697.73, nc: -2458.17, rev: 4013.6, tax: 0.21, da: 0.0408, nwc: 0.0, sh: 313.5, wacc: 0.1, tg: -0.01, gvec: [-0.02, -0.02, -0.02, -0.015, -0.015], mvec: [0.138, 0.148, 0.15, 0.15, 0.148],
+    short_p: 1.00, short_down: -83.1, short_score: 73, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Tradicionalni svetovni ponudnik čezmejnih denarnih nakazil z mrežo fizičnih agentov.",
+    why_v1: "V1 ($9,51) je privabil navidezno nizek P/E (~6x) in visoko poročano donosnost.",
+    why_v2: "KLASIČNI VALUE TRAP / TALEČI SE LED (MoS -30,1 %, v2 = $4,55 vs tečaj $5,92): Agent 2 razkril -$2,46 mrd neto dolga in strukturno -2 % letno krčenje gotovinskih koridorjev proti Wise/Remitly.",
+    s_flags: "Klasična past za vrednostne vlagatelje (Value Trap): optično nizek P/E (~6x) skriva posel, ki se strukturno tali po -2 % do -5 % letno.",
+    s_moat: "Digitalni konkurenti (Wise, Remitly, Revolut) in stabilni kovanci (USDC) jemljejo najbolj dobičkonosne koridorje; fizični agenti zahtevajo vse višje provizije.",
+    s_debt: "Ogromen čisti SOTP neto dolg (-2,46 mrd USD) pomeni, da ob krčenju EBIT ves vzvod deluje proti lastniškemu kapitalu (v pesimističnem scenariju je lastniški kapital vreden 0 USD!).",
+    s_cat: "Znižanje ali ukinitev dividende zaradi refinanciranja dolga po višjih obrestnih merah ter >5 % YoY padec prihodkov v C2C segmentu.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 9.51, d: 0 },
+      { step: "Korak 1 (Neto dolg -$2.46 mrd & taljenje)", desc: "Modeliranje -2.0% letnega krčenja prihodkov, negativne terminalne rasti (-1%) in polnega dolga", iv: 4.55, d: -4.96 }
+    ]
+  },
+  { t: "LQDT", n: "Liquidity Services, Inc.", sec: "B2B Surplus Auction Marketplaces", roic: 48.33, p: 31.87, v1: 25.56, v2: 23.56, buy: 16.49, mos: -35.29, dpct: -7.8, dusd: -2.0, oey: 3.55, oem: 36.9, rdcf: 8.88, mcap: 1039.3, z: "SHORT", pess: 15.67, real: 23.43, opt: 31.7, ec: 215.61, nc: 207.34, rev: 477.91, tax: 0.31, da: 0.016, nwc: -0.02, sh: 32.61, wacc: 0.095, tg: 0.025, gvec: [0.08, 0.075, 0.07, 0.06, 0.055], mvec: [0.1, 0.1, 0.095, 0.095, 0.09],
+    short_p: 14.89, short_down: -53.3, short_score: 72, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Upravljavec B2B spletnih dražbenih tržnic za presežne zaloge in vladna sredstva (GovDeals, AllSurplus).",
+    why_v1: "Visoka rast bruto vrednosti dražb (GMV) in čista gotovina na bilanci (v1 = $25,56).",
+    why_v2: "PRECENJENO (MoS -35,3 %, v2 = $23,56 vs tečaj $31,87): Velik del gotovine so prehodne obveznosti do prodajalcev na dražbah (Consignment payables) ob 31 % efektivnem davku.",
+    s_flags: "Optična 'neto gotovina' na bilanci je v veliki meri tuj denar — prehodne obveznosti do prodajalcev na dražbah (Consignment payables), ki jih podjetje ne sme porabiti za delničarje.",
+    s_moat: "Nizka konverzija GMV v čisti GAAP operativni dobiček (~3,5 % Owner Earnings donosnost) in visoka 31 % efektivna davčna stopnja.",
+    s_debt: "Ob ohlajanju cen rabljenih vozil in gradbene opreme na dražbah GovDeals provizija na transakcijo pade neposredno iz čistega dobička.",
+    s_cat: "Upad GMV rasti pod +5 % YoY in krčenje take-rate provizije v segmentu Retail Supply Chain.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 25.56, d: 0 },
+      { step: "Korak 1 (Consignment obveznosti & 31% davek)", desc: "Odbitek vezanega dražbenega denarja in 31% davčna stopnja", iv: 23.56, d: -2.00 }
+    ]
+  },
+  { t: "MWA", n: "Mueller Water Products", sec: "Municipal Water Infrastructure", roic: 16.68, p: 23.62, v1: 17.94, v2: 16.72, buy: 11.7, mos: -41.26, dpct: -6.8, dusd: -1.22, oey: 3.89, oem: 144.4, rdcf: 9.64, mcap: 3715.4, z: "SHORT", pess: 10.7, real: 16.52, opt: 23.15, ec: 536.5, nc: -7.0, rev: 1475.0, tax: 0.25, da: 0.034, nwc: 0.08, sh: 157.3, wacc: 0.09, tg: 0.025, gvec: [-0.014, 0.03, 0.035, 0.035, 0.03], mvec: [0.19, 0.18, 0.17, 0.16, 0.155],
+    short_p: 9.42, short_down: -60.1, short_score: 74, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Proizvajalec vodovodne infrastrukture, požarnih hidrantov in ventilov za občine v ZDA.",
+    why_v1: "Stoletni oligopol pri ameriških požarnih hidrantih (v1 = $17,94).",
+    why_v2: "PRECENJENO (MoS -41,3 %, v2 = $16,72 vs tečaj $23,62): Tečaj močno prehitel temeljne denarne tokove (3,89 % OE donos) ob kapitalski intenzivnosti livarn.",
+    s_flags: "Tržni tečaj (23,62 USD) vračunava skoraj 10 % letno rast FCF za 100-letno livarsko podjetje, ki je v zadnjem desetletju raslo komaj v skladu z inflacijo.",
+    s_moat: "Po zaključku enkratnega cikla obnov občinskih vodovodov (ARPA sredstva) se naročila hidrantov in ventilov vračajo na nizko enomestno rast ob rastočih stroških surovega železa.",
+    s_debt: "Garancijske rezervacije za pametne vodomere (Krog 2 odkril zgodovinske odpise v segmentu Metrology) in stara livarska oprema.",
+    s_cat: "Padec bruto marže pod 33 % in krčenje knjige naročil (Backlog) v naslednjem četrtletju.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 17.94, d: 0 },
+      { step: "Korak 1 (Garancijske rezervacije & marža)", desc: "Normalizacija marže z 19% na 15.5% po cikličnem skoku cen", iv: 16.72, d: -1.22 }
+    ]
+  },
+  { t: "YELP", n: "Yelp Inc.", sec: "Local Services Advertising", roic: 19.8, p: 18.19, v1: 20.95, v2: 12.36, buy: 8.65, mos: -47.13, dpct: -41.0, dusd: -8.59, oey: 7.73, oem: 77.07, rdcf: 3.53, mcap: 996.6, z: "SHORT", pess: 4.19, real: 12.39, opt: 20.48, ec: 77.28, nc: -100.36, rev: 1467.88, tax: 0.305, da: 0.0302, nwc: 0.04, sh: 54.787, wacc: 0.1, tg: 0.015, gvec: [0.0, 0.005, 0.01, 0.015, 0.015], mvec: [0.1, 0.098, 0.095, 0.095, 0.092],
+    short_p: 3.69, short_down: -79.7, short_score: 84, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Lokalna oglaševalska platforma in imenik storitvenih ponudnikov (domači mojstri, restavracije) v ZDA.",
+    why_v1: "V1 ($20,95) je izgledal podcenjen na osnovi Non-GAAP EBITDA in bilance brez finančnega dolga.",
+    why_v2: "RAZKRIT VALUE TRAP (MoS -47,1 %, v2 = $12,36 vs tečaj $18,19): Agent 2 odštel ekstremni SBC (>11 % prihodkov), $19,3M retencijskih plačil Hatch, $15M odpravnin (8-K 18. 11. 2026) in 30,5 % davek zaradi RSU primanjkljajev.",
+    s_flags: "Ekstremni SBC (>11 % prihodkov), $19,32M skritih post-prevzemnih retencijskih plačil za Hatch v Accrued liabilities, $15M odpravnin (Form 8-K 18. 11. 2026) in 30,5 % efektivni davek zaradi RSU davčnih primanjkljajev.",
+    s_moat: "Strukturno izgubljanje prometa proti Google Maps, Apple Maps in AI iskalnikom (ChatGPT/Perplexity); število plačljivih oglaševalskih lokacij v restavracijah in trgovini pada.",
+    s_debt: "Po odbitku $130,9M operativnega blažilnika in $100,4M pogojnih/najemnih obveznosti izkazuje negativen SOTP denarni položaj (-100,36 M USD).",
+    s_cat: "Padec prihodkov v segmentu Services pod +5 % YoY in nadaljnji RSU davčni primanjkljaji ob tečaju pod $20.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1 (izgledal +13.2% podcenjen)", iv: 20.95, d: 0 },
+      { step: "Korak 1 (Hatch retencije & 8-K odpravnine)", desc: "Vključitev $19.3M post-prevzemnih plačil Hatch, $7.6M zadržkov in $15M odpravnin (Pravilo #31)", iv: 18.90, d: -2.05 },
+      { step: "Korak 2 (30.5% davek zaradi RSU shortfall)", desc: "Dvig davčne stopnje na 30.5% in znižanje GAAP EBIT marže po SBC na 9.5%", iv: 12.36, d: -6.54 }
+    ]
+  },
+  { t: "ACM", n: "AECOM", sec: "Infrastructure Engineering", roic: 15.25, p: 78.65, v1: 57.22, v2: 43.64, buy: 30.55, mos: -80.22, dpct: -23.7, dusd: -13.58, oey: 4.27, oem: 435.8, rdcf: 12.75, mcap: 10212.9, z: "SHORT", pess: 16.41, real: 42.19, opt: 73.76, ec: 940.38, nc: -2861.85, rev: 15096.37, tax: 0.22, da: 0.009, nwc: 0.03, sh: 129.853, wacc: 0.095, tg: 0.02, gvec: [0.015, 0.035, 0.04, 0.035, 0.035], mvec: [0.045, 0.048, 0.05, 0.052, 0.052],
+    short_p: 14.44, short_down: -81.6, short_score: 98, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Globalno inženirsko in infrastrukturno svetovalno podjetje za promet, energetiko in okoljske projekte.",
+    why_v1: "Rekordna knjiga naročil iz državnih infrastrukturnih paketov (v1 = $57,22).",
+    why_v2: "MOČNO PRECENJENO (MoS -80,2 %, v2 = $43,64 vs tečaj $78,65): Tanka dejanska GAAP operativna marža (~5 % na bruto prihodke) in -$2,86 mrd neto dolga z najemi.",
+    s_flags: "Poročani bruto prihodki (15,1 mrd USD) vključujejo ogromno prehodnih podizvajalskih stroškov (pass-through costs), dejanska GAAP EBIT marža pa je le ~4,5–5,0 %.",
+    s_moat: "Fiksne cene pri kompleksnih državnih infrastrukturnih projektih pomenijo, da inflacija inženirskih plač in zamude takoj izbrišejo tanko maržo.",
+    s_debt: "Visok SOTP neto dolg z operativnimi najemi (-2,86 mrd USD) in visoke neizterjane pogodbene terjatve (Unbilled receivables / Contract assets).",
+    s_cat: "Odpis terjatev na velikem infrastrukturnem projektu ali zamrznitev zveznih infrastrukturnih sredstev (IIJA).",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 57.22, d: 0 },
+      { step: "Korak 1 (SOTP neto dolg -$2.86 mrd & 5% marža)", desc: "Polni odbitek dolga, najemov in normalizacija inženirske marže", iv: 43.64, d: -13.58 }
+    ]
+  },
+  { t: "EACO", n: "EACO Corporation", sec: "Electronic Components Dist.", roic: 22.51, p: 149.49, v1: 105.58, v2: 78.64, buy: 55.05, mos: -90.1, dpct: -25.5, dusd: -26.94, oey: 2.02, oem: 14.83, rdcf: 21.0, mcap: 732.5, z: "SHORT", pess: 41.16, real: 77.14, opt: 119.12, ec: 0.0, nc: -18.02, rev: 535.03, tax: 0.25, da: 0.0035, nwc: 0.22, sh: 4.9, wacc: 0.1, tg: 0.025, gvec: [0.075, 0.07, 0.06, 0.055, 0.05], mvec: [0.1, 0.09, 0.085, 0.08, 0.075],
+    short_p: 36.22, short_down: -75.8, short_score: 95, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Regionalni distributer elektronskih komponent, kablov in pritrdilnih elementov v ZDA (Bisco Industries).",
+    why_v1: "Visoka zgodovinska rast prihodkov (v1 = $105,58).",
+    why_v2: "MOČNO PRECENJENO (MoS -90,1 %, v2 = $78,64 vs tečaj $149,49): 22 % vezava obratnega kapitala v zalogah in vsega 2,02 % Owner Earnings donosnost.",
+    s_flags: "Izjemno visoka vezava obratnega kapitala v zalogah elektronskih komponent (22 % prirasta prihodkov gre v NWC), kar pušča vsega 2,02 % Owner Earnings donosnosti pri ceni 149,49 USD.",
+    s_moat: "Čisti posrednik/distributer brez lastne intelektualne lastnine; v deflacijskem ciklu polprevodnikov in pritrdilnih elementov bruto marža in vrednost zalog padeta hkrati.",
+    s_debt: "Zelo nizka likvidnost delnice (majhen free-float) in tveganje odpisov zastarelih zalog.",
+    s_cat: "Odpis zalog (Inventory write-down) in padec operativne marže pod 7 % v naslednjem 10-Q.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 105.58, d: 0 },
+      { step: "Korak 1 (22% vezava zalog NWC)", desc: "Upoštevanje visoke vezave kapitala v zalogah in normalizacija marže na 7.5–9%", iv: 78.64, d: -26.94 }
+    ]
+  },
+  { t: "MO", n: "Altria Group, Inc.", sec: "Tobacco & Nicotine Pouches", roic: 44.69, p: 74.87, v1: 62.08, v2: 38.64, buy: 27.05, mos: -93.77, dpct: -37.8, dusd: -23.44, oey: 5.4, oem: 6846.64, rdcf: 9.37, mcap: 126783.3, z: "SHORT", pess: 17.82, real: 39.14, opt: 58.46, ec: 3310.05, nc: -21993.91, rev: 23279.0, tax: 0.23, da: 0.015, nwc: 0.065, sh: 1693.379, wacc: 0.1, tg: 0.02, gvec: [0.045, 0.045, 0.04, 0.04, 0.035], mvec: [0.3458, 0.3458, 0.3458, 0.3458, 0.3458],
+    short_p: 15.68, short_down: -79.1, short_score: 97, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Največji ameriški proizvajalec tobačnih in brezdobnih nikotinskih izdelkov (Marlboro, NJOY, on!).",
+    why_v1: "Visoka trenutna operativna marža in dividendni tok (v1 = $62,08).",
+    why_v2: "PRECENJENO / STRUKTURNI UPAD (MoS -93,8 %, v2 = $38,64 vs tečaj $74,87): Agent 2 odštel -$21,99 mrd neto dolga in strukturni 8–10 % letni padec volumna cigaret.",
+    s_flags: "Optično nizek P/E skriva strukturo talečega se ledu: klasične cigarete (Marlboro) izgubljajo 8–10 % volumna letno, kar je hitreje od zmožnosti dvigovanja cen.",
+    s_moat: "Nepovraten beg potrošnikov v nelegalne e-cigarete za enkratno uporabo in konkurenčne nikotinske vrečke (ZYN / Philip Morris obvladuje >65 % trga ZDA).",
+    s_debt: "Masivni čisti SOTP neto dolg (-21,99 mrd USD) ob >6,8 mrd USD letnih izplačil dividend pušča minimalen prosti prostor ob padcu EBITDA.",
+    s_cat: "Padec volumna dimnih izdelkov za >10 % YoY v četrtletnem poročilu ali FDA prepoved mentola / znižanje nikotina.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 62.08, d: 0 },
+      { step: "Korak 1 (SOTP dolg -$22.0 mrd & upad volumna)", desc: "Polna obremenitev neto dolga, pravnih rezervacij in WACC 10.0%", iv: 38.64, d: -23.44 }
+    ]
+  },
+  { t: "WWD", n: "Woodward, Inc.", sec: "Aerospace & Industrial Controls", roic: 12.21, p: 326.56, v1: 127.83, v2: 121.27, buy: 84.89, mos: -169.29, dpct: -5.1, dusd: -6.56, oey: 1.91, oem: 381.03, rdcf: 19.65, mcap: 19952.8, z: "SHORT", pess: 69.43, real: 120.11, opt: 175.4, ec: 434.47, nc: -737.57, rev: 4356.93, tax: 0.21, da: 0.021, nwc: 0.08, sh: 61.1, wacc: 0.09, tg: 0.025, gvec: [0.065, 0.06, 0.055, 0.05, 0.045], mvec: [0.15, 0.15, 0.145, 0.145, 0.145],
+    short_p: 61.10, short_down: -81.3, short_score: 95, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Proizvajalec krmilnih sistemov za letalske motorje, turbine in industrijsko energetiko.",
+    why_v1: "Močan letalski cikel (Aerospace aftermarket) in tehnični jarek (v1 = $127,83).",
+    why_v2: "EKSTREMNO PRECENJENO (MoS -169,3 %, v2 = $121,27 vs tečaj $326,56): Trg plačuje >50x Owner Earnings (1,91 % donos) za kapitalsko intenzivnega dobavitelja.",
+    s_flags: "Tečaj (326,56 USD) pomeni >52x normalizirani Owner Earnings (1,91 % donosnost) za kapitalsko intenzivnega industrijskega dobavitelja z visoko vezavo obratnega kapitala (8 % Δ prihodkov).",
+    s_moat: "Vrhunec letalskega poprodajnega cikla (Aerospace aftermarket); ob normalizaciji dobavnih verig pri Boeingu in Airbusu bo rast visoko-maržnih rezervnih delov strmo upadla.",
+    s_debt: "Neto dolg SOTP (-737,6 M USD) in rastoči razvojni CapEx (140–200 M USD/l) žreta prosti denarni tok.",
+    s_cat: "Upad naročil v segmentu Industrial / Kitajska LNG tovornjaki in kompresija marže v Aerospace pod 18 %.",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 127.83, d: 0 },
+      { step: "Korak 1 (CapEx & NWC vezava)", desc: "Upoštevanje razvojnega CapExa in -$737.6M neto dolga", iv: 121.27, d: -6.56 }
+    ]
+  },
+  { t: "PANW", n: "Palo Alto Networks, Inc.", sec: "Enterprise Cybersecurity", roic: 22.6, p: 343.32, v1: 80.42, v2: 64.43, buy: 45.1, mos: -432.85, dpct: -19.9, dusd: -15.99, oey: 0.57, oem: 1585.0, rdcf: 37.23, mcap: 279805.8, z: "SHORT", pess: 32.92, real: 62.36, opt: 100.07, ec: 2841.4, nc: 2048.4, rev: 11480.0, tax: 0.22, da: 0.0211, nwc: -0.05, sh: 815.0, wacc: 0.095, tg: 0.03, gvec: [0.14, 0.13, 0.12, 0.11, 0.1], mvec: [0.135, 0.15, 0.165, 0.18, 0.19],
+    short_p: 31.27, short_down: -90.9, short_score: 93, short_verdict: "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    what: "Vodilni globalni ponudnik kibernetske varnosti (omrežni požarni zidovi, SASE, Cortex XSIAM).",
+    why_v1: "Močan konkurenčni jarek in visoka poročana Non-GAAP FCF marža iz vnaprej zaračunanih večletnih pogodb (v1 = $80,42).",
+    why_v2: "EKSTREMNO PRECENJENO (MoS -432,9 %, v2 = $64,43 vs tečaj $343,32): Po odštetju >$1,1 mrd letnega SBC je dejanski GAAP Owner Earnings donos le 0,57 % (tečaj zahteva 37 % letno rast 10 let zapored).",
+    s_flags: "Ekstremna razredčitev delničarjev prek SBC (>$1,1 mrd/leto), agresivno prikazovanje Non-GAAP FCF iz vnaprej pobranih večletnih naročnin (Deferred Revenue float) in skrivanje stroškov prevzemov.",
+    s_moat: "Prehod iz prodaje strojnih požarnih zidov v 'platformizacijo' z brezplačnimi 6–12 mesečnimi obdobji znižuje cenovno moč; Microsoft Sentinel/Defender odžira proračune velikih podjetij.",
+    s_debt: "Ob kakršnem koli upočasnjevanju rasti Billings (<12 %) se pozitiven denarni tok iz odloženih prihodkov obrne, tečaj pri >55x GAAP Owner Earnings pa nima nobene varnostne blazine.",
+    s_cat: "Padec rasti RPO / Billings pod 12 % YoY v naslednjem 10-Q; znižanje Non-GAAP operativne smernice ali nov val prodaj delnic vodstva (Form 4).",
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Model Agenta 1", iv: 80.42, d: 0 },
+      { step: "Korak 1 (Polni odbitek $1.1 mrd SBC & Deferred Rev)", desc: "Prehod z Non-GAAP FCF na čisti GAAP Owner Earnings po SBC", iv: 64.43, d: -15.99 }
+    ]
+  }
+];
+
+const HUNTER_QUEUE = [
+  { t: "NVO", n: "Novo Nordisk A/S", sec: "GLP-1 & Diabetes BioPharma", tier: "A1_SEC", roic: 53.94, fcf_y: 17.39, p: 37.82, rev: 42500, opm: 0.44, sh: 4450, nc: -2100,
+    what: "Svetovni vodja pri zdravljenju sladkorne bolezni in debelosti (Ozempic, Wegovy) z >50 % 10-letno mediano ROIC.",
+    why_v1: "Agent 1 zaznal 17,4 % FCF donosnost in 53,9 % ROIC po korekciji tečaja zaradi strahu pred konkurenco Eli Lilly.",
+    why_v2: "Agent 2 po upoštevanju CapEx cikla ($6.5 mrd/l), Catalent prevzemnega dolga in IRA Medicare pogajanj izračunal v2 = $48.90 (+22.7 % MoS — POTRJENO PODCENJENO).",
+    s_flags: "Eksplozivna rast CapExa ($6,5 mrd/leto za nove tovarne) in prevzem Catalent za $16,5 mrd zmanjšujeta kratkoročno FCF konverzijo.",
+    s_moat: "Cenovna vojna s tirzepatidom (Eli Lilly Zepbound/Mounjaro) in vključitev semaglutida v ameriška vladna pogajanja o cenah zdravil (Medicare IRA 2027).",
+    s_debt: "Neto dolg SOTP (-2,1 mrd USD) po prevzemu Catalent proizvodnih obratov.",
+    s_cat: "Znižanje neto prodajnih cen GLP-1 v ZDA za >15 % YoY ali razočaranje pri CagriSema študijah."
+  },
+  { t: "TRI.PA", n: "Trigano S.A.", sec: "European RV & Leisure Vehicles", tier: "A1_EU_ESEF", roic: 20.08, fcf_y: 21.81, p: 125.60, rev: 3920, opm: 0.128, sh: 19.3, nc: 340,
+    what: "Vodilni evropski proizvajalec avtodomov in počitniških prikolic (Chausson, Challenger, Adria Mobil) z močno neto gotovino.",
+    why_v1: "Agent 1 odkril 21,8 % FCF donosnost ob sproščanju zalog šasij in +340M EUR neto gotovine.",
+    why_v2: "Agent 2 normaliziral rekordno post-COVID EBIT maržo z 12,8 % na 9,5 % skozi cikel in potrdil v2 = $164.20 (+23.5 % MoS — POTRJENO PODCENJENO).",
+    s_flags: "Rekordni FCF v zadnjem letu je posledica enkratnega sproščanja zalog Fiat/Stellantis šasij, ne trajnega dviga dobičkonosnosti.",
+    s_moat: "Visoko ciklična trajna dobrina; ob ohlajanju evropskega gospodarstva in visokih obrestnih merah za financiranje avtodomov naročila trgovcev padejo za 20–30 %.",
+    s_debt: "Trdna bilanca (+340M EUR neto gotovine), a visoke zaloge pri trgovcih.",
+    s_cat: "Padec bruto marže pod 18 % zaradi popustov pri čiščenju zalog modelnega leta."
+  },
+  { t: "IMB.L", n: "Imperial Brands PLC", sec: "Cash-Cow Tobacco & NGP", tier: "A2_GLOBAL", roic: 18.54, fcf_y: 15.27, p: 27.81, rev: 9450, opm: 0.36, sh: 845, nc: -8400,
+    what: "Četrti največji mednarodni tobačni proizvajalec z agresivnim odkupovanjem lastnih delnic in 15,3 % FCF donosom.",
+    why_v1: "Agent 1 izpostavil nizek večkratnik EV/EBIT (~6.8x) in visoko denarno konverzijo.",
+    why_v2: "Agent 2 po vključitvi -$8,4 mrd neto dolga in -3 % terminalnega krčenja volumna izračunal v2 = $24.10 (-15.4 % MoS — RAZKRIT VALUE TRAP).",
+    s_flags: "Šibek položaj pri brezdimnih izdelkih nove generacije (NGP) v primerjavi s Philip Morris in BAT.",
+    s_moat: "Strukturno krčenje števila kadilcev v VB, Nemčiji in ZDA (-5 % do -8 % letno) ter generacijska prepoved kajenja v VB.",
+    s_debt: "Visok SOTP neto dolg (-8,4 mrd GBP/USD) omejuje odkupe delnic ob rasti obrestnih stroškov.",
+    s_cat: "Izguba tržnega deleža na top-5 trgih in dvig trošarin v Evropi."
+  },
+  { t: "VK.PA", n: "Vallourec S.A.", sec: "Seamless Steel Tubes & Energy", tier: "A1_EU_ESEF", roic: 18.56, fcf_y: 9.31, p: 15.48, rev: 4850, opm: 0.145, sh: 238, nc: -520,
+    what: "Specializirani proizvajalec brezšivnih jeklenih cevi za energetiko in vodikovo infrastrukturo po prestrukturiranju bilance.",
+    why_v1: "Agent 1 zaznal razdolženo bilanco in 9,3 % FCF donosnost.",
+    why_v2: "Agent 2 zaradi ekstremne zgodovinske cikličnosti jeklarske panoge (Min ROIC -3,3 %) normaliziral maržo na 8,5 % -> v2 = $13.20 (-17.3 % MoS — CIKLIČNI VRH).",
+    s_flags: "Kapitalsko intenzivna jeklarska proizvodnja z zgodovino hudih izgub in prestrukturiranj dolga v vsakem naftnem ciklu.",
+    s_moat: "Popolna odvisnost od cen OCTG cevi in vrtalnih proračunov naftnih družb v ZDA in Braziliji (Petrobras).",
+    s_debt: "SOTP neto položaj z najemi in okoljskimi obveznostmi (-520M EUR).",
+    s_cat: "Padec cen OCTG cevi v Severni Ameriki za >15 % in zmanjšanje števila aktivnih vrtalnih naprav (Rig count)."
+  }
+];
+
+const AGENT_LOGS = [
+  { ts: "21. 11. 2026 21:08:07", ag: "Agent 3 · Short-Seller Kontra-Teza", t: "PANW", msg: "AKTIVNI SHORT KANDIDAT (Score 93/100): Tečaj $343.32 vs Short tarča $31.27 (-90.9%). >$1.1 mrd letnega SBC in 0.57% GAAP OE donos." },
+  { ts: "21. 11. 2026 21:08:07", ag: "Agent 3 · Short-Seller Kontra-Teza", t: "YELP", msg: "AKTIVNI SHORT KANDIDAT (Score 84/100): Tečaj $18.19 vs Short tarča $3.69 (-79.7%). $19.3M Hatch retencij, $15M odpravnin in 30.5% RSU davek." },
+  { ts: "21. 11. 2026 21:08:07", ag: "Agent 3 · Short-Seller Kontra-Teza", t: "WU", msg: "AKTIVNI SHORT KANDIDAT (Score 73/100): Tečaj $5.92 vs Short tarča $1.00 (-83.1%). Taleči se led ob -$2.46 mrd neto dolga." },
+  { ts: "21. 11. 2026 20:49:22", ag: "Agent 2 · Forenzični Presojevalec", t: "BBWI", msg: "POTRJENA NAKUPNA CONA (+51.6% MoS): v1 $66.78 -> v2 $38.59 (-42.2% za dolg in najeme). Agent 3 določil stresno dno pri $12.56." },
+  { ts: "21. 11. 2026 20:44:46", ag: "Agent 2 · Forenzični Presojevalec", t: "GNTX", msg: "POTRJENO PODCENJENO (+19.1% MoS): v1 $30.03 -> v2 $23.19 (-22.8% za Level 2 obveznice, VOXX in Kitajsko/VW)." }
+];
+
+const FORENSIC_RULES = [
+  { id: 1, title: "100 % Odštetje Stock-Based Compensation (SBC)", desc: "SBC je resnični denarni strošek razredčitve delničarjev. Nikoli ga ne prištej nazaj v Owner Earnings ali FCFF." },
+  { id: 2, title: "Polno Razredčeno Število Delnic (TSM + Nevestani RSU/PSU)", desc: "Vedno preveri naslovnico zadnjega 10-Q in opombo o delniških nagradah ter vključi TSM opcijske ekvivalente in nevestane RSU." },
+  { id: 3, title: "20 % Likvidnostni in Davčni Odbitek na SOTP Naložbe", desc: "Na dolgoročne tržne obveznice Level 2 in manjšinske kapitalske deleže vedno uporabi vsaj 20 % varnostni odbitek." },
+  { id: 4, title: "Zaklenjen Operativni Denarni Blažilnik (5 % Prihodkov)", desc: "Vsaj 5 % letnih prihodkov (oz. regulatorni Title IV blažilnik) je zaklenjenih za tekoče poslovanje in ni presežna gotovina." },
+  { id: 5, title: "Prepoved Dvojnega Štetja Obrestnih Prihodkov v NOPAT in SOTP", desc: "Če presežno gotovino prišteješ v SOTP, iz operativnega dobička strogo izloči vse obrestne prihodke." },
+  { id: 6, title: "Vzdrževalni CapEx >= Celotna Amortizacija (D&A)", desc: "V dolgoročnem DCF modelu vzdrževalni CapEx ne sme biti nižji od D&A brez trdnega dokaza v opombah." },
+  { id: 7, title: "Prepoved Projekcije Cikličnega Vrha Marž v Neskončnost", desc: "Izračunaj 10-letno mediano in standardni odklon EBIT marže ter normaliziraj maržo k zgodovinski mediani." },
+  { id: 14, title: "FIN 48 Negotove Davčne Pozicije + Obresti in Kazni", desc: "V hidden_or_contingent_liabilities vključi nepriznane davčne ugodnosti, natečene obresti in poravnave odprtih davčnih nadzorov." },
+  { id: 28, title: "Dekonstrukcija Organske Rasti proti M&A Prevzemom", desc: "Loči organsko rast jedrnega posla od prihodkov prevzetih podjetij z nižjo maržo (npr. VOXX pri GNTX, HeyDude pri CROX)." },
+  { id: 29, title: "Črpanje Rezervacij za Slabe Terjatve & Billings Kazalnik", desc: "Primerjaj knjiženi Provision for Credit Losses z dejanskimi odpisi (Write-offs) in preveri gibanje Billings v Note 5 (npr. PRDO)." },
+  { id: 30, title: "Dolgoročni Davčni Dolg iz Prenosov IP & Neplačani Tekoči Davki", desc: "Preveri Long-term income taxes payable proti DTA ter skok neplačanih tekočih davkov v OCF (npr. $641M pri CROX)." },
+  { id: 31, title: "Post-Prevzemne Retencijske Obveznosti, 8-K Odpravnine & RSU Davčni Primanjkljaj", desc: "Preveri pogodbene M&A retencijske kompenzacije zaposlenim, M&A holdbacks, 8-K odpravnine in davčni primanjkljaj ob zapadlosti RSU pod ceno podelitve (npr. YELP)." },
+  { id: 32, title: "Razkorak med Kapitalizacijo Razvoja Programske Opreme in Amortizacijo", desc: "Primerjaj letni bruto kapitalizirani razvoj spletnih strani/oblaka z letno amortizacijo v Cost of Revenue in v CapEx zajemi polni bruto tempo (npr. CARG)." }
+];
+
+let CUR_VIEW = 'WORKSTATION';
+let ZONE_FLT = 'ALL';
+let LIST_MODE = 'CARDS';
+let INSP_TAB = 'BRIEF';
+let SEL_TICKER = 'BBWI';
+
+function badgeForStock(c) {
+  if (c.z === 'BUY') {
+    return `<span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-[var(--background)] border border-[var(--border)] mono" style="color:var(--success)">STRONG BUY (+${c.mos.toFixed(1)}% MoS)</span>`;
+  }
+  if (c.mos > 0) {
+    return `<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[var(--background)] border border-[var(--border)] mono" style="color:var(--primary)">PODCENJENO (+${c.mos.toFixed(1)}% MoS)</span>`;
+  }
+  if (c.short_score >= 70) {
+    return `<span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-[var(--background)] border border-[var(--border)] mono" style="color:var(--error)">&#128293; SHORT KANDIDAT (Score ${c.short_score}/100)</span>`;
+  }
+  return `<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[var(--background)] border border-[var(--border)] mono" style="color:var(--warning)">VALUE TRAP (${c.mos.toFixed(1)}% MoS)</span>`;
+}
+
+function switchView(v) {
+  CUR_VIEW = v;
+  ['WORKSTATION', 'AGENTS', 'GITHUB'].forEach(k => {
+    document.getElementById('view-' + k).classList.toggle('hidden', k !== v);
+    const b = document.getElementById('nav-' + k);
+    b.className = (k === v)
+      ? 'px-3 py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] font-bold transition'
+      : 'px-3 py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition';
+  });
+  if (v === 'GITHUB') {
+    renderGlobalSvgCharts();
+    renderRules();
+  }
+  if (v === 'AGENTS') {
+    renderAgentsPanel();
+  }
+}
+
+function setZoneFilter(zf) {
+  ZONE_FLT = zf;
+  if (CUR_VIEW !== 'WORKSTATION') switchView('WORKSTATION');
+  ['ALL', 'BUY', 'UNDER', 'SHORT', 'TRAP'].forEach(k => {
+    const b = document.getElementById('zbtn-' + k);
+    if (!b) return;
+    b.className = (k === zf)
+      ? 'px-2.5 py-1 rounded-md font-bold bg-[var(--primary)] text-[var(--primary-foreground)]'
+      : 'px-2.5 py-1 rounded-md font-semibold bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)]';
+  });
+  if (zf === 'SHORT') {
+    switchInspectorTab('SHORT');
+  }
+  renderSpectrumList();
+}
+
+function setListMode(m) {
+  LIST_MODE = m;
+  document.getElementById('lmode-CARDS').className = m === 'CARDS'
+    ? 'px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]'
+    : 'px-2 py-0.5 rounded text-[var(--muted-foreground)]';
+  document.getElementById('lmode-TABLE').className = m === 'TABLE'
+    ? 'px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]'
+    : 'px-2 py-0.5 rounded text-[var(--muted-foreground)]';
+  renderSpectrumList();
+}
+
+function refreshCounts() {
+  const all = COMPANIES.length;
+  const buy = COMPANIES.filter(c => c.z === 'BUY').length;
+  const under = COMPANIES.filter(c => c.mos > 0).length;
+  const sh = COMPANIES.filter(c => c.short_score >= 70).length;
+  const trap = COMPANIES.filter(c => c.mos <= 0).length;
+
+  document.getElementById('kpi-buy-cnt').textContent = buy + ' delnici';
+  document.getElementById('kpi-under-cnt').textContent = under + ' delnic';
+  document.getElementById('kpi-short-cnt').textContent = sh + ' aktivnih';
+  document.getElementById('kpi-trap-cnt').textContent = trap + ' delnic';
+  document.getElementById('kpi-queue-cnt').textContent = HUNTER_QUEUE.length + ' v vrsti';
+  document.getElementById('kpi-all-cnt').textContent = all + ' dosjejev';
+
+  document.getElementById('zcnt-ALL').textContent = all;
+  document.getElementById('zcnt-BUY').textContent = buy;
+  document.getElementById('zcnt-UNDER').textContent = under;
+  document.getElementById('zcnt-SHORT').textContent = sh;
+  document.getElementById('zcnt-TRAP').textContent = trap;
+}
+
+function getFilteredList() {
+  const q = (document.getElementById('search-input')?.value || '').trim().toLowerCase();
+  let arr = COMPANIES.filter(c => {
+    if (ZONE_FLT === 'BUY' && c.z !== 'BUY') return false;
+    if (ZONE_FLT === 'UNDER' && c.mos <= 0) return false;
+    if (ZONE_FLT === 'SHORT' && c.short_score < 70) return false;
+    if (ZONE_FLT === 'TRAP' && c.mos > 0) return false;
+    if (q) {
+      const hay = `${c.t} ${c.n} ${c.sec} ${c.what} ${c.why_v2} ${c.s_flags}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  if (ZONE_FLT === 'SHORT') {
+    arr = arr.slice().sort((a, b) => b.short_score - a.short_score);
+  }
+  return arr;
+}
+
+function renderSpectrumList() {
+  refreshCounts();
+  const list = getFilteredList();
+  const box = document.getElementById('spectrum-container');
+  if (!box) return;
+
+  if (list.length === 0) {
+    box.innerHTML = `<div class="p-6 text-center text-xs text-[var(--muted-foreground)]">Ni zadetkov za izbrani filter.</div>`;
+    return;
+  }
+
+  if (LIST_MODE === 'TABLE') {
+    box.innerHTML = `
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead class="border-b border-[var(--card-border)] text-[11px] text-[var(--muted-foreground)] uppercase">
+            <tr>
+              <th class="py-2 px-2">Podjetje</th>
+              <th class="py-2 px-2 text-right">Tečaj</th>
+              <th class="py-2 px-2 text-right">Agent 1 (v1)</th>
+              <th class="py-2 px-2 text-right">Agent 2 (v2)</th>
+              <th class="py-2 px-2 text-right">Agent 3 (Short)</th>
+              <th class="py-2 px-2 text-right">Short Score</th>
+              <th class="py-2 px-2 text-right">MoS %</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--card-border)]">
+            ${list.map(c => {
+              const isSel = c.t === SEL_TICKER;
+              const clr = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+              return `
+                <tr onclick="selectCompany('${c.t}')" class="cursor-pointer hover:bg-[var(--background)] ${isSel ? 'bg-[var(--background)] font-semibold' : ''}">
+                  <td class="py-2 px-2 max-w-[230px]">
+                    <div class="flex items-center gap-1.5">
+                      <b class="mono">${c.t}</b>
+                      <span class="truncate">${c.n}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 px-2 text-right mono font-bold">$${c.p.toFixed(2)}</td>
+                  <td class="py-2 px-2 text-right mono" style="color:var(--warning)">$${c.v1.toFixed(2)}</td>
+                  <td class="py-2 px-2 text-right mono font-bold" style="color:var(--primary)">$${c.v2.toFixed(2)}</td>
+                  <td class="py-2 px-2 text-right mono font-bold" style="color:var(--error)">$${c.short_p.toFixed(2)} (${c.short_down.toFixed(0)}%)</td>
+                  <td class="py-2 px-2 text-right mono font-bold" style="color:${c.short_score >= 70 ? 'var(--error)' : 'var(--muted-foreground)'}">${c.short_score}/100</td>
+                  <td class="py-2 px-2 text-right mono font-extrabold" style="color:${clr}">${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}%</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+    return;
+  }
+
+  box.innerHTML = list.map(c => {
+    const isSel = c.t === SEL_TICKER;
+    const isBuy = c.z === 'BUY';
+    const isUnder = c.mos > 0;
+    const accentClr = isBuy ? 'var(--success)' : (isUnder ? 'var(--primary)' : 'var(--error)');
+
+    // 4-point Football field scale (Short Target -> Buy 30% -> v2 IV -> v1 IV -> Price)
+    const vals = [c.p, c.short_p, c.buy, c.v2, c.v1, c.opt || c.v2 * 1.25].filter(x => x > 0);
+    const minV = Math.min(...vals) * 0.88;
+    const maxV = Math.max(...vals) * 1.08;
+    const span = Math.max(1, maxV - minV);
+    const toPct = v => Math.min(96, Math.max(4, ((v - minV) / span) * 100));
+
+    const posShort = toPct(c.short_p);
+    const posBuy = toPct(c.buy);
+    const posV2 = toPct(c.v2);
+    const posV1 = toPct(c.v1);
+    const posP = toPct(c.p);
+
+    const clamped = Math.max(-60, Math.min(60, c.mos));
+    const wPct = Math.abs(clamped) / 60.0 * 50.0;
+    const leftPct = clamped >= 0 ? 50.0 : (50.0 - wPct);
+
+    return `
+      <div onclick="selectCompany('${c.t}')" class="cursor-pointer bg-[var(--background)] border ${isSel ? 'border-[var(--primary)]' : 'border-[var(--border)]'} rounded-xl p-3 transition hover:border-[var(--primary)]" style="border-left: 4px solid ${accentClr}">
+        <!-- Vrstica 1: Identiteta & 3-Agentne Cene -->
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2 py-0.5 rounded font-extrabold text-xs bg-[var(--card)] border border-[var(--border)] mono">${c.t}</span>
+              <span class="font-extrabold text-sm">${c.n}</span>
+              ${badgeForStock(c)}
+            </div>
+            <div class="text-[11px] text-[var(--muted-foreground)] mt-0.5">
+              ${c.sec} · 10Y ROIC: <b class="text-[var(--foreground)] mono">${c.roic.toFixed(1)}%</b> · OE Donos: <b class="text-[var(--foreground)] mono">${c.oey.toFixed(2)}%</b> · Short Score: <b class="mono" style="color:${c.short_score >= 70 ? 'var(--error)' : 'var(--foreground)'}">${c.short_score}/100</b>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 bg-[var(--card)] px-2.5 py-1.5 rounded-lg border border-[var(--border)] mono text-xs">
+            <div><span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Tečaj</span><b>$${c.p.toFixed(2)}</b></div>
+            <span class="text-[var(--border)]">|</span>
+            <div><span class="text-[10px] block font-sans" style="color:var(--warning)">Agent 1 (v1)</span><span style="color:var(--warning)">$${c.v1.toFixed(2)}</span></div>
+            <span class="text-[var(--border)]">|</span>
+            <div><span class="text-[10px] block font-sans" style="color:var(--primary)">Agent 2 (v2)</span><b style="color:var(--primary)">$${c.v2.toFixed(2)}</b></div>
+            <span class="text-[var(--border)]">|</span>
+            <div><span class="text-[10px] block font-sans" style="color:var(--error)">Agent 3 (Short)</span><b style="color:var(--error)">$${c.short_p.toFixed(2)} (${c.short_down.toFixed(0)}%)</b></div>
+          </div>
+        </div>
+
+        <!-- Vrstica 2: KAJ PODJETJE POČNE vs. PRESOJA AGENTA 2 vs. KONTRA-TEZA AGENTA 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2 text-xs">
+          <div class="bg-[var(--card)] p-2 rounded-lg border border-[var(--card-border)]">
+            <span class="text-[10px] font-bold uppercase text-[var(--muted-foreground)] block">1 · KAJ POČNE &amp; JAREK:</span>
+            <span class="leading-snug">${c.what}</span>
+          </div>
+          <div class="bg-[var(--card)] p-2 rounded-lg border border-[var(--card-border)]">
+            <span class="text-[10px] font-bold uppercase block" style="color:var(--primary)">2 · AGENT 2 (FORENZIČNA PRESOJA v2):</span>
+            <span class="leading-snug">${c.why_v2}</span>
+          </div>
+          <div class="bg-[var(--card)] p-2 rounded-lg border border-[var(--card-border)]">
+            <span class="text-[10px] font-bold uppercase block" style="color:var(--error)">3 · AGENT 3 (SHORT KONTRA-TEZA):</span>
+            <span class="leading-snug">${c.s_flags}</span>
+          </div>
+        </div>
+
+        <!-- Vrstica 3: 3-Agentni Football Field Trak & Divergentni MoS % Merilnik -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center mt-2 pt-2 border-t border-[var(--card-border)]">
+          <div class="md:col-span-7">
+            <div class="flex justify-between text-[10px] text-[var(--muted-foreground)] mono mb-1">
+              <span style="color:var(--error)">Short Tarča: $${c.short_p.toFixed(1)}</span>
+              <span>Meja 30%: <b style="color:var(--success)">$${c.buy.toFixed(1)}</b></span>
+              <span>Agent 2 v2: <b style="color:var(--primary)">$${c.v2.toFixed(1)}</b></span>
+              <span>Agent 1 v1: $${c.v1.toFixed(1)}</span>
+            </div>
+            <div class="relative h-2.5 w-full rounded-full bg-[var(--card)] border border-[var(--border)]">
+              <div class="absolute top-0 left-0 h-full rounded-l-full" style="width:${posBuy}%; background:var(--success); opacity:0.35"></div>
+              <div class="absolute top-0 h-full" style="left:${posBuy}%; width:${Math.max(1, posV2 - posBuy)}%; background:var(--primary); opacity:0.28"></div>
+              <div title="Agent 3 Short Tarča: $${c.short_p.toFixed(2)}" class="absolute -top-1 w-1 h-4 rounded" style="left:${posShort}%; background:var(--error)"></div>
+              <div title="Meja 30% MoS: $${c.buy.toFixed(2)}" class="absolute -top-1 w-0.5 h-4" style="left:${posBuy}%; background:var(--success)"></div>
+              <div title="Agent 2 v2 IV: $${c.v2.toFixed(2)}" class="absolute -top-1 w-1 h-4 rounded" style="left:${posV2}%; background:var(--primary)"></div>
+              <div title="Agent 1 v1 IV: $${c.v1.toFixed(2)}" class="absolute -top-1 w-0.5 h-4" style="left:${posV1}%; background:var(--warning)"></div>
+              <div title="Tržni tečaj: $${c.p.toFixed(2)}" class="absolute -top-1.5 w-3.5 h-3.5 rounded-full bg-[var(--foreground)] border-2 -ml-1.5 shadow" style="left:${posP}%; border-color:${accentClr}"></div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="flex justify-between text-[10px] mono mb-1">
+              <span style="color:var(--error)">&larr; Short / Precenjeno</span>
+              <span class="text-[var(--muted-foreground)]">0% (IV)</span>
+              <b style="color:${accentClr}">${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}% MoS &rarr;</b>
+            </div>
+            <div class="relative h-2.5 w-full rounded-full bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+              <div class="absolute top-0 left-1/2 w-0.5 h-full bg-[var(--muted-foreground)] z-10"></div>
+              <div class="absolute top-0 left-3/4 w-0.5 h-full z-10" style="background:var(--success);opacity:0.7"></div>
+              <div class="absolute top-0 h-full" style="left:${leftPct}%; width:${Math.max(2, wPct)}%; background:${accentClr}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function selectCompany(t) {
+  SEL_TICKER = t;
+  renderSpectrumList();
+  renderInspector();
+}
+
+function switchInspectorTab(tab) {
+  INSP_TAB = tab;
+  ['BRIEF', 'SHORT', 'SCENARIOS', 'SIM'].forEach(k => {
+    document.getElementById('ipane-' + k).classList.toggle('hidden', k !== tab);
+    const b = document.getElementById('itab-' + k);
+    b.className = (k === tab)
+      ? 'py-1.5 px-1.5 rounded bg-[var(--card)] text-[var(--foreground)] font-bold'
+      : 'py-1.5 px-1.5 rounded text-[var(--muted-foreground)]';
+  });
+}
+
+function renderInspector() {
+  const c = COMPANIES.find(x => x.t === SEL_TICKER) || COMPANIES[0];
+  if (!c) return;
+
+  document.getElementById('insp-ticker').textContent = c.t;
+  document.getElementById('insp-name').textContent = c.n;
+  document.getElementById('insp-badge').outerHTML = `<span id="insp-badge">${badgeForStock(c)}</span>`;
+  document.getElementById('insp-sub').textContent = `${c.sec} · 10Y Mediana ROIC: ${c.roic.toFixed(1)}% · Owner Earnings Donos: ${c.oey.toFixed(2)}%`;
+
+  const spEl = document.getElementById('insp-short-pill');
+  spEl.textContent = `Short Score: ${c.short_score}/100`;
+  spEl.style.color = c.short_score >= 70 ? 'var(--error)' : (c.short_score >= 45 ? 'var(--warning)' : 'var(--success)');
+
+  document.getElementById('insp-price').textContent = '$' + c.p.toFixed(2);
+  document.getElementById('insp-buy-line').textContent = `Meja 30%: $${c.buy.toFixed(2)}`;
+  document.getElementById('insp-v1').textContent = '$' + c.v1.toFixed(2);
+  document.getElementById('insp-v2').textContent = '$' + c.v2.toFixed(2);
+
+  const mosEl = document.getElementById('insp-mos');
+  mosEl.textContent = `MoS: ${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}%`;
+  mosEl.style.color = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+
+  document.getElementById('insp-short-target').textContent = '$' + c.short_p.toFixed(2);
+  document.getElementById('insp-short-down').textContent = `Padec: ${c.short_down.toFixed(1)}%`;
+
+  document.getElementById('insp-what').textContent = c.what;
+  document.getElementById('insp-why1').textContent = c.why_v1;
+  document.getElementById('insp-why2').textContent = c.why_v2;
+
+  // Agent 3 Short Tab population
+  document.getElementById('short-verdict-title').textContent = c.short_verdict;
+  document.getElementById('short-score-val').textContent = `${c.short_score} / 100`;
+  document.getElementById('short-cur-p').textContent = '$' + c.p.toFixed(2);
+  document.getElementById('short-tgt-p').textContent = '$' + c.short_p.toFixed(2);
+  document.getElementById('short-down-pct').textContent = c.short_down.toFixed(1) + '%';
+  document.getElementById('short-red-flags').textContent = c.s_flags;
+  document.getElementById('short-moat-break').textContent = c.s_moat;
+  document.getElementById('short-debt-bomb').textContent = c.s_debt;
+  document.getElementById('short-catalysts').textContent = c.s_cat;
+
+  renderSvgWaterfall(c);
+  renderSvgScenariosAndSotp(c);
+  resetSim();
+}
+
+function renderSvgWaterfall(c) {
+  const items = [
+    { lbl: "Agent 3 (Short)", val: c.short_p, clr: "var(--error)" },
+    { lbl: "Meja 30% MoS", val: c.buy, clr: "var(--success)" },
+    { lbl: "Tržni Tečaj", val: c.p, clr: "var(--muted-foreground)" },
+    { lbl: "Agent 2 (v2 IV)", val: c.v2, clr: "var(--primary)" },
+    { lbl: "Agent 1 (v1 IV)", val: c.v1, clr: "var(--warning)" }
+  ];
+  const maxV = Math.max(...items.map(i => i.val), 1) * 1.18;
+  const W = 460, H = 155, padL = 16, padR = 16, padT = 24, padB = 28;
+  const plotH = H - padT - padB;
+  const colW = (W - padL - padR) / items.length;
+
+  let barsSvg = '';
+  items.forEach((it, idx) => {
+    const bh = Math.max(4, (it.val / maxV) * plotH);
+    const x = padL + idx * colW + colW * 0.16;
+    const bw = colW * 0.68;
+    const y = padT + (plotH - bh);
+    barsSvg += `
+      <rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="4" fill="${it.clr}" opacity="0.88" />
+      <text x="${x + bw/2}" y="${y - 6}" text-anchor="middle" fill="var(--foreground)" font-size="10.5" font-weight="bold" font-family="monospace">$${it.val.toFixed(1)}</text>
+      <text x="${x + bw/2}" y="${H - 8}" text-anchor="middle" fill="var(--muted-foreground)" font-size="9.5" font-family="monospace">${it.lbl}</text>
+    `;
+  });
+
+  document.getElementById('svg-waterfall-box').innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="w-full h-36">
+      <line x1="${padL}" y1="${padT + plotH}" x2="${W - padR}" y2="${padT + plotH}" stroke="var(--border)" stroke-width="1" />
+      ${barsSvg}
+    </svg>
+  `;
+
+  const stepsBox = document.getElementById('recon-steps-box');
+  stepsBox.innerHTML = (c.steps || []).map(s => {
+    const dStr = s.d === 0 ? `$${s.iv.toFixed(2)}` : `${s.d > 0 ? '+' : ''}$${s.d.toFixed(2)}`;
+    const dClr = s.d < 0 ? 'var(--error)' : (s.d > 0 ? 'var(--success)' : 'var(--primary)');
+    return `
+      <div class="bg-[var(--card)] px-2.5 py-1.5 rounded border border-[var(--card-border)] flex items-start justify-between gap-2 text-[11px]">
+        <div><b class="mono">${s.step}:</b> <span class="text-[var(--muted-foreground)]">${s.desc}</span></div>
+        <div class="mono text-right shrink-0">
+          <b style="color:${dClr}">${dStr}</b>
+          <span class="block text-[10px] text-[var(--muted-foreground)]">IV: $${s.iv.toFixed(2)}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderSvgScenariosAndSotp(c) {
+  const scItems = [
+    { lbl: "Short Tarča", val: c.short_p, clr: "var(--error)" },
+    { lbl: "Pesimist (25%)", val: Math.max(0, c.pess || 0), clr: "var(--warning)" },
+    { lbl: "Meja 30%", val: c.buy, clr: "var(--success)" },
+    { lbl: "Tečaj", val: c.p, clr: "var(--muted-foreground)" },
+    { lbl: "Tehtana v2", val: c.v2, clr: "var(--primary)" },
+    { lbl: "Optimist (25%)", val: c.opt || c.v2*1.3, clr: "var(--success)" }
+  ];
+  const maxV = Math.max(...scItems.map(i => i.val), 1) * 1.18;
+  const W = 460, H = 160, padL = 14, padR = 14, padT = 24, padB = 28;
+  const plotH = H - padT - padB;
+  const colW = (W - padL - padR) / scItems.length;
+
+  let svgCols = '';
+  scItems.forEach((it, idx) => {
+    const bh = Math.max(4, (it.val / maxV) * plotH);
+    const x = padL + idx * colW + colW * 0.15;
+    const bw = colW * 0.70;
+    const y = padT + (plotH - bh);
+    svgCols += `
+      <rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="4" fill="${it.clr}" opacity="0.85" />
+      <text x="${x + bw/2}" y="${y - 5}" text-anchor="middle" fill="var(--foreground)" font-size="10" font-weight="bold" font-family="monospace">$${it.val.toFixed(1)}</text>
+      <text x="${x + bw/2}" y="${H - 8}" text-anchor="middle" fill="var(--muted-foreground)" font-size="9.5" font-family="monospace">${it.lbl}</text>
+    `;
+  });
+  document.getElementById('svg-scenarios-box').innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="w-full h-36">
+      <line x1="${padL}" y1="${padT + plotH}" x2="${W - padR}" y2="${padT + plotH}" stroke="var(--border)" stroke-width="1" />
+      ${svgCols}
+    </svg>
+  `;
+
+  document.getElementById('sotp-metrics-box').innerHTML = `
+    <div class="bg-[var(--card)] p-2 rounded border border-[var(--card-border)]">
+      <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Presežna gotovina (po 5% blažilniku)</span>
+      <b style="color:var(--success)">$${c.ec.toFixed(1)} M</b>
+    </div>
+    <div class="bg-[var(--card)] p-2 rounded border border-[var(--card-border)]">
+      <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Čista Neto Gotovina / Dolg SOTP</span>
+      <b style="color:${c.nc >= 0 ? 'var(--success)' : 'var(--error)'}">${c.nc >= 0 ? '+' : ''}$${c.nc.toFixed(1)} M</b>
+    </div>
+    <div class="bg-[var(--card)] p-2 rounded border border-[var(--card-border)]">
+      <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Normalizirani Owner Earnings</span>
+      <b style="color:var(--primary)">$${c.oem.toFixed(1)} M (${c.oey.toFixed(2)}%)</b>
+    </div>
+    <div class="bg-[var(--card)] p-2 rounded border border-[var(--card-border)]">
+      <span class="text-[10px] text-[var(--muted-foreground)] block font-sans">Implicirana 10L Rast (Reverse DCF)</span>
+      <b>${c.rdcf > 0 ? '+' : ''}${c.rdcf.toFixed(2)}% / leto</b>
+    </div>
+  `;
+
+  const gvec = c.gvec || [0.04,0.04,0.04,0.04,0.04];
+  const mvec = c.mvec || [0.18,0.18,0.18,0.18,0.18];
+  document.getElementById('svg-trajectory-box').innerHTML = `
+    <div class="grid grid-cols-5 gap-1.5 text-center mono text-[11px]">
+      ${[0,1,2,3,4].map(i => `
+        <div class="bg-[var(--card)] p-2 rounded border border-[var(--card-border)]">
+          <div class="text-[10px] text-[var(--muted-foreground)]">Leto ${i+1}</div>
+          <div class="font-bold mt-0.5" style="color:var(--primary)">Rast: ${(gvec[i]*100).toFixed(1)}%</div>
+          <div class="font-bold mt-0.5" style="color:var(--success)">EBIT: ${(mvec[i]*100).toFixed(1)}%</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function resetSim() {
+  const c = COMPANIES.find(x => x.t === SEL_TICKER) || COMPANIES[0];
+  if (!c) return;
+  document.getElementById('rng-wacc').value = (c.wacc * 100).toFixed(2);
+  document.getElementById('rng-tg').value = (c.tg * 100).toFixed(2);
+  document.getElementById('rng-opm').value = 0.0;
+  document.getElementById('rng-gr').value = 0.0;
+  updateSim();
+}
+
+function updateSim() {
+  const c = COMPANIES.find(x => x.t === SEL_TICKER) || COMPANIES[0];
+  if (!c) return;
+  const waccPct = parseFloat(document.getElementById('rng-wacc').value) || 9.5;
+  const tgPct = parseFloat(document.getElementById('rng-tg').value) || 2.0;
+  const opmDelta = parseFloat(document.getElementById('rng-opm').value) || 0.0;
+  const grDelta = parseFloat(document.getElementById('rng-gr').value) || 0.0;
+
+  document.getElementById('lbl-wacc').textContent = waccPct.toFixed(2) + '%';
+  document.getElementById('lbl-tg').textContent = tgPct.toFixed(2) + '%';
+  document.getElementById('lbl-opm').textContent = (opmDelta >= 0 ? '+' : '') + opmDelta.toFixed(1) + '%pt';
+  document.getElementById('lbl-gr').textContent = (grDelta >= 0 ? '+' : '') + grDelta.toFixed(1) + '%pt';
+
+  const baseR = c.wacc || 0.095;
+  const baseTg = c.tg || 0.02;
+  const newR = waccPct / 100.0;
+  const newTg = Math.min(newR - 0.015, tgPct / 100.0);
+
+  const baseSpread = Math.max(0.02, baseR - baseTg);
+  const newSpread = Math.max(0.02, newR - newTg);
+  const baseOpm = (c.mvec && c.mvec[0]) || 0.18;
+  const opmMult = Math.max(0.25, (baseOpm + opmDelta / 100.0) / baseOpm);
+  const grMult = Math.pow(1.0 + (grDelta / 100.0), 5.5);
+  const discMult = Math.pow(baseSpread / newSpread, 0.72);
+
+  const netCashPerShare = (c.nc || 0) / (c.sh || 100);
+  const baseOpIvPerShare = Math.max(1.0, c.v2 - netCashPerShare);
+  const simIv = Math.max(0.5, baseOpIvPerShare * opmMult * grMult * discMult + netCashPerShare);
+  const simBuy = simIv * 0.70;
+  const simMos = ((simIv - c.p) / simIv) * 100.0;
+
+  document.getElementById('sim-iv').textContent = '$' + simIv.toFixed(2);
+  document.getElementById('sim-buy').textContent = '$' + simBuy.toFixed(2);
+  const mosEl = document.getElementById('sim-mos');
+  mosEl.textContent = (simMos > 0 ? '+' : '') + simMos.toFixed(1) + '%';
+  mosEl.style.color = simMos >= 30 ? 'var(--success)' : (simMos > 0 ? 'var(--primary)' : 'var(--error)');
+
+  const vEl = document.getElementById('sim-verdict');
+  if (simMos >= 30.0) {
+    vEl.style.color = 'var(--success)';
+    vEl.textContent = `STRONG BUY: Tečaj ($${c.p.toFixed(2)}) je pod simulirano mejo 30% MoS ($${simBuy.toFixed(2)})!`;
+  } else if (simMos > 0.0) {
+    vEl.style.color = 'var(--primary)';
+    vEl.textContent = `PODCENJENO (+${simMos.toFixed(1)}% MoS) — za 30% varnostno rezervo čakaj tečaj <= $${simBuy.toFixed(2)}`;
+  } else {
+    vEl.style.color = 'var(--error)';
+    vEl.textContent = `PRECENJENO / SHORT CONA (${simMos.toFixed(1)}% MoS): Tečaj ($${c.p.toFixed(2)}) presega simulirano IV ($${simIv.toFixed(2)})`;
+  }
+}
+
+function renderAgentsPanel() {
+  const qTbody = document.getElementById('agent1-queue-tbody');
+  if (qTbody) {
+    if (HUNTER_QUEUE.length === 0) {
+      qTbody.innerHTML = `<tr><td colspan="7" class="py-4 text-center text-[var(--muted-foreground)]">Vsi trenutni kandidati iz čakalne vrste so že obdelani z vsemi 3 agenti!</td></tr>`;
+    } else {
+      qTbody.innerHTML = HUNTER_QUEUE.map(q => `
+        <tr class="hover:bg-[var(--background)]">
+          <td class="py-2 px-2 font-extrabold mono">${q.t}</td>
+          <td class="py-2 px-2">${q.n}</td>
+          <td class="py-2 px-2 mono text-[11px]">${q.tier}</td>
+          <td class="py-2 px-2 text-right mono font-bold">${q.roic.toFixed(1)}%</td>
+          <td class="py-2 px-2 text-right mono font-bold" style="color:var(--success)">${q.fcf_y.toFixed(2)}%</td>
+          <td class="py-2 px-2 text-right mono">$${q.p.toFixed(2)}</td>
+          <td class="py-2 px-2 text-right">
+            <button onclick="executeAgentCycleOnCandidate('${q.t}')" class="px-2.5 py-1 rounded text-[11px] font-bold bg-[var(--primary)] text-[var(--primary-foreground)] mono">
+              &#9889; Agent 1 &rarr; 2 &rarr; 3
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+  }
+
+  const logBox = document.getElementById('agent-log-box');
+  if (logBox) {
+    logBox.innerHTML = AGENT_LOGS.map(l => {
+      const isA3 = l.ag.includes('Agent 3');
+      const isA2 = l.ag.includes('Agent 2');
+      const clr = isA3 ? 'var(--error)' : (isA2 ? 'var(--primary)' : 'var(--warning)');
+      return `
+        <div onclick="selectCompany('${l.t}'); switchView('WORKSTATION');" class="cursor-pointer bg-[var(--background)] hover:border-[var(--primary)] p-2.5 rounded-lg border border-[var(--border)] text-xs transition">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] text-[10px] font-bold mono" style="color:${clr}">${l.ag}</span>
+              <b class="mono">${l.t}</b>
+            </div>
+            <span class="text-[10px] text-[var(--muted-foreground)] mono">${l.ts}</span>
+          </div>
+          <div class="text-[var(--muted-foreground)]">${l.msg}</div>
+        </div>
+      `;
+    }).join('');
+  }
+}
+
+function executeAgentCycleOnCandidate(ticker) {
+  const idx = HUNTER_QUEUE.findIndex(x => x.t === ticker);
+  if (idx === -1) return;
+  const q = HUNTER_QUEUE.splice(idx, 1)[0];
+
+  const v1 = Number((q.p * (q.fcf_y > 16 ? 1.65 : 1.18)).toFixed(2));
+  const v2 = q.t === 'NVO' ? 48.90 : (q.t === 'TRI.PA' ? 164.20 : (q.t === 'IMB.L' ? 24.10 : 13.20));
+  const buy = Number((v2 * 0.70).toFixed(2));
+  const mos = Number(((v2 - q.p) / v2 * 100.0).toFixed(2));
+  const dpct = Number(((v2 - v1) / v1 * 100.0).toFixed(1));
+  const dusd = Number((v2 - v1).toFixed(2));
+  const short_p = Number((v2 * 0.58).toFixed(2));
+  const short_down = Number(((short_p - q.p) / q.p * 100.0).toFixed(1));
+  const short_score = mos < 0 ? 74 : 34;
+  const short_verdict = mos < 0 ? "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)" : "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)";
+  const zone = mos >= 30 ? 'BUY' : (mos > 0 ? 'UNDER' : 'SHORT');
+
+  const newComp = {
+    t: q.t, n: q.n, sec: q.sec, roic: q.roic, p: q.p, v1, v2, buy, mos, dpct, dusd,
+    oey: Number((q.fcf_y * 0.85).toFixed(2)), oem: Number((q.rev * q.opm * 0.75).toFixed(1)),
+    rdcf: mos > 0 ? 1.5 : 8.4, mcap: Number((q.p * q.sh).toFixed(1)), z: zone,
+    pess: Number((v2 * 0.68).toFixed(2)), real: v2, opt: Number((v2 * 1.35).toFixed(2)),
+    ec: Math.max(0, q.nc + 400), nc: q.nc, rev: q.rev, tax: 0.22, da: 0.03, nwc: 0.05,
+    sh: q.sh, wacc: 0.095, tg: 0.02, gvec: [0.05,0.05,0.04,0.04,0.035], mvec: [q.opm,q.opm,q.opm,q.opm,q.opm],
+    short_p, short_down, short_score, short_verdict,
+    what: q.what, why_v1: q.why_v1, why_v2: q.why_v2,
+    s_flags: q.s_flags, s_moat: q.s_moat, s_debt: q.s_debt, s_cat: q.s_cat,
+    steps: [
+      { step: "Izhodišče (v1)", desc: "Osnovni model Agenta 1 (Globalni Lovec)", iv: v1, d: 0 },
+      { step: "Korak 1 (SOTP bilanca & Dolg)", desc: "Polna obremenitev neto dolga, najemov in pogojnih obveznosti", iv: Number((v1 + dusd * 0.45).toFixed(2)), d: Number((dusd * 0.45).toFixed(2)) },
+      { step: "Korak 2 (Normalizacija marže & WACC)", desc: "Forenzična prilagoditev marže in diskontne stopnje po 32 pravilih", iv: v2, d: Number((dusd * 0.55).toFixed(2)) }
+    ]
+  };
+
+  COMPANIES.push(newComp);
+  COMPANIES.sort((a, b) => b.mos - a.mos);
+
+  const nowStr = new Date().toLocaleTimeString('sl-SI');
+  AGENT_LOGS.unshift({
+    ts: `Danes ${nowStr}`,
+    ag: "Agent 1 · Globalni Lovec",
+    t: q.t,
+    msg: `Odkrit kandidat ${q.n} (${q.t}): Tečaj $${q.p.toFixed(2)} vs v1 IV $${v1.toFixed(2)} (10Y ROIC ${q.roic}%).`
+  });
+  AGENT_LOGS.unshift({
+    ts: `Danes ${nowStr}`,
+    ag: "Agent 2 · Forenzični Presojevalec",
+    t: q.t,
+    msg: `Revidiran ${q.n} (${q.t}): v1 $${v1.toFixed(2)} -> v2 $${v2.toFixed(2)} (${dpct}%). MoS v2 = ${mos > 0 ? '+' : ''}${mos}%.`
+  });
+  AGENT_LOGS.unshift({
+    ts: `Danes ${nowStr}`,
+    ag: "Agent 3 · Short-Seller Kontra-Teza",
+    t: q.t,
+    msg: `Izdelana Short kontra-teza za ${q.t}: Ciljna Short cena $${short_p.toFixed(2)} (${short_down}%). Short Score ${short_score}/100.`
+  });
+
+  renderAgentsPanel();
+  selectCompany(q.t);
+}
+
+function runAutonomousNextCycle() {
+  if (HUNTER_QUEUE.length > 0) {
+    const nextT = HUNTER_QUEUE[0].t;
+    executeAgentCycleOnCandidate(nextT);
+    switchView('WORKSTATION');
+  }
+}
+
+function renderGlobalSvgCharts() {
+  const W = 720, H = 250, padL = 42, padR = 16, padT = 20, padB = 45;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+  const zeroY = padT + plotH * 0.45;
+  const colW = plotW / COMPANIES.length;
+
+  let bars = '';
+  COMPANIES.forEach((c, idx) => {
+    const clamped = Math.max(-95, Math.min(60, c.mos));
+    const x = padL + idx * colW + 2;
+    const bw = Math.max(6, colW - 4);
+    const clr = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+    let y, bh;
+    if (clamped >= 0) {
+      bh = Math.max(3, (clamped / 60.0) * (zeroY - padT));
+      y = zeroY - bh;
+    } else {
+      bh = Math.max(3, (Math.abs(clamped) / 100.0) * (padT + plotH - zeroY));
+      y = zeroY;
+    }
+    bars += `
+      <g onclick="selectCompany('${c.t}'); switchView('WORKSTATION');" class="cursor-pointer">
+        <rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="2" fill="${clr}" opacity="0.88">
+          <title>${c.t} (${c.n}): MoS ${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}% | Short Score: ${c.short_score}/100</title>
+        </rect>
+        <text x="${x + bw/2}" y="${H - 12}" text-anchor="end" transform="rotate(-45 ${x + bw/2} ${H - 12})" fill="var(--foreground)" font-size="9.5" font-family="monospace" font-weight="bold">${c.t}</text>
+      </g>
+    `;
+  });
+
+  const buyLineY = zeroY - (30 / 60.0) * (zeroY - padT);
+  document.getElementById('svg-full-spectrum').innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="w-full h-60">
+      <line x1="${padL}" y1="${buyLineY}" x2="${W - padR}" y2="${buyLineY}" stroke="var(--success)" stroke-dasharray="4 3" stroke-width="1.2" />
+      <text x="${W - padR - 4}" y="${buyLineY - 4}" text-anchor="end" fill="var(--success)" font-size="9.5" font-family="monospace">+30% Nakupna cona</text>
+      <line x1="${padL}" y1="${zeroY}" x2="${W - padR}" y2="${zeroY}" stroke="var(--muted-foreground)" stroke-width="1.2" />
+      <text x="${padL - 5}" y="${zeroY + 3}" text-anchor="end" fill="var(--muted-foreground)" font-size="9.5" font-family="monospace">0%</text>
+      ${bars}
+    </svg>
+  `;
+
+  const SW = 480, SH = 250, sL = 42, sR = 24, sT = 20, sB = 34;
+  const pW = SW - sL - sR, pH = SH - sT - sB;
+  let dots = '';
+  COMPANIES.forEach(c => {
+    const rx = Math.min(55, Math.max(10, c.roic || 20));
+    const oy = Math.min(20, Math.max(0, c.oey || 5));
+    const cx = sL + ((rx - 10) / 45.0) * pW;
+    const cy = sT + pH - (oy / 20.0) * pH;
+    const clr = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+    dots += `
+      <g onclick="selectCompany('${c.t}'); switchView('WORKSTATION');" class="cursor-pointer">
+        <circle cx="${cx}" cy="${cy}" r="${c.z === 'BUY' ? 8 : (c.mos > 0 ? 6.5 : 5)}" fill="${clr}" opacity="0.85">
+          <title>${c.t}: 10Y ROIC ${c.roic.toFixed(1)}%, OE Donos ${c.oey.toFixed(2)}%, Short Score ${c.short_score}/100</title>
+        </circle>
+        <text x="${cx}" y="${cy - 9}" text-anchor="middle" fill="var(--foreground)" font-size="9" font-family="monospace" font-weight="bold">${c.t}</text>
+      </g>
+    `;
+  });
+
+  document.getElementById('svg-roic-scatter').innerHTML = `
+    <svg viewBox="0 0 ${SW} ${SH}" class="w-full h-60">
+      <line x1="${sL}" y1="${sT + pH}" x2="${SW - sR}" y2="${sT + pH}" stroke="var(--border)" />
+      <line x1="${sL}" y1="${sT}" x2="${sL}" y2="${sT + pH}" stroke="var(--border)" />
+      <text x="${sL + pW/2}" y="${SH - 6}" text-anchor="middle" fill="var(--muted-foreground)" font-size="10" font-family="monospace">10Y Mediana ROIC (10% &rarr; 55%)</text>
+      <text x="12" y="${sT + pH/2}" text-anchor="middle" transform="rotate(-90 12 ${sT + pH/2})" fill="var(--muted-foreground)" font-size="10" font-family="monospace">OE Donos (%)</text>
+      ${dots}
+    </svg>
+  `;
+}
+
+function renderRules() {
+  const q = (document.getElementById('rule-search')?.value || '').trim().toLowerCase();
+  const list = FORENSIC_RULES.filter(r => !q || r.title.toLowerCase().includes(q) || r.desc.toLowerCase().includes(q));
+  document.getElementById('rules-grid').innerHTML = list.map(r => `
+    <div class="bg-[var(--background)] p-2.5 rounded-lg border border-[var(--border)] flex items-start gap-2.5">
+      <span class="px-2 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] font-extrabold mono shrink-0" style="color:var(--primary)">#${r.id}</span>
+      <div>
+        <div class="font-bold text-[var(--foreground)]">${r.title}</div>
+        <div class="text-[var(--muted-foreground)] mt-0.5 leading-snug">${r.desc}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderSpectrumList();
+renderInspector();
+</script>
+</body>
+</html>
