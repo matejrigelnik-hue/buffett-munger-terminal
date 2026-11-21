@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:09:22",
-  "epoch": 1795298962,
+  "updated_at": "21. 11. 2026 ob 22:09:29",
+  "epoch": 1795298969,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -4663,6 +4663,193 @@
       "reviewed_at": "2026-11-21 22:03"
     },
     {
+      "t": "ROP.SW",
+      "n": "Roche Holding AG",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A2_GLOBAL",
+      "roic": 27.13,
+      "p": 396.8,
+      "v1": 329.91,
+      "v2": 212.82,
+      "buy": 148.98,
+      "mos": -86.45,
+      "dpct": -35.5,
+      "dusd": -117.09,
+      "oey": 4.39,
+      "oem": 14131.9,
+      "rdcf": 11.23,
+      "mcap": 321847.7,
+      "z": "SHORT",
+      "pess": 109.83,
+      "real": 215.35,
+      "opt": 310.77,
+      "ec": 6586.1,
+      "nc": -29869.9,
+      "rev": 62959.0,
+      "tax": 0.23,
+      "da": 0.032,
+      "nwc": 0.065,
+      "sh": 811.108,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.3014,
+        0.3014,
+        0.3014,
+        0.3014,
+        0.3014
+      ],
+      "short_p": 96.65,
+      "short_down": -75.6,
+      "short_score": 98,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 27.1 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $329.91/delnico ob 4.39 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -35.5 % ($329.91 → $212.82); MoS = -86.5 % (PRECENJENO / VALUE TRAP).",
+      "s_flags": "Forenzični rez Agenta 2 (-35.5 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($396.80) trg vračunava +11.2 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -29869.90 M CHF.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 329.91,
+          "d": 230.94
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 629.59 M na 2203.57 M CHF ter posodobitev razredčenih delnic na 811.108 M",
+          "iv": 322.14,
+          "d": -7.77
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 312.4,
+          "d": -9.74
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 281.99,
+          "d": -30.41
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 212.82,
+          "d": -69.17
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 212.82,
+          "d": -117.09
+        }
+      ],
+      "forensic": {
+        "beneish_m": -2.0,
+        "beneish_flag": "POZOR (ACCRUALS)",
+        "altman_z": 5.17,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 4.4,
+        "finra_short_float_pct": 11.7,
+        "days_to_cover": 4.9,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 168.39
+          },
+          {
+            "q": "22Q2",
+            "p": 194.89
+          },
+          {
+            "q": "22Q3",
+            "p": 235.56
+          },
+          {
+            "q": "22Q4",
+            "p": 277.1
+          },
+          {
+            "q": "23Q1",
+            "p": 304.84
+          },
+          {
+            "q": "23Q2",
+            "p": 310.23
+          },
+          {
+            "q": "23Q3",
+            "p": 295.3
+          },
+          {
+            "q": "23Q4",
+            "p": 271.64
+          },
+          {
+            "q": "24Q1",
+            "p": 254.46
+          },
+          {
+            "q": "24Q2",
+            "p": 254.88
+          },
+          {
+            "q": "24Q3",
+            "p": 274.52
+          },
+          {
+            "q": "24Q4",
+            "p": 305.17
+          },
+          {
+            "q": "25Q1",
+            "p": 333.7
+          },
+          {
+            "q": "25Q2",
+            "p": 349.42
+          },
+          {
+            "q": "25Q3",
+            "p": 349.94
+          },
+          {
+            "q": "25Q4",
+            "p": 342.33
+          },
+          {
+            "q": "26Q1",
+            "p": 339.05
+          },
+          {
+            "q": "26Q2",
+            "p": 350.76
+          },
+          {
+            "q": "26Q3",
+            "p": 380.05
+          },
+          {
+            "q": "26Q4",
+            "p": 396.8
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:09"
+    },
+    {
       "t": "EACO",
       "n": "EACO CORP",
       "sec": "Technology / Industrials · Compounder",
@@ -6141,14 +6328,6 @@
       "p": 330.2
     },
     {
-      "t": "ROP.SW",
-      "n": "Roche Holding AG",
-      "tier": "A2_GLOBAL",
-      "roic": 27.1,
-      "fcf_y": 4.13,
-      "p": 396.8
-    },
-    {
       "t": "CTO.DE",
       "n": "Costco Wholesale Corporation",
       "tier": "A2_GLOBAL",
@@ -6299,9 +6478,35 @@
       "roic": 12.4,
       "fcf_y": 7.5,
       "p": 96.05
+    },
+    {
+      "t": "EPRO-B.ST",
+      "n": "Electrolux Professional AB (publ)",
+      "tier": "A2_GLOBAL",
+      "roic": 11.9,
+      "fcf_y": 7.5,
+      "p": 50.6
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-21 22:09:29",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "ROP.SW",
+      "msg": "Izdelana Short kontra-teza za Roche Holding AG (ROP.SW): Tečaj $396.80 -> Ciljna Short cena $96.65 (-75.6%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:09:29",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "ROP.SW",
+      "msg": "Presojen model za Roche Holding AG (ROP.SW): v1 $329.91 -> v2 $212.82 (-35.5%). MoS v2 = -86.5% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:09:29",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "ROP.SW",
+      "msg": "Odkrit kandidat Roche Holding AG (ROP.SW) iz svetovne baze: Tečaj $396.80 vs v1 IV $329.91 (MoS -20.3%). Predano Agentu 2 v presojo modela."
+    },
     {
       "ts": "2026-11-21 22:09:22",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
@@ -6463,24 +6668,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "VVV",
       "msg": "Odkrit kandidat VALVOLINE INC (VVV) iz svetovne baze: Tečaj $36.25 vs v1 IV $0.84 (MoS -4227.2%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 21:40:15",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "TRI.PA",
-      "msg": "Izdelana Short kontra-teza za Trigano S.A. (TRI.PA): Tečaj $125.60 -> Ciljna Short cena $102.18 (-18.6%). Short Score: 35/100 (TRDNJAVA — NE SHORTAJ (SHORT-SQUEEZE TVEGANJE))."
-    },
-    {
-      "ts": "2026-11-21 21:40:15",
-      "ag": "Agent 2 · Forenzični Presojevalec",
-      "t": "TRI.PA",
-      "msg": "Presojen model za Trigano S.A. (TRI.PA): v1 $309.74 -> v2 $204.09 (-34.1%). MoS v2 = +38.5% (V NAKUPNI CONI (MoS >= 30 % — POTRJEN NAKUP))."
-    },
-    {
-      "ts": "2026-11-21 21:40:14",
-      "ag": "Agent 1 · Globalni Lovec",
-      "t": "TRI.PA",
-      "msg": "Odkrit kandidat Trigano S.A. (TRI.PA) iz svetovne baze: Tečaj $125.60 vs v1 IV $309.74 (MoS +59.5%). Predano Agentu 2 v presojo modela."
     }
   ]
 }
