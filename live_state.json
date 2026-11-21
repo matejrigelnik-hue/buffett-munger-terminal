@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:09:29",
-  "epoch": 1795298969,
+  "updated_at": "21. 11. 2026 ob 22:09:54",
+  "epoch": 1795298994,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -5212,6 +5212,193 @@
       "reviewed_at": "2026-11-21 20:48"
     },
     {
+      "t": "HD",
+      "n": "HOME DEPOT, INC.",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A1_SEC",
+      "roic": 27.83,
+      "p": 339.04,
+      "v1": 242.83,
+      "v2": 145.53,
+      "buy": 101.87,
+      "mos": -132.96,
+      "dpct": -40.1,
+      "dusd": -97.3,
+      "oey": 3.88,
+      "oem": 13370.3,
+      "rdcf": 13.72,
+      "mcap": 344345.3,
+      "z": "SHORT",
+      "pess": 62.88,
+      "real": 147.74,
+      "opt": 223.78,
+      "ec": 0.0,
+      "nc": -54575.1,
+      "rev": 164683.0,
+      "tax": 0.23,
+      "da": 0.0213,
+      "nwc": 0.065,
+      "sh": 1015.648,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.1154,
+        0.1154,
+        0.1154,
+        0.1154,
+        0.1154
+      ],
+      "short_p": 55.33,
+      "short_down": -83.7,
+      "short_score": 98,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A1_SEC) in 10-letno mediano ROIC 27.8 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $242.83/delnico ob 3.88 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -40.1 % ($242.83 → $145.53); MoS = -133.0 % (PRECENJENO / VALUE TRAP).",
+      "s_flags": "Forenzični rez Agenta 2 (-40.1 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($339.04) trg vračunava +13.7 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -54575.14 M USD.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 242.83,
+          "d": 169.98
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 1646.83 M na 5763.90 M USD ter posodobitev razredčenih delnic na 1015.648 M",
+          "iv": 234.48,
+          "d": -8.35
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 225.83,
+          "d": -8.65
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 201.5,
+          "d": -24.33
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 145.53,
+          "d": -55.97
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 145.53,
+          "d": -97.3
+        }
+      ],
+      "forensic": {
+        "beneish_m": -2.0,
+        "beneish_flag": "POZOR (ACCRUALS)",
+        "altman_z": 5.03,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 5.5,
+        "finra_short_float_pct": 16.2,
+        "days_to_cover": 6.8,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 202.19
+          },
+          {
+            "q": "22Q2",
+            "p": 191.17
+          },
+          {
+            "q": "22Q3",
+            "p": 172.42
+          },
+          {
+            "q": "22Q4",
+            "p": 158.47
+          },
+          {
+            "q": "23Q1",
+            "p": 160.28
+          },
+          {
+            "q": "23Q2",
+            "p": 181.58
+          },
+          {
+            "q": "23Q3",
+            "p": 216.79
+          },
+          {
+            "q": "23Q4",
+            "p": 253.87
+          },
+          {
+            "q": "24Q1",
+            "p": 280.41
+          },
+          {
+            "q": "24Q2",
+            "p": 289.81
+          },
+          {
+            "q": "24Q3",
+            "p": 284.38
+          },
+          {
+            "q": "24Q4",
+            "p": 273.62
+          },
+          {
+            "q": "25Q1",
+            "p": 268.86
+          },
+          {
+            "q": "25Q2",
+            "p": 276.97
+          },
+          {
+            "q": "25Q3",
+            "p": 296.77
+          },
+          {
+            "q": "25Q4",
+            "p": 319.86
+          },
+          {
+            "q": "26Q1",
+            "p": 335.5
+          },
+          {
+            "q": "26Q2",
+            "p": 336.86
+          },
+          {
+            "q": "26Q3",
+            "p": 325.14
+          },
+          {
+            "q": "26Q4",
+            "p": 339.04
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:09"
+    },
+    {
       "t": "CLAS-B.ST",
       "n": "Clas Ohlson AB (publ)",
       "sec": "Technology / Industrials · Compounder",
@@ -6288,14 +6475,6 @@
   ],
   "hunter_queue": [
     {
-      "t": "HD",
-      "n": "HOME DEPOT, INC.",
-      "tier": "A1_SEC",
-      "roic": 27.8,
-      "fcf_y": 3.74,
-      "p": 339.04
-    },
-    {
       "t": "WMG",
       "n": "Warner Music Group Corp.",
       "tier": "A1_SEC",
@@ -6486,9 +6665,35 @@
       "roic": 11.9,
       "fcf_y": 7.5,
       "p": 50.6
+    },
+    {
+      "t": "AAF.L",
+      "n": "Airtel Africa Plc",
+      "tier": "A2_GLOBAL",
+      "roic": 11.5,
+      "fcf_y": 7.5,
+      "p": 2.74
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-21 22:09:54",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "HD",
+      "msg": "Izdelana Short kontra-teza za HOME DEPOT, INC. (HD): Tečaj $339.04 -> Ciljna Short cena $55.33 (-83.7%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:09:54",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "HD",
+      "msg": "Presojen model za HOME DEPOT, INC. (HD): v1 $242.83 -> v2 $145.53 (-40.1%). MoS v2 = -133.0% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:09:53",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "HD",
+      "msg": "Odkrit kandidat HOME DEPOT, INC. (HD) iz svetovne baze: Tečaj $339.04 vs v1 IV $242.83 (MoS -39.6%). Predano Agentu 2 v presojo modela."
+    },
     {
       "ts": "2026-11-21 22:09:29",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
@@ -6650,24 +6855,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "TRI.PA",
       "msg": "Odkrit kandidat Trigano S.A. (TRI.PA) iz svetovne baze: Tečaj $125.60 vs v1 IV $262.84 (MoS +52.2%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 22:02:19",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "VVV",
-      "msg": "Izdelana Short kontra-teza za VALVOLINE INC (VVV): Tečaj $36.25 -> Ciljna Short cena $1.00 (-97.2%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
-    },
-    {
-      "ts": "2026-11-21 22:02:19",
-      "ag": "Agent 2 · Forenzični Presojevalec",
-      "t": "VVV",
-      "msg": "Presojen model za VALVOLINE INC (VVV): v1 $0.84 -> v2 $-6.71 (-898.8%). MoS v2 = -100.0% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
-    },
-    {
-      "ts": "2026-11-21 22:02:19",
-      "ag": "Agent 1 · Globalni Lovec",
-      "t": "VVV",
-      "msg": "Odkrit kandidat VALVOLINE INC (VVV) iz svetovne baze: Tečaj $36.25 vs v1 IV $0.84 (MoS -4227.2%). Predano Agentu 2 v presojo modela."
     }
   ]
 }
