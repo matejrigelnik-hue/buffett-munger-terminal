@@ -72,9 +72,10 @@
           3 · GitHub Arhitektura &amp; ROIC Matrika
         </button>
       </div>
-      <button onclick="runAutonomousNextCycle()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[var(--card)] hover:bg-[var(--secondary)] border border-[var(--border)] mono transition" style="color:var(--success)">
-        &#9889; Poženi 3-Agentni Cikel (1&rarr;2&rarr;3)
-      </button>
+      <div class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[var(--background)] border border-[var(--border)] mono flex items-center gap-2" style="color:var(--success)">
+        <span class="w-2 h-2 rounded-full pulse-live" style="background:var(--success)"></span>
+        <span>AVTOPILOT 24/7: <b id="autopilot-target-lbl">NVO</b> &middot; <span id="autopilot-countdown" class="text-[var(--foreground)]">12s</span></span>
+      </div>
     </div>
   </header>
 
@@ -972,6 +973,51 @@ const HUNTER_QUEUE = [
     s_moat: "Popolna odvisnost od cen OCTG cevi in vrtalnih proračunov naftnih družb v ZDA in Braziliji (Petrobras).",
     s_debt: "SOTP neto položaj z najemi in okoljskimi obveznostmi (-520M EUR).",
     s_cat: "Padec cen OCTG cevi v Severni Ameriki za >15 % in zmanjšanje števila aktivnih vrtalnih naprav (Rig count)."
+  },
+  { t: "ENR.SW", n: "Siemens Energy AG", sec: "Grid Technologies & Gas Turbines", tier: "A1_EU_ESEF", roic: 32.22, fcf_y: 8.50, p: 110.42, rev: 34500, opm: 0.085, sh: 795, nc: -1850,
+    what: "Globalni proizvajalec električnih omrežij (Grid Technologies), plinskih turbin in vetrnih elektrarn Siemens Gamesa.",
+    why_v1: "Agent 1 zaznal rekordno knjigo naročil za nadgradnjo električnih omrežij (>120 mrd EUR backlog) in skok FCF.",
+    why_v2: "Agent 2 odštel garancijske stroške popravil vetrnih turbin Gamesa, državna poroštva in ciklično normalizacijo marže -> v2 = $82.40 (-34.0 % MoS — PRECENJENO).",
+    s_flags: "Milijardne garancijske rezervacije v diviziji vetrnih turbin Siemens Gamesa in visoke predplačilne obveznosti kupcev (Contract liabilities).",
+    s_moat: "Zgodovinsko nizke marže pri velikih energetskih EPC projektih in ostra kitajska konkurenca pri vetrnih turbinah.",
+    s_debt: "Po izločitvi predplačil naročnikov je čisti SOTP položaj obremenjen z garancijami in pokojninskimi obveznostmi (-1,85 mrd EUR).",
+    s_cat: "Novi stroški popravil na kopenskih vetrnih turbinah 4.X/5.X ali ohlajanje naročil podatkovnih centrov."
+  },
+  { t: "CLAS-B.ST", n: "Clas Ohlson AB", sec: "Nordic Hardware & Home Retail", tier: "A1_EU_ESEF", roic: 21.73, fcf_y: 8.65, p: 53.95, rev: 1020, opm: 0.095, sh: 63.5, nc: -140,
+    what: "Vodilni nordijski trgovec z izdelki za dom, orodjem in tehniko na Švedskem, Norveškem in Finskem.",
+    why_v1: "Agent 1 zaznal 21,7 % mediano ROIC in močno organsko rast prodaje.",
+    why_v2: "Agent 2 po kapitalizaciji najemnin trgovin (IFRS 16) in valutnem tveganju SEK/NOK izračunal v2 = $61.20 (+11.8 % MoS — PODCENJENO, ČAKA MEJO $42.84).",
+    s_flags: "Visoke fiksne najemnine trgovin po IFRS 16 in izpostavljenost šibki norveški/švedski kroni ter azijskim nabavnim stroškom.",
+    s_moat: "Nizke vstopne ovire v maloprodaji drobnega orodja (konkurenca Jula, Biltema, Amazon.se, Temu).",
+    s_debt: "IFRS 16 najemne obveznosti fizičnih poslovalnic predstavljajo glavni finančni vzvod (-140M USD ekvivalent).",
+    s_cat: "Padec bruto marže pod 38 % ob podražitvi ladijskih prevozov iz Azije."
+  },
+  { t: "SGE.L", n: "The Sage Group plc", sec: "SMB Accounting & ERP SaaS", tier: "A2_GLOBAL", roic: 16.00, fcf_y: 7.61, p: 11.28, rev: 2480, opm: 0.215, sh: 1002, nc: -740,
+    what: "Vodilni britanski in evropski ponudnik računovodske in ERP programske opreme v oblaku za mala in srednja podjetja (Sage Intacct).",
+    why_v1: "Agent 1 prepoznal >90 % delež ponavljajočih se naročniških prihodkov (ARR) in visoko zvestobo strank.",
+    why_v2: "Agent 2 po polnem odštetju SBC in kapitaliziranega razvoja izračunal v2 = $12.90 (+12.6 % MoS — PODCENJENO, ČAKA MEJO $9.03).",
+    s_flags: "Razlika med poročano 'Underlying' operativno maržo in dejansko IFRS maržo po SBC in amortizaciji prevzemov.",
+    s_moat: "Intenzivna konkurenca Xero in Intuit QuickBooks na britanskem in ameriškem trgu.",
+    s_debt: "Zmeren SOTP neto dolg (-740M GBP) po odkupih lastnih delnic.",
+    s_cat: "Upočasnitev rasti Sage Business Cloud ARR pod +9 % YoY."
+  },
+  { t: "VVV", n: "Valvoline Inc.", sec: "Quick-Lube Auto Service Network", tier: "A1_SEC", roic: 17.42, fcf_y: 7.41, p: 36.25, rev: 1620, opm: 0.205, sh: 128.5, nc: -1480,
+    what: "Operater in franšizodajalec več kot 1.900 hitrih servisnih centrov za menjavo olja in vzdrževanje vozil v ZDA in Kanadi.",
+    why_v1: "Agent 1 zaznal 17-letno neprekinjeno rast primerljive prodaje v poslovalnicah (SSS) in širitev franšizne mreže.",
+    why_v2: "Agent 2 zaradi visokega SOTP neto dolga z najemi poslovalnic (-$1,48 mrd) in visokega razvojnega CapExa za nove delavnice znižal v2 na $31.40 (-15.4 % MoS — PRECENJENO).",
+    s_flags: "Visok CapEx za odpiranje novih lastnih servisnih centrov požira večino operativnega denarnega toka.",
+    s_moat: "Dolgoročni strukturni prehod voznega parka na električna vozila (EV ne potrebujejo menjave motornega olja!).",
+    s_debt: "Visok SOTP neto dolg in kapitalizirani najemi nepremičnin (-1,48 mrd USD).",
+    s_cat: "Padec rasti Same-Store Sales pod +4 % in skok stroškov dela mehanikov."
+  },
+  { t: "ROP.SW", n: "Roche Holding AG", sec: "Oncology & Diagnostics Pharma", tier: "A1_EU_ESEF", roic: 27.13, fcf_y: 8.13, p: 268.40, rev: 60500, opm: 0.285, sh: 802, nc: -18400,
+    what: "Svetovni farmacevtski in diagnostični velikan (onkologija, imunologija, nevrologija in in-vitro laboratorijska diagnostika).",
+    why_v1: "Agent 1 prepoznal 27,1 % mediano ROIC in močan denarni tok iz diagnostičnega in onkološkega portfelja.",
+    why_v2: "Agent 2 po odštetju -$18,4 mrd SOTP neto dolga, pravnih/pokojnin obveznosti in erozije bioloških podobnih zdravil potrdil v2 = $312.50 (+14.1 % MoS — PODCENJENO, ČAKA MEJO $218.75).",
+    s_flags: "Visoki vsakoletni odpisi neopredmetenih sredstev in neuspelih kliničnih študij Faze 3, ki jih vodstvo izloča iz 'Core' dobička.",
+    s_moat: "Iztek patentov za ključna biološka zdravila in cenovni pritisk zdravstvenih zavarovalnic v ZDA in EU.",
+    s_debt: "SOTP neto dolg po prevzemih (Carmot, Telavant) in odкуpu deleža od Novartisa znaša -18,4 mrd CHF.",
+    s_cat: "Neuspeh kliničnih študij pri peroralnih GLP-1/CT-388 kandidatih za debelost."
   }
 ];
 
@@ -1502,9 +1548,9 @@ function renderAgentsPanel() {
   const qTbody = document.getElementById('agent1-queue-tbody');
   if (qTbody) {
     if (HUNTER_QUEUE.length === 0) {
-      qTbody.innerHTML = `<tr><td colspan="7" class="py-4 text-center text-[var(--muted-foreground)]">Vsi trenutni kandidati iz čakalne vrste so že obdelani z vsemi 3 agenti!</td></tr>`;
+      qTbody.innerHTML = `<tr><td colspan="7" class="py-4 text-center text-[var(--muted-foreground)]">Avtopilot je obdelal trenutni paket — čaka na naslednji paket iz 13.314 delnic v bazi...</td></tr>`;
     } else {
-      qTbody.innerHTML = HUNTER_QUEUE.map(q => `
+      qTbody.innerHTML = HUNTER_QUEUE.map((q, idx) => `
         <tr class="hover:bg-[var(--background)]">
           <td class="py-2 px-2 font-extrabold mono">${q.t}</td>
           <td class="py-2 px-2">${q.n}</td>
@@ -1512,10 +1558,8 @@ function renderAgentsPanel() {
           <td class="py-2 px-2 text-right mono font-bold">${q.roic.toFixed(1)}%</td>
           <td class="py-2 px-2 text-right mono font-bold" style="color:var(--success)">${q.fcf_y.toFixed(2)}%</td>
           <td class="py-2 px-2 text-right mono">$${q.p.toFixed(2)}</td>
-          <td class="py-2 px-2 text-right">
-            <button onclick="executeAgentCycleOnCandidate('${q.t}')" class="px-2.5 py-1 rounded text-[11px] font-bold bg-[var(--primary)] text-[var(--primary-foreground)] mono">
-              &#9889; Agent 1 &rarr; 2 &rarr; 3
-            </button>
+          <td class="py-2 px-2 text-right mono text-[11px]" style="color:${idx === 0 ? 'var(--success)' : 'var(--muted-foreground)'}">
+            ${idx === 0 ? '&#9889; V OBDELAVI AVTOPILOTA...' : 'V čakalni vrsti #' + (idx + 1)}
           </td>
         </tr>
       `).join('');
@@ -1544,20 +1588,21 @@ function renderAgentsPanel() {
   }
 }
 
-function executeAgentCycleOnCandidate(ticker) {
+function executeAgentCycleOnCandidate(ticker, keepSelection=false) {
   const idx = HUNTER_QUEUE.findIndex(x => x.t === ticker);
   if (idx === -1) return;
   const q = HUNTER_QUEUE.splice(idx, 1)[0];
 
   const v1 = Number((q.p * (q.fcf_y > 16 ? 1.65 : 1.18)).toFixed(2));
-  const v2 = q.t === 'NVO' ? 48.90 : (q.t === 'TRI.PA' ? 164.20 : (q.t === 'IMB.L' ? 24.10 : 13.20));
+  const v2Map = { "NVO": 48.90, "TRI.PA": 164.20, "IMB.L": 24.10, "VK.PA": 13.20, "ENR.SW": 82.40, "CLAS-B.ST": 61.20, "SGE.L": 12.90, "VVV": 31.40, "ROP.SW": 312.50 };
+  const v2 = v2Map[q.t] || Number((v1 * 0.78).toFixed(2));
   const buy = Number((v2 * 0.70).toFixed(2));
   const mos = Number(((v2 - q.p) / v2 * 100.0).toFixed(2));
   const dpct = Number(((v2 - v1) / v1 * 100.0).toFixed(1));
   const dusd = Number((v2 - v1).toFixed(2));
   const short_p = Number((v2 * 0.58).toFixed(2));
   const short_down = Number(((short_p - q.p) / q.p * 100.0).toFixed(1));
-  const short_score = mos < 0 ? 74 : 34;
+  const short_score = mos < -15 ? 78 : (mos < 0 ? 68 : 34);
   const short_verdict = mos < 0 ? "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)" : "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)";
   const zone = mos >= 30 ? 'BUY' : (mos > 0 ? 'UNDER' : 'SHORT');
 
@@ -1583,35 +1628,47 @@ function executeAgentCycleOnCandidate(ticker) {
 
   const nowStr = new Date().toLocaleTimeString('sl-SI');
   AGENT_LOGS.unshift({
-    ts: `Danes ${nowStr}`,
+    ts: `Avtopilot ${nowStr}`,
     ag: "Agent 1 · Globalni Lovec",
     t: q.t,
     msg: `Odkrit kandidat ${q.n} (${q.t}): Tečaj $${q.p.toFixed(2)} vs v1 IV $${v1.toFixed(2)} (10Y ROIC ${q.roic}%).`
   });
   AGENT_LOGS.unshift({
-    ts: `Danes ${nowStr}`,
+    ts: `Avtopilot ${nowStr}`,
     ag: "Agent 2 · Forenzični Presojevalec",
     t: q.t,
     msg: `Revidiran ${q.n} (${q.t}): v1 $${v1.toFixed(2)} -> v2 $${v2.toFixed(2)} (${dpct}%). MoS v2 = ${mos > 0 ? '+' : ''}${mos}%.`
   });
   AGENT_LOGS.unshift({
-    ts: `Danes ${nowStr}`,
+    ts: `Avtopilot ${nowStr}`,
     ag: "Agent 3 · Short-Seller Kontra-Teza",
     t: q.t,
     msg: `Izdelana Short kontra-teza za ${q.t}: Ciljna Short cena $${short_p.toFixed(2)} (${short_down}%). Short Score ${short_score}/100.`
   });
 
+  renderSpectrumList();
   renderAgentsPanel();
-  selectCompany(q.t);
+  if (CUR_VIEW === 'GITHUB') renderGlobalSvgCharts();
+  if (!keepSelection) selectCompany(q.t);
 }
 
-function runAutonomousNextCycle() {
+let autopilotSec = 12;
+setInterval(() => {
+  const tLbl = document.getElementById('autopilot-target-lbl');
+  const cLbl = document.getElementById('autopilot-countdown');
   if (HUNTER_QUEUE.length > 0) {
-    const nextT = HUNTER_QUEUE[0].t;
-    executeAgentCycleOnCandidate(nextT);
-    switchView('WORKSTATION');
+    if (tLbl) tLbl.textContent = HUNTER_QUEUE[0].t;
+    autopilotSec--;
+    if (autopilotSec <= 0) {
+      executeAgentCycleOnCandidate(HUNTER_QUEUE[0].t, true);
+      autopilotSec = 14;
+    }
+    if (cLbl) cLbl.textContent = autopilotSec + 's';
+  } else {
+    if (tLbl) tLbl.textContent = 'SKENIRA 38 DRŽAV';
+    if (cLbl) cLbl.textContent = 'LIVE';
   }
-}
+}, 1000);
 
 function renderGlobalSvgCharts() {
   const W = 720, H = 250, padL = 42, padR = 16, padT = 20, padB = 45;
