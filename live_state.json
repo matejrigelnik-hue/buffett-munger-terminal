@@ -1,6 +1,6 @@
 {
-  "updated_at": "21. 11. 2026 ob 22:08:53",
-  "epoch": 1795298933,
+  "updated_at": "21. 11. 2026 ob 22:09:22",
+  "epoch": 1795298962,
   "total_db_companies": 13747,
   "scanned_fundamentals": 251,
   "companies": [
@@ -5910,6 +5910,193 @@
         ]
       },
       "reviewed_at": "2026-11-21 22:08"
+    },
+    {
+      "t": "SGE.L",
+      "n": "The Sage Group plc",
+      "sec": "Technology / Industrials · Compounder",
+      "tier": "A2_GLOBAL",
+      "roic": 16.0,
+      "p": 1128.5,
+      "v1": 0.08,
+      "v2": 0.05,
+      "buy": 0.03,
+      "mos": -24000.42,
+      "dpct": -37.5,
+      "dusd": -0.03,
+      "oey": 0.04,
+      "oem": 421.6,
+      "rdcf": 60.0,
+      "mcap": 1034630.9,
+      "z": "SHORT",
+      "pess": 0.02,
+      "real": 0.05,
+      "opt": 0.07,
+      "ec": 284.9,
+      "nc": -1860.3,
+      "rev": 2783.0,
+      "tax": 0.23,
+      "da": 0.032,
+      "nwc": 0.065,
+      "sh": 91641.352,
+      "wacc": 0.1,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "mvec": [
+        0.2079,
+        0.2079,
+        0.2079,
+        0.2079,
+        0.2079
+      ],
+      "short_p": 1.0,
+      "short_down": -91.1,
+      "short_score": 98,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 16.0 %.",
+      "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $0.08/delnico ob 0.04 % Owner Earnings donosnosti.",
+      "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -37.5 % ($0.08 → $0.05); MoS = -24000.4 % (PRECENJENO / VALUE TRAP).",
+      "s_flags": "Forenzični rez Agenta 2 (-37.5 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+      "s_moat": "Pri trenutnem tečaju ($11.29) trg vračunava +60.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+      "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -1860.30 M GBP.",
+      "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+          "iv": 0.08,
+          "d": 0.06
+        },
+        {
+          "step": "Korak 1",
+          "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 27.83 M na 97.41 M GBP ter posodobitev razredčenih delnic na 91641.352 M",
+          "iv": 0.08,
+          "d": 0.0
+        },
+        {
+          "step": "Korak 2",
+          "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+          "iv": 0.07,
+          "d": -0.01
+        },
+        {
+          "step": "Korak 3",
+          "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+          "iv": 0.07,
+          "d": 0.0
+        },
+        {
+          "step": "Korak 4 (v2)",
+          "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+          "iv": 0.05,
+          "d": -0.02
+        },
+        {
+          "step": "Skupaj (v1 → v2)",
+          "desc": "Skupni učinek forenzične revizije Agenta 2",
+          "iv": 0.05,
+          "d": -0.03
+        }
+      ],
+      "forensic": {
+        "beneish_m": -1.58,
+        "beneish_flag": "MANIPULACIJSKI ALARM",
+        "altman_z": 4.75,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 6.7,
+        "finra_short_float_pct": 24.5,
+        "days_to_cover": 10.3,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 588.38
+          },
+          {
+            "q": "22Q2",
+            "p": 699.67
+          },
+          {
+            "q": "22Q3",
+            "p": 790.95
+          },
+          {
+            "q": "22Q4",
+            "p": 828.28
+          },
+          {
+            "q": "23Q1",
+            "p": 802.74
+          },
+          {
+            "q": "23Q2",
+            "p": 735.84
+          },
+          {
+            "q": "23Q3",
+            "p": 669.2
+          },
+          {
+            "q": "23Q4",
+            "p": 643.7
+          },
+          {
+            "q": "24Q1",
+            "p": 679.17
+          },
+          {
+            "q": "24Q2",
+            "p": 765.17
+          },
+          {
+            "q": "24Q3",
+            "p": 867.69
+          },
+          {
+            "q": "24Q4",
+            "p": 947.85
+          },
+          {
+            "q": "25Q1",
+            "p": 982.67
+          },
+          {
+            "q": "25Q2",
+            "p": 976.65
+          },
+          {
+            "q": "25Q3",
+            "p": 958.07
+          },
+          {
+            "q": "25Q4",
+            "p": 962.34
+          },
+          {
+            "q": "26Q1",
+            "p": 1011.34
+          },
+          {
+            "q": "26Q2",
+            "p": 1100.32
+          },
+          {
+            "q": "26Q3",
+            "p": 1199.42
+          },
+          {
+            "q": "26Q4",
+            "p": 1128.5
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-21 22:09"
     }
   ],
   "hunter_queue": [
@@ -5992,14 +6179,6 @@
       "roic": 19.5,
       "fcf_y": 3.73,
       "p": 192.6
-    },
-    {
-      "t": "SGE.L",
-      "n": "The Sage Group plc",
-      "tier": "A2_GLOBAL",
-      "roic": 16.0,
-      "fcf_y": 4.61,
-      "p": 11.29
     },
     {
       "t": "NVDA.SW",
@@ -6112,9 +6291,35 @@
       "roic": 13.5,
       "fcf_y": 7.5,
       "p": 16.59
+    },
+    {
+      "t": "NEWA-B.ST",
+      "n": "New Wave Group AB (publ)",
+      "tier": "A2_GLOBAL",
+      "roic": 12.4,
+      "fcf_y": 7.5,
+      "p": 96.05
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-21 22:09:22",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "SGE.L",
+      "msg": "Izdelana Short kontra-teza za The Sage Group plc (SGE.L): Tečaj $11.29 -> Ciljna Short cena $1.00 (-91.1%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    },
+    {
+      "ts": "2026-11-21 22:09:22",
+      "ag": "Agent 2 · Forenzični Presojevalec",
+      "t": "SGE.L",
+      "msg": "Presojen model za The Sage Group plc (SGE.L): v1 $0.08 -> v2 $0.05 (-37.5%). MoS v2 = -24000.4% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    },
+    {
+      "ts": "2026-11-21 22:09:21",
+      "ag": "Agent 1 · Globalni Lovec",
+      "t": "SGE.L",
+      "msg": "Odkrit kandidat The Sage Group plc (SGE.L) iz svetovne baze: Tečaj $11.29 vs v1 IV $0.08 (MoS -14222.0%). Predano Agentu 2 v presojo modela."
+    },
     {
       "ts": "2026-11-21 22:08:53",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
@@ -6276,24 +6481,6 @@
       "ag": "Agent 1 · Globalni Lovec",
       "t": "TRI.PA",
       "msg": "Odkrit kandidat Trigano S.A. (TRI.PA) iz svetovne baze: Tečaj $125.60 vs v1 IV $309.74 (MoS +59.5%). Predano Agentu 2 v presojo modela."
-    },
-    {
-      "ts": "2026-11-21 21:26:32",
-      "ag": "Agent 3 · Short-Seller Kontra-Teza",
-      "t": "NVO",
-      "msg": "Izdelana Short kontra-teza za NOVO NORDISK A S (NVO): Tečaj $37.82 -> Ciljna Short cena $133.66 (+253.4%). Short Score: 32/100 (TRDNJAVA — NE SHORTAJ (SHORT-SQUEEZE TVEGANJE))."
-    },
-    {
-      "ts": "2026-11-21 21:26:32",
-      "ag": "Agent 2 · Forenzični Presojevalec",
-      "t": "NVO",
-      "msg": "Presojen model za NOVO NORDISK A S (NVO): v1 $416.84 -> v2 $275.85 (-33.8%). MoS v2 = +86.3% (V NAKUPNI CONI (MoS >= 30 % — POTRJEN NAKUP))."
-    },
-    {
-      "ts": "2026-11-21 21:26:32",
-      "ag": "Agent 1 · Globalni Lovec",
-      "t": "NVO",
-      "msg": "Odkrit kandidat NOVO NORDISK A S (NVO) iz svetovne baze: Tečaj $37.82 vs v1 IV $416.84 (MoS +90.9%). Predano Agentu 2 v presojo modela."
     }
   ]
 }
