@@ -1,0 +1,347 @@
+{
+  "t": "IFX.SW",
+  "n": "Infineon Technologies AG",
+  "country": "DE",
+  "exchange": "Xetra / SIX",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Semiconductors (Automotive Power & Microcontroller Chips)",
+  "sec": "Information Technology · Semiconductors (Automotive Power & Microcontroller Chips)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 15.8,
+  "p": 30.85,
+  "v1": 31.39,
+  "v2": 24.63,
+  "buy": 18.95,
+  "mos": -20.16,
+  "data_check_flag": false,
+  "dpct": -21.5,
+  "dusd": -6.76,
+  "oey": 4.14,
+  "oem": 1662.2,
+  "rdcf": 8.27,
+  "mcap": 40197.6,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 13.22,
+  "real": 24.24,
+  "opt": 36.81,
+  "ec": 2952.25,
+  "nc": -2967.75,
+  "rev": 14955.0,
+  "opm_cur": 0.175,
+  "opm_norm": 0.185,
+  "tax": 0.21,
+  "da": 0.11,
+  "capex_pct": 0.13,
+  "nwc": 0.05,
+  "sbc_pct": 0.012,
+  "sh": 1303.0,
+  "wacc": 0.092,
+  "tg": 0.025,
+  "gvec": [
+    0.06,
+    0.0579,
+    0.0557,
+    0.0536,
+    0.0514,
+    0.0493,
+    0.0472,
+    0.045,
+    0.0429,
+    0.0407
+  ],
+  "mvec": [
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185,
+    0.185
+  ],
+  "short_p": 12.16,
+  "short_down": -60.6,
+  "short_score": 41,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.2,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": -12.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-IFX-SW",
+    "accession_no": "ESEF-2026-IFX-SW",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          26.5,
+          27.9,
+          29.56,
+          31.52,
+          33.9
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          24.39,
+          25.54,
+          26.9,
+          28.47,
+          30.36
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          22.56,
+          23.52,
+          24.63,
+          25.92,
+          27.43
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          20.94,
+          21.75,
+          22.69,
+          23.76,
+          24.99
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          19.52,
+          20.21,
+          20.99,
+          21.89,
+          22.91
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 20.09,
+    "p25": 21.68,
+    "p50": 24.76,
+    "p75": 27.27,
+    "p90": 30.55,
+    "prob_above_price_pct": 9.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 29.11,
+      "v1": 28.56,
+      "v2": 22.41,
+      "mos": -23.0
+    },
+    {
+      "q": "25Q4",
+      "p": 29.72,
+      "v1": 29.13,
+      "v2": 22.86,
+      "mos": -23.1
+    },
+    {
+      "q": "26Q1",
+      "p": 30.99,
+      "v1": 29.69,
+      "v2": 23.3,
+      "mos": -24.8
+    },
+    {
+      "q": "26Q2",
+      "p": 32.28,
+      "v1": 30.26,
+      "v2": 23.74,
+      "mos": -26.5
+    },
+    {
+      "q": "26Q3",
+      "p": 32.91,
+      "v1": 30.82,
+      "v2": 24.19,
+      "mos": -26.5
+    },
+    {
+      "q": "26Q4",
+      "p": 30.85,
+      "v1": 31.39,
+      "v2": 24.63,
+      "mos": -20.2
+    }
+  ],
+  "what": "Infineon Technologies AG (IFX.SW) — vodilno podjetje v panogi Semiconductors (Automotive Power & Microcontroller Chips) (Xetra / SIX), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti EUR (izkazi v EUR, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 15.8 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (18.5 %) ter preverbi Beneish M (-2.44) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (85 %), Beneish M-Score (-2.44) in Altman Z-Score (4.10).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Information Technology (Semiconductors (Automotive Power & Microcontroller Chips)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (4950M EUR) in najeme (520M EUR).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 31.39,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (748M EUR), IFRS 16 najemov (520M) in pogojnih obveznosti",
+      "iv": 29.36,
+      "d": -2.03
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.2% prihodkov) in efektivni davek 21.0%",
+      "iv": 27.87,
+      "d": -1.49
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 17.5% na sredinskih 18.5%",
+      "iv": 26.12,
+      "d": -1.75
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.5%",
+      "iv": 24.63,
+      "d": -1.49
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.44,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.1,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 85.0,
+    "share_dilution_3y_pct": 0.1,
+    "sloan_accrual_pct": 2.7,
+    "finra_short_float_pct": 2.2,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -12.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 30.22
+      },
+      {
+        "q": "22Q2",
+        "p": 30.45
+      },
+      {
+        "q": "22Q3",
+        "p": 29.55
+      },
+      {
+        "q": "22Q4",
+        "p": 27.89
+      },
+      {
+        "q": "23Q1",
+        "p": 26.22
+      },
+      {
+        "q": "23Q2",
+        "p": 25.31
+      },
+      {
+        "q": "23Q3",
+        "p": 25.61
+      },
+      {
+        "q": "23Q4",
+        "p": 27.03
+      },
+      {
+        "q": "24Q1",
+        "p": 28.98
+      },
+      {
+        "q": "24Q2",
+        "p": 30.66
+      },
+      {
+        "q": "24Q3",
+        "p": 31.46
+      },
+      {
+        "q": "24Q4",
+        "p": 31.23
+      },
+      {
+        "q": "25Q1",
+        "p": 30.31
+      },
+      {
+        "q": "25Q2",
+        "p": 29.4
+      },
+      {
+        "q": "25Q3",
+        "p": 29.11
+      },
+      {
+        "q": "25Q4",
+        "p": 29.72
+      },
+      {
+        "q": "26Q1",
+        "p": 30.99
+      },
+      {
+        "q": "26Q2",
+        "p": 32.28
+      },
+      {
+        "q": "26Q3",
+        "p": 32.91
+      },
+      {
+        "q": "26Q4",
+        "p": 30.85
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

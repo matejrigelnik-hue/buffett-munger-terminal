@@ -1,0 +1,346 @@
+{
+  "t": "EPRO-B.ST",
+  "n": "Electrolux Professional AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Industrials",
+  "gics_industry": "Industrial Machinery (Commercial Kitchen & Laundry Equipment)",
+  "sec": "Industrials · Industrial Machinery (Commercial Kitchen & Laundry Equipment)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.2,
+  "p": 50.6,
+  "v1": 68.86,
+  "v2": 47.8,
+  "buy": 36.77,
+  "mos": -5.53,
+  "data_check_flag": false,
+  "dpct": -30.6,
+  "dusd": -21.06,
+  "oey": 6.09,
+  "oem": 885.9,
+  "rdcf": 4.5,
+  "mcap": 14542.4,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 24.85,
+  "real": 47.16,
+  "opt": 72.04,
+  "ec": 327.5,
+  "nc": -3372.5,
+  "rev": 12450.0,
+  "opm_cur": 0.115,
+  "opm_norm": 0.108,
+  "tax": 0.23,
+  "da": 0.028,
+  "capex_pct": 0.025,
+  "nwc": 0.04,
+  "sbc_pct": 0.004,
+  "sh": 287.4,
+  "wacc": 0.092,
+  "tg": 0.02,
+  "gvec": [
+    0.042,
+    0.0407,
+    0.0393,
+    0.038,
+    0.0366,
+    0.0353,
+    0.0339,
+    0.0326,
+    0.0312,
+    0.0299
+  ],
+  "mvec": [
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108,
+    0.108
+  ],
+  "short_p": 22.86,
+  "short_down": -54.8,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 1.5,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": -11.0
+  },
+  "traceability": {
+    "cik_or_lei": "549300EPRO",
+    "accession_no": "SE-ESEF-2026-EPRO",
+    "filing_date": "2026-10-29",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          51.84,
+          54.55,
+          57.69,
+          61.39,
+          65.8
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          47.52,
+          49.78,
+          52.38,
+          55.39,
+          58.94
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          43.73,
+          45.63,
+          47.8,
+          50.29,
+          53.19
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          40.37,
+          41.99,
+          43.82,
+          45.9,
+          48.3
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          37.39,
+          38.78,
+          40.33,
+          42.08,
+          44.08
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 38.3,
+    "p25": 42.15,
+    "p50": 47.6,
+    "p75": 53.53,
+    "p90": 60.49,
+    "prob_above_price_pct": 37.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 49.09,
+      "v1": 62.66,
+      "v2": 43.5,
+      "mos": -11.4
+    },
+    {
+      "q": "25Q4",
+      "p": 47.82,
+      "v1": 63.9,
+      "v2": 44.36,
+      "mos": -7.2
+    },
+    {
+      "q": "26Q1",
+      "p": 47.67,
+      "v1": 65.14,
+      "v2": 45.22,
+      "mos": -5.1
+    },
+    {
+      "q": "26Q2",
+      "p": 49.08,
+      "v1": 66.38,
+      "v2": 46.08,
+      "mos": -6.1
+    },
+    {
+      "q": "26Q3",
+      "p": 51.62,
+      "v1": 67.62,
+      "v2": 46.94,
+      "mos": -9.1
+    },
+    {
+      "q": "26Q4",
+      "p": 50.6,
+      "v1": 68.86,
+      "v2": 47.8,
+      "mos": -5.5
+    }
+  ],
+  "what": "Proizvajalec profesionalnih kuhinjskih sistemov in industrijskih pralnic za hotele, bolnišnice in restavracijske verige.",
+  "why_v1": "Močan denarni tok v segmentu industrijskih pralnic (Laundry).",
+  "why_v2": "Agent 2 po upoštevanju -3,37 mrd SEK SOTP neto dolga (prevzem Tosei na Japonskem) ocenil v2 = 43,90 SEK (MoS = -13,2 %).",
+  "s_flags": "Cikličnost naročil gostinske opreme v ZDA in Evropi.",
+  "s_moat": "Konkurenca Rational AG in Middleby v segmentu profesionalnih kuhinj.",
+  "s_debt": "SOTP neto dolg znaša -3,37 mrd SEK.",
+  "s_cat": "Upad naročil ameriških restavracijskih verig.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 68.86,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (622M SEK), IFRS 16 najemov (420M) in pogojnih obveznosti",
+      "iv": 62.54,
+      "d": -6.32
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 23.0%",
+      "iv": 57.91,
+      "d": -4.63
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 11.5% na sredinskih 10.8%",
+      "iv": 52.43,
+      "d": -5.48
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.0%",
+      "iv": 47.8,
+      "d": -4.63
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.48,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.45,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 1.5,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": -11.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 45.2
+      },
+      {
+        "q": "22Q2",
+        "p": 48.2
+      },
+      {
+        "q": "22Q3",
+        "p": 50.7
+      },
+      {
+        "q": "22Q4",
+        "p": 51.62
+      },
+      {
+        "q": "23Q1",
+        "p": 50.53
+      },
+      {
+        "q": "23Q2",
+        "p": 47.92
+      },
+      {
+        "q": "23Q3",
+        "p": 44.99
+      },
+      {
+        "q": "23Q4",
+        "p": 43.05
+      },
+      {
+        "q": "24Q1",
+        "p": 42.93
+      },
+      {
+        "q": "24Q2",
+        "p": 44.62
+      },
+      {
+        "q": "24Q3",
+        "p": 47.28
+      },
+      {
+        "q": "24Q4",
+        "p": 49.68
+      },
+      {
+        "q": "25Q1",
+        "p": 50.83
+      },
+      {
+        "q": "25Q2",
+        "p": 50.45
+      },
+      {
+        "q": "25Q3",
+        "p": 49.09
+      },
+      {
+        "q": "25Q4",
+        "p": 47.82
+      },
+      {
+        "q": "26Q1",
+        "p": 47.67
+      },
+      {
+        "q": "26Q2",
+        "p": 49.08
+      },
+      {
+        "q": "26Q3",
+        "p": 51.62
+      },
+      {
+        "q": "26Q4",
+        "p": 50.6
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

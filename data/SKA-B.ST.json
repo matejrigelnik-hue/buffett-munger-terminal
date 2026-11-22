@@ -1,0 +1,347 @@
+{
+  "t": "SKA-B.ST",
+  "n": "Skanska AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Industrials",
+  "gics_industry": "Construction & Engineering (Global Civil & Commercial Development)",
+  "sec": "Industrials · Construction & Engineering (Global Civil & Commercial Development)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.2,
+  "p": 218.4,
+  "v1": 287.09,
+  "v2": 193.09,
+  "buy": 148.53,
+  "mos": -11.59,
+  "data_check_flag": false,
+  "dpct": -32.7,
+  "dusd": -94.0,
+  "oey": 3.03,
+  "oem": 2726.3,
+  "rdcf": 4.98,
+  "mcap": 89871.6,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 112.82,
+  "real": 190.55,
+  "opt": 278.44,
+  "ec": 8075.0,
+  "nc": -3425.0,
+  "rev": 168500.0,
+  "opm_cur": 0.045,
+  "opm_norm": 0.042,
+  "tax": 0.21,
+  "da": 0.018,
+  "capex_pct": 0.02,
+  "nwc": 0.035,
+  "sbc_pct": 0.004,
+  "sh": 411.5,
+  "wacc": 0.088,
+  "tg": 0.02,
+  "gvec": [
+    0.032,
+    0.0313,
+    0.0305,
+    0.0298,
+    0.0291,
+    0.0283,
+    0.0276,
+    0.0269,
+    0.0261,
+    0.0254
+  ],
+  "mvec": [
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042
+  ],
+  "short_p": 103.79,
+  "short_down": -52.5,
+  "short_score": 37,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.2,
+    "days_to_cover": 1.5,
+    "momentum_6m_pct": 14.2
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-SKA-B-ST",
+    "accession_no": "ESEF-2026-SKA-B-ST",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          206.86,
+          216.77,
+          228.38,
+          242.2,
+          258.89
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          191.63,
+          199.83,
+          209.33,
+          220.48,
+          233.72
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          178.36,
+          185.22,
+          193.09,
+          202.21,
+          212.9
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          166.7,
+          172.5,
+          179.08,
+          186.64,
+          195.38
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          156.39,
+          161.31,
+          166.87,
+          173.19,
+          180.43
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 111.28,
+    "p25": 151.41,
+    "p50": 194.28,
+    "p75": 237.12,
+    "p90": 273.51,
+    "prob_above_price_pct": 34.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 206.85,
+      "v1": 261.25,
+      "v2": 175.71,
+      "mos": -15.1
+    },
+    {
+      "q": "25Q4",
+      "p": 207.25,
+      "v1": 266.42,
+      "v2": 179.19,
+      "mos": -13.5
+    },
+    {
+      "q": "26Q1",
+      "p": 213.92,
+      "v1": 271.59,
+      "v2": 182.66,
+      "mos": -14.6
+    },
+    {
+      "q": "26Q2",
+      "p": 224.15,
+      "v1": 276.75,
+      "v2": 186.14,
+      "mos": -17.0
+    },
+    {
+      "q": "26Q3",
+      "p": 233.04,
+      "v1": 281.92,
+      "v2": 189.61,
+      "mos": -18.6
+    },
+    {
+      "q": "26Q4",
+      "p": 218.4,
+      "v1": 287.09,
+      "v2": 193.09,
+      "mos": -11.6
+    }
+  ],
+  "what": "Skanska AB (publ) (SKA-B.ST) — vodilno podjetje v panogi Construction & Engineering (Global Civil & Commercial Development) (Nasdaq Stockholm), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti SEK (izkazi v SEK, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 14.2 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (4.2 %) ter preverbi Beneish M (-2.52) in Piotroski F (8/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (108 %), Beneish M-Score (-2.52) in Altman Z-Score (3.65).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Industrials (Construction & Engineering (Global Civil & Commercial Development)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (6200M SEK) in najeme (3100M SEK).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 287.09,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (8425M SEK), IFRS 16 najemov (3100M) in pogojnih obveznosti",
+      "iv": 258.89,
+      "d": -28.2
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 21.0%",
+      "iv": 238.21,
+      "d": -20.68
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 4.5% na sredinskih 4.2%",
+      "iv": 213.77,
+      "d": -24.44
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.8% in g 2.0%",
+      "iv": 193.09,
+      "d": -20.68
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.52,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.65,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 108.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -1.4,
+    "finra_short_float_pct": 1.2,
+    "days_to_cover": 1.5,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 14.2,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 210.15
+      },
+      {
+        "q": "22Q2",
+        "p": 217.65
+      },
+      {
+        "q": "22Q3",
+        "p": 217.52
+      },
+      {
+        "q": "22Q4",
+        "p": 209.47
+      },
+      {
+        "q": "23Q1",
+        "p": 196.93
+      },
+      {
+        "q": "23Q2",
+        "p": 185.54
+      },
+      {
+        "q": "23Q3",
+        "p": 180.5
+      },
+      {
+        "q": "23Q4",
+        "p": 184.15
+      },
+      {
+        "q": "24Q1",
+        "p": 194.88
+      },
+      {
+        "q": "24Q2",
+        "p": 208.02
+      },
+      {
+        "q": "24Q3",
+        "p": 218.14
+      },
+      {
+        "q": "24Q4",
+        "p": 221.63
+      },
+      {
+        "q": "25Q1",
+        "p": 218.44
+      },
+      {
+        "q": "25Q2",
+        "p": 211.88
+      },
+      {
+        "q": "25Q3",
+        "p": 206.85
+      },
+      {
+        "q": "25Q4",
+        "p": 207.25
+      },
+      {
+        "q": "26Q1",
+        "p": 213.92
+      },
+      {
+        "q": "26Q2",
+        "p": 224.15
+      },
+      {
+        "q": "26Q3",
+        "p": 233.04
+      },
+      {
+        "q": "26Q4",
+        "p": 218.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

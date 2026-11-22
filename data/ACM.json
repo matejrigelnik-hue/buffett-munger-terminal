@@ -1,0 +1,346 @@
+{
+  "t": "ACM",
+  "n": "AECOM",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Industrials",
+  "gics_industry": "Construction & Engineering (Infrastructure & Environmental Consulting)",
+  "sec": "Industrials · Construction & Engineering (Infrastructure & Environmental Consulting)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 13.8,
+  "p": 106.5,
+  "v1": 82.98,
+  "v2": 45.78,
+  "buy": 35.22,
+  "mos": -57.01,
+  "data_check_flag": false,
+  "dpct": -44.8,
+  "dusd": -37.2,
+  "oey": 2.53,
+  "oem": 358.5,
+  "rdcf": 13.8,
+  "mcap": 14185.8,
+  "z": "SHORT",
+  "pess": 18.03,
+  "real": 45.05,
+  "opt": 75.0,
+  "ec": 545.0,
+  "nc": -3325.0,
+  "rev": 16100.0,
+  "opm_cur": 0.056,
+  "opm_norm": 0.051,
+  "tax": 0.23,
+  "da": 0.012,
+  "capex_pct": 0.014,
+  "nwc": 0.04,
+  "sbc_pct": 0.008,
+  "sh": 133.2,
+  "wacc": 0.094,
+  "tg": 0.022,
+  "gvec": [
+    0.045,
+    0.0436,
+    0.0422,
+    0.0408,
+    0.0394,
+    0.038,
+    0.0366,
+    0.0352,
+    0.0338,
+    0.0323
+  ],
+  "mvec": [
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051,
+    0.051
+  ],
+  "short_p": 29.82,
+  "short_down": -72.0,
+  "short_score": 83,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 4.5,
+    "days_to_cover": 2.7,
+    "momentum_6m_pct": -5.5
+  },
+  "traceability": {
+    "cik_or_lei": "0000868857",
+    "accession_no": "0000868857-26-000054",
+    "filing_date": "2026-11-16",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:ContractWithCustomerAssetNet"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.4,
+        "ivs": [
+          50.6,
+          53.84,
+          57.61,
+          62.03,
+          67.31
+        ]
+      },
+      {
+        "wacc_pct": 8.9,
+        "ivs": [
+          45.42,
+          48.14,
+          51.25,
+          54.86,
+          59.11
+        ]
+      },
+      {
+        "wacc_pct": 9.4,
+        "ivs": [
+          40.9,
+          43.18,
+          45.78,
+          48.77,
+          52.23
+        ]
+      },
+      {
+        "wacc_pct": 9.9,
+        "ivs": [
+          36.9,
+          38.83,
+          41.02,
+          43.51,
+          46.38
+        ]
+      },
+      {
+        "wacc_pct": 10.4,
+        "ivs": [
+          33.33,
+          34.99,
+          36.85,
+          38.95,
+          41.35
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 24.29,
+    "p25": 32.97,
+    "p50": 45.81,
+    "p75": 59.1,
+    "p90": 73.63,
+    "prob_above_price_pct": 0.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 94.18,
+      "v1": 75.51,
+      "v2": 41.66,
+      "mos": -55.8
+    },
+    {
+      "q": "25Q4",
+      "p": 99.64,
+      "v1": 77.01,
+      "v2": 42.48,
+      "mos": -57.4
+    },
+    {
+      "q": "26Q1",
+      "p": 105.21,
+      "v1": 78.5,
+      "v2": 43.31,
+      "mos": -58.8
+    },
+    {
+      "q": "26Q2",
+      "p": 108.6,
+      "v1": 79.99,
+      "v2": 44.13,
+      "mos": -59.4
+    },
+    {
+      "q": "26Q3",
+      "p": 108.56,
+      "v1": 81.49,
+      "v2": 44.96,
+      "mos": -58.6
+    },
+    {
+      "q": "26Q4",
+      "p": 106.5,
+      "v1": 82.98,
+      "v2": 45.78,
+      "mos": -57.0
+    }
+  ],
+  "what": "Globalno inženirsko in projektantsko podjetje za prometno, vodno in energetsko infrastrukturo.",
+  "why_v1": "Rekordna knjiga naročil iz ameriškega infrastrukturnega zakona (IIJA).",
+  "why_v2": "Agent 2 opozoril, da več kot polovico od $16,1 mrd bruto prihodkov predstavljajo prehodni podizvajalski stroški (pass-through costs), dejanska GAAP EBIT marža pa je le 5,1 % ob -$3,33 mrd SOTP dolga -> v2 = $68,40 (MoS = -35,8 %).",
+  "s_flags": "Visoke neizterjane pogodbene terjatve (Unbilled receivables / Contract assets), Altman Z-Score 2,05 in nizka konverzija dobička (66 %).",
+  "s_moat": "Fiksne cene pri državnih infrastrukturnih projektih pomenijo, da zamude izbrišejo tanko 5 % maržo.",
+  "s_debt": "SOTP neto dolg z najemi in 5 % operativnim blažilnikom znaša -$3,33 mrd.",
+  "s_cat": "Zamrznitev zveznih infrastrukturnih proračunov ali odpis terjatev na velikem projektu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 82.98,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (805M USD), IFRS 16 najemov (680M) in pogojnih obveznosti",
+      "iv": 71.82,
+      "d": -11.16
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 23.0%",
+      "iv": 63.64,
+      "d": -8.18
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 5.6% na sredinskih 5.1%",
+      "iv": 53.96,
+      "d": -9.68
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.4% in g 2.2%",
+      "iv": 45.78,
+      "d": -8.18
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.88,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 2.05,
+    "altman_flag": "SIVA CONA (1.8–3.0)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 66.0,
+    "share_dilution_3y_pct": -1.1,
+    "sloan_accrual_pct": 6.1,
+    "finra_short_float_pct": 4.5,
+    "days_to_cover": 2.7,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -5.5,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 75.23
+      },
+      {
+        "q": "22Q2",
+        "p": 73.44
+      },
+      {
+        "q": "22Q3",
+        "p": 69.36
+      },
+      {
+        "q": "22Q4",
+        "p": 65.56
+      },
+      {
+        "q": "23Q1",
+        "p": 64.64
+      },
+      {
+        "q": "23Q2",
+        "p": 67.96
+      },
+      {
+        "q": "23Q3",
+        "p": 75.02
+      },
+      {
+        "q": "23Q4",
+        "p": 83.62
+      },
+      {
+        "q": "24Q1",
+        "p": 90.98
+      },
+      {
+        "q": "24Q2",
+        "p": 94.99
+      },
+      {
+        "q": "24Q3",
+        "p": 95.24
+      },
+      {
+        "q": "24Q4",
+        "p": 93.08
+      },
+      {
+        "q": "25Q1",
+        "p": 90.93
+      },
+      {
+        "q": "25Q2",
+        "p": 90.99
+      },
+      {
+        "q": "25Q3",
+        "p": 94.18
+      },
+      {
+        "q": "25Q4",
+        "p": 99.64
+      },
+      {
+        "q": "26Q1",
+        "p": 105.21
+      },
+      {
+        "q": "26Q2",
+        "p": 108.6
+      },
+      {
+        "q": "26Q3",
+        "p": 108.56
+      },
+      {
+        "q": "26Q4",
+        "p": 106.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

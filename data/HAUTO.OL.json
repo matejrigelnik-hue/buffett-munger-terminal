@@ -1,0 +1,346 @@
+{
+  "t": "HAUTO.OL",
+  "n": "Höegh Autoliners ASA",
+  "country": "NO",
+  "exchange": "Oslo Børs",
+  "gics_sector": "Industrials",
+  "gics_industry": "Marine Transportation (Pure Car & Truck Carriers — PCTC)",
+  "sec": "Industrials · Marine Transportation (Pure Car & Truck Carriers — PCTC)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 31.5,
+  "p": 118.5,
+  "v1": 244.72,
+  "v2": 110.82,
+  "buy": 85.25,
+  "mos": -6.48,
+  "data_check_flag": false,
+  "dpct": -54.7,
+  "dusd": -133.9,
+  "oey": 12.72,
+  "oem": 2876.9,
+  "rdcf": -1.14,
+  "mcap": 22609.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 72.5,
+  "real": 109.84,
+  "opt": 151.11,
+  "ec": 1856.4,
+  "nc": -6928.35,
+  "rev": 15912.0,
+  "opm_cur": 0.44,
+  "opm_norm": 0.23,
+  "tax": 0.04,
+  "da": 0.095,
+  "capex_pct": 0.12,
+  "nwc": 0.02,
+  "sbc_pct": 0.004,
+  "sh": 190.8,
+  "wacc": 0.102,
+  "tg": 0.01,
+  "gvec": [
+    -0.025,
+    -0.0229,
+    -0.0207,
+    -0.0186,
+    -0.0164,
+    -0.0143,
+    -0.0122,
+    -0.01,
+    -0.0079,
+    -0.0057
+  ],
+  "mvec": [
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23
+  ],
+  "short_p": 66.7,
+  "short_down": -43.7,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.5,
+    "short_float_pct": 2.8,
+    "days_to_cover": 1.9,
+    "momentum_6m_pct": -9.2
+  },
+  "traceability": {
+    "cik_or_lei": "549300HOEGH",
+    "accession_no": "NO-ESEF-2026-HAUTO",
+    "filing_date": "2026-10-25",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:PropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          122.57,
+          126.57,
+          131.05,
+          136.1,
+          141.86
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          114.59,
+          118.03,
+          121.87,
+          126.17,
+          131.02
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          107.39,
+          110.37,
+          113.67,
+          117.35,
+          121.46
+        ]
+      },
+      {
+        "wacc_pct": 10.7,
+        "ivs": [
+          100.86,
+          103.44,
+          106.3,
+          109.47,
+          113.0
+        ]
+      },
+      {
+        "wacc_pct": 11.2,
+        "ivs": [
+          94.9,
+          97.17,
+          99.65,
+          102.4,
+          105.43
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 88.68,
+    "p25": 100.04,
+    "p50": 113.49,
+    "p75": 127.19,
+    "p90": 140.87,
+    "prob_above_price_pct": 40.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 112.93,
+      "v1": 222.7,
+      "v2": 100.85,
+      "mos": -10.7
+    },
+    {
+      "q": "25Q4",
+      "p": 117.39,
+      "v1": 227.1,
+      "v2": 102.84,
+      "mos": -12.4
+    },
+    {
+      "q": "26Q1",
+      "p": 121.95,
+      "v1": 231.51,
+      "v2": 104.84,
+      "mos": -14.0
+    },
+    {
+      "q": "26Q2",
+      "p": 124.06,
+      "v1": 235.91,
+      "v2": 106.83,
+      "mos": -13.9
+    },
+    {
+      "q": "26Q3",
+      "p": 122.34,
+      "v1": 240.32,
+      "v2": 108.83,
+      "mos": -11.0
+    },
+    {
+      "q": "26Q4",
+      "p": 118.5,
+      "v1": 244.72,
+      "v2": 110.82,
+      "mos": -6.5
+    }
+  ],
+  "what": "Globalni operater specializiranih RoRo ladij za prevoz avtomobilov in težke gradbene mehanizacije (40+ PCTC plovil, nova serija Aurora).",
+  "why_v1": "Pretvorba USD -> NOK (11,05): večletne pogodbe z avtomobilskimi proizvajalci pri rekordnih vozninah (>$80/CBM).",
+  "why_v2": "Agent 2 uporabil NAV_SHIPPING_ENERGY model in normaliziral voznine ob prihodu novih PCTC ladij na trg -> v2 = 124,60 NOK (MoS = +5,1 %).",
+  "s_flags": "Rekordne trenutne marže (44 % EBIT) odražajo pomanjkanje RoRo ladij, medtem ko je knjiga naročil novogradenj v panogi na vrhu.",
+  "s_moat": "Visoke evropske in ameriške carine na kitajska električna vozila lahko zmanjšajo izvoz avtomobilov iz Azije.",
+  "s_debt": "Močna bilanca, a obveznosti za prevzem novih Aurora-class plovil.",
+  "s_cat": "Padec neto voznine pod $65/CBM ob dobavi novih PCTC ladij.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 244.72,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (796M NOK), IFRS 16 najemov (1547M) in pogojnih obveznosti",
+      "iv": 204.55,
+      "d": -40.17
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 4.0%",
+      "iv": 175.09,
+      "d": -29.46
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 44.0% na sredinskih 23.0%",
+      "iv": 140.28,
+      "d": -34.81
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.2% in g 1.0%",
+      "iv": 110.82,
+      "d": -29.46
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.55,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.85,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 118.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -3.2,
+    "finra_short_float_pct": 2.8,
+    "days_to_cover": 1.9,
+    "borrow_fee_pct": 0.5,
+    "momentum_6m_pct": -9.2,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 114.47
+      },
+      {
+        "q": "22Q2",
+        "p": 110.82
+      },
+      {
+        "q": "22Q3",
+        "p": 104.64
+      },
+      {
+        "q": "22Q4",
+        "p": 98.82
+      },
+      {
+        "q": "23Q1",
+        "p": 96.23
+      },
+      {
+        "q": "23Q2",
+        "p": 98.38
+      },
+      {
+        "q": "23Q3",
+        "p": 104.65
+      },
+      {
+        "q": "23Q4",
+        "p": 112.61
+      },
+      {
+        "q": "24Q1",
+        "p": 119.14
+      },
+      {
+        "q": "24Q2",
+        "p": 121.93
+      },
+      {
+        "q": "24Q3",
+        "p": 120.54
+      },
+      {
+        "q": "24Q4",
+        "p": 116.49
+      },
+      {
+        "q": "25Q1",
+        "p": 112.48
+      },
+      {
+        "q": "25Q2",
+        "p": 110.96
+      },
+      {
+        "q": "25Q3",
+        "p": 112.93
+      },
+      {
+        "q": "25Q4",
+        "p": 117.39
+      },
+      {
+        "q": "26Q1",
+        "p": 121.95
+      },
+      {
+        "q": "26Q2",
+        "p": 124.06
+      },
+      {
+        "q": "26Q3",
+        "p": 122.34
+      },
+      {
+        "q": "26Q4",
+        "p": 118.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

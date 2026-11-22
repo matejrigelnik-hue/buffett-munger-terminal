@@ -1,0 +1,347 @@
+{
+  "t": "STMPA.PA",
+  "n": "STMicroelectronics N.V.",
+  "country": "CH",
+  "exchange": "Euronext Paris / NYSE",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Semiconductors (Automotive SiC, Microcontrollers & Industrial Power)",
+  "sec": "Information Technology · Semiconductors (Automotive SiC, Microcontrollers & Industrial Power)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 0.925,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 16.8,
+  "p": 25.4,
+  "v1": 31.44,
+  "v2": 26.95,
+  "buy": 20.73,
+  "mos": 6.1,
+  "data_check_flag": false,
+  "dpct": -14.3,
+  "dusd": -4.49,
+  "oey": 5.26,
+  "oem": 1205.0,
+  "rdcf": 3.58,
+  "mcap": 22910.8,
+  "z": "UNDER",
+  "pess": 16.41,
+  "real": 26.68,
+  "opt": 38.02,
+  "ec": 5102.76,
+  "nc": 1634.01,
+  "rev": 12644.75,
+  "opm_cur": 0.125,
+  "opm_norm": 0.165,
+  "tax": 0.18,
+  "da": 0.11,
+  "capex_pct": 0.135,
+  "nwc": 0.05,
+  "sbc_pct": 0.015,
+  "sh": 902.0,
+  "wacc": 0.095,
+  "tg": 0.022,
+  "gvec": [
+    0.05,
+    0.0483,
+    0.0466,
+    0.0449,
+    0.0432,
+    0.0414,
+    0.0397,
+    0.038,
+    0.0363,
+    0.0346
+  ],
+  "mvec": [
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165
+  ],
+  "short_p": 15.1,
+  "short_down": -40.6,
+  "short_score": 25,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 3.4,
+    "days_to_cover": 2.0,
+    "momentum_6m_pct": -26.0
+  },
+  "traceability": {
+    "cik_or_lei": "0000932111",
+    "accession_no": "20F-STM-2026",
+    "filing_date": "2026-10-31",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          28.65,
+          29.77,
+          31.07,
+          32.61,
+          34.41
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          26.84,
+          27.78,
+          28.86,
+          30.11,
+          31.58
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          25.25,
+          26.04,
+          26.95,
+          27.98,
+          29.18
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          23.84,
+          24.52,
+          25.28,
+          26.15,
+          27.14
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          22.59,
+          23.17,
+          23.82,
+          24.55,
+          25.38
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 22.22,
+    "p25": 24.56,
+    "p50": 27.0,
+    "p75": 29.95,
+    "p90": 32.99,
+    "prob_above_price_pct": 68.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 24.38,
+      "v1": 28.61,
+      "v2": 24.52,
+      "mos": 0.6
+    },
+    {
+      "q": "25Q4",
+      "p": 25.39,
+      "v1": 29.18,
+      "v2": 25.01,
+      "mos": -1.5
+    },
+    {
+      "q": "26Q1",
+      "p": 26.22,
+      "v1": 29.74,
+      "v2": 25.49,
+      "mos": -2.8
+    },
+    {
+      "q": "26Q2",
+      "p": 26.37,
+      "v1": 30.31,
+      "v2": 25.98,
+      "mos": -1.5
+    },
+    {
+      "q": "26Q3",
+      "p": 25.73,
+      "v1": 30.87,
+      "v2": 26.46,
+      "mos": 2.8
+    },
+    {
+      "q": "26Q4",
+      "p": 25.4,
+      "v1": 31.44,
+      "v2": 26.95,
+      "mos": 6.1
+    }
+  ],
+  "what": "Evropski polprevodniški proizvajalec mikrokrmilnikov (STM32) in silicijevega karbida (SiC) za električna vozila ter industrijsko avtomatizacijo.",
+  "why_v1": "Pretvorba USD -> EUR (0,925): močna neto gotovina (+$2,45 mrd USD) na cikličnem dnu naročil.",
+  "why_v2": "Agent 2 uporabil NORMALIZED_CYCLICAL model (16,5 % sredinska marža ob visokem tovarniškem CapExu 13,5 % prihodkov) -> v2 = 22,80 EUR (MoS = -10,2 %).",
+  "s_flags": "Visoka kapitalska intenzivnost lastnih tovarn rezin (fabs) žre prosti denarni tok v času padca izkoriščenosti kapacitet.",
+  "s_moat": "Čiščenje zalog mikrokrmilnikov pri evropskih avtomobilskih in industrijskih kupcih.",
+  "s_debt": "Močna čista neto gotovina (+1,63 mrd EUR po SOTP blažilniku).",
+  "s_cat": "Nadaljnje znižanje bruto marže pod 38 % zaradi neizkoriščenih tovarniških zmogljivosti.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 31.44,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (632M EUR), IFRS 16 najemov (324M) in pogojnih obveznosti",
+      "iv": 30.09,
+      "d": -1.35
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.5% prihodkov) in efektivni davek 18.0%",
+      "iv": 29.11,
+      "d": -0.98
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 12.5% na sredinskih 16.5%",
+      "iv": 27.94,
+      "d": -1.17
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.2%",
+      "iv": 26.95,
+      "d": -0.99
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.35,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.8,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 6,
+    "fcf_ni_ratio_pct": 72.0,
+    "share_dilution_3y_pct": 0.2,
+    "sloan_accrual_pct": 5.0,
+    "finra_short_float_pct": 3.4,
+    "days_to_cover": 2.0,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": -26.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 24.14
+      },
+      {
+        "q": "22Q2",
+        "p": 23.11
+      },
+      {
+        "q": "22Q3",
+        "p": 21.77
+      },
+      {
+        "q": "22Q4",
+        "p": 20.78
+      },
+      {
+        "q": "23Q1",
+        "p": 20.67
+      },
+      {
+        "q": "23Q2",
+        "p": 21.56
+      },
+      {
+        "q": "23Q3",
+        "p": 23.16
+      },
+      {
+        "q": "23Q4",
+        "p": 24.84
+      },
+      {
+        "q": "24Q1",
+        "p": 25.96
+      },
+      {
+        "q": "24Q2",
+        "p": 26.18
+      },
+      {
+        "q": "24Q3",
+        "p": 25.56
+      },
+      {
+        "q": "24Q4",
+        "p": 24.57
+      },
+      {
+        "q": "25Q1",
+        "p": 23.82
+      },
+      {
+        "q": "25Q2",
+        "p": 23.74
+      },
+      {
+        "q": "25Q3",
+        "p": 24.38
+      },
+      {
+        "q": "25Q4",
+        "p": 25.39
+      },
+      {
+        "q": "26Q1",
+        "p": 26.22
+      },
+      {
+        "q": "26Q2",
+        "p": 26.37
+      },
+      {
+        "q": "26Q3",
+        "p": 25.73
+      },
+      {
+        "q": "26Q4",
+        "p": 25.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

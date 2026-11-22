@@ -1,0 +1,346 @@
+{
+  "t": "HRMY",
+  "n": "Harmony Biosciences Holdings",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Health Care",
+  "gics_industry": "Biotechnology (Rare Neurological Disorders / WAKIX)",
+  "sec": "Health Care · Biotechnology (Rare Neurological Disorders / WAKIX)",
+  "model_type": "PHARMA_PIPELINE",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 29.4,
+  "p": 32.59,
+  "v1": 59.42,
+  "v2": 43.2,
+  "buy": 33.23,
+  "mos": 32.56,
+  "data_check_flag": false,
+  "dpct": -27.3,
+  "dusd": -16.22,
+  "oey": 9.16,
+  "oem": 181.7,
+  "rdcf": -2.73,
+  "mcap": 1983.1,
+  "z": "BUY",
+  "pess": 31.82,
+  "real": 43.28,
+  "opt": 54.43,
+  "ec": 800.53,
+  "nc": 510.53,
+  "rev": 989.4,
+  "opm_cur": 0.295,
+  "opm_norm": 0.245,
+  "tax": 0.23,
+  "da": 0.025,
+  "capex_pct": 0.015,
+  "nwc": 0.03,
+  "sbc_pct": 0.045,
+  "sh": 60.85,
+  "wacc": 0.105,
+  "tg": -0.02,
+  "gvec": [
+    0.045,
+    0.041,
+    0.0371,
+    0.0331,
+    0.0291,
+    0.0251,
+    0.0212,
+    0.0172,
+    0.0132,
+    0.0092
+  ],
+  "mvec": [
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245,
+    0.245
+  ],
+  "short_p": 29.27,
+  "short_down": -10.2,
+  "short_score": 16,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 2,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.55,
+    "short_float_pct": 6.8,
+    "days_to_cover": 3.5,
+    "momentum_6m_pct": -5.2
+  },
+  "traceability": {
+    "cik_or_lei": "0001802665",
+    "accession_no": "0001802665-26-000041",
+    "filing_date": "2026-11-03",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:CostOfGoodsAndServicesSold"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      -3.0,
+      -2.5,
+      -2.0,
+      -1.5,
+      -1.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          45.26,
+          45.88,
+          46.55,
+          47.28,
+          48.09
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          43.66,
+          44.21,
+          44.81,
+          45.45,
+          46.15
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          42.18,
+          42.67,
+          43.2,
+          43.77,
+          44.39
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          40.82,
+          41.25,
+          41.72,
+          42.23,
+          42.78
+        ]
+      },
+      {
+        "wacc_pct": 11.5,
+        "ivs": [
+          39.56,
+          39.95,
+          40.36,
+          40.8,
+          41.29
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 38.62,
+    "p25": 41.0,
+    "p50": 43.34,
+    "p75": 45.67,
+    "p90": 48.5,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 35.07,
+      "v1": 54.07,
+      "v2": 39.31,
+      "mos": 12.1
+    },
+    {
+      "q": "25Q4",
+      "p": 33.63,
+      "v1": 55.14,
+      "v2": 40.09,
+      "mos": 19.2
+    },
+    {
+      "q": "26Q1",
+      "p": 33.0,
+      "v1": 56.21,
+      "v2": 40.87,
+      "mos": 23.8
+    },
+    {
+      "q": "26Q2",
+      "p": 33.36,
+      "v1": 57.28,
+      "v2": 41.64,
+      "mos": 24.8
+    },
+    {
+      "q": "26Q3",
+      "p": 34.32,
+      "v1": 58.35,
+      "v2": 42.42,
+      "mos": 23.6
+    },
+    {
+      "q": "26Q4",
+      "p": 32.59,
+      "v1": 59.42,
+      "v2": 43.2,
+      "mos": 32.6
+    }
+  ],
+  "what": "Komercialno biotehnološko podjetje z zdravilom WAKIX (pitolisant) za narkolepsijo in +$510M čiste presežne gotovine.",
+  "why_v1": "Visoka rast bolnikov na zdravilu WAKIX in močan prosti denarni tok.",
+  "why_v2": "Agent 2 uporabil PHARMA_PIPELINE model zaradi patentnega klifa leta 2030 (poravnava z generiki Novitium/MSN) in 29 % licenčnin Bioprojetu -> v2 = $36,27 (MoS = +11,3 %).",
+  "s_flags": "100 % prihodkov je skoncentriranih v eni sami molekuli (pitolisant).",
+  "s_moat": "Vstop generičnega pitolisanta leta 2030 in 100 % koncentracija prodaje prek 3 PBM distributerjev.",
+  "s_debt": "Močna neto gotovina (+$510M po SOTP odbitkih).",
+  "s_cat": "Morebitni neuspeh klinične Faze 3 za Pitolisant HD.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (PHARMA_PIPELINE, valuta USD)",
+      "iv": 59.42,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (49M USD), IFRS 16 najemov (15M) in pogojnih obveznosti",
+      "iv": 54.55,
+      "d": -4.87
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (4.5% prihodkov) in efektivni davek 23.0%",
+      "iv": 50.99,
+      "d": -3.56
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 29.5% na sredinskih 24.5%",
+      "iv": 46.77,
+      "d": -4.22
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.5% in g -2.0%",
+      "iv": 43.2,
+      "d": -3.57
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.44,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 5.85,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": 1.1,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 6.8,
+    "days_to_cover": 3.5,
+    "borrow_fee_pct": 0.55,
+    "momentum_6m_pct": -5.2,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 43.22
+      },
+      {
+        "q": "22Q2",
+        "p": 44.4
+      },
+      {
+        "q": "22Q3",
+        "p": 45.08
+      },
+      {
+        "q": "22Q4",
+        "p": 44.63
+      },
+      {
+        "q": "23Q1",
+        "p": 42.92
+      },
+      {
+        "q": "23Q2",
+        "p": 40.39
+      },
+      {
+        "q": "23Q3",
+        "p": 37.85
+      },
+      {
+        "q": "23Q4",
+        "p": 36.12
+      },
+      {
+        "q": "24Q1",
+        "p": 35.64
+      },
+      {
+        "q": "24Q2",
+        "p": 36.24
+      },
+      {
+        "q": "24Q3",
+        "p": 37.3
+      },
+      {
+        "q": "24Q4",
+        "p": 38.02
+      },
+      {
+        "q": "25Q1",
+        "p": 37.85
+      },
+      {
+        "q": "25Q2",
+        "p": 36.71
+      },
+      {
+        "q": "25Q3",
+        "p": 35.07
+      },
+      {
+        "q": "25Q4",
+        "p": 33.63
+      },
+      {
+        "q": "26Q1",
+        "p": 33.0
+      },
+      {
+        "q": "26Q2",
+        "p": 33.36
+      },
+      {
+        "q": "26Q3",
+        "p": 34.32
+      },
+      {
+        "q": "26Q4",
+        "p": 32.59
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

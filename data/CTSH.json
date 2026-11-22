@@ -1,0 +1,346 @@
+{
+  "t": "CTSH",
+  "n": "Cognizant Technology Solutions",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Information Technology",
+  "gics_industry": "IT Consulting & Other Services",
+  "sec": "Information Technology · IT Consulting & Other Services",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 16.5,
+  "p": 58.06,
+  "v1": 102.43,
+  "v2": 75.19,
+  "buy": 57.84,
+  "mos": 29.5,
+  "data_check_flag": false,
+  "dpct": -26.6,
+  "dusd": -27.24,
+  "oey": 7.94,
+  "oem": 2075.0,
+  "rdcf": -0.14,
+  "mcap": 26127.0,
+  "z": "UNDER",
+  "pess": 45.04,
+  "real": 74.46,
+  "opt": 106.8,
+  "ec": 1055.45,
+  "nc": -1874.55,
+  "rev": 21891.0,
+  "opm_cur": 0.152,
+  "opm_norm": 0.142,
+  "tax": 0.255,
+  "da": 0.026,
+  "capex_pct": 0.022,
+  "nwc": 0.035,
+  "sbc_pct": 0.015,
+  "sh": 450.0,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.036,
+    0.035,
+    0.034,
+    0.0331,
+    0.0321,
+    0.0311,
+    0.0301,
+    0.0292,
+    0.0282,
+    0.0272
+  ],
+  "mvec": [
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142,
+    0.142
+  ],
+  "short_p": 41.44,
+  "short_down": -28.6,
+  "short_score": 17,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.5,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": -6.5
+  },
+  "traceability": {
+    "cik_or_lei": "0001058290",
+    "accession_no": "0001058290-26-000048",
+    "filing_date": "2026-10-31",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          80.48,
+          83.81,
+          87.66,
+          92.15,
+          97.46
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          74.98,
+          77.78,
+          80.98,
+          84.67,
+          88.98
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          70.13,
+          72.5,
+          75.19,
+          78.27,
+          81.8
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          65.83,
+          67.86,
+          70.13,
+          72.72,
+          75.66
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          61.99,
+          63.73,
+          65.67,
+          67.86,
+          70.33
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 62.69,
+    "p25": 67.86,
+    "p50": 75.03,
+    "p75": 83.48,
+    "p90": 92.07,
+    "prob_above_price_pct": 97.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 64.55,
+      "v1": 93.21,
+      "v2": 68.42,
+      "mos": 6.0
+    },
+    {
+      "q": "25Q4",
+      "p": 62.12,
+      "v1": 95.06,
+      "v2": 69.78,
+      "mos": 12.3
+    },
+    {
+      "q": "26Q1",
+      "p": 58.98,
+      "v1": 96.9,
+      "v2": 71.13,
+      "mos": 20.6
+    },
+    {
+      "q": "26Q2",
+      "p": 56.44,
+      "v1": 98.74,
+      "v2": 72.48,
+      "mos": 28.4
+    },
+    {
+      "q": "26Q3",
+      "p": 55.57,
+      "v1": 100.59,
+      "v2": 73.84,
+      "mos": 32.9
+    },
+    {
+      "q": "26Q4",
+      "p": 58.06,
+      "v1": 102.43,
+      "v2": 75.19,
+      "mos": 29.5
+    }
+  ],
+  "what": "Globalni ponudnik IT svetovanja, inženiringa (prevzem Belcan) in modernizacije aplikacij za finančne ter zdravstvene korporacije.",
+  "why_v1": "9,5 % FCF donosnost in disciplinirano odkupovanje lastnih delnic.",
+  "why_v2": "Agent 2 po vključitvi $1,3 mrd dolga za prevzem Belcan in 25,5 % davčne stopnje potrdil v2 = $71,66 (MoS = +23,4 %).",
+  "s_flags": "Odprti davčni spori v Indiji in ZDA ter serijski prevzemi za ohranjanje rasti prihodkov.",
+  "s_moat": "Generativna AI deflacionira ceno ur zunanjega razvoja kode in vzdrževanja aplikacij.",
+  "s_debt": "SOTP neto dolg z najemi po 5 % denarnem blažilniku znaša -$1,87 mrd.",
+  "s_cat": "Padec organskih prihodkov v bančnem segmentu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 102.43,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1095M USD), IFRS 16 najemov (680M) in pogojnih obveznosti",
+      "iv": 94.26,
+      "d": -8.17
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.5% prihodkov) in efektivni davek 25.5%",
+      "iv": 88.27,
+      "d": -5.99
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 15.2% na sredinskih 14.2%",
+      "iv": 81.18,
+      "d": -7.09
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 75.19,
+      "d": -5.99
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.52,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.45,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": -2.8,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 2.5,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -6.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 72.06
+      },
+      {
+        "q": "22Q2",
+        "p": 72.12
+      },
+      {
+        "q": "22Q3",
+        "p": 73.99
+      },
+      {
+        "q": "22Q4",
+        "p": 76.57
+      },
+      {
+        "q": "23Q1",
+        "p": 78.33
+      },
+      {
+        "q": "23Q2",
+        "p": 78.09
+      },
+      {
+        "q": "23Q3",
+        "p": 75.52
+      },
+      {
+        "q": "23Q4",
+        "p": 71.35
+      },
+      {
+        "q": "24Q1",
+        "p": 66.99
+      },
+      {
+        "q": "24Q2",
+        "p": 63.86
+      },
+      {
+        "q": "24Q3",
+        "p": 62.73
+      },
+      {
+        "q": "24Q4",
+        "p": 63.37
+      },
+      {
+        "q": "25Q1",
+        "p": 64.7
+      },
+      {
+        "q": "25Q2",
+        "p": 65.4
+      },
+      {
+        "q": "25Q3",
+        "p": 64.55
+      },
+      {
+        "q": "25Q4",
+        "p": 62.12
+      },
+      {
+        "q": "26Q1",
+        "p": 58.98
+      },
+      {
+        "q": "26Q2",
+        "p": 56.44
+      },
+      {
+        "q": "26Q3",
+        "p": 55.57
+      },
+      {
+        "q": "26Q4",
+        "p": 58.06
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

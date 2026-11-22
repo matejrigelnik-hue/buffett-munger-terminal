@@ -1,0 +1,347 @@
+{
+  "t": "DESN.SW",
+  "n": "Dottikon ES Holding AG",
+  "country": "CH",
+  "exchange": "SIX Swiss Exchange",
+  "gics_sector": "Materials",
+  "gics_industry": "Specialty Chemicals (Hazardous Reaction Pharma Intermediates CDMO)",
+  "sec": "Materials · Specialty Chemicals (Hazardous Reaction Pharma Intermediates CDMO)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "CHF",
+  "fin_ccy": "CHF",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 15.2,
+  "p": 245.0,
+  "v1": 146.01,
+  "v2": 111.63,
+  "buy": 85.87,
+  "mos": -54.44,
+  "data_check_flag": false,
+  "dpct": -23.5,
+  "dusd": -34.38,
+  "oey": 1.51,
+  "oem": 52.3,
+  "rdcf": 17.66,
+  "mcap": 3454.5,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 61.99,
+  "real": 108.98,
+  "opt": 166.58,
+  "ec": 191.75,
+  "nc": 121.75,
+  "rev": 365.0,
+  "opm_cur": 0.275,
+  "opm_norm": 0.26,
+  "tax": 0.16,
+  "da": 0.08,
+  "capex_pct": 0.14,
+  "nwc": 0.05,
+  "sbc_pct": 0.004,
+  "sh": 14.1,
+  "wacc": 0.078,
+  "tg": 0.022,
+  "gvec": [
+    0.075,
+    0.0718,
+    0.0685,
+    0.0653,
+    0.062,
+    0.0588,
+    0.0556,
+    0.0523,
+    0.0491,
+    0.0458
+  ],
+  "mvec": [
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26
+  ],
+  "short_p": 68.6,
+  "short_down": -72.0,
+  "short_score": 46,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 1.4,
+    "days_to_cover": 2.3,
+    "momentum_6m_pct": -6.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-DESN-SW",
+    "accession_no": "ESEF-2026-DESN-SW",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 6.8,
+        "ivs": [
+          119.2,
+          126.41,
+          135.19,
+          146.11,
+          160.06
+        ]
+      },
+      {
+        "wacc_pct": 7.3,
+        "ivs": [
+          109.56,
+          115.34,
+          122.25,
+          130.66,
+          141.13
+        ]
+      },
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          101.39,
+          106.09,
+          111.63,
+          118.27,
+          126.34
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          94.39,
+          98.26,
+          102.77,
+          108.09,
+          114.45
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          88.32,
+          91.55,
+          95.27,
+          99.59,
+          104.7
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 91.96,
+    "p25": 99.37,
+    "p50": 111.68,
+    "p75": 122.43,
+    "p90": 133.92,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 225.34,
+      "v1": 132.87,
+      "v2": 101.58,
+      "mos": -54.9
+    },
+    {
+      "q": "25Q4",
+      "p": 221.53,
+      "v1": 135.5,
+      "v2": 103.59,
+      "mos": -53.2
+    },
+    {
+      "q": "26Q1",
+      "p": 219.35,
+      "v1": 138.13,
+      "v2": 105.6,
+      "mos": -51.9
+    },
+    {
+      "q": "26Q2",
+      "p": 223.49,
+      "v1": 140.75,
+      "v2": 107.61,
+      "mos": -51.9
+    },
+    {
+      "q": "26Q3",
+      "p": 235.45,
+      "v1": 143.38,
+      "v2": 109.62,
+      "mos": -53.4
+    },
+    {
+      "q": "26Q4",
+      "p": 245.0,
+      "v1": 146.01,
+      "v2": 111.63,
+      "mos": -54.4
+    }
+  ],
+  "what": "Dottikon ES Holding AG (DESN.SW) — vodilno podjetje v panogi Specialty Chemicals (Hazardous Reaction Pharma Intermediates CDMO) (SIX Swiss Exchange), vrednoteno po specializirani predlogi DCF_COMPOUNDER v valuti CHF (izkazi v CHF, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 15.2 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (26.0 %) ter preverbi Beneish M (-2.42) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (82 %), Beneish M-Score (-2.42) in Altman Z-Score (8.10).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Materials (Specialty Chemicals (Hazardous Reaction Pharma Intermediates CDMO)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (45M CHF) in najeme (10M CHF).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta CHF)",
+      "iv": 146.01,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (18M CHF), IFRS 16 najemov (10M) in pogojnih obveznosti",
+      "iv": 135.7,
+      "d": -10.31
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 16.0%",
+      "iv": 128.13,
+      "d": -7.57
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 27.5% na sredinskih 26.0%",
+      "iv": 119.19,
+      "d": -8.94
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 7.8% in g 2.2%",
+      "iv": 111.63,
+      "d": -7.56
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.42,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 8.1,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 82.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": 3.2,
+    "finra_short_float_pct": 1.4,
+    "days_to_cover": 2.3,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -6.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 144.04
+      },
+      {
+        "q": "22Q2",
+        "p": 159.73
+      },
+      {
+        "q": "22Q3",
+        "p": 178.58
+      },
+      {
+        "q": "22Q4",
+        "p": 194.33
+      },
+      {
+        "q": "23Q1",
+        "p": 201.82
+      },
+      {
+        "q": "23Q2",
+        "p": 199.49
+      },
+      {
+        "q": "23Q3",
+        "p": 190.19
+      },
+      {
+        "q": "23Q4",
+        "p": 179.84
+      },
+      {
+        "q": "24Q1",
+        "p": 174.64
+      },
+      {
+        "q": "24Q2",
+        "p": 178.17
+      },
+      {
+        "q": "24Q3",
+        "p": 189.79
+      },
+      {
+        "q": "24Q4",
+        "p": 205.15
+      },
+      {
+        "q": "25Q1",
+        "p": 218.45
+      },
+      {
+        "q": "25Q2",
+        "p": 225.39
+      },
+      {
+        "q": "25Q3",
+        "p": 225.34
+      },
+      {
+        "q": "25Q4",
+        "p": 221.53
+      },
+      {
+        "q": "26Q1",
+        "p": 219.35
+      },
+      {
+        "q": "26Q2",
+        "p": 223.49
+      },
+      {
+        "q": "26Q3",
+        "p": 235.45
+      },
+      {
+        "q": "26Q4",
+        "p": 245.0
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

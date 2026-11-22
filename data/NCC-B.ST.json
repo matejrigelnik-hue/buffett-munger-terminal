@@ -1,0 +1,347 @@
+{
+  "t": "NCC-B.ST",
+  "n": "NCC AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Industrials",
+  "gics_industry": "Construction & Engineering (Nordic Infrastructure & Buildings)",
+  "sec": "Industrials · Construction & Engineering (Nordic Infrastructure & Buildings)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 13.5,
+  "p": 164.5,
+  "v1": 278.92,
+  "v2": 153.33,
+  "buy": 117.95,
+  "mos": -6.79,
+  "data_check_flag": false,
+  "dpct": -45.0,
+  "dusd": -125.59,
+  "oey": 3.87,
+  "oem": 622.0,
+  "rdcf": 3.58,
+  "mcap": 16055.2,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 66.27,
+  "real": 151.04,
+  "opt": 244.97,
+  "ec": 480.0,
+  "nc": -6820.0,
+  "rev": 58400.0,
+  "opm_cur": 0.038,
+  "opm_norm": 0.035,
+  "tax": 0.21,
+  "da": 0.02,
+  "capex_pct": 0.022,
+  "nwc": 0.03,
+  "sbc_pct": 0.003,
+  "sh": 97.6,
+  "wacc": 0.092,
+  "tg": 0.02,
+  "gvec": [
+    0.028,
+    0.0275,
+    0.027,
+    0.0265,
+    0.026,
+    0.0256,
+    0.0251,
+    0.0246,
+    0.0241,
+    0.0236
+  ],
+  "mvec": [
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.035
+  ],
+  "short_p": 60.97,
+  "short_down": -62.9,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 1.5,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": 11.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-NCC-B-ST",
+    "accession_no": "ESEF-2026-NCC-B-ST",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          168.34,
+          178.32,
+          189.91,
+          203.52,
+          219.75
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          152.36,
+          160.68,
+          170.25,
+          181.36,
+          194.42
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          138.33,
+          145.34,
+          153.33,
+          162.52,
+          173.18
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          125.93,
+          131.88,
+          138.62,
+          146.28,
+          155.1
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          114.89,
+          119.98,
+          125.7,
+          132.16,
+          139.52
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 46.52,
+    "p25": 105.14,
+    "p50": 166.11,
+    "p75": 220.8,
+    "p90": 279.61,
+    "prob_above_price_pct": 50.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 157.82,
+      "v1": 253.82,
+      "v2": 139.53,
+      "mos": -11.6
+    },
+    {
+      "q": "25Q4",
+      "p": 164.37,
+      "v1": 258.84,
+      "v2": 142.29,
+      "mos": -13.4
+    },
+    {
+      "q": "26Q1",
+      "p": 169.78,
+      "v1": 263.86,
+      "v2": 145.05,
+      "mos": -14.6
+    },
+    {
+      "q": "26Q2",
+      "p": 170.92,
+      "v1": 268.88,
+      "v2": 147.81,
+      "mos": -13.5
+    },
+    {
+      "q": "26Q3",
+      "p": 166.83,
+      "v1": 273.9,
+      "v2": 150.57,
+      "mos": -9.7
+    },
+    {
+      "q": "26Q4",
+      "p": 164.5,
+      "v1": 278.92,
+      "v2": 153.33,
+      "mos": -6.8
+    }
+  ],
+  "what": "NCC AB (publ) (NCC-B.ST) — vodilno podjetje v panogi Construction & Engineering (Nordic Infrastructure & Buildings) (Nasdaq Stockholm), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti SEK (izkazi v SEK, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 13.5 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (3.5 %) ter preverbi Beneish M (-2.45) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (104 %), Beneish M-Score (-2.45) in Altman Z-Score (3.20).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Industrials (Construction & Engineering (Nordic Infrastructure & Buildings)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (4800M SEK) in najeme (1650M SEK).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 278.92,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (2920M SEK), IFRS 16 najemov (1650M) in pogojnih obveznosti",
+      "iv": 241.24,
+      "d": -37.68
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.3% prihodkov) in efektivni davek 21.0%",
+      "iv": 213.61,
+      "d": -27.63
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 3.8% na sredinskih 3.5%",
+      "iv": 180.96,
+      "d": -32.65
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.0%",
+      "iv": 153.33,
+      "d": -27.63
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.45,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.2,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 104.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -0.7,
+    "finra_short_float_pct": 1.5,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": 11.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 156.52
+      },
+      {
+        "q": "22Q2",
+        "p": 149.93
+      },
+      {
+        "q": "22Q3",
+        "p": 141.26
+      },
+      {
+        "q": "22Q4",
+        "p": 134.73
+      },
+      {
+        "q": "23Q1",
+        "p": 133.78
+      },
+      {
+        "q": "23Q2",
+        "p": 139.41
+      },
+      {
+        "q": "23Q3",
+        "p": 149.68
+      },
+      {
+        "q": "23Q4",
+        "p": 160.6
+      },
+      {
+        "q": "24Q1",
+        "p": 168.01
+      },
+      {
+        "q": "24Q2",
+        "p": 169.54
+      },
+      {
+        "q": "24Q3",
+        "p": 165.66
+      },
+      {
+        "q": "24Q4",
+        "p": 159.31
+      },
+      {
+        "q": "25Q1",
+        "p": 154.4
+      },
+      {
+        "q": "25Q2",
+        "p": 153.77
+      },
+      {
+        "q": "25Q3",
+        "p": 157.82
+      },
+      {
+        "q": "25Q4",
+        "p": 164.37
+      },
+      {
+        "q": "26Q1",
+        "p": 169.78
+      },
+      {
+        "q": "26Q2",
+        "p": 170.92
+      },
+      {
+        "q": "26Q3",
+        "p": 166.83
+      },
+      {
+        "q": "26Q4",
+        "p": 164.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

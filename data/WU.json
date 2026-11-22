@@ -1,0 +1,346 @@
+{
+  "t": "WU",
+  "n": "The Western Union Company",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Financials",
+  "gics_industry": "Transaction & Payment Processing Services (Cross-Border Remittances)",
+  "sec": "Financials · Transaction & Payment Processing Services (Cross-Border Remittances)",
+  "model_type": "EXCESS_RETURN_FIN_INS",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 19.2,
+  "p": 11.2,
+  "v1": 11.9,
+  "v2": 5.76,
+  "buy": 4.43,
+  "mos": -48.57,
+  "data_check_flag": false,
+  "dpct": -51.6,
+  "dusd": -6.14,
+  "oey": 13.19,
+  "oem": 490.3,
+  "rdcf": 3.54,
+  "mcap": 3718.4,
+  "z": "SHORT",
+  "pess": 1.82,
+  "real": 5.73,
+  "opt": 9.77,
+  "ec": 941.0,
+  "nc": -2349.0,
+  "rev": 4180.0,
+  "opm_cur": 0.19,
+  "opm_norm": 0.165,
+  "tax": 0.18,
+  "da": 0.032,
+  "capex_pct": 0.035,
+  "nwc": 0.02,
+  "sbc_pct": 0.012,
+  "sh": 332.0,
+  "wacc": 0.105,
+  "tg": -0.025,
+  "gvec": [
+    -0.02,
+    -0.0203,
+    -0.0206,
+    -0.0209,
+    -0.0212,
+    -0.0215,
+    -0.0218,
+    -0.0221,
+    -0.0224,
+    -0.0227
+  ],
+  "mvec": [
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165,
+    0.165
+  ],
+  "short_p": 3.14,
+  "short_down": -72.0,
+  "short_score": 86,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 8.6,
+    "days_to_cover": 4.2,
+    "momentum_6m_pct": -14.5
+  },
+  "traceability": {
+    "cik_or_lei": "0001365135",
+    "accession_no": "0001365135-26-000043",
+    "filing_date": "2026-10-29",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:LongTermDebt"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      -3.5,
+      -3.0,
+      -2.5,
+      -2.0,
+      -1.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          6.45,
+          6.64,
+          6.85,
+          7.06,
+          7.29
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          5.94,
+          6.1,
+          6.28,
+          6.47,
+          6.67
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          5.46,
+          5.6,
+          5.76,
+          5.93,
+          6.11
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          5.01,
+          5.14,
+          5.28,
+          5.43,
+          5.59
+        ]
+      },
+      {
+        "wacc_pct": 11.5,
+        "ivs": [
+          4.59,
+          4.7,
+          4.84,
+          4.97,
+          5.11
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 3.93,
+    "p25": 4.95,
+    "p50": 5.85,
+    "p75": 6.88,
+    "p90": 8.11,
+    "prob_above_price_pct": 0.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 10.12,
+      "v1": 10.83,
+      "v2": 5.24,
+      "mos": -48.2
+    },
+    {
+      "q": "25Q4",
+      "p": 10.7,
+      "v1": 11.04,
+      "v2": 5.35,
+      "mos": -50.0
+    },
+    {
+      "q": "26Q1",
+      "p": 11.07,
+      "v1": 11.26,
+      "v2": 5.45,
+      "mos": -50.8
+    },
+    {
+      "q": "26Q2",
+      "p": 11.11,
+      "v1": 11.47,
+      "v2": 5.55,
+      "mos": -50.0
+    },
+    {
+      "q": "26Q3",
+      "p": 10.85,
+      "v1": 11.69,
+      "v2": 5.66,
+      "mos": -47.8
+    },
+    {
+      "q": "26Q4",
+      "p": 11.2,
+      "v1": 11.9,
+      "v2": 5.76,
+      "mos": -48.6
+    }
+  ],
+  "what": "Tradicionalni ponudnik čezmejnih denarnih nakazil prek mreže fizičnih agentov.",
+  "why_v1": "Optično nizek P/E (~6,5x) in visok dividendni donos.",
+  "why_v2": "Agent 2 razkril klasično past (Value Trap): po odštetju -$2,35 mrd SOTP neto dolga in -2,5 % letnega krčenja marž je IV v2 = $7,10 (MoS = -36,6 %).",
+  "s_flags": "Altman Z-Score 1,54 (cona finančne stiske) in padajoči organski prihodki v ključnih koridorjih.",
+  "s_moat": "Digitalni konkurenti (Wise, Remitly, Revolut) in stabilni kovanci (USDC) jemljejo najbolj dobičkonosne stranke.",
+  "s_debt": "Čisti SOTP neto dolg (-$2,35 mrd) pomeni, da ob krčenju EBIT finančni vzvod deluje proti delničarjem.",
+  "s_cat": "Znižanje dividende zaradi refinanciranja dolga po višjih obrestnih merah.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (EXCESS_RETURN_FIN_INS, valuta USD)",
+      "iv": 11.9,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (209M USD), IFRS 16 najemov (160M) in pogojnih obveznosti",
+      "iv": 10.06,
+      "d": -1.84
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.2% prihodkov) in efektivni davek 18.0%",
+      "iv": 8.71,
+      "d": -1.35
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 19.0% na sredinskih 16.5%",
+      "iv": 7.11,
+      "d": -1.6
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.5% in g -2.5%",
+      "iv": 5.76,
+      "d": -1.35
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.92,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 1.54,
+    "altman_flag": "STEČAJNA STISKA (<1.81)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 78.0,
+    "share_dilution_3y_pct": -3.2,
+    "sloan_accrual_pct": 4.0,
+    "finra_short_float_pct": 8.6,
+    "days_to_cover": 4.2,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -14.5,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 7.41
+      },
+      {
+        "q": "22Q2",
+        "p": 7.02
+      },
+      {
+        "q": "22Q3",
+        "p": 6.67
+      },
+      {
+        "q": "22Q4",
+        "p": 6.62
+      },
+      {
+        "q": "23Q1",
+        "p": 7.0
+      },
+      {
+        "q": "23Q2",
+        "p": 7.78
+      },
+      {
+        "q": "23Q3",
+        "p": 8.7
+      },
+      {
+        "q": "23Q4",
+        "p": 9.49
+      },
+      {
+        "q": "24Q1",
+        "p": 9.91
+      },
+      {
+        "q": "24Q2",
+        "p": 9.91
+      },
+      {
+        "q": "24Q3",
+        "p": 9.63
+      },
+      {
+        "q": "24Q4",
+        "p": 9.35
+      },
+      {
+        "q": "25Q1",
+        "p": 9.29
+      },
+      {
+        "q": "25Q2",
+        "p": 9.57
+      },
+      {
+        "q": "25Q3",
+        "p": 10.12
+      },
+      {
+        "q": "25Q4",
+        "p": 10.7
+      },
+      {
+        "q": "26Q1",
+        "p": 11.07
+      },
+      {
+        "q": "26Q2",
+        "p": 11.11
+      },
+      {
+        "q": "26Q3",
+        "p": 10.85
+      },
+      {
+        "q": "26Q4",
+        "p": 11.2
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

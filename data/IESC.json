@@ -1,0 +1,347 @@
+{
+  "t": "IESC",
+  "n": "IES Holdings, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Industrials",
+  "gics_industry": "Construction & Engineering (Data Center & Residential Electrical)",
+  "sec": "Industrials · Construction & Engineering (Data Center & Residential Electrical)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 28.4,
+  "p": 156.06,
+  "v1": 186.23,
+  "v2": 101.53,
+  "buy": 78.1,
+  "mos": -34.94,
+  "data_check_flag": false,
+  "dpct": -45.5,
+  "dusd": -84.7,
+  "oey": 3.39,
+  "oem": 218.9,
+  "rdcf": 10.51,
+  "mcap": 6457.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 61.54,
+  "real": 100.64,
+  "opt": 143.32,
+  "ec": 196.11,
+  "nc": -83.89,
+  "rev": 4477.9,
+  "opm_cur": 0.122,
+  "opm_norm": 0.088,
+  "tax": 0.24,
+  "da": 0.015,
+  "capex_pct": 0.018,
+  "nwc": 0.05,
+  "sbc_pct": 0.008,
+  "sh": 41.38,
+  "wacc": 0.098,
+  "tg": 0.022,
+  "gvec": [
+    0.045,
+    0.0436,
+    0.0422,
+    0.0408,
+    0.0394,
+    0.038,
+    0.0366,
+    0.0352,
+    0.0338,
+    0.0323
+  ],
+  "mvec": [
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088,
+    0.088
+  ],
+  "short_p": 56.62,
+  "short_down": -63.7,
+  "short_score": 38,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 2,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 3.8,
+    "days_to_cover": 2.1,
+    "momentum_6m_pct": 14.5
+  },
+  "traceability": {
+    "cik_or_lei": "0001048268",
+    "accession_no": "0001048268-26-000031",
+    "filing_date": "2026-11-18",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:RedeemableNoncontrollingInterestEquityCarryingAmount"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          108.43,
+          112.75,
+          117.71,
+          123.49,
+          130.3
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          101.28,
+          104.91,
+          109.05,
+          113.82,
+          119.36
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          94.97,
+          98.05,
+          101.53,
+          105.5,
+          110.07
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          89.36,
+          92.0,
+          94.95,
+          98.29,
+          102.11
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          84.35,
+          86.61,
+          89.13,
+          91.98,
+          95.18
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 81.72,
+    "p25": 89.36,
+    "p50": 101.99,
+    "p75": 115.26,
+    "p90": 129.07,
+    "prob_above_price_pct": 0.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 143.73,
+      "v1": 169.47,
+      "v2": 92.39,
+      "mos": -35.7
+    },
+    {
+      "q": "25Q4",
+      "p": 149.88,
+      "v1": 172.82,
+      "v2": 94.22,
+      "mos": -37.1
+    },
+    {
+      "q": "26Q1",
+      "p": 151.61,
+      "v1": 176.17,
+      "v2": 96.05,
+      "mos": -36.6
+    },
+    {
+      "q": "26Q2",
+      "p": 149.09,
+      "v1": 179.53,
+      "v2": 97.87,
+      "mos": -34.4
+    },
+    {
+      "q": "26Q3",
+      "p": 144.88,
+      "v1": 182.88,
+      "v2": 99.7,
+      "mos": -31.2
+    },
+    {
+      "q": "26Q4",
+      "p": 156.06,
+      "v1": 186.23,
+      "v2": 101.53,
+      "mos": -34.9
+    }
+  ],
+  "what": "Izvajalec elektroinštalacijskih sistemov in hladilne infrastrukture za podatkovne centre ter stanovanjsko gradnjo v ZDA.",
+  "why_v1": "Eksplozivna rast naročil v podatkovnih centrih in 0 USD bančnega dolga.",
+  "why_v2": "Agent 2 uporabil NORMALIZED_CYCLICAL model: znižal rekordno 12,2 % gradbeno maržo na 8,8 % in odštel obveznosti do manjšinskih deležev (NCI) -> v2 = $141,86 (MoS = -9,1 %).",
+  "s_flags": "Trenutna gradbena marža (12,2 %) je +2 standardna odklona nad 10-letno mediano.",
+  "s_moat": "Odvisnost od cikla gradnje AI podatkovnih centrov in ameriškega stanovanjskega trga.",
+  "s_debt": "Brez bančnega dolga, a $195M odkupnih obveznosti za manjšinske deleže (Redeemable NCI).",
+  "s_cat": "Ohlajanje AI CapEx proračunov hiperskalerjev.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 186.23,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (224M USD), IFRS 16 najemov (85M) in pogojnih obveznosti",
+      "iv": 160.82,
+      "d": -25.41
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 24.0%",
+      "iv": 142.19,
+      "d": -18.63
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 12.2% na sredinskih 8.8%",
+      "iv": 120.16,
+      "d": -22.03
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g 2.2%",
+      "iv": 101.53,
+      "d": -18.63
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.45,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 6.1,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": -0.8,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 3.8,
+    "days_to_cover": 2.1,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": 14.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 95.55
+      },
+      {
+        "q": "22Q2",
+        "p": 91.01
+      },
+      {
+        "q": "22Q3",
+        "p": 90.17
+      },
+      {
+        "q": "22Q4",
+        "p": 95.26
+      },
+      {
+        "q": "23Q1",
+        "p": 105.8
+      },
+      {
+        "q": "23Q2",
+        "p": 118.79
+      },
+      {
+        "q": "23Q3",
+        "p": 130.09
+      },
+      {
+        "q": "23Q4",
+        "p": 136.33
+      },
+      {
+        "q": "24Q1",
+        "p": 136.52
+      },
+      {
+        "q": "24Q2",
+        "p": 132.38
+      },
+      {
+        "q": "24Q3",
+        "p": 127.52
+      },
+      {
+        "q": "24Q4",
+        "p": 125.56
+      },
+      {
+        "q": "25Q1",
+        "p": 128.42
+      },
+      {
+        "q": "25Q2",
+        "p": 135.43
+      },
+      {
+        "q": "25Q3",
+        "p": 143.73
+      },
+      {
+        "q": "25Q4",
+        "p": 149.88
+      },
+      {
+        "q": "26Q1",
+        "p": 151.61
+      },
+      {
+        "q": "26Q2",
+        "p": 149.09
+      },
+      {
+        "q": "26Q3",
+        "p": 144.88
+      },
+      {
+        "q": "26Q4",
+        "p": 156.06
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

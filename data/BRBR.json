@@ -1,0 +1,346 @@
+{
+  "t": "BRBR",
+  "n": "BellRing Brands, Inc.",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Consumer Staples",
+  "gics_industry": "Packaged Foods & Meats (Premier Protein RTD Shakes)",
+  "sec": "Consumer Staples · Packaged Foods & Meats (Premier Protein RTD Shakes)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 27.6,
+  "p": 32.1,
+  "v1": 49.96,
+  "v2": 33.4,
+  "buy": 25.69,
+  "mos": 4.05,
+  "data_check_flag": false,
+  "dpct": -33.1,
+  "dusd": -16.56,
+  "oey": 6.77,
+  "oem": 257.5,
+  "rdcf": 4.42,
+  "mcap": 3803.2,
+  "z": "UNDER",
+  "pess": 17.39,
+  "real": 32.97,
+  "opt": 50.27,
+  "ec": 0.0,
+  "nc": -940.0,
+  "rev": 2398.4,
+  "opm_cur": 0.175,
+  "opm_norm": 0.155,
+  "tax": 0.23,
+  "da": 0.018,
+  "capex_pct": 0.015,
+  "nwc": 0.055,
+  "sbc_pct": 0.014,
+  "sh": 118.48,
+  "wacc": 0.095,
+  "tg": 0.022,
+  "gvec": [
+    0.055,
+    0.053,
+    0.051,
+    0.049,
+    0.0469,
+    0.0449,
+    0.0429,
+    0.0409,
+    0.0389,
+    0.0368
+  ],
+  "mvec": [
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155,
+    0.155
+  ],
+  "short_p": 16.0,
+  "short_down": -50.2,
+  "short_score": 26,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 3.6,
+    "days_to_cover": 2.1,
+    "momentum_6m_pct": -11.0
+  },
+  "traceability": {
+    "cik_or_lei": "0001772028",
+    "accession_no": "0001772028-26-000049",
+    "filing_date": "2026-11-17",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          36.22,
+          38.09,
+          40.25,
+          42.79,
+          45.81
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          33.22,
+          34.78,
+          36.57,
+          38.65,
+          41.09
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          30.58,
+          31.9,
+          33.4,
+          35.12,
+          37.12
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          28.25,
+          29.37,
+          30.64,
+          32.08,
+          33.73
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          26.18,
+          27.14,
+          28.21,
+          29.43,
+          30.82
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 25.54,
+    "p25": 29.14,
+    "p50": 32.58,
+    "p75": 36.72,
+    "p90": 41.6,
+    "prob_above_price_pct": 54.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 30.3,
+      "v1": 45.46,
+      "v2": 30.39,
+      "mos": 0.3
+    },
+    {
+      "q": "25Q4",
+      "p": 30.72,
+      "v1": 46.36,
+      "v2": 31.0,
+      "mos": 0.9
+    },
+    {
+      "q": "26Q1",
+      "p": 31.94,
+      "v1": 47.26,
+      "v2": 31.6,
+      "mos": -1.1
+    },
+    {
+      "q": "26Q2",
+      "p": 33.39,
+      "v1": 48.16,
+      "v2": 32.2,
+      "mos": -3.6
+    },
+    {
+      "q": "26Q3",
+      "p": 34.33,
+      "v1": 49.06,
+      "v2": 32.8,
+      "mos": -4.5
+    },
+    {
+      "q": "26Q4",
+      "p": 32.1,
+      "v1": 49.96,
+      "v2": 33.4,
+      "mos": 4.0
+    }
+  ],
+  "what": "Vodilni ameriški proizvajalec pripravljenih beljakovinskih napitkov (Premier Protein in Dymatize) s kapitalsko lahkim modelom zunanjih polnilnic.",
+  "why_v1": "Močna sekularna rast povpraševanja po beljakovinskih napitkih (tudi pri uporabnikih GLP-1 zdravil).",
+  "why_v2": "Agent 2 po upoštevanju -$965M SOTP neto dolga, inflacije sirotkinih beljakovin in koncentracije pri Costcu/Walmartu določil v2 = $33,40 (MoS = +4,0 %).",
+  "s_flags": "Ekstremna koncentracija kupcev: Costco in Walmart predstavljata >65 % prodaje.",
+  "s_moat": "Inflacija cen sirotke (whey protein) in trgovske znamke (Kirkland).",
+  "s_debt": "SOTP neto dolg znaša -$965M.",
+  "s_cat": "Izguba promocijske rotacije v Costco katalogu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 49.96,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (120M USD), IFRS 16 najemov (45M) in pogojnih obveznosti",
+      "iv": 44.99,
+      "d": -4.97
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.4% prihodkov) in efektivni davek 23.0%",
+      "iv": 41.35,
+      "d": -3.64
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 17.5% na sredinskih 15.5%",
+      "iv": 37.04,
+      "d": -4.31
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.2%",
+      "iv": 33.4,
+      "d": -3.64
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.47,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.55,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 98.0,
+    "share_dilution_3y_pct": -3.4,
+    "sloan_accrual_pct": 0.4,
+    "finra_short_float_pct": 3.6,
+    "days_to_cover": 2.1,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -11.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 31.31
+      },
+      {
+        "q": "22Q2",
+        "p": 31.89
+      },
+      {
+        "q": "22Q3",
+        "p": 31.29
+      },
+      {
+        "q": "22Q4",
+        "p": 29.71
+      },
+      {
+        "q": "23Q1",
+        "p": 27.87
+      },
+      {
+        "q": "23Q2",
+        "p": 26.59
+      },
+      {
+        "q": "23Q3",
+        "p": 26.49
+      },
+      {
+        "q": "23Q4",
+        "p": 27.64
+      },
+      {
+        "q": "24Q1",
+        "p": 29.55
+      },
+      {
+        "q": "24Q2",
+        "p": 31.43
+      },
+      {
+        "q": "24Q3",
+        "p": 32.54
+      },
+      {
+        "q": "24Q4",
+        "p": 32.58
+      },
+      {
+        "q": "25Q1",
+        "p": 31.79
+      },
+      {
+        "q": "25Q2",
+        "p": 30.79
+      },
+      {
+        "q": "25Q3",
+        "p": 30.3
+      },
+      {
+        "q": "25Q4",
+        "p": 30.72
+      },
+      {
+        "q": "26Q1",
+        "p": 31.94
+      },
+      {
+        "q": "26Q2",
+        "p": 33.39
+      },
+      {
+        "q": "26Q3",
+        "p": 34.33
+      },
+      {
+        "q": "26Q4",
+        "p": 32.1
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

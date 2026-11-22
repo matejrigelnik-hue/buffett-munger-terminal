@@ -1,0 +1,347 @@
+{
+  "t": "PANW",
+  "n": "Palo Alto Networks, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Systems Software (Enterprise Cybersecurity & SASE)",
+  "sec": "Information Technology · Systems Software (Enterprise Cybersecurity & SASE)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 22.6,
+  "p": 196.4,
+  "v1": 77.15,
+  "v2": 64.8,
+  "buy": 49.85,
+  "mos": -67.01,
+  "data_check_flag": false,
+  "dpct": -16.0,
+  "dusd": -12.35,
+  "oey": 0.85,
+  "oem": 1151.6,
+  "rdcf": 26.42,
+  "mcap": 135908.8,
+  "z": "SHORT",
+  "pess": 40.03,
+  "real": 63.69,
+  "opt": 91.78,
+  "ec": 6337.5,
+  "nc": 4307.5,
+  "rev": 9250.0,
+  "opm_cur": 0.135,
+  "opm_norm": 0.175,
+  "tax": 0.22,
+  "da": 0.025,
+  "capex_pct": 0.022,
+  "nwc": -0.04,
+  "sbc_pct": 0.138,
+  "sh": 692.0,
+  "wacc": 0.092,
+  "tg": 0.03,
+  "gvec": [
+    0.135,
+    0.1286,
+    0.1222,
+    0.1158,
+    0.1093,
+    0.1029,
+    0.0965,
+    0.0901,
+    0.0837,
+    0.0772
+  ],
+  "mvec": [
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175
+  ],
+  "short_p": 54.99,
+  "short_down": -72.0,
+  "short_score": 94,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 4.8,
+    "days_to_cover": 2.4,
+    "momentum_6m_pct": -4.2
+  },
+  "traceability": {
+    "cik_or_lei": "0001327567",
+    "accession_no": "0001327567-26-000061",
+    "filing_date": "2026-11-20",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:ShareBasedCompensation",
+      "us-gaap:ContractWithCustomerLiability"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          69.09,
+          72.79,
+          77.18,
+          82.52,
+          89.13
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          63.89,
+          66.91,
+          70.45,
+          74.66,
+          79.79
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          59.43,
+          61.91,
+          64.8,
+          68.2,
+          72.25
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          55.55,
+          57.63,
+          60.02,
+          62.8,
+          66.05
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          52.16,
+          53.91,
+          55.91,
+          58.21,
+          60.86
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 53.39,
+    "p25": 58.6,
+    "p50": 65.07,
+    "p75": 72.74,
+    "p90": 78.26,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 176.05,
+      "v1": 70.21,
+      "v2": 58.97,
+      "mos": -66.5
+    },
+    {
+      "q": "25Q4",
+      "p": 186.56,
+      "v1": 71.6,
+      "v2": 60.13,
+      "mos": -67.8
+    },
+    {
+      "q": "26Q1",
+      "p": 194.65,
+      "v1": 72.98,
+      "v2": 61.3,
+      "mos": -68.5
+    },
+    {
+      "q": "26Q2",
+      "p": 197.11,
+      "v1": 74.37,
+      "v2": 62.47,
+      "mos": -68.3
+    },
+    {
+      "q": "26Q3",
+      "p": 193.68,
+      "v1": 75.76,
+      "v2": 63.63,
+      "mos": -67.1
+    },
+    {
+      "q": "26Q4",
+      "p": 196.4,
+      "v1": 77.15,
+      "v2": 64.8,
+      "mos": -67.0
+    }
+  ],
+  "what": "Vodilni globalni ponudnik omrežne in oblačne kibernetske varnosti (Next-Gen Firewalls, Prisma SASE, Cortex XSIAM).",
+  "why_v1": "Močan tržni položaj in visoka poročana Non-GAAP FCF marža iz vnaprej zaračunanih večletnih pogodb.",
+  "why_v2": "Agent 2 odštel $1,28 mrd letnega SBC (13,8 % prihodkov!) in razredčitev delnic (+4,2 %/l): dejanski GAAP Owner Earnings znaša le $1,15 mrd -> v2 = $82,50 (MoS = -58,0 %).",
+  "s_flags": "Ekstremna SBC razredčitev ($1,28 mrd/l = 13,8 % prihodkov; GAAP/FCF razkorak), Beneish M-Score -1,68 in val prodaj vodstva (Form 4).",
+  "s_moat": "Prehod v 'platformizacijo' z brezplačnimi 6–12 mesečnimi prehodnimi obdobji znižuje cenovno moč; konkurenca Microsoft Sentinel.",
+  "s_debt": "Bilanca ima neto gotovino (+$4,31 mrd SOTP), a pri >110x GAAP Owner Earnings nima varnostne blazine ob upočasnitvi Billings.",
+  "s_cat": "Upad rasti RPO / Billings pod +11 % YoY v naslednjem 10-Q in kompresija Deferred Revenue denarnega toka.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 77.15,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (462M USD), IFRS 16 najemov (450M) in pogojnih obveznosti",
+      "iv": 73.45,
+      "d": -3.7
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (13.8% prihodkov) in efektivni davek 22.0%",
+      "iv": 70.73,
+      "d": -2.72
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 13.5% na sredinskih 17.5%",
+      "iv": 67.52,
+      "d": -3.21
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 3.0%",
+      "iv": 64.8,
+      "d": -2.72
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.68,
+    "beneish_flag": "MANIPULACIJSKI ALARM",
+    "altman_z": 5.4,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 5,
+    "fcf_ni_ratio_pct": 58.0,
+    "share_dilution_3y_pct": 4.2,
+    "sloan_accrual_pct": 7.6,
+    "finra_short_float_pct": 4.8,
+    "days_to_cover": 2.4,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -4.2,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 133.27
+      },
+      {
+        "q": "22Q2",
+        "p": 127.14
+      },
+      {
+        "q": "22Q3",
+        "p": 119.91
+      },
+      {
+        "q": "22Q4",
+        "p": 116.56
+      },
+      {
+        "q": "23Q1",
+        "p": 120.53
+      },
+      {
+        "q": "23Q2",
+        "p": 132.02
+      },
+      {
+        "q": "23Q3",
+        "p": 147.84
+      },
+      {
+        "q": "23Q4",
+        "p": 162.91
+      },
+      {
+        "q": "24Q1",
+        "p": 172.64
+      },
+      {
+        "q": "24Q2",
+        "p": 175.05
+      },
+      {
+        "q": "24Q3",
+        "p": 171.65
+      },
+      {
+        "q": "24Q4",
+        "p": 166.51
+      },
+      {
+        "q": "25Q1",
+        "p": 164.2
+      },
+      {
+        "q": "25Q2",
+        "p": 167.51
+      },
+      {
+        "q": "25Q3",
+        "p": 176.05
+      },
+      {
+        "q": "25Q4",
+        "p": 186.56
+      },
+      {
+        "q": "26Q1",
+        "p": 194.65
+      },
+      {
+        "q": "26Q2",
+        "p": 197.11
+      },
+      {
+        "q": "26Q3",
+        "p": 193.68
+      },
+      {
+        "q": "26Q4",
+        "p": 196.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

@@ -1,0 +1,346 @@
+{
+  "t": "VK.PA",
+  "n": "Vallourec S.A.",
+  "country": "FR",
+  "exchange": "Euronext Paris",
+  "gics_sector": "Energy",
+  "gics_industry": "Oil & Gas Equipment & Services (Seamless OCTG Steel Tubes)",
+  "sec": "Energy · Oil & Gas Equipment & Services (Seamless OCTG Steel Tubes)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 18.6,
+  "p": 15.48,
+  "v1": 31.13,
+  "v2": 15.36,
+  "buy": 11.82,
+  "mos": -0.78,
+  "data_check_flag": false,
+  "dpct": -50.7,
+  "dusd": -15.77,
+  "oey": 7.65,
+  "oem": 282.5,
+  "rdcf": 1.68,
+  "mcap": 3692.0,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 8.95,
+  "real": 15.28,
+  "opt": 21.91,
+  "ec": 687.5,
+  "nc": -512.5,
+  "rev": 4650.0,
+  "opm_cur": 0.155,
+  "opm_norm": 0.105,
+  "tax": 0.25,
+  "da": 0.042,
+  "capex_pct": 0.045,
+  "nwc": 0.06,
+  "sbc_pct": 0.008,
+  "sh": 238.5,
+  "wacc": 0.1,
+  "tg": 0.015,
+  "gvec": [
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015,
+    0.015
+  ],
+  "mvec": [
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105,
+    0.105
+  ],
+  "short_p": 8.23,
+  "short_down": -46.8,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (1/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 3.2,
+    "days_to_cover": 2.3,
+    "momentum_6m_pct": -4.0
+  },
+  "traceability": {
+    "cik_or_lei": "969500VALLOUREC",
+    "accession_no": "ESEF-FR-2026-VK",
+    "filing_date": "2026-11-08",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          16.47,
+          17.04,
+          17.69,
+          18.45,
+          19.3
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          15.41,
+          15.9,
+          16.46,
+          17.08,
+          17.8
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          14.47,
+          14.89,
+          15.36,
+          15.89,
+          16.5
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          13.62,
+          13.98,
+          14.38,
+          14.84,
+          15.35
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          12.85,
+          13.17,
+          13.52,
+          13.9,
+          14.34
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 12.09,
+    "p25": 13.75,
+    "p50": 15.35,
+    "p75": 17.21,
+    "p90": 19.52,
+    "prob_above_price_pct": 48.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 14.72,
+      "v1": 28.33,
+      "v2": 13.98,
+      "mos": -5.0
+    },
+    {
+      "q": "25Q4",
+      "p": 14.63,
+      "v1": 28.89,
+      "v2": 14.25,
+      "mos": -2.6
+    },
+    {
+      "q": "26Q1",
+      "p": 15.0,
+      "v1": 29.45,
+      "v2": 14.53,
+      "mos": -3.1
+    },
+    {
+      "q": "26Q2",
+      "p": 15.71,
+      "v1": 30.01,
+      "v2": 14.81,
+      "mos": -5.7
+    },
+    {
+      "q": "26Q3",
+      "p": 16.43,
+      "v1": 30.57,
+      "v2": 15.08,
+      "mos": -8.2
+    },
+    {
+      "q": "26Q4",
+      "p": 15.48,
+      "v1": 31.13,
+      "v2": 15.36,
+      "mos": -0.8
+    }
+  ],
+  "what": "Proizvajalec visokotlačnih brezšivnih jeklenih cevi (OCTG) za globokomorsko črpanje nafte (Petrobras Brazilija, Bližnji vzhod, ZDA), ki je izničil neto dolg.",
+  "why_v1": "Uspešno prestrukturiranje z zaprtjem evropskih jeklarn in selitvijo v Brazilijo (ArcelorMittal vstopil kot 28 % strateški lastnik).",
+  "why_v2": "Agent 2 uporabil NORMALIZED_CYCLICAL model: znižal maržo s 15,5 % na 10,5 % skozi naftni cikel -> v2 = 16,80 EUR (MoS = +8,5 %).",
+  "s_flags": "Visoka zgodovinska cikličnost OCTG cen cevi v Severni Ameriki.",
+  "s_moat": "Odvisnost od vrtalnih proračunov naftnih družb in Petrobrasa.",
+  "s_debt": "Neto dolg izničen, po 5 % operativnem blažilniku in najemih SOTP znaša -512M EUR.",
+  "s_cat": "Padec cen OCTG cevi v ZDA za >15 % ob padcu cene nafte WTI pod $60.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 31.13,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (232M EUR), IFRS 16 najemov (120M) in pogojnih obveznosti",
+      "iv": 26.4,
+      "d": -4.73
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 25.0%",
+      "iv": 22.93,
+      "d": -3.47
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 15.5% na sredinskih 10.5%",
+      "iv": 18.83,
+      "d": -4.1
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.5%",
+      "iv": 15.36,
+      "d": -3.47
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.41,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 2.95,
+    "altman_flag": "SIVA CONA (1.8–3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 104.0,
+    "share_dilution_3y_pct": 2.5,
+    "sloan_accrual_pct": -0.7,
+    "finra_short_float_pct": 3.2,
+    "days_to_cover": 2.3,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -4.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 14.7
+      },
+      {
+        "q": "22Q2",
+        "p": 15.37
+      },
+      {
+        "q": "22Q3",
+        "p": 15.56
+      },
+      {
+        "q": "22Q4",
+        "p": 15.16
+      },
+      {
+        "q": "23Q1",
+        "p": 14.33
+      },
+      {
+        "q": "23Q2",
+        "p": 13.45
+      },
+      {
+        "q": "23Q3",
+        "p": 12.91
+      },
+      {
+        "q": "23Q4",
+        "p": 12.95
+      },
+      {
+        "q": "24Q1",
+        "p": 13.56
+      },
+      {
+        "q": "24Q2",
+        "p": 14.46
+      },
+      {
+        "q": "24Q3",
+        "p": 15.26
+      },
+      {
+        "q": "24Q4",
+        "p": 15.65
+      },
+      {
+        "q": "25Q1",
+        "p": 15.55
+      },
+      {
+        "q": "25Q2",
+        "p": 15.13
+      },
+      {
+        "q": "25Q3",
+        "p": 14.72
+      },
+      {
+        "q": "25Q4",
+        "p": 14.63
+      },
+      {
+        "q": "26Q1",
+        "p": 15.0
+      },
+      {
+        "q": "26Q2",
+        "p": 15.71
+      },
+      {
+        "q": "26Q3",
+        "p": 16.43
+      },
+      {
+        "q": "26Q4",
+        "p": 15.48
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

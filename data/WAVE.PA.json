@@ -1,0 +1,346 @@
+{
+  "t": "WAVE.PA",
+  "n": "Wavestone SA",
+  "country": "FR",
+  "exchange": "Euronext Paris",
+  "gics_sector": "Information Technology",
+  "gics_industry": "IT Consulting & Other Services (Cybersecurity & Digital Transformation)",
+  "sec": "Information Technology · IT Consulting & Other Services (Cybersecurity & Digital Transformation)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.01,
+  "roic": 18.4,
+  "p": 33.0,
+  "v1": 70.12,
+  "v2": 44.09,
+  "buy": 33.92,
+  "mos": 33.61,
+  "data_check_flag": false,
+  "dpct": -37.1,
+  "dusd": -26.03,
+  "oey": 8.38,
+  "oem": 68.7,
+  "rdcf": 0.6,
+  "mcap": 820.1,
+  "z": "BUY",
+  "pess": 25.07,
+  "real": 43.68,
+  "opt": 63.91,
+  "ec": 77.75,
+  "nc": -157.25,
+  "rev": 945.0,
+  "opm_cur": 0.135,
+  "opm_norm": 0.115,
+  "tax": 0.255,
+  "da": 0.02,
+  "capex_pct": 0.018,
+  "nwc": 0.04,
+  "sbc_pct": 0.015,
+  "sh": 24.85,
+  "wacc": 0.098,
+  "tg": 0.02,
+  "gvec": [
+    0.048,
+    0.0463,
+    0.0446,
+    0.0429,
+    0.0412,
+    0.0394,
+    0.0377,
+    0.036,
+    0.0343,
+    0.0326
+  ],
+  "mvec": [
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115
+  ],
+  "short_p": 23.06,
+  "short_down": -30.1,
+  "short_score": 16,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 1.1,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": -16.0
+  },
+  "traceability": {
+    "cik_or_lei": "969500WAVESTONE",
+    "accession_no": "ESEF-FR-2026-WAVE",
+    "filing_date": "2026-09-30",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          47.45,
+          49.47,
+          51.79,
+          54.49,
+          57.64
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          44.03,
+          45.74,
+          47.67,
+          49.9,
+          52.49
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          41.0,
+          42.45,
+          44.09,
+          45.96,
+          48.1
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          38.31,
+          39.55,
+          40.94,
+          42.52,
+          44.31
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          35.89,
+          36.96,
+          38.15,
+          39.5,
+          41.01
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 35.22,
+    "p25": 39.43,
+    "p50": 43.64,
+    "p75": 49.18,
+    "p90": 54.72,
+    "prob_above_price_pct": 95.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 35.07,
+      "v1": 63.81,
+      "v2": 40.12,
+      "mos": 14.4
+    },
+    {
+      "q": "25Q4",
+      "p": 35.57,
+      "v1": 65.07,
+      "v2": 40.92,
+      "mos": 15.0
+    },
+    {
+      "q": "26Q1",
+      "p": 36.13,
+      "v1": 66.33,
+      "v2": 41.71,
+      "mos": 15.4
+    },
+    {
+      "q": "26Q2",
+      "p": 36.03,
+      "v1": 67.6,
+      "v2": 42.5,
+      "mos": 18.0
+    },
+    {
+      "q": "26Q3",
+      "p": 34.87,
+      "v1": 68.86,
+      "v2": 43.3,
+      "mos": 24.2
+    },
+    {
+      "q": "26Q4",
+      "p": 33.0,
+      "v1": 70.12,
+      "v2": 44.09,
+      "mos": 33.6
+    }
+  ],
+  "what": "Vodilno francosko in nemško svetovalno podjetje za kibernetsko varnost, oblačno arhitekturo in integracijo po združitvi s Q_PERIOR.",
+  "why_v1": "Kapitalsko lahek model (<1,5 % CapEx/prihodki) in visoka denarna konverzija pri 9,5x EV/EBIT.",
+  "why_v2": "Agent 2 po upoštevanju integracijskih stroškov Q_PERIOR in 25 % francosko-nemškega davka potrdil v2 = 43,80 EUR (MoS = +32,7 %).",
+  "s_flags": "Integracija nemškega Q_PERIOR zahteva uskladitev sistemov in zadržanje ključnih svetovalcev.",
+  "s_moat": "Pritisk na dnevne postavke IT svetovalcev ob krčenju proračunov evropskih bank.",
+  "s_debt": "Zelo nizka zadolženost (-67M EUR SOTP po 5 % denarnem blažilniku).",
+  "s_cat": "Padec zasedenosti svetovalcev (Utilization rate) pod 71 %.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta EUR)",
+      "iv": 70.12,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (47M EUR), IFRS 16 najemov (62M) in pogojnih obveznosti",
+      "iv": 62.31,
+      "d": -7.81
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.5% prihodkov) in efektivni davek 25.5%",
+      "iv": 56.58,
+      "d": -5.73
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 13.5% na sredinskih 11.5%",
+      "iv": 49.82,
+      "d": -6.76
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g 2.0%",
+      "iv": 44.09,
+      "d": -5.73
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.55,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.62,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 109.0,
+    "share_dilution_3y_pct": 0.5,
+    "sloan_accrual_pct": -1.6,
+    "finra_short_float_pct": 1.1,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -16.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 45.79
+      },
+      {
+        "q": "22Q2",
+        "p": 44.09
+      },
+      {
+        "q": "22Q3",
+        "p": 41.65
+      },
+      {
+        "q": "22Q4",
+        "p": 39.27
+      },
+      {
+        "q": "23Q1",
+        "p": 37.75
+      },
+      {
+        "q": "23Q2",
+        "p": 37.55
+      },
+      {
+        "q": "23Q3",
+        "p": 38.52
+      },
+      {
+        "q": "23Q4",
+        "p": 39.99
+      },
+      {
+        "q": "24Q1",
+        "p": 41.12
+      },
+      {
+        "q": "24Q2",
+        "p": 41.23
+      },
+      {
+        "q": "24Q3",
+        "p": 40.17
+      },
+      {
+        "q": "24Q4",
+        "p": 38.34
+      },
+      {
+        "q": "25Q1",
+        "p": 36.48
+      },
+      {
+        "q": "25Q2",
+        "p": 35.29
+      },
+      {
+        "q": "25Q3",
+        "p": 35.07
+      },
+      {
+        "q": "25Q4",
+        "p": 35.57
+      },
+      {
+        "q": "26Q1",
+        "p": 36.13
+      },
+      {
+        "q": "26Q2",
+        "p": 36.03
+      },
+      {
+        "q": "26Q3",
+        "p": 34.87
+      },
+      {
+        "q": "26Q4",
+        "p": 33.0
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

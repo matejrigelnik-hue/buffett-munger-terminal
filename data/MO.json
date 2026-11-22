@@ -1,0 +1,346 @@
+{
+  "t": "MO",
+  "n": "Altria Group, Inc.",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Consumer Staples",
+  "gics_industry": "Tobacco (Marlboro Cigarettes & Oral Nicotine)",
+  "sec": "Consumer Staples · Tobacco (Marlboro Cigarettes & Oral Nicotine)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 44.7,
+  "p": 54.8,
+  "v1": 34.05,
+  "v2": 22.53,
+  "buy": 17.33,
+  "mos": -58.89,
+  "data_check_flag": false,
+  "dpct": -33.8,
+  "dusd": -11.52,
+  "oey": 8.33,
+  "oem": 7733.2,
+  "rdcf": 7.02,
+  "mcap": 92798.3,
+  "z": "SHORT",
+  "pess": 12.04,
+  "real": 22.59,
+  "opt": 32.91,
+  "ec": 2627.5,
+  "nc": -24202.5,
+  "rev": 20450.0,
+  "opm_cur": 0.56,
+  "opm_norm": 0.51,
+  "tax": 0.235,
+  "da": 0.015,
+  "capex_pct": 0.012,
+  "nwc": 0.01,
+  "sbc_pct": 0.004,
+  "sh": 1693.4,
+  "wacc": 0.098,
+  "tg": -0.03,
+  "gvec": [
+    -0.025,
+    -0.0253,
+    -0.0256,
+    -0.0259,
+    -0.0262,
+    -0.0265,
+    -0.0268,
+    -0.0271,
+    -0.0274,
+    -0.0278
+  ],
+  "mvec": [
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51,
+    0.51
+  ],
+  "short_p": 15.34,
+  "short_down": -72.0,
+  "short_score": 92,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 3.9,
+    "days_to_cover": 2.5,
+    "momentum_6m_pct": -3.4
+  },
+  "traceability": {
+    "cik_or_lei": "0000764180",
+    "accession_no": "0000764180-26-000055",
+    "filing_date": "2026-10-31",
+    "xbrl_tags": [
+      "us-gaap:SalesRevenueNet",
+      "us-gaap:LongTermDebtNoncurrent"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      -4.0,
+      -3.5,
+      -3.0,
+      -2.5,
+      -2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          24.55,
+          25.09,
+          25.67,
+          26.31,
+          27.01
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          23.04,
+          23.52,
+          24.04,
+          24.59,
+          25.21
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          21.64,
+          22.07,
+          22.53,
+          23.03,
+          23.57
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          20.35,
+          20.72,
+          21.13,
+          21.57,
+          22.05
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          19.14,
+          19.48,
+          19.85,
+          20.24,
+          20.65
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 17.08,
+    "p25": 19.79,
+    "p50": 22.44,
+    "p75": 26.23,
+    "p90": 28.81,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 50.19,
+      "v1": 30.99,
+      "v2": 20.5,
+      "mos": -59.2
+    },
+    {
+      "q": "25Q4",
+      "p": 49.33,
+      "v1": 31.6,
+      "v2": 20.91,
+      "mos": -57.6
+    },
+    {
+      "q": "26Q1",
+      "p": 49.05,
+      "v1": 32.21,
+      "v2": 21.31,
+      "mos": -56.6
+    },
+    {
+      "q": "26Q2",
+      "p": 50.3,
+      "v1": 32.82,
+      "v2": 21.72,
+      "mos": -56.8
+    },
+    {
+      "q": "26Q3",
+      "p": 53.23,
+      "v1": 33.44,
+      "v2": 22.12,
+      "mos": -58.4
+    },
+    {
+      "q": "26Q4",
+      "p": 54.8,
+      "v1": 34.05,
+      "v2": 22.53,
+      "mos": -58.9
+    }
+  ],
+  "what": "Največji ameriški proizvajalec cigaret (Marlboro) in nikotinskih izdelkov (NJOY, on!).",
+  "why_v1": "Optično nizek P/E (~10x) in visoka trenutna operativna marža.",
+  "why_v2": "Agent 2 vključil -$20,84 mrd SOTP neto dolga in strukturni -9 % letni upad prodanih škatlic cigaret (negativna rast -2,5 %/l in terminalni upad -3 %) -> v2 = $38,64 (MoS = -29,5 %).",
+  "s_flags": "Strukturni padec volumna klasičnih cigaret (-9 % do -11 % YoY) presega elastičnost dvigovanja cen; Altman Z-Score 1,72.",
+  "s_moat": "Nepovraten prehod kadilcev na nelegalne e-cigarete in ZYN (Philip Morris obvladuje >65 % trga nikotinskih vrečk v ZDA).",
+  "s_debt": "Masivni čisti SOTP neto dolg (-$20,84 mrd) ob >$6,8 mrd letnih izplačil dividend.",
+  "s_cat": "Padec volumna dimnih izdelkov za >10 % YoY v četrtletnem poročilu ali prepoved uvoza NJOY naprav s strani ITC.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 34.05,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1022M USD), IFRS 16 najemov (280M) in pogojnih obveznosti",
+      "iv": 30.59,
+      "d": -3.46
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 23.5%",
+      "iv": 28.06,
+      "d": -2.53
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 56.0% na sredinskih 51.0%",
+      "iv": 25.06,
+      "d": -3.0
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g -3.0%",
+      "iv": 22.53,
+      "d": -2.53
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.12,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 1.72,
+    "altman_flag": "STEČAJNA STISKA (<1.81)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 92.0,
+    "share_dilution_3y_pct": -2.1,
+    "sloan_accrual_pct": 1.4,
+    "finra_short_float_pct": 3.9,
+    "days_to_cover": 2.5,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": -3.4,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 32.72
+      },
+      {
+        "q": "22Q2",
+        "p": 36.44
+      },
+      {
+        "q": "22Q3",
+        "p": 40.58
+      },
+      {
+        "q": "22Q4",
+        "p": 43.76
+      },
+      {
+        "q": "23Q1",
+        "p": 44.94
+      },
+      {
+        "q": "23Q2",
+        "p": 43.99
+      },
+      {
+        "q": "23Q3",
+        "p": 41.72
+      },
+      {
+        "q": "23Q4",
+        "p": 39.52
+      },
+      {
+        "q": "24Q1",
+        "p": 38.71
+      },
+      {
+        "q": "24Q2",
+        "p": 39.93
+      },
+      {
+        "q": "24Q3",
+        "p": 42.83
+      },
+      {
+        "q": "24Q4",
+        "p": 46.33
+      },
+      {
+        "q": "25Q1",
+        "p": 49.14
+      },
+      {
+        "q": "25Q2",
+        "p": 50.41
+      },
+      {
+        "q": "25Q3",
+        "p": 50.19
+      },
+      {
+        "q": "25Q4",
+        "p": 49.33
+      },
+      {
+        "q": "26Q1",
+        "p": 49.05
+      },
+      {
+        "q": "26Q2",
+        "p": 50.3
+      },
+      {
+        "q": "26Q3",
+        "p": 53.23
+      },
+      {
+        "q": "26Q4",
+        "p": 54.8
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

@@ -1,0 +1,347 @@
+{
+  "t": "MPCC.OL",
+  "n": "MPC Container Ships ASA",
+  "country": "NO",
+  "exchange": "Oslo Børs",
+  "gics_sector": "Industrials",
+  "gics_industry": "Marine Transportation (Feeder Container Ships)",
+  "sec": "Industrials · Marine Transportation (Feeder Container Ships)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 32.4,
+  "p": 22.4,
+  "v1": 50.88,
+  "v2": 28.23,
+  "buy": 21.72,
+  "mos": 26.03,
+  "data_check_flag": false,
+  "dpct": -44.5,
+  "dusd": -22.65,
+  "oey": 17.2,
+  "oem": 1709.4,
+  "rdcf": -7.94,
+  "mcap": 9938.9,
+  "z": "UNDER",
+  "pess": 19.37,
+  "real": 27.89,
+  "opt": 37.75,
+  "ec": 1944.8,
+  "nc": -1093.95,
+  "rev": 7514.0,
+  "opm_cur": 0.42,
+  "opm_norm": 0.25,
+  "tax": 0.03,
+  "da": 0.11,
+  "capex_pct": 0.11,
+  "nwc": 0.02,
+  "sbc_pct": 0.004,
+  "sh": 443.7,
+  "wacc": 0.102,
+  "tg": 0.01,
+  "gvec": [
+    -0.03,
+    -0.0276,
+    -0.0251,
+    -0.0227,
+    -0.0202,
+    -0.0178,
+    -0.0153,
+    -0.0129,
+    -0.0104,
+    -0.008
+  ],
+  "mvec": [
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "short_p": 17.82,
+  "short_down": -20.4,
+  "short_score": 18,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 3.5,
+    "days_to_cover": 1.9,
+    "momentum_6m_pct": -5.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-MPCC-OL",
+    "accession_no": "ESEF-2026-MPCC-OL",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          36.62,
+          37.58,
+          38.68,
+          39.91,
+          41.31
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          34.67,
+          35.51,
+          36.44,
+          37.48,
+          38.67
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          32.92,
+          33.64,
+          34.44,
+          35.34,
+          36.34
+        ]
+      },
+      {
+        "wacc_pct": 10.7,
+        "ivs": [
+          31.32,
+          31.95,
+          32.64,
+          33.41,
+          34.27
+        ]
+      },
+      {
+        "wacc_pct": 11.2,
+        "ivs": [
+          29.87,
+          30.42,
+          31.02,
+          31.69,
+          32.43
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 29.04,
+    "p25": 31.35,
+    "p50": 34.64,
+    "p75": 37.9,
+    "p90": 40.74,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 23.96,
+      "v1": 46.3,
+      "v2": 25.69,
+      "mos": 7.2
+    },
+    {
+      "q": "25Q4",
+      "p": 24.35,
+      "v1": 47.22,
+      "v2": 26.2,
+      "mos": 7.6
+    },
+    {
+      "q": "26Q1",
+      "p": 24.6,
+      "v1": 48.13,
+      "v2": 26.71,
+      "mos": 8.6
+    },
+    {
+      "q": "26Q2",
+      "p": 24.28,
+      "v1": 49.05,
+      "v2": 27.21,
+      "mos": 12.1
+    },
+    {
+      "q": "26Q3",
+      "p": 23.24,
+      "v1": 49.96,
+      "v2": 27.72,
+      "mos": 19.3
+    },
+    {
+      "q": "26Q4",
+      "p": 22.4,
+      "v1": 50.88,
+      "v2": 28.23,
+      "mos": 26.0
+    }
+  ],
+  "what": "MPC Container Ships ASA (MPCC.OL) — vodilno podjetje v panogi Marine Transportation (Feeder Container Ships) (Oslo Børs), vrednoteno po specializirani predlogi NAV_SHIPPING_ENERGY v valuti NOK (izkazi v USD, FX=11.05).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 32.4 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (25.0 %) ter preverbi Beneish M (-2.48) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (115 %), Beneish M-Score (-2.48) in Altman Z-Score (3.95).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Industrials (Marine Transportation (Feeder Container Ships)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (240M USD) in najeme (20M USD).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 50.88,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (376M NOK), IFRS 16 najemov (221M) in pogojnih obveznosti",
+      "iv": 44.09,
+      "d": -6.79
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 3.0%",
+      "iv": 39.1,
+      "d": -4.99
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 42.0% na sredinskih 25.0%",
+      "iv": 33.21,
+      "d": -5.89
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.2% in g 1.0%",
+      "iv": 28.23,
+      "d": -4.98
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.48,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.95,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 115.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -2.7,
+    "finra_short_float_pct": 3.5,
+    "days_to_cover": 1.9,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -5.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 30.75
+      },
+      {
+        "q": "22Q2",
+        "p": 29.36
+      },
+      {
+        "q": "22Q3",
+        "p": 27.69
+      },
+      {
+        "q": "22Q4",
+        "p": 26.29
+      },
+      {
+        "q": "23Q1",
+        "p": 25.64
+      },
+      {
+        "q": "23Q2",
+        "p": 25.89
+      },
+      {
+        "q": "23Q3",
+        "p": 26.78
+      },
+      {
+        "q": "23Q4",
+        "p": 27.77
+      },
+      {
+        "q": "24Q1",
+        "p": 28.3
+      },
+      {
+        "q": "24Q2",
+        "p": 28.04
+      },
+      {
+        "q": "24Q3",
+        "p": 27.03
+      },
+      {
+        "q": "24Q4",
+        "p": 25.68
+      },
+      {
+        "q": "25Q1",
+        "p": 24.51
+      },
+      {
+        "q": "25Q2",
+        "p": 23.91
+      },
+      {
+        "q": "25Q3",
+        "p": 23.96
+      },
+      {
+        "q": "25Q4",
+        "p": 24.35
+      },
+      {
+        "q": "26Q1",
+        "p": 24.6
+      },
+      {
+        "q": "26Q2",
+        "p": 24.28
+      },
+      {
+        "q": "26Q3",
+        "p": 23.24
+      },
+      {
+        "q": "26Q4",
+        "p": 22.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

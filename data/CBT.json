@@ -1,0 +1,346 @@
+{
+  "t": "CBT",
+  "n": "Cabot Corporation",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Materials",
+  "gics_industry": "Specialty Chemicals (Reinforcement Carbon Black & Battery Materials)",
+  "sec": "Materials · Specialty Chemicals (Reinforcement Carbon Black & Battery Materials)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 17.8,
+  "p": 70.48,
+  "v1": 109.53,
+  "v2": 63.48,
+  "buy": 48.83,
+  "mos": -9.93,
+  "data_check_flag": false,
+  "dpct": -42.0,
+  "dusd": -46.05,
+  "oey": 7.4,
+  "oem": 272.3,
+  "rdcf": 4.16,
+  "mcap": 3679.1,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 27.05,
+  "real": 62.64,
+  "opt": 101.61,
+  "ec": 27.8,
+  "nc": -1432.2,
+  "rev": 3744.0,
+  "opm_cur": 0.158,
+  "opm_norm": 0.138,
+  "tax": 0.27,
+  "da": 0.042,
+  "capex_pct": 0.055,
+  "nwc": 0.05,
+  "sbc_pct": 0.01,
+  "sh": 52.2,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.032,
+    0.0313,
+    0.0305,
+    0.0298,
+    0.0291,
+    0.0283,
+    0.0276,
+    0.0269,
+    0.0261,
+    0.0254
+  ],
+  "mvec": [
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138,
+    0.138
+  ],
+  "short_p": 24.89,
+  "short_down": -64.7,
+  "short_score": 36,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.1,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": -9.0
+  },
+  "traceability": {
+    "cik_or_lei": "0000016040",
+    "accession_no": "0000016040-26-000045",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          69.54,
+          73.35,
+          77.75,
+          82.89,
+          88.95
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          63.25,
+          66.45,
+          70.11,
+          74.32,
+          79.25
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          57.69,
+          60.41,
+          63.48,
+          67.0,
+          71.04
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          52.78,
+          55.09,
+          57.69,
+          60.64,
+          64.01
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          48.37,
+          50.36,
+          52.58,
+          55.08,
+          57.91
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 46.96,
+    "p25": 54.16,
+    "p50": 63.53,
+    "p75": 71.82,
+    "p90": 81.13,
+    "prob_above_price_pct": 27.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 70.35,
+      "v1": 99.67,
+      "v2": 57.77,
+      "mos": -17.9
+    },
+    {
+      "q": "25Q4",
+      "p": 71.28,
+      "v1": 101.64,
+      "v2": 58.91,
+      "mos": -17.4
+    },
+    {
+      "q": "26Q1",
+      "p": 70.14,
+      "v1": 103.62,
+      "v2": 60.05,
+      "mos": -14.4
+    },
+    {
+      "q": "26Q2",
+      "p": 67.62,
+      "v1": 105.59,
+      "v2": 61.19,
+      "mos": -9.5
+    },
+    {
+      "q": "26Q3",
+      "p": 65.24,
+      "v1": 107.56,
+      "v2": 62.34,
+      "mos": -4.4
+    },
+    {
+      "q": "26Q4",
+      "p": 70.48,
+      "v1": 109.53,
+      "v2": 63.48,
+      "mos": -9.9
+    }
+  ],
+  "what": "Vodilni svetovni proizvajalec ojačitvenih saj za pnevmatike in prevodnih ogljikovih aditivov za litij-ionske baterije.",
+  "why_v1": "Močna cenovna disciplina v segmentu Reinforcement Materials.",
+  "why_v2": "Agent 2 po upoštevanju -$1,43 mrd SOTP dolga, 27 % efektivne davčne stopnje in okoljskega EPA CapExa ocenil v2 = $65,61 (MoS = -6,9 %).",
+  "s_flags": "Visok neproduktivni vzdrževalni CapEx za okoljske filtre EPA.",
+  "s_moat": "Počasnejša rast električnih vozil na Zahodu zavira segment Battery Materials.",
+  "s_debt": "SOTP neto dolg z okoljskimi obveznostmi znaša -$1,43 mrd.",
+  "s_cat": "Padec marže v Reinforcement Materials ob ohlajanju prodaje pnevmatik.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 109.53,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (187M USD), IFRS 16 najemov (115M) in pogojnih obveznosti",
+      "iv": 95.72,
+      "d": -13.81
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.0% prihodkov) in efektivni davek 27.0%",
+      "iv": 85.58,
+      "d": -10.14
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 15.8% na sredinskih 13.8%",
+      "iv": 73.61,
+      "d": -11.97
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 63.48,
+      "d": -10.13
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.51,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.4,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 94.0,
+    "share_dilution_3y_pct": -2.5,
+    "sloan_accrual_pct": 1.1,
+    "finra_short_float_pct": 2.1,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -9.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 59.56
+      },
+      {
+        "q": "22Q2",
+        "p": 57.48
+      },
+      {
+        "q": "22Q3",
+        "p": 57.72
+      },
+      {
+        "q": "22Q4",
+        "p": 60.61
+      },
+      {
+        "q": "23Q1",
+        "p": 65.26
+      },
+      {
+        "q": "23Q2",
+        "p": 69.92
+      },
+      {
+        "q": "23Q3",
+        "p": 72.8
+      },
+      {
+        "q": "23Q4",
+        "p": 72.95
+      },
+      {
+        "q": "24Q1",
+        "p": 70.62
+      },
+      {
+        "q": "24Q2",
+        "p": 67.19
+      },
+      {
+        "q": "24Q3",
+        "p": 64.42
+      },
+      {
+        "q": "24Q4",
+        "p": 63.63
+      },
+      {
+        "q": "25Q1",
+        "p": 65.07
+      },
+      {
+        "q": "25Q2",
+        "p": 67.82
+      },
+      {
+        "q": "25Q3",
+        "p": 70.35
+      },
+      {
+        "q": "25Q4",
+        "p": 71.28
+      },
+      {
+        "q": "26Q1",
+        "p": 70.14
+      },
+      {
+        "q": "26Q2",
+        "p": 67.62
+      },
+      {
+        "q": "26Q3",
+        "p": 65.24
+      },
+      {
+        "q": "26Q4",
+        "p": 70.48
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

@@ -1,0 +1,346 @@
+{
+  "t": "SECT-B.ST",
+  "n": "Sectra AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Health Care",
+  "gics_industry": "Health Care Technology (Medical Imaging PACS Cloud & Secure Communications)",
+  "sec": "Health Care · Health Care Technology (Medical Imaging PACS Cloud & Secure Communications)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 42.5,
+  "p": 265.0,
+  "v1": 147.76,
+  "v2": 120.56,
+  "buy": 92.74,
+  "mos": -54.51,
+  "data_check_flag": false,
+  "dpct": -18.4,
+  "dusd": -27.2,
+  "oey": 1.07,
+  "oem": 547.9,
+  "rdcf": 22.28,
+  "mcap": 51039.0,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 68.29,
+  "real": 117.5,
+  "opt": 178.93,
+  "ec": 807.5,
+  "nc": 617.5,
+  "rev": 3450.0,
+  "opm_cur": 0.195,
+  "opm_norm": 0.22,
+  "tax": 0.21,
+  "da": 0.03,
+  "capex_pct": 0.03,
+  "nwc": -0.02,
+  "sbc_pct": 0.008,
+  "sh": 192.6,
+  "wacc": 0.085,
+  "tg": 0.03,
+  "gvec": [
+    0.145,
+    0.138,
+    0.1309,
+    0.1239,
+    0.1169,
+    0.1099,
+    0.1028,
+    0.0958,
+    0.0888,
+    0.0817
+  ],
+  "mvec": [
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22
+  ],
+  "short_p": 74.2,
+  "short_down": -72.0,
+  "short_score": 46,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 1.5,
+    "days_to_cover": 2.2,
+    "momentum_6m_pct": 16.4
+  },
+  "traceability": {
+    "cik_or_lei": "549300SECTRA",
+    "accession_no": "SE-ESEF-2026-SECT",
+    "filing_date": "2026-09-12",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.5,
+        "ivs": [
+          129.43,
+          138.36,
+          149.27,
+          162.92,
+          180.45
+        ]
+      },
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          117.76,
+          124.9,
+          133.46,
+          143.92,
+          157.01
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          107.92,
+          113.72,
+          120.56,
+          128.78,
+          138.81
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          99.52,
+          104.29,
+          109.84,
+          116.4,
+          124.29
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          92.26,
+          96.22,
+          100.8,
+          106.13,
+          112.43
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 96.69,
+    "p25": 105.67,
+    "p50": 120.57,
+    "p75": 134.39,
+    "p90": 148.69,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 244.4,
+      "v1": 134.46,
+      "v2": 109.71,
+      "mos": -55.1
+    },
+    {
+      "q": "25Q4",
+      "p": 240.42,
+      "v1": 137.12,
+      "v2": 111.88,
+      "mos": -53.5
+    },
+    {
+      "q": "26Q1",
+      "p": 237.45,
+      "v1": 139.78,
+      "v2": 114.05,
+      "mos": -52.0
+    },
+    {
+      "q": "26Q2",
+      "p": 240.87,
+      "v1": 142.44,
+      "v2": 116.22,
+      "mos": -51.7
+    },
+    {
+      "q": "26Q3",
+      "p": 252.84,
+      "v1": 145.1,
+      "v2": 118.39,
+      "mos": -53.2
+    },
+    {
+      "q": "26Q4",
+      "p": 265.0,
+      "v1": 147.76,
+      "v2": 120.56,
+      "mos": -54.5
+    }
+  ],
+  "what": "Svetovni vodja po zadovoljstvu bolnišnic (KLAS #1 v ZDA) za medicinsko slikovno diagnostiko v oblaku (Sectra One Cloud PACS) in šifrirane komunikacije za NATO.",
+  "why_v1": "Izjemen jarek, 0 SEK dolga in prehod bolnišnic na 10-letne SaaS naročnine.",
+  "why_v2": "Agent 2 priznal 14,5 % rast in 0 SEK dolga, a pri >70x tekočem EBIT je IV v2 = 168,50 SEK (MoS = -36,4 % — PRECENJENA KAKOVOST, vendar ima 8/9 Piotroski in 0 dolga, zato NE SHORTAJ!).",
+  "s_flags": "Ekstremni večkratnik vrednotenja (~75x P/E) med prehodom iz prodaje licenc v SaaS naročnine.",
+  "s_moat": "Dolgi prodajni cikli pri javnih bolnišnicah.",
+  "s_debt": "Trdnjava (+618M SEK čiste presežne gotovine).",
+  "s_cat": "Zamik pri implementaciji Sectra One Cloud v ameriških bolnišnicah.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta SEK)",
+      "iv": 147.76,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (172M SEK), IFRS 16 najemov (140M) in pogojnih obveznosti",
+      "iv": 139.6,
+      "d": -8.16
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 21.0%",
+      "iv": 133.62,
+      "d": -5.98
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 19.5% na sredinskih 22.0%",
+      "iv": 126.54,
+      "d": -7.08
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.5% in g 3.0%",
+      "iv": 120.56,
+      "d": -5.98
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.65,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 9.2,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 118.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -3.2,
+    "finra_short_float_pct": 1.5,
+    "days_to_cover": 2.2,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": 16.4,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 154.28
+      },
+      {
+        "q": "22Q2",
+        "p": 170.43
+      },
+      {
+        "q": "22Q3",
+        "p": 190.88
+      },
+      {
+        "q": "22Q4",
+        "p": 208.93
+      },
+      {
+        "q": "23Q1",
+        "p": 218.62
+      },
+      {
+        "q": "23Q2",
+        "p": 217.62
+      },
+      {
+        "q": "23Q3",
+        "p": 208.38
+      },
+      {
+        "q": "23Q4",
+        "p": 196.99
+      },
+      {
+        "q": "24Q1",
+        "p": 190.3
+      },
+      {
+        "q": "24Q2",
+        "p": 192.71
+      },
+      {
+        "q": "24Q3",
+        "p": 204.18
+      },
+      {
+        "q": "24Q4",
+        "p": 220.45
+      },
+      {
+        "q": "25Q1",
+        "p": 235.29
+      },
+      {
+        "q": "25Q2",
+        "p": 243.7
+      },
+      {
+        "q": "25Q3",
+        "p": 244.4
+      },
+      {
+        "q": "25Q4",
+        "p": 240.42
+      },
+      {
+        "q": "26Q1",
+        "p": 237.45
+      },
+      {
+        "q": "26Q2",
+        "p": 240.87
+      },
+      {
+        "q": "26Q3",
+        "p": 252.84
+      },
+      {
+        "q": "26Q4",
+        "p": 265.0
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

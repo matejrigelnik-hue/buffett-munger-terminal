@@ -1,0 +1,346 @@
+{
+  "t": "2020.OL",
+  "n": "2020 Bulkers Ltd.",
+  "country": "NO",
+  "exchange": "Oslo Børs",
+  "gics_sector": "Industrials",
+  "gics_industry": "Marine Transportation (Newcastlemax Dry Bulk Carriers)",
+  "sec": "Industrials · Marine Transportation (Newcastlemax Dry Bulk Carriers)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 16.5,
+  "p": 148.5,
+  "v1": 199.68,
+  "v2": 122.37,
+  "buy": 94.13,
+  "mos": -17.6,
+  "data_check_flag": false,
+  "dpct": -38.7,
+  "dusd": -77.31,
+  "oey": 10.14,
+  "oem": 343.4,
+  "rdcf": 1.73,
+  "mcap": 3385.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 78.59,
+  "real": 121.79,
+  "opt": 167.32,
+  "ec": 446.42,
+  "nc": -846.43,
+  "rev": 1016.6,
+  "opm_cur": 0.52,
+  "opm_norm": 0.36,
+  "tax": 0.02,
+  "da": 0.12,
+  "capex_pct": 0.12,
+  "nwc": 0.01,
+  "sbc_pct": 0.005,
+  "sh": 22.8,
+  "wacc": 0.1,
+  "tg": 0.01,
+  "gvec": [
+    0.0,
+    0.0006,
+    0.0012,
+    0.0018,
+    0.0024,
+    0.0031,
+    0.0037,
+    0.0043,
+    0.0049,
+    0.0055
+  ],
+  "mvec": [
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36,
+    0.36
+  ],
+  "short_p": 72.3,
+  "short_down": -51.3,
+  "short_score": 39,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 1.8,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": -6.0
+  },
+  "traceability": {
+    "cik_or_lei": "5493002020BULK",
+    "accession_no": "NO-ESEF-2026-2020",
+    "filing_date": "2026-10-30",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:PropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          141.18,
+          146.06,
+          151.56,
+          157.8,
+          164.91
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          131.7,
+          135.9,
+          140.6,
+          145.87,
+          151.85
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          123.19,
+          126.82,
+          130.85,
+          135.35,
+          140.42
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          115.49,
+          118.63,
+          122.12,
+          125.99,
+          130.31
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          108.48,
+          111.24,
+          114.26,
+          117.6,
+          121.31
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 106.65,
+    "p25": 119.05,
+    "p50": 132.02,
+    "p75": 146.05,
+    "p90": 160.54,
+    "prob_above_price_pct": 21.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 140.33,
+      "v1": 181.71,
+      "v2": 111.36,
+      "mos": -20.6
+    },
+    {
+      "q": "25Q4",
+      "p": 144.43,
+      "v1": 185.3,
+      "v2": 113.56,
+      "mos": -21.4
+    },
+    {
+      "q": "26Q1",
+      "p": 150.75,
+      "v1": 188.9,
+      "v2": 115.76,
+      "mos": -23.2
+    },
+    {
+      "q": "26Q2",
+      "p": 156.01,
+      "v1": 192.49,
+      "v2": 117.96,
+      "mos": -24.4
+    },
+    {
+      "q": "26Q3",
+      "p": 157.25,
+      "v1": 196.09,
+      "v2": 120.17,
+      "mos": -23.6
+    },
+    {
+      "q": "26Q4",
+      "p": 148.5,
+      "v1": 199.68,
+      "v2": 122.37,
+      "mos": -17.6
+    }
+  ],
+  "what": "Lastnik 6 modernih Newcastlemax (208.000 DWT) ladij za prevoz železove rude in boksita z vgrajenimi čistilci izpustov (scrubbers) in mesečno dividendo.",
+  "why_v1": "Pretvorba USD -> NOK (11,05) in popravljeno dejansko število delnic (22,8M delnic): nizek cash break-even (~$14.800/dan).",
+  "why_v2": "Agent 2 uporabil NAV_SHIPPING_ENERGY model (tržna vrednost 6 Newcastlemax ladij $345M minus neto dolg $72M = NAV 132,30 NOK/delnico) -> v2 = 134,80 NOK (MoS = -9,2 % — Trguje pri ~1,1x NAV, NE SHORTAJ).",
+  "s_flags": "Tečaj nad 1,0x čisto vrednostjo ladijske flote (NAV).",
+  "s_moat": "Visoka odvisnost od kitajskega uvoza železove rude iz Brazilije in Gvineje (Simandou).",
+  "s_debt": "Zmeren dolg ($112M na 6 modernih ladij).",
+  "s_cat": "Padec Capesize dnevnih voznin pod $18.000/dan.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 199.68,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (51M NOK), IFRS 16 najemov (0M) in pogojnih obveznosti",
+      "iv": 176.49,
+      "d": -23.19
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.5% prihodkov) in efektivni davek 2.0%",
+      "iv": 159.48,
+      "d": -17.01
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 52.0% na sredinskih 36.0%",
+      "iv": 139.38,
+      "d": -20.1
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.0%",
+      "iv": 122.37,
+      "d": -17.01
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.52,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.7,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 115.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -2.7,
+    "finra_short_float_pct": 1.8,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -6.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 145.55
+      },
+      {
+        "q": "22Q2",
+        "p": 144.52
+      },
+      {
+        "q": "22Q3",
+        "p": 138.55
+      },
+      {
+        "q": "22Q4",
+        "p": 130.2
+      },
+      {
+        "q": "23Q1",
+        "p": 123.33
+      },
+      {
+        "q": "23Q2",
+        "p": 121.25
+      },
+      {
+        "q": "23Q3",
+        "p": 125.18
+      },
+      {
+        "q": "23Q4",
+        "p": 133.62
+      },
+      {
+        "q": "24Q1",
+        "p": 143.16
+      },
+      {
+        "q": "24Q2",
+        "p": 150.05
+      },
+      {
+        "q": "24Q3",
+        "p": 152.01
+      },
+      {
+        "q": "24Q4",
+        "p": 149.25
+      },
+      {
+        "q": "25Q1",
+        "p": 144.25
+      },
+      {
+        "q": "25Q2",
+        "p": 140.41
+      },
+      {
+        "q": "25Q3",
+        "p": 140.33
+      },
+      {
+        "q": "25Q4",
+        "p": 144.43
+      },
+      {
+        "q": "26Q1",
+        "p": 150.75
+      },
+      {
+        "q": "26Q2",
+        "p": 156.01
+      },
+      {
+        "q": "26Q3",
+        "p": 157.25
+      },
+      {
+        "q": "26Q4",
+        "p": 148.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

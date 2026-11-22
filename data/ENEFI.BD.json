@@ -1,0 +1,347 @@
+{
+  "t": "ENEFI.BD",
+  "n": "ENEFI Vagyonkezelő Nyrt.",
+  "country": "HU",
+  "exchange": "Budapest Stock Exchange",
+  "gics_sector": "Utilities",
+  "gics_industry": "Independent Power Producers & Infrastructure Asset Mgmt",
+  "sec": "Utilities · Independent Power Producers & Infrastructure Asset Mgmt",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.45,
+  "roic": 14.9,
+  "p": 0.48,
+  "v1": 0.9,
+  "v2": 0.58,
+  "buy": 0.45,
+  "mos": 20.83,
+  "data_check_flag": false,
+  "dpct": -35.6,
+  "dusd": -0.32,
+  "oey": 18.52,
+  "oem": 1.0,
+  "rdcf": -1.22,
+  "mcap": 5.4,
+  "z": "UNDER",
+  "pess": 0.38,
+  "real": 0.58,
+  "opt": 0.79,
+  "ec": 0.96,
+  "nc": 0.06,
+  "rev": 4.8,
+  "opm_cur": 0.18,
+  "opm_norm": 0.14,
+  "tax": 0.12,
+  "da": 0.04,
+  "capex_pct": 0.04,
+  "nwc": 0.03,
+  "sbc_pct": 0.0,
+  "sh": 11.2,
+  "wacc": 0.11,
+  "tg": 0.015,
+  "gvec": [
+    0.02,
+    0.0197,
+    0.0194,
+    0.0191,
+    0.0188,
+    0.0185,
+    0.0182,
+    0.0179,
+    0.0176,
+    0.0173
+  ],
+  "mvec": [
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14,
+    0.14
+  ],
+  "short_p": 0.35,
+  "short_down": -27.1,
+  "short_score": 20,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.5,
+    "short_float_pct": 1.0,
+    "days_to_cover": 1.2,
+    "momentum_6m_pct": 2.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-ENEFI-BD",
+    "accession_no": "ESEF-2026-ENEFI-BD",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          0.62,
+          0.63,
+          0.65,
+          0.67,
+          0.69
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          0.59,
+          0.6,
+          0.61,
+          0.63,
+          0.65
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          0.56,
+          0.57,
+          0.58,
+          0.6,
+          0.61
+        ]
+      },
+      {
+        "wacc_pct": 11.5,
+        "ivs": [
+          0.53,
+          0.54,
+          0.55,
+          0.57,
+          0.58
+        ]
+      },
+      {
+        "wacc_pct": 12.0,
+        "ivs": [
+          0.51,
+          0.52,
+          0.53,
+          0.54,
+          0.55
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 0.5,
+    "p25": 0.54,
+    "p50": 0.59,
+    "p75": 0.64,
+    "p90": 0.69,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 0.53,
+      "v1": 0.82,
+      "v2": 0.53,
+      "mos": 0.0
+    },
+    {
+      "q": "25Q4",
+      "p": 0.5,
+      "v1": 0.84,
+      "v2": 0.54,
+      "mos": 8.0
+    },
+    {
+      "q": "26Q1",
+      "p": 0.5,
+      "v1": 0.85,
+      "v2": 0.55,
+      "mos": 10.0
+    },
+    {
+      "q": "26Q2",
+      "p": 0.5,
+      "v1": 0.87,
+      "v2": 0.56,
+      "mos": 12.0
+    },
+    {
+      "q": "26Q3",
+      "p": 0.5,
+      "v1": 0.88,
+      "v2": 0.57,
+      "mos": 14.0
+    },
+    {
+      "q": "26Q4",
+      "p": 0.48,
+      "v1": 0.9,
+      "v2": 0.58,
+      "mos": 20.8
+    }
+  ],
+  "what": "ENEFI Vagyonkezelő Nyrt. (ENEFI.BD) — vodilno podjetje v panogi Independent Power Producers & Infrastructure Asset Mgmt (Budapest Stock Exchange), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti EUR (izkazi v EUR, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 14.9 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (14.0 %) ter preverbi Beneish M (-2.35) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (105 %), Beneish M-Score (-2.35) in Altman Z-Score (3.80).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Utilities (Independent Power Producers & Infrastructure Asset Mgmt).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (0M EUR) in najeme (0M EUR).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 0.9,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (0M EUR), IFRS 16 najemov (0M) in pogojnih obveznosti",
+      "iv": 0.8,
+      "d": -0.1
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.0% prihodkov) in efektivni davek 12.0%",
+      "iv": 0.73,
+      "d": -0.07
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 18.0% na sredinskih 14.0%",
+      "iv": 0.65,
+      "d": -0.08
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 11.0% in g 1.5%",
+      "iv": 0.58,
+      "d": -0.07
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.35,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.8,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": -2.0,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 1.0,
+    "days_to_cover": 1.2,
+    "borrow_fee_pct": 0.5,
+    "momentum_6m_pct": 2.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 0.6
+      },
+      {
+        "q": "22Q2",
+        "p": 0.62
+      },
+      {
+        "q": "22Q3",
+        "p": 0.64
+      },
+      {
+        "q": "22Q4",
+        "p": 0.65
+      },
+      {
+        "q": "23Q1",
+        "p": 0.65
+      },
+      {
+        "q": "23Q2",
+        "p": 0.64
+      },
+      {
+        "q": "23Q3",
+        "p": 0.6
+      },
+      {
+        "q": "23Q4",
+        "p": 0.56
+      },
+      {
+        "q": "24Q1",
+        "p": 0.53
+      },
+      {
+        "q": "24Q2",
+        "p": 0.52
+      },
+      {
+        "q": "24Q3",
+        "p": 0.52
+      },
+      {
+        "q": "24Q4",
+        "p": 0.54
+      },
+      {
+        "q": "25Q1",
+        "p": 0.55
+      },
+      {
+        "q": "25Q2",
+        "p": 0.54
+      },
+      {
+        "q": "25Q3",
+        "p": 0.53
+      },
+      {
+        "q": "25Q4",
+        "p": 0.5
+      },
+      {
+        "q": "26Q1",
+        "p": 0.5
+      },
+      {
+        "q": "26Q2",
+        "p": 0.5
+      },
+      {
+        "q": "26Q3",
+        "p": 0.5
+      },
+      {
+        "q": "26Q4",
+        "p": 0.48
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

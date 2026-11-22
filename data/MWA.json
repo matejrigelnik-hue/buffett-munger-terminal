@@ -1,0 +1,346 @@
+{
+  "t": "MWA",
+  "n": "Mueller Water Products, Inc.",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Industrials",
+  "gics_industry": "Industrial Machinery (Municipal Water Hydrants, Valves & Meters)",
+  "sec": "Industrials · Industrial Machinery (Municipal Water Hydrants, Valves & Meters)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 15.2,
+  "p": 23.62,
+  "v1": 21.61,
+  "v2": 14.04,
+  "buy": 10.8,
+  "mos": -40.56,
+  "data_check_flag": false,
+  "dpct": -35.0,
+  "dusd": -7.57,
+  "oey": 3.72,
+  "oem": 138.1,
+  "rdcf": 10.03,
+  "mcap": 3715.4,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 7.72,
+  "real": 13.85,
+  "opt": 20.75,
+  "ec": 236.25,
+  "nc": -303.75,
+  "rev": 1475.0,
+  "opm_cur": 0.168,
+  "opm_norm": 0.145,
+  "tax": 0.23,
+  "da": 0.042,
+  "capex_pct": 0.045,
+  "nwc": 0.05,
+  "sbc_pct": 0.01,
+  "sh": 157.3,
+  "wacc": 0.092,
+  "tg": 0.022,
+  "gvec": [
+    0.035,
+    0.0342,
+    0.0334,
+    0.0326,
+    0.0318,
+    0.031,
+    0.0302,
+    0.0294,
+    0.0286,
+    0.0278
+  ],
+  "mvec": [
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145,
+    0.145
+  ],
+  "short_p": 7.1,
+  "short_down": -69.9,
+  "short_score": 41,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.7,
+    "days_to_cover": 2.1,
+    "momentum_6m_pct": 19.5
+  },
+  "traceability": {
+    "cik_or_lei": "0001350593",
+    "accession_no": "0001350593-26-000040",
+    "filing_date": "2026-11-11",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:ProductWarrantyAccrual"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          15.12,
+          15.87,
+          16.76,
+          17.79,
+          19.03
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          13.95,
+          14.58,
+          15.3,
+          16.14,
+          17.13
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          12.91,
+          13.44,
+          14.04,
+          14.74,
+          15.54
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          12.01,
+          12.46,
+          12.96,
+          13.53,
+          14.2
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          11.21,
+          11.59,
+          12.01,
+          12.5,
+          13.05
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 11.15,
+    "p25": 12.28,
+    "p50": 14.11,
+    "p75": 15.85,
+    "p90": 17.68,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 21.65,
+      "v1": 19.67,
+      "v2": 12.78,
+      "mos": -41.0
+    },
+    {
+      "q": "25Q4",
+      "p": 22.68,
+      "v1": 20.05,
+      "v2": 13.03,
+      "mos": -42.5
+    },
+    {
+      "q": "26Q1",
+      "p": 23.09,
+      "v1": 20.44,
+      "v2": 13.28,
+      "mos": -42.5
+    },
+    {
+      "q": "26Q2",
+      "p": 22.81,
+      "v1": 20.83,
+      "v2": 13.53,
+      "mos": -40.7
+    },
+    {
+      "q": "26Q3",
+      "p": 22.16,
+      "v1": 21.22,
+      "v2": 13.79,
+      "mos": -37.8
+    },
+    {
+      "q": "26Q4",
+      "p": 23.62,
+      "v1": 21.61,
+      "v2": 14.04,
+      "mos": -40.6
+    }
+  ],
+  "what": "Najstarejši ameriški proizvajalec požarnih hidrantov, vodovodnih ventilov in pametnih vodomerov z >50 % tržnim deležem v občinah ZDA.",
+  "why_v1": "Močan reguliran specifikacijski jarek pri občinskih vodovodih.",
+  "why_v2": "Agent 2 normaliziral maržo po zaključku nove livarne in izteku ARPA subvencij -> v2 = $18,20 (MoS = -22,9 %).",
+  "s_flags": "Zgodovinske garancijske rezervacije pri elektronskih vodomerih.",
+  "s_moat": "Počasna dolgoročna rast občinskih vodovodnih proračunov (~3 %/leto).",
+  "s_debt": "Zelo zmeren SOTP neto dolg (-$304M).",
+  "s_cat": "Krčenje knjige naročil (Backlog) po porabi zveznih ARPA sredstev.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 21.61,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (74M USD), IFRS 16 najemov (35M) in pogojnih obveznosti",
+      "iv": 19.34,
+      "d": -2.27
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.0% prihodkov) in efektivni davek 23.0%",
+      "iv": 17.67,
+      "d": -1.67
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 16.8% na sredinskih 14.5%",
+      "iv": 15.71,
+      "d": -1.96
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.2%",
+      "iv": 14.04,
+      "d": -1.67
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.48,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.15,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 102.0,
+    "share_dilution_3y_pct": -0.5,
+    "sloan_accrual_pct": -0.4,
+    "finra_short_float_pct": 2.7,
+    "days_to_cover": 2.1,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 19.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 14.77
+      },
+      {
+        "q": "22Q2",
+        "p": 14.0
+      },
+      {
+        "q": "22Q3",
+        "p": 13.67
+      },
+      {
+        "q": "22Q4",
+        "p": 14.2
+      },
+      {
+        "q": "23Q1",
+        "p": 15.62
+      },
+      {
+        "q": "23Q2",
+        "p": 17.55
+      },
+      {
+        "q": "23Q3",
+        "p": 19.38
+      },
+      {
+        "q": "23Q4",
+        "p": 20.55
+      },
+      {
+        "q": "24Q1",
+        "p": 20.81
+      },
+      {
+        "q": "24Q2",
+        "p": 20.32
+      },
+      {
+        "q": "24Q3",
+        "p": 19.58
+      },
+      {
+        "q": "24Q4",
+        "p": 19.17
+      },
+      {
+        "q": "25Q1",
+        "p": 19.44
+      },
+      {
+        "q": "25Q2",
+        "p": 20.39
+      },
+      {
+        "q": "25Q3",
+        "p": 21.65
+      },
+      {
+        "q": "25Q4",
+        "p": 22.68
+      },
+      {
+        "q": "26Q1",
+        "p": 23.09
+      },
+      {
+        "q": "26Q2",
+        "p": 22.81
+      },
+      {
+        "q": "26Q3",
+        "p": 22.16
+      },
+      {
+        "q": "26Q4",
+        "p": 23.62
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

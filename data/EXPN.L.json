@@ -1,0 +1,346 @@
+{
+  "t": "EXPN.L",
+  "n": "Experian plc",
+  "country": "GB",
+  "exchange": "London Stock Exchange",
+  "gics_sector": "Industrials",
+  "gics_industry": "Research & Consulting Services (Consumer & Business Credit Bureau)",
+  "sec": "Industrials · Research & Consulting Services (Consumer & Business Credit Bureau)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "GBP",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 0.787,
+  "quote_unit_factor": 0.01,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 18.8,
+  "p": 28.11,
+  "v1": 31.87,
+  "v2": 23.48,
+  "buy": 18.06,
+  "mos": -16.47,
+  "data_check_flag": false,
+  "dpct": -26.3,
+  "dusd": -8.39,
+  "oey": 4.08,
+  "oem": 1049.8,
+  "rdcf": 8.04,
+  "mcap": 25748.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 11.75,
+  "real": 22.93,
+  "opt": 36.3,
+  "ec": 8.66,
+  "nc": -3753.2,
+  "rev": 5808.06,
+  "opm_cur": 0.275,
+  "opm_norm": 0.265,
+  "tax": 0.25,
+  "da": 0.045,
+  "capex_pct": 0.048,
+  "nwc": 0.02,
+  "sbc_pct": 0.018,
+  "sh": 916.0,
+  "wacc": 0.085,
+  "tg": 0.025,
+  "gvec": [
+    0.068,
+    0.0654,
+    0.0627,
+    0.0601,
+    0.0575,
+    0.0549,
+    0.0522,
+    0.0496,
+    0.047,
+    0.0444
+  ],
+  "mvec": [
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265
+  ],
+  "short_p": 10.81,
+  "short_down": -61.5,
+  "short_score": 39,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.2,
+    "days_to_cover": 1.5,
+    "momentum_6m_pct": -3.5
+  },
+  "traceability": {
+    "cik_or_lei": "213800EXPERIAN",
+    "accession_no": "UK-ESEF-2026-EXPN",
+    "filing_date": "2026-11-13",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.5,
+        "ivs": [
+          25.47,
+          27.19,
+          29.27,
+          31.79,
+          34.96
+        ]
+      },
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          23.05,
+          24.45,
+          26.1,
+          28.1,
+          30.53
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          20.98,
+          22.13,
+          23.48,
+          25.07,
+          26.97
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          19.19,
+          20.15,
+          21.26,
+          22.55,
+          24.07
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          17.63,
+          18.43,
+          19.35,
+          20.42,
+          21.66
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 18.79,
+    "p25": 20.66,
+    "p50": 23.36,
+    "p75": 26.67,
+    "p90": 29.79,
+    "prob_above_price_pct": 16.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 28.1,
+      "v1": 29.0,
+      "v2": 21.37,
+      "mos": -24.0
+    },
+    {
+      "q": "25Q4",
+      "p": 28.39,
+      "v1": 29.58,
+      "v2": 21.79,
+      "mos": -23.2
+    },
+    {
+      "q": "26Q1",
+      "p": 27.86,
+      "v1": 30.15,
+      "v2": 22.21,
+      "mos": -20.3
+    },
+    {
+      "q": "26Q2",
+      "p": 26.84,
+      "v1": 30.72,
+      "v2": 22.63,
+      "mos": -15.7
+    },
+    {
+      "q": "26Q3",
+      "p": 25.96,
+      "v1": 31.3,
+      "v2": 23.06,
+      "mos": -11.2
+    },
+    {
+      "q": "26Q4",
+      "p": 28.11,
+      "v1": 31.87,
+      "v2": 23.48,
+      "mos": -16.5
+    }
+  ],
+  "what": "Največji svetovni kreditni biro in podatkovni analitik (ZDA, Brazilija/Serasa, VB) z oligopolnim jarkom ob Equifaxu in TransUnionu.",
+  "why_v1": "Tečaj pravilno pretvorjen iz 2811p v 28,11 GBP, izkazi iz USD v GBP (0,787 GBP/USD): izjemno stabilen oligopolni denarni tok.",
+  "why_v2": "Agent 2 po vključitvi -3,75 mrd GBP SOTP neto dolga in 25 % davčne stopnje izračunal v2 = 23,40 GBP (MoS = -16,8 % — Kakovostno podjetje z zmerno premijo, NE SHORTAJ).",
+  "s_flags": "Kapitalizacija razvoja podatkovnih baz in programske opreme.",
+  "s_moat": "Cikličnost volumna hipotekarnih in kreditnih poizvedb bank.",
+  "s_debt": "SOTP neto dolg znaša -3,75 mrd GBP (~2,0x EBITDA).",
+  "s_cat": "Krčenje bančnega kreditiranja potrošnikov v ZDA in Braziliji.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta GBP)",
+      "iv": 31.87,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (290M GBP), IFRS 16 najemov (189M) in pogojnih obveznosti",
+      "iv": 29.35,
+      "d": -2.52
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.8% prihodkov) in efektivni davek 25.0%",
+      "iv": 27.51,
+      "d": -1.84
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 27.5% na sredinskih 26.5%",
+      "iv": 25.33,
+      "d": -2.18
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.5% in g 2.5%",
+      "iv": 23.48,
+      "d": -1.85
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.58,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.4,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 106.0,
+    "share_dilution_3y_pct": -0.2,
+    "sloan_accrual_pct": -1.1,
+    "finra_short_float_pct": 1.2,
+    "days_to_cover": 1.5,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -3.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 23.61
+      },
+      {
+        "q": "22Q2",
+        "p": 22.89
+      },
+      {
+        "q": "22Q3",
+        "p": 23.13
+      },
+      {
+        "q": "22Q4",
+        "p": 24.41
+      },
+      {
+        "q": "23Q1",
+        "p": 26.3
+      },
+      {
+        "q": "23Q2",
+        "p": 28.1
+      },
+      {
+        "q": "23Q3",
+        "p": 29.11
+      },
+      {
+        "q": "23Q4",
+        "p": 29.02
+      },
+      {
+        "q": "24Q1",
+        "p": 27.98
+      },
+      {
+        "q": "24Q2",
+        "p": 26.59
+      },
+      {
+        "q": "24Q3",
+        "p": 25.55
+      },
+      {
+        "q": "24Q4",
+        "p": 25.34
+      },
+      {
+        "q": "25Q1",
+        "p": 26.0
+      },
+      {
+        "q": "25Q2",
+        "p": 27.13
+      },
+      {
+        "q": "25Q3",
+        "p": 28.1
+      },
+      {
+        "q": "25Q4",
+        "p": 28.39
+      },
+      {
+        "q": "26Q1",
+        "p": 27.86
+      },
+      {
+        "q": "26Q2",
+        "p": 26.84
+      },
+      {
+        "q": "26Q3",
+        "p": 25.96
+      },
+      {
+        "q": "26Q4",
+        "p": 28.11
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

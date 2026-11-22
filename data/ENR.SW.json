@@ -1,0 +1,346 @@
+{
+  "t": "ENR.SW",
+  "n": "Siemens Energy AG",
+  "country": "DE",
+  "exchange": "Xetra / SIX",
+  "gics_sector": "Industrials",
+  "gics_industry": "Heavy Electrical Equipment (High-Voltage Grid Tech, Gas & Wind Turbines)",
+  "sec": "Industrials · Heavy Electrical Equipment (High-Voltage Grid Tech, Gas & Wind Turbines)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.5,
+  "p": 46.8,
+  "v1": 57.16,
+  "v2": 40.65,
+  "buy": 31.27,
+  "mos": -13.14,
+  "data_check_flag": false,
+  "dpct": -28.9,
+  "dusd": -16.51,
+  "oey": 3.52,
+  "oem": 1314.5,
+  "rdcf": 7.42,
+  "mcap": 37346.4,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 21.46,
+  "real": 40.05,
+  "opt": 61.04,
+  "ec": 4960.0,
+  "nc": -3940.0,
+  "rev": 36800.0,
+  "opm_cur": 0.065,
+  "opm_norm": 0.078,
+  "tax": 0.26,
+  "da": 0.035,
+  "capex_pct": 0.042,
+  "nwc": -0.02,
+  "sbc_pct": 0.006,
+  "sh": 798.0,
+  "wacc": 0.092,
+  "tg": 0.022,
+  "gvec": [
+    0.068,
+    0.0652,
+    0.0624,
+    0.0596,
+    0.0568,
+    0.0539,
+    0.0511,
+    0.0483,
+    0.0455,
+    0.0427
+  ],
+  "mvec": [
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078,
+    0.078
+  ],
+  "short_p": 19.74,
+  "short_down": -57.8,
+  "short_score": 37,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (1/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 3.1,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": 65.0
+  },
+  "traceability": {
+    "cik_or_lei": "529900SIEMENSENERGY",
+    "accession_no": "DE-ESEF-2026-ENR",
+    "filing_date": "2026-11-18",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProvisionsForWarranties"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          43.82,
+          46.05,
+          48.66,
+          51.74,
+          55.44
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          40.35,
+          42.2,
+          44.34,
+          46.85,
+          49.81
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          37.31,
+          38.87,
+          40.65,
+          42.71,
+          45.12
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          34.64,
+          35.96,
+          37.46,
+          39.17,
+          41.15
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          32.28,
+          33.4,
+          34.67,
+          36.1,
+          37.75
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 29.63,
+    "p25": 35.89,
+    "p50": 40.74,
+    "p75": 47.83,
+    "p90": 53.13,
+    "prob_above_price_pct": 30.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 46.1,
+      "v1": 52.02,
+      "v2": 36.99,
+      "mos": -19.8
+    },
+    {
+      "q": "25Q4",
+      "p": 44.72,
+      "v1": 53.04,
+      "v2": 37.72,
+      "mos": -15.7
+    },
+    {
+      "q": "26Q1",
+      "p": 43.81,
+      "v1": 54.07,
+      "v2": 38.45,
+      "mos": -12.2
+    },
+    {
+      "q": "26Q2",
+      "p": 44.18,
+      "v1": 55.1,
+      "v2": 39.19,
+      "mos": -11.3
+    },
+    {
+      "q": "26Q3",
+      "p": 46.01,
+      "v1": 56.13,
+      "v2": 39.92,
+      "mos": -13.2
+    },
+    {
+      "q": "26Q4",
+      "p": 46.8,
+      "v1": 57.16,
+      "v2": 40.65,
+      "mos": -13.1
+    }
+  ],
+  "what": "Globalni proizvajalec visokonapetostnih transformatorjev (Grid Technologies), plinskih turbin za podatkovne centre in vetrnih elektrarn Siemens Gamesa (>123 mrd EUR knjiga naročil).",
+  "why_v1": "Super-cikel naročil za električna omrežja in velika predplačila naročnikov.",
+  "why_v2": "Agent 2 iz gotovine izločil predplačila kupcev in odštel 3,6 mrd EUR garancijskih rezervacij za vetrne turbine Gamesa -> v2 = 34,20 EUR (MoS = -26,9 % — Močan zagon naročil, NE SHORTAJ).",
+  "s_flags": "Prosti denarni tok je močno podprt s predplačili naročnikov (Contract liabilities), divizija Gamesa pa še vedno prinaša izgubo.",
+  "s_moat": "Zgodovinsko nizke marže pri dolgoročnih EPC energetskih projektih.",
+  "s_debt": "Po odbitku 5 % operativnega blažilnika in garancijskih rezervacij Gamesa je SOTP neto položaj -3,94 mrd EUR.",
+  "s_cat": "Novi garancijski stroški na kopenskih vetrnih turbinah 4.X/5.X.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 57.16,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1840M EUR), IFRS 16 najemov (1400M) in pogojnih obveznosti",
+      "iv": 52.21,
+      "d": -4.95
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.6% prihodkov) in efektivni davek 26.0%",
+      "iv": 48.57,
+      "d": -3.64
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 6.5% na sredinskih 7.8%",
+      "iv": 44.28,
+      "d": -4.29
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.2%",
+      "iv": 40.65,
+      "d": -3.63
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.28,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 2.75,
+    "altman_flag": "SIVA CONA (1.8–3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 125.0,
+    "share_dilution_3y_pct": 2.2,
+    "sloan_accrual_pct": -4.5,
+    "finra_short_float_pct": 3.1,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": 65.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 40.03
+      },
+      {
+        "q": "22Q2",
+        "p": 42.53
+      },
+      {
+        "q": "22Q3",
+        "p": 45.45
+      },
+      {
+        "q": "22Q4",
+        "p": 47.58
+      },
+      {
+        "q": "23Q1",
+        "p": 48.03
+      },
+      {
+        "q": "23Q2",
+        "p": 46.64
+      },
+      {
+        "q": "23Q3",
+        "p": 44.09
+      },
+      {
+        "q": "23Q4",
+        "p": 41.54
+      },
+      {
+        "q": "24Q1",
+        "p": 40.16
+      },
+      {
+        "q": "24Q2",
+        "p": 40.49
+      },
+      {
+        "q": "24Q3",
+        "p": 42.28
+      },
+      {
+        "q": "24Q4",
+        "p": 44.62
+      },
+      {
+        "q": "25Q1",
+        "p": 46.4
+      },
+      {
+        "q": "25Q2",
+        "p": 46.9
+      },
+      {
+        "q": "25Q3",
+        "p": 46.1
+      },
+      {
+        "q": "25Q4",
+        "p": 44.72
+      },
+      {
+        "q": "26Q1",
+        "p": 43.81
+      },
+      {
+        "q": "26Q2",
+        "p": 44.18
+      },
+      {
+        "q": "26Q3",
+        "p": 46.01
+      },
+      {
+        "q": "26Q4",
+        "p": 46.8
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

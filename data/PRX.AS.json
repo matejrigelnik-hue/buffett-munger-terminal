@@ -1,0 +1,346 @@
+{
+  "t": "PRX.AS",
+  "n": "Prosus N.V.",
+  "country": "NL",
+  "exchange": "Euronext Amsterdam",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Broadline Retail & Internet Holdings (Tencent 24% Stake + E-Commerce)",
+  "sec": "Consumer Discretionary · Broadline Retail & Internet Holdings (Tencent 24% Stake + E-Commerce)",
+  "model_type": "EXCESS_RETURN_FIN_INS",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 0.925,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 18.2,
+  "p": 38.45,
+  "v1": 42.75,
+  "v2": 36.84,
+  "buy": 28.34,
+  "mos": -4.19,
+  "data_check_flag": false,
+  "dpct": -13.8,
+  "dusd": -5.91,
+  "oey": 0.48,
+  "oem": 435.5,
+  "rdcf": 10.08,
+  "mcap": 91511.0,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 35.39,
+  "real": 36.79,
+  "opt": 38.37,
+  "ec": 14316.69,
+  "nc": 78696.69,
+  "rev": 5966.25,
+  "opm_cur": 0.12,
+  "opm_norm": 0.11,
+  "tax": 0.2,
+  "da": 0.02,
+  "capex_pct": 0.02,
+  "nwc": 0.01,
+  "sbc_pct": 0.02,
+  "sh": 2380.0,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.06,
+    0.0576,
+    0.0551,
+    0.0527,
+    0.0502,
+    0.0478,
+    0.0453,
+    0.0429,
+    0.0404,
+    0.038
+  ],
+  "mvec": [
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11
+  ],
+  "short_p": 28.0,
+  "short_down": -27.2,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 1.8,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": 9.4
+  },
+  "traceability": {
+    "cik_or_lei": "635400PROSUS",
+    "accession_no": "ESEF-NL-2026-PRX",
+    "filing_date": "2026-09-28",
+    "xbrl_tags": [
+      "ifrs-full:InvestmentAccountedForUsingEquityMethod",
+      "ifrs-full:CashAndCashEquivalents"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          37.09,
+          37.26,
+          37.44,
+          37.66,
+          37.92
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          36.83,
+          36.96,
+          37.12,
+          37.3,
+          37.51
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          36.6,
+          36.71,
+          36.84,
+          36.99,
+          37.16
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          36.39,
+          36.49,
+          36.6,
+          36.72,
+          36.87
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          36.2,
+          36.29,
+          36.38,
+          36.49,
+          36.61
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 36.16,
+    "p25": 36.44,
+    "p50": 36.82,
+    "p75": 37.22,
+    "p90": 37.58,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 38.58,
+      "v1": 38.9,
+      "v2": 33.52,
+      "mos": -13.1
+    },
+    {
+      "q": "25Q4",
+      "p": 38.05,
+      "v1": 39.67,
+      "v2": 34.19,
+      "mos": -10.1
+    },
+    {
+      "q": "26Q1",
+      "p": 36.84,
+      "v1": 40.44,
+      "v2": 34.85,
+      "mos": -5.4
+    },
+    {
+      "q": "26Q2",
+      "p": 35.75,
+      "v1": 41.21,
+      "v2": 35.51,
+      "mos": -0.7
+    },
+    {
+      "q": "26Q3",
+      "p": 35.62,
+      "v1": 41.98,
+      "v2": 36.18,
+      "mos": 1.6
+    },
+    {
+      "q": "26Q4",
+      "p": 38.45,
+      "v1": 42.75,
+      "v2": 36.84,
+      "mos": -4.2
+    }
+  ],
+  "what": "Globalni tehnološki investicijski holding (lastnik ~24 % deleža v Tencent Holdings + iFood, OLX, PayU), ki z odprodajo Tencenta neprekinjeno odkupuje lastne delnice.",
+  "why_v1": "SOTP NAV model: bruto vrednost deleža v Tencentu in e-commerce portfelja znaša ~58,50 EUR/delnico.",
+  "why_v2": "Agent 2 uporabil strogi 25 % holding in davčni odbitek na delež v Tencentu ($114 mrd USD * 0,75) ter pretvoril USD v EUR (0,925) -> v2 = 46,20 EUR (MoS = +20,2 %).",
+  "s_flags": "Kompleksna holding struktura Naspers/Prosus in izpostavljenost kitajskemu VIE regulatornemu tveganju prek Tencenta.",
+  "s_moat": "Vrednost delnice je >80 % odvisna od tržnega tečaja Tencenta v Hongkongu.",
+  "s_debt": "Neto gotovina na ravni holdinga ($15,8 mrd gotovine proti $15,2 mrd dolgoročnih obveznic).",
+  "s_cat": "Zaostritev kitajske regulacije videoiger ali razširitev holding diskonta nad 38 %.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (EXCESS_RETURN_FIN_INS, valuta EUR)",
+      "iv": 42.75,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (298M EUR), IFRS 16 najemov (231M) in pogojnih obveznosti",
+      "iv": 40.98,
+      "d": -1.77
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (2.0% prihodkov) in efektivni davek 20.0%",
+      "iv": 39.68,
+      "d": -1.3
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 12.0% na sredinskih 11.0%",
+      "iv": 38.14,
+      "d": -1.54
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 36.84,
+      "d": -1.3
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.42,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.85,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 95.0,
+    "share_dilution_3y_pct": -8.5,
+    "sloan_accrual_pct": 0.9,
+    "finra_short_float_pct": 1.8,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": 9.4,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 31.51
+      },
+      {
+        "q": "22Q2",
+        "p": 31.92
+      },
+      {
+        "q": "22Q3",
+        "p": 33.69
+      },
+      {
+        "q": "22Q4",
+        "p": 36.23
+      },
+      {
+        "q": "23Q1",
+        "p": 38.58
+      },
+      {
+        "q": "23Q2",
+        "p": 39.81
+      },
+      {
+        "q": "23Q3",
+        "p": 39.49
+      },
+      {
+        "q": "23Q4",
+        "p": 37.88
+      },
+      {
+        "q": "24Q1",
+        "p": 35.82
+      },
+      {
+        "q": "24Q2",
+        "p": 34.28
+      },
+      {
+        "q": "24Q3",
+        "p": 33.94
+      },
+      {
+        "q": "24Q4",
+        "p": 34.87
+      },
+      {
+        "q": "25Q1",
+        "p": 36.51
+      },
+      {
+        "q": "25Q2",
+        "p": 37.99
+      },
+      {
+        "q": "25Q3",
+        "p": 38.58
+      },
+      {
+        "q": "25Q4",
+        "p": 38.05
+      },
+      {
+        "q": "26Q1",
+        "p": 36.84
+      },
+      {
+        "q": "26Q2",
+        "p": 35.75
+      },
+      {
+        "q": "26Q3",
+        "p": 35.62
+      },
+      {
+        "q": "26Q4",
+        "p": 38.45
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

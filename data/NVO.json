@@ -1,0 +1,347 @@
+{
+  "t": "NVO",
+  "n": "Novo Nordisk A/S (ADR)",
+  "country": "DK",
+  "exchange": "NYSE / Nasdaq Copenhagen",
+  "gics_sector": "Health Care",
+  "gics_industry": "Pharmaceuticals (GLP-1 Obesity & Diabetes)",
+  "sec": "Health Care · Pharmaceuticals (GLP-1 Obesity & Diabetes)",
+  "model_type": "PHARMA_PIPELINE",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "DKK",
+  "fx_fin_to_price": 0.1433,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 53.9,
+  "p": 37.82,
+  "v1": 97.87,
+  "v2": 67.38,
+  "buy": 51.83,
+  "mos": 78.16,
+  "data_check_flag": false,
+  "dpct": -31.2,
+  "dusd": -30.49,
+  "oey": 6.65,
+  "oem": 11190.4,
+  "rdcf": 1.43,
+  "mcap": 168299.0,
+  "z": "BUY",
+  "pess": 35.46,
+  "real": 66.06,
+  "opt": 101.93,
+  "ec": 3126.45,
+  "nc": -13653.98,
+  "rev": 47812.05,
+  "opm_cur": 0.442,
+  "opm_norm": 0.395,
+  "tax": 0.21,
+  "da": 0.032,
+  "capex_pct": 0.095,
+  "nwc": 0.03,
+  "sbc_pct": 0.008,
+  "sh": 4450.0,
+  "wacc": 0.085,
+  "tg": 0.022,
+  "gvec": [
+    0.105,
+    0.0999,
+    0.0949,
+    0.0898,
+    0.0847,
+    0.0796,
+    0.0746,
+    0.0695,
+    0.0644,
+    0.0593
+  ],
+  "mvec": [
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395,
+    0.395
+  ],
+  "short_p": 32.62,
+  "short_down": -13.7,
+  "short_score": 12,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.2,
+    "days_to_cover": 1.3,
+    "momentum_6m_pct": -24.5
+  },
+  "traceability": {
+    "cik_or_lei": "0000353278",
+    "accession_no": "0000353278-26-000019",
+    "filing_date": "2026-10-30",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:PropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.5,
+        "ivs": [
+          72.52,
+          76.77,
+          81.83,
+          87.95,
+          95.49
+        ]
+      },
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          66.41,
+          69.89,
+          73.98,
+          78.83,
+          84.7
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          61.15,
+          64.03,
+          67.38,
+          71.3,
+          75.95
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          56.59,
+          59.0,
+          61.76,
+          64.97,
+          68.73
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          52.58,
+          54.62,
+          56.94,
+          59.59,
+          62.66
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 52.24,
+    "p25": 59.85,
+    "p50": 67.86,
+    "p75": 75.78,
+    "p90": 84.34,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 42.11,
+      "v1": 89.06,
+      "v2": 61.32,
+      "mos": 45.6
+    },
+    {
+      "q": "25Q4",
+      "p": 40.69,
+      "v1": 90.82,
+      "v2": 62.53,
+      "mos": 53.7
+    },
+    {
+      "q": "26Q1",
+      "p": 38.65,
+      "v1": 92.59,
+      "v2": 63.74,
+      "mos": 64.9
+    },
+    {
+      "q": "26Q2",
+      "p": 36.81,
+      "v1": 94.35,
+      "v2": 64.95,
+      "mos": 76.4
+    },
+    {
+      "q": "26Q3",
+      "p": 35.94,
+      "v1": 96.11,
+      "v2": 66.17,
+      "mos": 84.1
+    },
+    {
+      "q": "26Q4",
+      "p": 37.82,
+      "v1": 97.87,
+      "v2": 67.38,
+      "mos": 78.2
+    }
+  ],
+  "what": "Svetovni farmacevtski vodja na področju GLP-1 terapij za sladkorno bolezen in debelost (Ozempic, Wegovy, CagriSema) z >50 % 10-letno mediano ROIC.",
+  "why_v1": "Po valuti usklajen izračun (izkazi 333,65 mrd DKK pretvorjeni po 0,1433 USD/DKK v $47,81 mrd USD): pri tečaju $37,82 ADR trguje pri 11,2x normaliziranem EBIT.",
+  "why_v2": "Agent 2 upošteval Catalent prevzemni dolg (102,4 mrd DKK = $14,67 mrd USD), povišan tovarniški CapEx (9,5 % prihodkov) ter Medicare IRA cenovni pritisk -> v2 = $51,40 USD (MoS = +35,9 %).",
+  "s_flags": "Visok razvojni CapEx za širitev proizvodnih kapacitet ($6,5 mrd USD/leto) začasno znižuje FCF konverzijo na 88 %.",
+  "s_moat": "Ostra cenovna konkurenca Eli Lilly (Zepbound/Mounjaro) in ameriška vladna pogajanja o cenah zdravil (Medicare Part D 2027).",
+  "s_debt": "Povečan SOTP neto dolg (-$13,65 mrd USD po prevzemu obratov Catalent), ki pa je pokrit v <10 mesecih EBITDA.",
+  "s_cat": "Znižanje neto cen GLP-1 v ZDA za >15 % YoY ali zamik pri odobritvi CagriSema.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (PHARMA_PIPELINE, valuta USD)",
+      "iv": 97.87,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (2391M USD), IFRS 16 najemov (1175M) in pogojnih obveznosti",
+      "iv": 88.72,
+      "d": -9.15
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 21.0%",
+      "iv": 82.02,
+      "d": -6.7
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 44.2% na sredinskih 39.5%",
+      "iv": 74.09,
+      "d": -7.93
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.5% in g 2.2%",
+      "iv": 67.38,
+      "d": -6.71
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.58,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 7.12,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 88.0,
+    "share_dilution_3y_pct": -1.6,
+    "sloan_accrual_pct": 2.2,
+    "finra_short_float_pct": 1.2,
+    "days_to_cover": 1.3,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -24.5,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 46.88
+      },
+      {
+        "q": "22Q2",
+        "p": 46.58
+      },
+      {
+        "q": "22Q3",
+        "p": 47.57
+      },
+      {
+        "q": "22Q4",
+        "p": 49.25
+      },
+      {
+        "q": "23Q1",
+        "p": 50.65
+      },
+      {
+        "q": "23Q2",
+        "p": 50.88
+      },
+      {
+        "q": "23Q3",
+        "p": 49.59
+      },
+      {
+        "q": "23Q4",
+        "p": 47.08
+      },
+      {
+        "q": "24Q1",
+        "p": 44.21
+      },
+      {
+        "q": "24Q2",
+        "p": 41.94
+      },
+      {
+        "q": "24Q3",
+        "p": 40.88
+      },
+      {
+        "q": "24Q4",
+        "p": 41.06
+      },
+      {
+        "q": "25Q1",
+        "p": 41.87
+      },
+      {
+        "q": "25Q2",
+        "p": 42.45
+      },
+      {
+        "q": "25Q3",
+        "p": 42.11
+      },
+      {
+        "q": "25Q4",
+        "p": 40.69
+      },
+      {
+        "q": "26Q1",
+        "p": 38.65
+      },
+      {
+        "q": "26Q2",
+        "p": 36.81
+      },
+      {
+        "q": "26Q3",
+        "p": 35.94
+      },
+      {
+        "q": "26Q4",
+        "p": 37.82
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

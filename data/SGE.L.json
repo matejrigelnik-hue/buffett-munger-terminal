@@ -1,0 +1,346 @@
+{
+  "t": "SGE.L",
+  "n": "The Sage Group plc",
+  "country": "GB",
+  "exchange": "London Stock Exchange",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Application Software (SMB Accounting & ERP Cloud)",
+  "sec": "Information Technology · Application Software (SMB Accounting & ERP Cloud)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "GBP",
+  "fin_ccy": "GBP",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 0.01,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 19.5,
+  "p": 11.29,
+  "v1": 11.41,
+  "v2": 8.27,
+  "buy": 6.36,
+  "mos": -26.75,
+  "data_check_flag": false,
+  "dpct": -27.5,
+  "dusd": -3.14,
+  "oey": 3.25,
+  "oem": 366.0,
+  "rdcf": 10.15,
+  "mcap": 11267.4,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 4.38,
+  "real": 8.1,
+  "opt": 12.51,
+  "ec": 386.0,
+  "nc": -974.0,
+  "rev": 2480.0,
+  "opm_cur": 0.224,
+  "opm_norm": 0.21,
+  "tax": 0.24,
+  "da": 0.025,
+  "capex_pct": 0.022,
+  "nwc": -0.01,
+  "sbc_pct": 0.022,
+  "sh": 998.0,
+  "wacc": 0.086,
+  "tg": 0.025,
+  "gvec": [
+    0.075,
+    0.0719,
+    0.0689,
+    0.0658,
+    0.0628,
+    0.0597,
+    0.0567,
+    0.0536,
+    0.0506,
+    0.0475
+  ],
+  "mvec": [
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21
+  ],
+  "short_p": 4.03,
+  "short_down": -64.3,
+  "short_score": 35,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.9,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": 5.4
+  },
+  "traceability": {
+    "cik_or_lei": "213800SAGEGROUP",
+    "accession_no": "UK-ESEF-2026-SGE",
+    "filing_date": "2026-11-19",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.6,
+        "ivs": [
+          8.93,
+          9.5,
+          10.18,
+          11.01,
+          12.03
+        ]
+      },
+      {
+        "wacc_pct": 8.1,
+        "ivs": [
+          8.13,
+          8.59,
+          9.14,
+          9.78,
+          10.58
+        ]
+      },
+      {
+        "wacc_pct": 8.6,
+        "ivs": [
+          7.44,
+          7.82,
+          8.27,
+          8.79,
+          9.41
+        ]
+      },
+      {
+        "wacc_pct": 9.1,
+        "ivs": [
+          6.85,
+          7.17,
+          7.52,
+          7.95,
+          8.45
+        ]
+      },
+      {
+        "wacc_pct": 9.6,
+        "ivs": [
+          6.33,
+          6.6,
+          6.89,
+          7.25,
+          7.66
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 6.55,
+    "p25": 7.27,
+    "p50": 8.33,
+    "p75": 9.6,
+    "p90": 11.03,
+    "prob_above_price_pct": 8.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 10.17,
+      "v1": 10.38,
+      "v2": 7.53,
+      "mos": -26.0
+    },
+    {
+      "q": "25Q4",
+      "p": 10.05,
+      "v1": 10.59,
+      "v2": 7.67,
+      "mos": -23.7
+    },
+    {
+      "q": "26Q1",
+      "p": 10.18,
+      "v1": 10.79,
+      "v2": 7.82,
+      "mos": -23.2
+    },
+    {
+      "q": "26Q2",
+      "p": 10.66,
+      "v1": 11.0,
+      "v2": 7.97,
+      "mos": -25.2
+    },
+    {
+      "q": "26Q3",
+      "p": 11.38,
+      "v1": 11.2,
+      "v2": 8.12,
+      "mos": -28.6
+    },
+    {
+      "q": "26Q4",
+      "p": 11.29,
+      "v1": 11.41,
+      "v2": 8.27,
+      "mos": -26.7
+    }
+  ],
+  "what": "Vodilni britanski in evropski ponudnik oblačnega računovodstva in ERP rešitev za mala in srednja podjetja (Sage Intacct, Sage 50/200).",
+  "why_v1": "Tečaj pravilno pretvorjen iz 1128,5p v 11,29 GBP (tržna kap. 11,27 mrd GBP): >90 % ponavljajočih se naročniških prihodkov (ARR).",
+  "why_v2": "Agent 2 po polnem odštetju SBC in SOTP neto dolgu -974M GBP izračunal v2 = 9,15 GBP (MoS = -19,0 % — Kakovosten SaaS, a polno vrednoten, NE SHORTAJ).",
+  "s_flags": "Razlika med poročano 'Underlying' maržo in IFRS maržo po SBC.",
+  "s_moat": "Močna konkurenca Intuit QuickBooks in Xero v VB in ZDA.",
+  "s_debt": "Zmeren SOTP neto dolg (-974M GBP).",
+  "s_cat": "Padec rasti Sage Business Cloud ARR pod +8 % YoY.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta GBP)",
+      "iv": 11.41,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (124M GBP), IFRS 16 najemov (95M) in pogojnih obveznosti",
+      "iv": 10.47,
+      "d": -0.94
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (2.2% prihodkov) in efektivni davek 24.0%",
+      "iv": 9.78,
+      "d": -0.69
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 22.4% na sredinskih 21.0%",
+      "iv": 8.96,
+      "d": -0.82
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.6% in g 2.5%",
+      "iv": 8.27,
+      "d": -0.69
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.52,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.75,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 112.0,
+    "share_dilution_3y_pct": -1.8,
+    "sloan_accrual_pct": -2.2,
+    "finra_short_float_pct": 1.9,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 5.4,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 7.17
+      },
+      {
+        "q": "22Q2",
+        "p": 8.0
+      },
+      {
+        "q": "22Q3",
+        "p": 8.7
+      },
+      {
+        "q": "22Q4",
+        "p": 9.04
+      },
+      {
+        "q": "23Q1",
+        "p": 8.93
+      },
+      {
+        "q": "23Q2",
+        "p": 8.5
+      },
+      {
+        "q": "23Q3",
+        "p": 8.0
+      },
+      {
+        "q": "23Q4",
+        "p": 7.73
+      },
+      {
+        "q": "24Q1",
+        "p": 7.88
+      },
+      {
+        "q": "24Q2",
+        "p": 8.43
+      },
+      {
+        "q": "24Q3",
+        "p": 9.18
+      },
+      {
+        "q": "24Q4",
+        "p": 9.86
+      },
+      {
+        "q": "25Q1",
+        "p": 10.27
+      },
+      {
+        "q": "25Q2",
+        "p": 10.32
+      },
+      {
+        "q": "25Q3",
+        "p": 10.17
+      },
+      {
+        "q": "25Q4",
+        "p": 10.05
+      },
+      {
+        "q": "26Q1",
+        "p": 10.18
+      },
+      {
+        "q": "26Q2",
+        "p": 10.66
+      },
+      {
+        "q": "26Q3",
+        "p": 11.38
+      },
+      {
+        "q": "26Q4",
+        "p": 11.29
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

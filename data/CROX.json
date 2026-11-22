@@ -1,0 +1,346 @@
+{
+  "t": "CROX",
+  "n": "Crocs, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Footwear (Crocs & HeyDude Casual Footwear)",
+  "sec": "Consumer Discretionary · Footwear (Crocs & HeyDude Casual Footwear)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 26.8,
+  "p": 154.67,
+  "v1": 260.47,
+  "v2": 156.34,
+  "buy": 120.26,
+  "mos": 1.08,
+  "data_check_flag": false,
+  "dpct": -40.0,
+  "dusd": -104.13,
+  "oey": 8.59,
+  "oem": 636.8,
+  "rdcf": 3.15,
+  "mcap": 7416.4,
+  "z": "UNDER",
+  "pess": 77.02,
+  "real": 154.7,
+  "opt": 238.94,
+  "ec": 0.0,
+  "nc": -2431.6,
+  "rev": 4101.2,
+  "opm_cur": 0.256,
+  "opm_norm": 0.222,
+  "tax": 0.215,
+  "da": 0.018,
+  "capex_pct": 0.022,
+  "nwc": 0.04,
+  "sbc_pct": 0.015,
+  "sh": 47.95,
+  "wacc": 0.098,
+  "tg": 0.02,
+  "gvec": [
+    0.035,
+    0.0341,
+    0.0332,
+    0.0323,
+    0.0313,
+    0.0304,
+    0.0295,
+    0.0286,
+    0.0277,
+    0.0268
+  ],
+  "mvec": [
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222,
+    0.222
+  ],
+  "short_p": 70.86,
+  "short_down": -54.2,
+  "short_score": 27,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.4,
+    "short_float_pct": 7.2,
+    "days_to_cover": 2.8,
+    "momentum_6m_pct": 11.2
+  },
+  "traceability": {
+    "cik_or_lei": "0001334036",
+    "accession_no": "0001334036-26-000053",
+    "filing_date": "2026-10-31",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:TaxesPayableCurrentAndNoncurrent"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          169.97,
+          178.13,
+          187.48,
+          198.31,
+          211.0
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          156.14,
+          163.02,
+          170.84,
+          179.81,
+          190.21
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          143.89,
+          149.74,
+          156.34,
+          163.85,
+          172.46
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          132.97,
+          137.99,
+          143.6,
+          149.94,
+          157.15
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          123.18,
+          127.5,
+          132.32,
+          137.7,
+          143.79
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 121.03,
+    "p25": 135.16,
+    "p50": 157.62,
+    "p75": 175.09,
+    "p90": 196.23,
+    "prob_above_price_pct": 52.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 148.04,
+      "v1": 237.03,
+      "v2": 142.27,
+      "mos": -3.9
+    },
+    {
+      "q": "25Q4",
+      "p": 154.12,
+      "v1": 241.72,
+      "v2": 145.08,
+      "mos": -5.9
+    },
+    {
+      "q": "26Q1",
+      "p": 159.54,
+      "v1": 246.4,
+      "v2": 147.9,
+      "mos": -7.3
+    },
+    {
+      "q": "26Q2",
+      "p": 161.18,
+      "v1": 251.09,
+      "v2": 150.71,
+      "mos": -6.5
+    },
+    {
+      "q": "26Q3",
+      "p": 157.83,
+      "v1": 255.78,
+      "v2": 153.53,
+      "mos": -2.7
+    },
+    {
+      "q": "26Q4",
+      "p": 154.67,
+      "v1": 260.47,
+      "v2": 156.34,
+      "mos": 1.1
+    }
+  ],
+  "what": "Globalni proizvajalec obutve iz pene Croslite (znamki Crocs in HeyDude) z visoko operativno maržo.",
+  "why_v1": "Visoka marža osnovne znamke Crocs in zniževanje bančnega dolga.",
+  "why_v2": "Agent 2 v Note 13 odkril $641,6M dolgoročnih davčnih obveznosti iz internih prenosov IP ter krčenje znamke HeyDude -> v2 = $138,84 (MoS = -10,2 %).",
+  "s_flags": "$641,56M dolgoročnih davčnih obveznosti (Note 13) in +$69,3M zadržanih tekočih davkov v OCF (Pravilo #30).",
+  "s_moat": "Prevzeta znamka HeyDude ($2,5 mrd) izgublja prodajo v veleprodaji.",
+  "s_debt": "SOTP neto dolg z najemi in IP davčnimi obveznostmi znaša -$2,45 mrd.",
+  "s_cat": "Nadaljnji dvomestni padec prodaje znamke HeyDude.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 260.47,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (205M USD), IFRS 16 najemov (310M) in pogojnih obveznosti",
+      "iv": 229.23,
+      "d": -31.24
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.5% prihodkov) in efektivni davek 21.5%",
+      "iv": 206.32,
+      "d": -22.91
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 25.6% na sredinskih 22.2%",
+      "iv": 179.25,
+      "d": -27.07
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g 2.0%",
+      "iv": 156.34,
+      "d": -22.91
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.05,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 3.45,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 6,
+    "fcf_ni_ratio_pct": 108.0,
+    "share_dilution_3y_pct": -4.1,
+    "sloan_accrual_pct": -1.4,
+    "finra_short_float_pct": 7.2,
+    "days_to_cover": 2.8,
+    "borrow_fee_pct": 0.4,
+    "momentum_6m_pct": 11.2,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 147.99
+      },
+      {
+        "q": "22Q2",
+        "p": 142.21
+      },
+      {
+        "q": "22Q3",
+        "p": 134.03
+      },
+      {
+        "q": "22Q4",
+        "p": 127.34
+      },
+      {
+        "q": "23Q1",
+        "p": 125.59
+      },
+      {
+        "q": "23Q2",
+        "p": 130.08
+      },
+      {
+        "q": "23Q3",
+        "p": 139.31
+      },
+      {
+        "q": "23Q4",
+        "p": 149.69
+      },
+      {
+        "q": "24Q1",
+        "p": 157.23
+      },
+      {
+        "q": "24Q2",
+        "p": 159.42
+      },
+      {
+        "q": "24Q3",
+        "p": 156.35
+      },
+      {
+        "q": "24Q4",
+        "p": 150.56
+      },
+      {
+        "q": "25Q1",
+        "p": 145.69
+      },
+      {
+        "q": "25Q2",
+        "p": 144.62
+      },
+      {
+        "q": "25Q3",
+        "p": 148.04
+      },
+      {
+        "q": "25Q4",
+        "p": 154.12
+      },
+      {
+        "q": "26Q1",
+        "p": 159.54
+      },
+      {
+        "q": "26Q2",
+        "p": 161.18
+      },
+      {
+        "q": "26Q3",
+        "p": 157.83
+      },
+      {
+        "q": "26Q4",
+        "p": 154.67
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

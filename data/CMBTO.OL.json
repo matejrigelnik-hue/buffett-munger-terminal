@@ -1,0 +1,347 @@
+{
+  "t": "CMBTO.OL",
+  "n": "CMB.TECH NV",
+  "country": "BE",
+  "exchange": "Oslo Børs / Euronext",
+  "gics_sector": "Energy",
+  "gics_industry": "Oil & Gas Storage & Transportation (VLCC & Ammonia Tankers)",
+  "sec": "Energy · Oil & Gas Storage & Transportation (VLCC & Ammonia Tankers)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 17.3,
+  "p": 158.4,
+  "v1": 113.0,
+  "v2": 49.01,
+  "buy": 37.7,
+  "mos": -69.06,
+  "data_check_flag": false,
+  "dpct": -56.6,
+  "dusd": -63.99,
+  "oey": 5.5,
+  "oem": 1691.5,
+  "rdcf": 15.28,
+  "mcap": 30761.3,
+  "z": "SHORT",
+  "pess": 39.74,
+  "real": 47.54,
+  "opt": 61.22,
+  "ec": 2994.55,
+  "nc": -25790.7,
+  "rev": 10829.0,
+  "opm_cur": 0.35,
+  "opm_norm": 0.22,
+  "tax": 0.04,
+  "da": 0.12,
+  "capex_pct": 0.16,
+  "nwc": 0.02,
+  "sbc_pct": 0.005,
+  "sh": 194.2,
+  "wacc": 0.1,
+  "tg": 0.01,
+  "gvec": [
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01
+  ],
+  "mvec": [
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22
+  ],
+  "short_p": 44.35,
+  "short_down": -72.0,
+  "short_score": 94,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.6,
+    "short_float_pct": 5.2,
+    "days_to_cover": 2.8,
+    "momentum_6m_pct": -14.2
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-CMBTO-OL",
+    "accession_no": "ESEF-2026-CMBTO-OL",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 0.5,
+    "p25": 0.5,
+    "p50": 0.5,
+    "p75": 0.5,
+    "p90": 0.5,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 142.48,
+      "v1": 102.83,
+      "v2": 44.6,
+      "mos": -68.7
+    },
+    {
+      "q": "25Q4",
+      "p": 150.87,
+      "v1": 104.86,
+      "v2": 45.48,
+      "mos": -69.9
+    },
+    {
+      "q": "26Q1",
+      "p": 156.87,
+      "v1": 106.9,
+      "v2": 46.36,
+      "mos": -70.4
+    },
+    {
+      "q": "26Q2",
+      "p": 158.17,
+      "v1": 108.93,
+      "v2": 47.25,
+      "mos": -70.1
+    },
+    {
+      "q": "26Q3",
+      "p": 154.95,
+      "v1": 110.97,
+      "v2": 48.13,
+      "mos": -68.9
+    },
+    {
+      "q": "26Q4",
+      "p": 158.4,
+      "v1": 113.0,
+      "v2": 49.01,
+      "mos": -69.1
+    }
+  ],
+  "what": "CMB.TECH NV (CMBTO.OL) — vodilno podjetje v panogi Oil & Gas Storage & Transportation (VLCC & Ammonia Tankers) (Oslo Børs / Euronext), vrednoteno po specializirani predlogi NAV_SHIPPING_ENERGY v valuti NOK (izkazi v USD, FX=11.05).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 17.3 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (22.0 %) ter preverbi Beneish M (-1.91) in Piotroski F (4/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (55 %), Beneish M-Score (-1.91) in Altman Z-Score (1.85).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Energy (Oil & Gas Storage & Transportation (VLCC & Ammonia Tankers)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (2450M USD) in najeme (110M USD).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 113.0,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (541M NOK), IFRS 16 najemov (1216M) in pogojnih obveznosti",
+      "iv": 93.8,
+      "d": -19.2
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.5% prihodkov) in efektivni davek 4.0%",
+      "iv": 79.73,
+      "d": -14.07
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 35.0% na sredinskih 22.0%",
+      "iv": 63.09,
+      "d": -16.64
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.0%",
+      "iv": 49.01,
+      "d": -14.08
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.91,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 1.85,
+    "altman_flag": "SIVA CONA (1.8–3.0)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 55.0,
+    "share_dilution_3y_pct": 2.5,
+    "sloan_accrual_pct": 8.1,
+    "finra_short_float_pct": 5.2,
+    "days_to_cover": 2.8,
+    "borrow_fee_pct": 0.6,
+    "momentum_6m_pct": -14.2,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 106.26
+      },
+      {
+        "q": "22Q2",
+        "p": 101.03
+      },
+      {
+        "q": "22Q3",
+        "p": 95.52
+      },
+      {
+        "q": "22Q4",
+        "p": 93.69
+      },
+      {
+        "q": "23Q1",
+        "p": 97.96
+      },
+      {
+        "q": "23Q2",
+        "p": 108.04
+      },
+      {
+        "q": "23Q3",
+        "p": 121.04
+      },
+      {
+        "q": "23Q4",
+        "p": 132.76
+      },
+      {
+        "q": "24Q1",
+        "p": 139.72
+      },
+      {
+        "q": "24Q2",
+        "p": 140.76
+      },
+      {
+        "q": "24Q3",
+        "p": 137.46
+      },
+      {
+        "q": "24Q4",
+        "p": 133.32
+      },
+      {
+        "q": "25Q1",
+        "p": 131.93
+      },
+      {
+        "q": "25Q2",
+        "p": 135.21
+      },
+      {
+        "q": "25Q3",
+        "p": 142.48
+      },
+      {
+        "q": "25Q4",
+        "p": 150.87
+      },
+      {
+        "q": "26Q1",
+        "p": 156.87
+      },
+      {
+        "q": "26Q2",
+        "p": 158.17
+      },
+      {
+        "q": "26Q3",
+        "p": 154.95
+      },
+      {
+        "q": "26Q4",
+        "p": 158.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

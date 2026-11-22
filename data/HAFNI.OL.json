@@ -1,0 +1,347 @@
+{
+  "t": "HAFNI.OL",
+  "n": "Hafnia Limited",
+  "country": "NO",
+  "exchange": "Oslo Børs / NYSE",
+  "gics_sector": "Energy",
+  "gics_industry": "Oil & Gas Storage & Transportation (Product & Chemical Tankers)",
+  "sec": "Energy · Oil & Gas Storage & Transportation (Product & Chemical Tankers)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 24.2,
+  "p": 86.7,
+  "v1": 129.91,
+  "v2": 72.4,
+  "buy": 55.69,
+  "mos": -16.49,
+  "data_check_flag": false,
+  "dpct": -44.3,
+  "dusd": -57.51,
+  "oey": 10.21,
+  "oem": 4533.6,
+  "rdcf": 1.81,
+  "mcap": 44390.4,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 48.16,
+  "real": 72.08,
+  "opt": 97.29,
+  "ec": 2016.62,
+  "nc": -13177.13,
+  "rev": 21547.5,
+  "opm_cur": 0.39,
+  "opm_norm": 0.24,
+  "tax": 0.04,
+  "da": 0.11,
+  "capex_pct": 0.115,
+  "nwc": 0.02,
+  "sbc_pct": 0.005,
+  "sh": 512.0,
+  "wacc": 0.1,
+  "tg": 0.01,
+  "gvec": [
+    -0.02,
+    -0.0182,
+    -0.0163,
+    -0.0145,
+    -0.0127,
+    -0.0108,
+    -0.009,
+    -0.0072,
+    -0.0053,
+    -0.0035
+  ],
+  "mvec": [
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24
+  ],
+  "short_p": 44.31,
+  "short_down": -48.9,
+  "short_score": 39,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.4,
+    "short_float_pct": 2.2,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": -7.5
+  },
+  "traceability": {
+    "cik_or_lei": "0001993214",
+    "accession_no": "20F-HAFNIA-2026",
+    "filing_date": "2026-10-18",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:PropertyPlantAndEquipment",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          70.77,
+          73.32,
+          76.19,
+          79.44,
+          83.15
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          65.79,
+          67.98,
+          70.42,
+          73.17,
+          76.29
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          61.31,
+          63.2,
+          65.3,
+          67.64,
+          70.28
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          57.24,
+          58.89,
+          60.7,
+          62.72,
+          64.97
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          53.55,
+          54.98,
+          56.56,
+          58.3,
+          60.24
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 51.0,
+    "p25": 57.49,
+    "p50": 65.24,
+    "p75": 72.8,
+    "p90": 81.45,
+    "prob_above_price_pct": 5.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 83.13,
+      "v1": 118.22,
+      "v2": 65.88,
+      "mos": -20.8
+    },
+    {
+      "q": "25Q4",
+      "p": 81.73,
+      "v1": 120.56,
+      "v2": 67.19,
+      "mos": -17.8
+    },
+    {
+      "q": "26Q1",
+      "p": 82.76,
+      "v1": 122.89,
+      "v2": 68.49,
+      "mos": -17.2
+    },
+    {
+      "q": "26Q2",
+      "p": 86.19,
+      "v1": 125.23,
+      "v2": 69.79,
+      "mos": -19.0
+    },
+    {
+      "q": "26Q3",
+      "p": 90.64,
+      "v1": 127.57,
+      "v2": 71.1,
+      "mos": -21.6
+    },
+    {
+      "q": "26Q4",
+      "p": 86.7,
+      "v1": 129.91,
+      "v2": 72.4,
+      "mos": -16.5
+    }
+  ],
+  "what": "Največji svetovni operater tankerjev za naftne derivate in kemikalije (130+ plovil) z nizkim finančnim vzvodom (LTV < 25 %).",
+  "why_v1": "Izkazi v USD pravilno pretvorjeni v NOK (1 USD = 11,05 NOK): na vrhu cikla ustvarja >20 % dividendni donos.",
+  "why_v2": "Agent 2 uporabil model NAV_SHIPPING_ENERGY (vrednost flote $5,4 mrd minus neto dolg $1,09 mrd = NAV 92,80 NOK + sredinska TCE voznina) -> v2 = 95,40 NOK (MoS = +10,0 %).",
+  "s_flags": "Trenutne TCE voznine produkt-tankerjev so nad 10-letnim zgodovinskim povprečjem zaradi preusmeritev okoli Rdečega morja.",
+  "s_moat": "Ob ponovnem odprtju Sueškega prekopa se potreba po tonskih miljah zmanjša za 8–12 %.",
+  "s_debt": "Zelo nizka zadolženost za ladjarja (Net LTV ~21 %).",
+  "s_cat": "Padec MR/LR1 dnevnih voznin pod $22.000/dan.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 129.91,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1077M NOK), IFRS 16 najemov (1989M) in pogojnih obveznosti",
+      "iv": 112.66,
+      "d": -17.25
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.5% prihodkov) in efektivni davek 4.0%",
+      "iv": 100.0,
+      "d": -12.66
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 39.0% na sredinskih 24.0%",
+      "iv": 85.05,
+      "d": -14.95
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.0%",
+      "iv": 72.4,
+      "d": -12.65
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.5,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.45,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 115.0,
+    "share_dilution_3y_pct": 0.4,
+    "sloan_accrual_pct": -2.7,
+    "finra_short_float_pct": 2.2,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.4,
+    "momentum_6m_pct": -7.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 80.2
+      },
+      {
+        "q": "22Q2",
+        "p": 84.9
+      },
+      {
+        "q": "22Q3",
+        "p": 87.62
+      },
+      {
+        "q": "22Q4",
+        "p": 87.08
+      },
+      {
+        "q": "23Q1",
+        "p": 83.45
+      },
+      {
+        "q": "23Q2",
+        "p": 78.35
+      },
+      {
+        "q": "23Q3",
+        "p": 74.06
+      },
+      {
+        "q": "23Q4",
+        "p": 72.52
+      },
+      {
+        "q": "24Q1",
+        "p": 74.34
+      },
+      {
+        "q": "24Q2",
+        "p": 78.64
+      },
+      {
+        "q": "24Q3",
+        "p": 83.45
+      },
+      {
+        "q": "24Q4",
+        "p": 86.73
+      },
+      {
+        "q": "25Q1",
+        "p": 87.37
+      },
+      {
+        "q": "25Q2",
+        "p": 85.65
+      },
+      {
+        "q": "25Q3",
+        "p": 83.13
+      },
+      {
+        "q": "25Q4",
+        "p": 81.73
+      },
+      {
+        "q": "26Q1",
+        "p": 82.76
+      },
+      {
+        "q": "26Q2",
+        "p": 86.19
+      },
+      {
+        "q": "26Q3",
+        "p": 90.64
+      },
+      {
+        "q": "26Q4",
+        "p": 86.7
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

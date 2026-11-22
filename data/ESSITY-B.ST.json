@@ -1,0 +1,347 @@
+{
+  "t": "ESSITY-B.ST",
+  "n": "Essity AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Consumer Staples",
+  "gics_industry": "Household Products (Tork, Libresse, Tena Hygiene & Medical)",
+  "sec": "Consumer Staples · Household Products (Tork, Libresse, Tena Hygiene & Medical)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 15.4,
+  "p": 286.5,
+  "v1": 429.97,
+  "v2": 309.65,
+  "buy": 238.19,
+  "mos": 8.08,
+  "data_check_flag": false,
+  "dpct": -28.0,
+  "dusd": -120.32,
+  "oey": 6.19,
+  "oem": 12336.9,
+  "rdcf": 2.47,
+  "mcap": 199404.0,
+  "z": "UNDER",
+  "pess": 159.05,
+  "real": 303.79,
+  "opt": 471.95,
+  "ec": 5125.0,
+  "nc": -39075.0,
+  "rev": 147500.0,
+  "opm_cur": 0.138,
+  "opm_norm": 0.132,
+  "tax": 0.23,
+  "da": 0.042,
+  "capex_pct": 0.045,
+  "nwc": 0.03,
+  "sbc_pct": 0.003,
+  "sh": 696.0,
+  "wacc": 0.084,
+  "tg": 0.02,
+  "gvec": [
+    0.035,
+    0.0341,
+    0.0332,
+    0.0323,
+    0.0313,
+    0.0304,
+    0.0295,
+    0.0286,
+    0.0277,
+    0.0268
+  ],
+  "mvec": [
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132,
+    0.132
+  ],
+  "short_p": 146.33,
+  "short_down": -48.9,
+  "short_score": 25,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.4,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": 9.8
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-ESSITY-B-ST",
+    "accession_no": "ESEF-2026-ESSITY-B-ST",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.4,
+        "ivs": [
+          335.18,
+          355.14,
+          378.8,
+          407.28,
+          442.23
+        ]
+      },
+      {
+        "wacc_pct": 7.9,
+        "ivs": [
+          305.79,
+          322.15,
+          341.29,
+          363.97,
+          391.28
+        ]
+      },
+      {
+        "wacc_pct": 8.4,
+        "ivs": [
+          280.38,
+          293.95,
+          309.65,
+          328.02,
+          349.77
+        ]
+      },
+      {
+        "wacc_pct": 8.9,
+        "ivs": [
+          258.22,
+          269.59,
+          282.62,
+          297.68,
+          315.3
+        ]
+      },
+      {
+        "wacc_pct": 9.4,
+        "ivs": [
+          238.72,
+          248.33,
+          259.26,
+          271.75,
+          286.21
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 254.7,
+    "p25": 278.91,
+    "p50": 316.95,
+    "p75": 358.28,
+    "p90": 397.81,
+    "prob_above_price_pct": 70.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 270.38,
+      "v1": 391.27,
+      "v2": 281.78,
+      "mos": 4.2
+    },
+    {
+      "q": "25Q4",
+      "p": 274.74,
+      "v1": 399.01,
+      "v2": 287.36,
+      "mos": 4.6
+    },
+    {
+      "q": "26Q1",
+      "p": 285.94,
+      "v1": 406.75,
+      "v2": 292.93,
+      "mos": 2.4
+    },
+    {
+      "q": "26Q2",
+      "p": 298.63,
+      "v1": 414.49,
+      "v2": 298.5,
+      "mos": -0.0
+    },
+    {
+      "q": "26Q3",
+      "p": 306.23,
+      "v1": 422.23,
+      "v2": 304.08,
+      "mos": -0.7
+    },
+    {
+      "q": "26Q4",
+      "p": 286.5,
+      "v1": 429.97,
+      "v2": 309.65,
+      "mos": 8.1
+    }
+  ],
+  "what": "Essity AB (publ) (ESSITY-B.ST) — vodilno podjetje v panogi Household Products (Tork, Libresse, Tena Hygiene & Medical) (Nasdaq Stockholm), vrednoteno po specializirani predlogi DCF_COMPOUNDER v valuti SEK (izkazi v SEK, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 15.4 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (13.2 %) ter preverbi Beneish M (-2.56) in Piotroski F (8/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (112 %), Beneish M-Score (-2.56) in Altman Z-Score (3.85).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Consumer Staples (Household Products (Tork, Libresse, Tena Hygiene & Medical)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (38500M SEK) in najeme (3900M SEK).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta SEK)",
+      "iv": 429.97,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (7375M SEK), IFRS 16 najemov (3900M) in pogojnih obveznosti",
+      "iv": 393.87,
+      "d": -36.1
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.3% prihodkov) in efektivni davek 23.0%",
+      "iv": 367.4,
+      "d": -26.47
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 13.8% na sredinskih 13.2%",
+      "iv": 336.12,
+      "d": -31.28
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.4% in g 2.0%",
+      "iv": 309.65,
+      "d": -26.47
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.56,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.85,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 112.0,
+    "share_dilution_3y_pct": -1.1,
+    "sloan_accrual_pct": -2.2,
+    "finra_short_float_pct": 1.4,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 9.8,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 279.92
+      },
+      {
+        "q": "22Q2",
+        "p": 284.18
+      },
+      {
+        "q": "22Q3",
+        "p": 277.84
+      },
+      {
+        "q": "22Q4",
+        "p": 263.31
+      },
+      {
+        "q": "23Q1",
+        "p": 247.04
+      },
+      {
+        "q": "23Q2",
+        "p": 236.51
+      },
+      {
+        "q": "23Q3",
+        "p": 236.74
+      },
+      {
+        "q": "23Q4",
+        "p": 247.91
+      },
+      {
+        "q": "24Q1",
+        "p": 265.35
+      },
+      {
+        "q": "24Q2",
+        "p": 281.83
+      },
+      {
+        "q": "24Q3",
+        "p": 291.06
+      },
+      {
+        "q": "24Q4",
+        "p": 290.64
+      },
+      {
+        "q": "25Q1",
+        "p": 283.07
+      },
+      {
+        "q": "25Q2",
+        "p": 274.24
+      },
+      {
+        "q": "25Q3",
+        "p": 270.38
+      },
+      {
+        "q": "25Q4",
+        "p": 274.74
+      },
+      {
+        "q": "26Q1",
+        "p": 285.94
+      },
+      {
+        "q": "26Q2",
+        "p": 298.63
+      },
+      {
+        "q": "26Q3",
+        "p": 306.23
+      },
+      {
+        "q": "26Q4",
+        "p": 286.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

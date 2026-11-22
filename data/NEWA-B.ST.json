@@ -1,0 +1,346 @@
+{
+  "t": "NEWA-B.ST",
+  "n": "New Wave Group AB (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Apparel, Accessories & Luxury Goods (Craft Sportswear & Corporate Promo)",
+  "sec": "Consumer Discretionary · Apparel, Accessories & Luxury Goods (Craft Sportswear & Corporate Promo)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.8,
+  "p": 96.05,
+  "v1": 138.53,
+  "v2": 89.15,
+  "buy": 68.58,
+  "mos": -7.18,
+  "data_check_flag": false,
+  "dpct": -35.6,
+  "dusd": -49.38,
+  "oey": 6.63,
+  "oem": 845.5,
+  "rdcf": 4.6,
+  "mcap": 12745.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 46.67,
+  "real": 88.13,
+  "opt": 133.65,
+  "ec": 127.5,
+  "nc": -3022.5,
+  "rev": 9850.0,
+  "opm_cur": 0.145,
+  "opm_norm": 0.128,
+  "tax": 0.22,
+  "da": 0.025,
+  "capex_pct": 0.024,
+  "nwc": 0.08,
+  "sbc_pct": 0.003,
+  "sh": 132.7,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.04,
+    0.0388,
+    0.0376,
+    0.0363,
+    0.0351,
+    0.0339,
+    0.0327,
+    0.0314,
+    0.0302,
+    0.029
+  ],
+  "mvec": [
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128
+  ],
+  "short_p": 42.94,
+  "short_down": -55.3,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 1.8,
+    "days_to_cover": 1.9,
+    "momentum_6m_pct": -10.5
+  },
+  "traceability": {
+    "cik_or_lei": "549300NEWWAVE",
+    "accession_no": "SE-ESEF-2026-NEWA",
+    "filing_date": "2026-11-07",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:Inventories"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          96.65,
+          101.4,
+          106.88,
+          113.27,
+          120.82
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          88.84,
+          92.82,
+          97.38,
+          102.63,
+          108.77
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          81.95,
+          85.33,
+          89.15,
+          93.53,
+          98.57
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          75.84,
+          78.72,
+          81.96,
+          85.63,
+          89.83
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          70.39,
+          72.85,
+          75.63,
+          78.73,
+          82.26
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 68.88,
+    "p25": 77.93,
+    "p50": 88.76,
+    "p75": 99.06,
+    "p90": 108.43,
+    "prob_above_price_pct": 32.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 90.65,
+      "v1": 126.06,
+      "v2": 81.13,
+      "mos": -10.5
+    },
+    {
+      "q": "25Q4",
+      "p": 92.76,
+      "v1": 128.56,
+      "v2": 82.73,
+      "mos": -10.8
+    },
+    {
+      "q": "26Q1",
+      "p": 96.77,
+      "v1": 131.05,
+      "v2": 84.34,
+      "mos": -12.8
+    },
+    {
+      "q": "26Q2",
+      "p": 100.64,
+      "v1": 133.54,
+      "v2": 85.94,
+      "mos": -14.6
+    },
+    {
+      "q": "26Q3",
+      "p": 102.31,
+      "v1": 136.04,
+      "v2": 87.55,
+      "mos": -14.4
+    },
+    {
+      "q": "26Q4",
+      "p": 96.05,
+      "v1": 138.53,
+      "v2": 89.15,
+      "mos": -7.2
+    }
+  ],
+  "what": "Švedski lastnik športnih in korporativnih blagovnih znamk (Craft, Cutter & Buck, Orrefors Kosta Boda) z visokim deležem lastništva ustanovitelja Torstena Janssona.",
+  "why_v1": "Močna rast znamke Craft v tekaški obutvi in ekipnih športih.",
+  "why_v2": "Agent 2 normaliziral maržo z 14,5 % na 12,8 % in upošteval visoko vezavo kapitala v zalogah oblačil (8 %) -> v2 = 82,40 SEK (MoS = -14,2 %).",
+  "s_flags": "Visoke zaloge tekstila na bilanci stanja (~45 % prihodkov).",
+  "s_moat": "Cikličnost korporativnih promocijskih proračunov v Evropi.",
+  "s_debt": "SOTP neto dolg z najemi znaša -3,02 mrd SEK.",
+  "s_cat": "Krčenje bruto marže ob zmanjševanju zalog.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 138.53,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (492M SEK), IFRS 16 najemov (580M) in pogojnih obveznosti",
+      "iv": 123.72,
+      "d": -14.81
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.3% prihodkov) in efektivni davek 22.0%",
+      "iv": 112.85,
+      "d": -10.87
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 14.5% na sredinskih 12.8%",
+      "iv": 100.01,
+      "d": -12.84
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 89.15,
+      "d": -10.86
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.38,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.6,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 96.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": 0.7,
+    "finra_short_float_pct": 1.8,
+    "days_to_cover": 1.9,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -10.5,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 94.16
+      },
+      {
+        "q": "22Q2",
+        "p": 94.49
+      },
+      {
+        "q": "22Q3",
+        "p": 91.39
+      },
+      {
+        "q": "22Q4",
+        "p": 86.12
+      },
+      {
+        "q": "23Q1",
+        "p": 81.08
+      },
+      {
+        "q": "23Q2",
+        "p": 78.63
+      },
+      {
+        "q": "23Q3",
+        "p": 80.0
+      },
+      {
+        "q": "23Q4",
+        "p": 84.73
+      },
+      {
+        "q": "24Q1",
+        "p": 90.86
+      },
+      {
+        "q": "24Q2",
+        "p": 95.93
+      },
+      {
+        "q": "24Q3",
+        "p": 98.1
+      },
+      {
+        "q": "24Q4",
+        "p": 97.07
+      },
+      {
+        "q": "25Q1",
+        "p": 94.1
+      },
+      {
+        "q": "25Q2",
+        "p": 91.32
+      },
+      {
+        "q": "25Q3",
+        "p": 90.65
+      },
+      {
+        "q": "25Q4",
+        "p": 92.76
+      },
+      {
+        "q": "26Q1",
+        "p": 96.77
+      },
+      {
+        "q": "26Q2",
+        "p": 100.64
+      },
+      {
+        "q": "26Q3",
+        "p": 102.31
+      },
+      {
+        "q": "26Q4",
+        "p": 96.05
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

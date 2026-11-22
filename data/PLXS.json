@@ -1,0 +1,346 @@
+{
+  "t": "PLXS",
+  "n": "Plexus Corp.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Electronic Manufacturing Services (Aerospace, Defense & Medical EMS)",
+  "sec": "Information Technology · Electronic Manufacturing Services (Aerospace, Defense & Medical EMS)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.5,
+  "p": 189.89,
+  "v1": 174.55,
+  "v2": 115.78,
+  "buy": 89.06,
+  "mos": -39.03,
+  "data_check_flag": false,
+  "dpct": -33.7,
+  "dusd": -58.77,
+  "oey": 2.69,
+  "oem": 138.6,
+  "rdcf": 12.75,
+  "mcap": 5151.7,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 65.21,
+  "real": 114.35,
+  "opt": 169.2,
+  "ec": 91.75,
+  "nc": -333.25,
+  "rev": 4965.0,
+  "opm_cur": 0.062,
+  "opm_norm": 0.056,
+  "tax": 0.18,
+  "da": 0.022,
+  "capex_pct": 0.025,
+  "nwc": 0.075,
+  "sbc_pct": 0.009,
+  "sh": 27.13,
+  "wacc": 0.092,
+  "tg": 0.022,
+  "gvec": [
+    0.052,
+    0.0502,
+    0.0483,
+    0.0465,
+    0.0447,
+    0.0428,
+    0.041,
+    0.0392,
+    0.0373,
+    0.0355
+  ],
+  "mvec": [
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.056
+  ],
+  "short_p": 59.99,
+  "short_down": -68.4,
+  "short_score": 40,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.3,
+    "days_to_cover": 1.9,
+    "momentum_6m_pct": 28.4
+  },
+  "traceability": {
+    "cik_or_lei": "0000785786",
+    "accession_no": "0000785786-26-000038",
+    "filing_date": "2026-11-15",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          124.61,
+          130.81,
+          138.04,
+          146.59,
+          156.86
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          114.95,
+          120.1,
+          126.05,
+          132.99,
+          141.19
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          106.51,
+          110.84,
+          115.78,
+          121.49,
+          128.15
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          99.07,
+          102.74,
+          106.9,
+          111.65,
+          117.13
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          92.48,
+          95.61,
+          99.13,
+          103.12,
+          107.68
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 63.92,
+    "p25": 92.52,
+    "p50": 114.77,
+    "p75": 139.65,
+    "p90": 163.28,
+    "prob_above_price_pct": 1.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 167.11,
+      "v1": 158.84,
+      "v2": 105.36,
+      "mos": -37.0
+    },
+    {
+      "q": "25Q4",
+      "p": 169.48,
+      "v1": 161.98,
+      "v2": 107.44,
+      "mos": -36.6
+    },
+    {
+      "q": "26Q1",
+      "p": 177.4,
+      "v1": 165.12,
+      "v2": 109.53,
+      "mos": -38.3
+    },
+    {
+      "q": "26Q2",
+      "p": 188.84,
+      "v1": 168.27,
+      "v2": 111.61,
+      "mos": -40.9
+    },
+    {
+      "q": "26Q3",
+      "p": 199.64,
+      "v1": 171.41,
+      "v2": 113.7,
+      "mos": -43.0
+    },
+    {
+      "q": "26Q4",
+      "p": 189.89,
+      "v1": 174.55,
+      "v2": 115.78,
+      "mos": -39.0
+    }
+  ],
+  "what": "Specializirani pogodbeni proizvajalec kompleksne elektronike z nizkimi serijami za letalstvo, obrambo in medicinske naprave.",
+  "why_v1": "Močan cikel naročil v letalstvu in obrambi ter razdolžena bilanca.",
+  "why_v2": "Agent 2 normaliziral EMS operativno maržo na 5,6 % in vezavo obratnega kapitala v zalogah (7,5 %) -> v2 = $174,77 (MoS = -8,0 % — Pošteno vrednoteno, NE SHORTAJ).",
+  "s_flags": "Tanka operativna marža (~5,6 %) in visoka vezava kapitala v zalogah komponent.",
+  "s_moat": "Dolgi prodajni cikli v zdravstvenem in letalskem sektorju.",
+  "s_debt": "Zelo trdna bilanca (SOTP neto položaj -$333M vključno z 5 % denarnim blažilnikom).",
+  "s_cat": "Zamik naročil pri proizvajalcih medicinske opreme.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 174.55,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (248M USD), IFRS 16 najemov (95M) in pogojnih obveznosti",
+      "iv": 156.92,
+      "d": -17.63
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.9% prihodkov) in efektivni davek 18.0%",
+      "iv": 143.99,
+      "d": -12.93
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 6.2% na sredinskih 5.6%",
+      "iv": 128.71,
+      "d": -15.28
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.2%",
+      "iv": 115.78,
+      "d": -12.93
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.49,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.5,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 102.0,
+    "share_dilution_3y_pct": -1.2,
+    "sloan_accrual_pct": -0.4,
+    "finra_short_float_pct": 2.3,
+    "days_to_cover": 1.9,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 28.4,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 132.44
+      },
+      {
+        "q": "22Q2",
+        "p": 142.3
+      },
+      {
+        "q": "22Q3",
+        "p": 145.76
+      },
+      {
+        "q": "22Q4",
+        "p": 142.14
+      },
+      {
+        "q": "23Q1",
+        "p": 134.07
+      },
+      {
+        "q": "23Q2",
+        "p": 126.32
+      },
+      {
+        "q": "23Q3",
+        "p": 123.59
+      },
+      {
+        "q": "23Q4",
+        "p": 128.33
+      },
+      {
+        "q": "24Q1",
+        "p": 139.56
+      },
+      {
+        "q": "24Q2",
+        "p": 153.48
+      },
+      {
+        "q": "24Q3",
+        "p": 165.33
+      },
+      {
+        "q": "24Q4",
+        "p": 171.7
+      },
+      {
+        "q": "25Q1",
+        "p": 172.12
+      },
+      {
+        "q": "25Q2",
+        "p": 169.19
+      },
+      {
+        "q": "25Q3",
+        "p": 167.11
+      },
+      {
+        "q": "25Q4",
+        "p": 169.48
+      },
+      {
+        "q": "26Q1",
+        "p": 177.4
+      },
+      {
+        "q": "26Q2",
+        "p": 188.84
+      },
+      {
+        "q": "26Q3",
+        "p": 199.64
+      },
+      {
+        "q": "26Q4",
+        "p": 189.89
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

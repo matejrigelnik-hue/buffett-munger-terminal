@@ -1,0 +1,347 @@
+{
+  "t": "SKF-B.ST",
+  "n": "AB SKF (publ)",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Industrials",
+  "gics_industry": "Industrial Machinery (Industrial & Automotive Bearings)",
+  "sec": "Industrials · Industrial Machinery (Industrial & Automotive Bearings)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.6,
+  "p": 204.5,
+  "v1": 342.93,
+  "v2": 250.66,
+  "buy": 192.82,
+  "mos": 22.57,
+  "data_check_flag": false,
+  "dpct": -26.9,
+  "dusd": -92.27,
+  "oey": 7.55,
+  "oem": 7032.7,
+  "rdcf": 0.45,
+  "mcap": 93129.3,
+  "z": "UNDER",
+  "pess": 139.74,
+  "real": 247.63,
+  "opt": 367.62,
+  "ec": 9225.0,
+  "nc": -14375.0,
+  "rev": 99500.0,
+  "opm_cur": 0.122,
+  "opm_norm": 0.118,
+  "tax": 0.24,
+  "da": 0.038,
+  "capex_pct": 0.042,
+  "nwc": 0.05,
+  "sbc_pct": 0.003,
+  "sh": 455.4,
+  "wacc": 0.092,
+  "tg": 0.02,
+  "gvec": [
+    0.032,
+    0.0313,
+    0.0305,
+    0.0298,
+    0.0291,
+    0.0283,
+    0.0276,
+    0.0269,
+    0.0261,
+    0.0254
+  ],
+  "mvec": [
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118,
+    0.118
+  ],
+  "short_p": 128.56,
+  "short_down": -37.1,
+  "short_score": 20,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.9,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": -3.2
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-SKF-B-ST",
+    "accession_no": "ESEF-2026-SKF-B-ST",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          269.64,
+          282.27,
+          296.95,
+          314.2,
+          334.77
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          249.39,
+          259.95,
+          272.07,
+          286.15,
+          302.7
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          231.65,
+          240.54,
+          250.66,
+          262.29,
+          275.8
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          215.95,
+          223.5,
+          232.03,
+          241.75,
+          252.92
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          201.98,
+          208.44,
+          215.69,
+          223.88,
+          233.2
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 199.27,
+    "p25": 219.47,
+    "p50": 248.99,
+    "p75": 280.44,
+    "p90": 317.23,
+    "prob_above_price_pct": 86.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 222.96,
+      "v1": 312.07,
+      "v2": 228.1,
+      "mos": 2.3
+    },
+    {
+      "q": "25Q4",
+      "p": 212.54,
+      "v1": 318.24,
+      "v2": 232.61,
+      "mos": 9.4
+    },
+    {
+      "q": "26Q1",
+      "p": 205.16,
+      "v1": 324.41,
+      "v2": 237.12,
+      "mos": 15.6
+    },
+    {
+      "q": "26Q2",
+      "p": 203.84,
+      "v1": 330.58,
+      "v2": 241.64,
+      "mos": 18.5
+    },
+    {
+      "q": "26Q3",
+      "p": 208.39,
+      "v1": 336.76,
+      "v2": 246.15,
+      "mos": 18.1
+    },
+    {
+      "q": "26Q4",
+      "p": 204.5,
+      "v1": 342.93,
+      "v2": 250.66,
+      "mos": 22.6
+    }
+  ],
+  "what": "AB SKF (publ) (SKF-B.ST) — vodilno podjetje v panogi Industrial Machinery (Industrial & Automotive Bearings) (Nasdaq Stockholm), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti SEK (izkazi v SEK, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 14.6 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (11.8 %) ter preverbi Beneish M (-2.51) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (106 %), Beneish M-Score (-2.51) in Altman Z-Score (3.75).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Industrials (Industrial Machinery (Industrial & Automotive Bearings)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (18500M SEK) in najeme (3200M SEK).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 342.93,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (4975M SEK), IFRS 16 najemov (3200M) in pogojnih obveznosti",
+      "iv": 315.25,
+      "d": -27.68
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.3% prihodkov) in efektivni davek 24.0%",
+      "iv": 294.95,
+      "d": -20.3
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 12.2% na sredinskih 11.8%",
+      "iv": 270.96,
+      "d": -23.99
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.0%",
+      "iv": 250.66,
+      "d": -20.3
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.51,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.75,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 106.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -1.1,
+    "finra_short_float_pct": 1.9,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -3.2,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 263.5
+      },
+      {
+        "q": "22Q2",
+        "p": 270.66
+      },
+      {
+        "q": "22Q3",
+        "p": 278.24
+      },
+      {
+        "q": "22Q4",
+        "p": 281.13
+      },
+      {
+        "q": "23Q1",
+        "p": 276.16
+      },
+      {
+        "q": "23Q2",
+        "p": 263.66
+      },
+      {
+        "q": "23Q3",
+        "p": 247.33
+      },
+      {
+        "q": "23Q4",
+        "p": 232.58
+      },
+      {
+        "q": "24Q1",
+        "p": 223.92
+      },
+      {
+        "q": "24Q2",
+        "p": 222.91
+      },
+      {
+        "q": "24Q3",
+        "p": 227.55
+      },
+      {
+        "q": "24Q4",
+        "p": 233.33
+      },
+      {
+        "q": "25Q1",
+        "p": 235.61
+      },
+      {
+        "q": "25Q2",
+        "p": 231.87
+      },
+      {
+        "q": "25Q3",
+        "p": 222.96
+      },
+      {
+        "q": "25Q4",
+        "p": 212.54
+      },
+      {
+        "q": "26Q1",
+        "p": 205.16
+      },
+      {
+        "q": "26Q2",
+        "p": 203.84
+      },
+      {
+        "q": "26Q3",
+        "p": 208.39
+      },
+      {
+        "q": "26Q4",
+        "p": 204.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

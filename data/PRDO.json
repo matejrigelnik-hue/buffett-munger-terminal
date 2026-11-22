@@ -1,0 +1,346 @@
+{
+  "t": "PRDO",
+  "n": "Perdoceo Education Corporation",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Education Services (Online Higher Education Universities)",
+  "sec": "Consumer Discretionary · Education Services (Online Higher Education Universities)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 22.8,
+  "p": 27.47,
+  "v1": 47.98,
+  "v2": 35.42,
+  "buy": 27.25,
+  "mos": 28.94,
+  "data_check_flag": false,
+  "dpct": -26.2,
+  "dusd": -12.56,
+  "oey": 7.4,
+  "oem": 128.6,
+  "rdcf": -2.43,
+  "mcap": 1737.5,
+  "z": "UNDER",
+  "pess": 25.07,
+  "real": 35.27,
+  "opt": 46.07,
+  "ec": 536.87,
+  "nc": 451.87,
+  "rev": 862.6,
+  "opm_cur": 0.245,
+  "opm_norm": 0.212,
+  "tax": 0.245,
+  "da": 0.022,
+  "capex_pct": 0.018,
+  "nwc": 0.02,
+  "sbc_pct": 0.018,
+  "sh": 63.25,
+  "wacc": 0.1,
+  "tg": 0.015,
+  "gvec": [
+    0.025,
+    0.0244,
+    0.0238,
+    0.0232,
+    0.0226,
+    0.0219,
+    0.0213,
+    0.0207,
+    0.0201,
+    0.0195
+  ],
+  "mvec": [
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212,
+    0.212
+  ],
+  "short_p": 23.06,
+  "short_down": -16.1,
+  "short_score": 17,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 3.1,
+    "days_to_cover": 2.4,
+    "momentum_6m_pct": 8.0
+  },
+  "traceability": {
+    "cik_or_lei": "0001046568",
+    "accession_no": "0001046568-26-000033",
+    "filing_date": "2026-11-05",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:AllowanceForDoubtfulAccountsReceivable"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          37.22,
+          38.17,
+          39.24,
+          40.46,
+          41.88
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          35.5,
+          36.3,
+          37.21,
+          38.24,
+          39.42
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          33.95,
+          34.65,
+          35.42,
+          36.29,
+          37.28
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          32.57,
+          33.17,
+          33.83,
+          34.58,
+          35.41
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          31.31,
+          31.83,
+          32.41,
+          33.05,
+          33.76
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 31.32,
+    "p25": 33.01,
+    "p50": 35.0,
+    "p75": 37.43,
+    "p90": 40.01,
+    "prob_above_price_pct": 99.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 28.99,
+      "v1": 43.66,
+      "v2": 32.23,
+      "mos": 11.2
+    },
+    {
+      "q": "25Q4",
+      "p": 29.11,
+      "v1": 44.53,
+      "v2": 32.87,
+      "mos": 12.9
+    },
+    {
+      "q": "26Q1",
+      "p": 29.67,
+      "v1": 45.39,
+      "v2": 33.51,
+      "mos": 12.9
+    },
+    {
+      "q": "26Q2",
+      "p": 30.06,
+      "v1": 46.25,
+      "v2": 34.14,
+      "mos": 13.6
+    },
+    {
+      "q": "26Q3",
+      "p": 29.73,
+      "v1": 47.12,
+      "v2": 34.78,
+      "mos": 17.0
+    },
+    {
+      "q": "26Q4",
+      "p": 27.47,
+      "v1": 47.98,
+      "v2": 35.42,
+      "mos": 28.9
+    }
+  ],
+  "what": "Operater akreditiranih spletnih univerz (CTU, AIU, St. Augustine) z +$451M čiste presežne gotovine.",
+  "why_v1": "Izjemno nizko vrednotenje EV/EBIT (~6x po odštetju gotovine).",
+  "why_v2": "Agent 2 v Note 5 odkril $7,58M črpanja rezervacij za slabe študentske terjatve in -7,3 % padec Billings -> znižal v2 na $31,42 (MoS = +14,4 %).",
+  "s_flags": "Knjiženi strošek slabih terjatev ($15,45M) je bil nižji od dejanskih odpisov ($23,03M) v 9M 2026.",
+  "s_moat": "Visoka regulatorna odvisnost od zveznega financiranja študentov Title IV (pravilo 90/10).",
+  "s_debt": "0 USD finančnega dolga, a zahteva po regulatornem likvidnostnem blažilniku.",
+  "s_cat": "Preiskava Ministrstva za izobraževanje ZDA ali nadaljnji padec Billings.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 47.98,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (43M USD), IFRS 16 najemov (45M) in pogojnih obveznosti",
+      "iv": 44.21,
+      "d": -3.77
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.8% prihodkov) in efektivni davek 24.5%",
+      "iv": 41.45,
+      "d": -2.76
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 24.5% na sredinskih 21.2%",
+      "iv": 38.18,
+      "d": -3.27
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.5%",
+      "iv": 35.42,
+      "d": -2.76
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.18,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 6.4,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 96.0,
+    "share_dilution_3y_pct": -2.2,
+    "sloan_accrual_pct": 0.7,
+    "finra_short_float_pct": 3.1,
+    "days_to_cover": 2.4,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": 8.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 38.47
+      },
+      {
+        "q": "22Q2",
+        "p": 37.72
+      },
+      {
+        "q": "22Q3",
+        "p": 36.05
+      },
+      {
+        "q": "22Q4",
+        "p": 33.9
+      },
+      {
+        "q": "23Q1",
+        "p": 31.98
+      },
+      {
+        "q": "23Q2",
+        "p": 30.93
+      },
+      {
+        "q": "23Q3",
+        "p": 30.99
+      },
+      {
+        "q": "23Q4",
+        "p": 31.91
+      },
+      {
+        "q": "24Q1",
+        "p": 33.07
+      },
+      {
+        "q": "24Q2",
+        "p": 33.78
+      },
+      {
+        "q": "24Q3",
+        "p": 33.58
+      },
+      {
+        "q": "24Q4",
+        "p": 32.5
+      },
+      {
+        "q": "25Q1",
+        "p": 30.98
+      },
+      {
+        "q": "25Q2",
+        "p": 29.64
+      },
+      {
+        "q": "25Q3",
+        "p": 28.99
+      },
+      {
+        "q": "25Q4",
+        "p": 29.11
+      },
+      {
+        "q": "26Q1",
+        "p": 29.67
+      },
+      {
+        "q": "26Q2",
+        "p": 30.06
+      },
+      {
+        "q": "26Q3",
+        "p": 29.73
+      },
+      {
+        "q": "26Q4",
+        "p": 27.47
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

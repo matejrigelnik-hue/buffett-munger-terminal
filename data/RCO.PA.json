@@ -1,0 +1,347 @@
+{
+  "t": "RCO.PA",
+  "n": "Rémy Cointreau SA",
+  "country": "FR",
+  "exchange": "Euronext Paris",
+  "gics_sector": "Consumer Staples",
+  "gics_industry": "Distillers & Vintners (Rémy Martin Cognac & Spirits)",
+  "sec": "Consumer Staples · Distillers & Vintners (Rémy Martin Cognac & Spirits)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 14.5,
+  "p": 58.2,
+  "v1": 64.91,
+  "v2": 49.31,
+  "buy": 37.93,
+  "mos": -15.27,
+  "data_check_flag": false,
+  "dpct": -24.0,
+  "dusd": -15.6,
+  "oey": 5.54,
+  "oem": 165.2,
+  "rdcf": 5.68,
+  "mcap": 2979.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 23.32,
+  "real": 48.31,
+  "opt": 77.32,
+  "ec": 84.0,
+  "nc": -691.0,
+  "rev": 1120.0,
+  "opm_cur": 0.215,
+  "opm_norm": 0.23,
+  "tax": 0.25,
+  "da": 0.035,
+  "capex_pct": 0.045,
+  "nwc": 0.09,
+  "sbc_pct": 0.008,
+  "sh": 51.2,
+  "wacc": 0.086,
+  "tg": 0.022,
+  "gvec": [
+    0.04,
+    0.0389,
+    0.0378,
+    0.0367,
+    0.0356,
+    0.0345,
+    0.0334,
+    0.0323,
+    0.0312,
+    0.0301
+  ],
+  "mvec": [
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23,
+    0.23
+  ],
+  "short_p": 21.45,
+  "short_down": -63.1,
+  "short_score": 38,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (1/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 5.8,
+    "days_to_cover": 3.2,
+    "momentum_6m_pct": -24.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-RCO-PA",
+    "accession_no": "ESEF-2026-RCO-PA",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.6,
+        "ivs": [
+          53.71,
+          57.16,
+          61.24,
+          66.17,
+          72.21
+        ]
+      },
+      {
+        "wacc_pct": 8.1,
+        "ivs": [
+          48.64,
+          51.46,
+          54.77,
+          58.69,
+          63.42
+        ]
+      },
+      {
+        "wacc_pct": 8.6,
+        "ivs": [
+          44.25,
+          46.59,
+          49.31,
+          52.48,
+          56.25
+        ]
+      },
+      {
+        "wacc_pct": 9.1,
+        "ivs": [
+          40.43,
+          42.39,
+          44.65,
+          47.25,
+          50.3
+        ]
+      },
+      {
+        "wacc_pct": 9.6,
+        "ivs": [
+          37.06,
+          38.73,
+          40.61,
+          42.78,
+          45.28
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 37.56,
+    "p25": 42.76,
+    "p50": 49.15,
+    "p75": 57.05,
+    "p90": 62.9,
+    "prob_above_price_pct": 21.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 58.33,
+      "v1": 59.07,
+      "v2": 44.87,
+      "mos": -23.1
+    },
+    {
+      "q": "25Q4",
+      "p": 57.33,
+      "v1": 60.24,
+      "v2": 45.76,
+      "mos": -20.2
+    },
+    {
+      "q": "26Q1",
+      "p": 55.46,
+      "v1": 61.4,
+      "v2": 46.65,
+      "mos": -15.9
+    },
+    {
+      "q": "26Q2",
+      "p": 54.03,
+      "v1": 62.57,
+      "v2": 47.53,
+      "mos": -12.0
+    },
+    {
+      "q": "26Q3",
+      "p": 54.18,
+      "v1": 63.74,
+      "v2": 48.42,
+      "mos": -10.6
+    },
+    {
+      "q": "26Q4",
+      "p": 58.2,
+      "v1": 64.91,
+      "v2": 49.31,
+      "mos": -15.3
+    }
+  ],
+  "what": "Rémy Cointreau SA (RCO.PA) — vodilno podjetje v panogi Distillers & Vintners (Rémy Martin Cognac & Spirits) (Euronext Paris), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti EUR (izkazi v EUR, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 14.5 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (23.0 %) ter preverbi Beneish M (-2.25) in Piotroski F (6/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (74 %), Beneish M-Score (-2.25) in Altman Z-Score (3.60).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Consumer Staples (Distillers & Vintners (Rémy Martin Cognac & Spirits)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (680M EUR) in najeme (55M EUR).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 64.91,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (56M EUR), IFRS 16 najemov (55M) in pogojnih obveznosti",
+      "iv": 60.23,
+      "d": -4.68
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 25.0%",
+      "iv": 56.8,
+      "d": -3.43
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 21.5% na sredinskih 23.0%",
+      "iv": 52.74,
+      "d": -4.06
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.6% in g 2.2%",
+      "iv": 49.31,
+      "d": -3.43
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.25,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.6,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 6,
+    "fcf_ni_ratio_pct": 74.0,
+    "share_dilution_3y_pct": 0.2,
+    "sloan_accrual_pct": 4.7,
+    "finra_short_float_pct": 5.8,
+    "days_to_cover": 3.2,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -24.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 47.72
+      },
+      {
+        "q": "22Q2",
+        "p": 48.76
+      },
+      {
+        "q": "22Q3",
+        "p": 51.74
+      },
+      {
+        "q": "22Q4",
+        "p": 55.62
+      },
+      {
+        "q": "23Q1",
+        "p": 58.91
+      },
+      {
+        "q": "23Q2",
+        "p": 60.3
+      },
+      {
+        "q": "23Q3",
+        "p": 59.35
+      },
+      {
+        "q": "23Q4",
+        "p": 56.63
+      },
+      {
+        "q": "24Q1",
+        "p": 53.51
+      },
+      {
+        "q": "24Q2",
+        "p": 51.44
+      },
+      {
+        "q": "24Q3",
+        "p": 51.31
+      },
+      {
+        "q": "24Q4",
+        "p": 53.02
+      },
+      {
+        "q": "25Q1",
+        "p": 55.6
+      },
+      {
+        "q": "25Q2",
+        "p": 57.71
+      },
+      {
+        "q": "25Q3",
+        "p": 58.33
+      },
+      {
+        "q": "25Q4",
+        "p": 57.33
+      },
+      {
+        "q": "26Q1",
+        "p": 55.46
+      },
+      {
+        "q": "26Q2",
+        "p": 54.03
+      },
+      {
+        "q": "26Q3",
+        "p": 54.18
+      },
+      {
+        "q": "26Q4",
+        "p": 58.2
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

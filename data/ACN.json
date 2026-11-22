@@ -1,0 +1,347 @@
+{
+  "t": "ACN",
+  "n": "Accenture plc",
+  "country": "IE",
+  "exchange": "NYSE",
+  "gics_sector": "Information Technology",
+  "gics_industry": "IT Consulting & Other Services",
+  "sec": "Information Technology · IT Consulting & Other Services",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 25.4,
+  "p": 221.17,
+  "v1": 286.27,
+  "v2": 209.19,
+  "buy": 160.92,
+  "mos": -5.42,
+  "data_check_flag": false,
+  "dpct": -26.9,
+  "dusd": -77.08,
+  "oey": 4.5,
+  "oem": 6025.2,
+  "rdcf": 5.21,
+  "mcap": 133869.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 113.72,
+  "real": 205.38,
+  "opt": 312.29,
+  "ec": 2240.82,
+  "nc": -6609.18,
+  "rev": 74183.5,
+  "opm_cur": 0.155,
+  "opm_norm": 0.148,
+  "tax": 0.235,
+  "da": 0.028,
+  "capex_pct": 0.045,
+  "nwc": 0.03,
+  "sbc_pct": 0.028,
+  "sh": 605.28,
+  "wacc": 0.088,
+  "tg": 0.025,
+  "gvec": [
+    0.048,
+    0.0466,
+    0.0452,
+    0.0438,
+    0.0424,
+    0.041,
+    0.0396,
+    0.0382,
+    0.0368,
+    0.0353
+  ],
+  "mvec": [
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148
+  ],
+  "short_p": 104.62,
+  "short_down": -52.7,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.5,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": -14.0
+  },
+  "traceability": {
+    "cik_or_lei": "0001467373",
+    "accession_no": "0001467373-26-000059",
+    "filing_date": "2026-10-18",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          224.61,
+          237.06,
+          251.85,
+          269.72,
+          291.75
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          206.55,
+          216.74,
+          228.67,
+          242.86,
+          260.01
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          190.99,
+          199.42,
+          209.19,
+          220.64,
+          234.25
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          177.44,
+          184.49,
+          192.58,
+          201.95,
+          212.94
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          165.53,
+          171.49,
+          178.26,
+          186.02,
+          195.02
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 172.26,
+    "p25": 190.84,
+    "p50": 213.83,
+    "p75": 243.5,
+    "p90": 265.62,
+    "prob_above_price_pct": 41.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 216.88,
+      "v1": 260.51,
+      "v2": 190.36,
+      "mos": -12.2
+    },
+    {
+      "q": "25Q4",
+      "p": 224.28,
+      "v1": 265.66,
+      "v2": 194.13,
+      "mos": -13.4
+    },
+    {
+      "q": "26Q1",
+      "p": 226.33,
+      "v1": 270.81,
+      "v2": 197.89,
+      "mos": -12.6
+    },
+    {
+      "q": "26Q2",
+      "p": 221.66,
+      "v1": 275.96,
+      "v2": 201.66,
+      "mos": -9.0
+    },
+    {
+      "q": "26Q3",
+      "p": 212.62,
+      "v1": 281.12,
+      "v2": 205.42,
+      "mos": -3.4
+    },
+    {
+      "q": "26Q4",
+      "p": 221.17,
+      "v1": 286.27,
+      "v2": 209.19,
+      "mos": -5.4
+    }
+  ],
+  "what": "Največje svetovno podjetje za IT svetovanje, integracijo sistemov in zunanje izvajanje poslovnih procesov (770.000+ zaposlenih).",
+  "why_v1": "Globalni doseg in močni odnosi z vodstvi Fortune 500 družb.",
+  "why_v2": "Agent 2 obravnaval serijske prevzeme manjših IT agencij (~$3,5 mrd/leto) kot vzdrževalni izdatek in odštel $3,71 mrd operativnega denarnega blažilnika -> v2 = $195,37 (MoS = -11,7 % — Pošteno/rahlo drago, NE SHORTAJ).",
+  "s_flags": "Večino prostega denarnega toka porabi za serijske M&A prevzeme (35+ prevzemov letno) za ohranjanje rasti.",
+  "s_moat": "Generativna AI zmanjšuje število obračunanih inženirskih ur pri vzdrževanju kode.",
+  "s_debt": "SOTP neto položaj po 5 % operativnem blažilniku in najemih znaša -$5,61 mrd.",
+  "s_cat": "Padec novih naročil (Bookings) v svetovalnem segmentu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 286.27,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (3709M USD), IFRS 16 najemov (2850M) in pogojnih obveznosti",
+      "iv": 263.15,
+      "d": -23.12
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (2.8% prihodkov) in efektivni davek 23.5%",
+      "iv": 246.19,
+      "d": -16.96
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 15.5% na sredinskih 14.8%",
+      "iv": 226.15,
+      "d": -20.04
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.8% in g 2.5%",
+      "iv": 209.19,
+      "d": -16.96
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.46,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.95,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 102.0,
+    "share_dilution_3y_pct": -0.9,
+    "sloan_accrual_pct": -0.4,
+    "finra_short_float_pct": 1.5,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -14.0,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 198.47
+      },
+      {
+        "q": "22Q2",
+        "p": 187.84
+      },
+      {
+        "q": "22Q3",
+        "p": 180.24
+      },
+      {
+        "q": "22Q4",
+        "p": 180.12
+      },
+      {
+        "q": "23Q1",
+        "p": 188.65
+      },
+      {
+        "q": "23Q2",
+        "p": 203.05
+      },
+      {
+        "q": "23Q3",
+        "p": 217.86
+      },
+      {
+        "q": "23Q4",
+        "p": 227.5
+      },
+      {
+        "q": "24Q1",
+        "p": 228.83
+      },
+      {
+        "q": "24Q2",
+        "p": 222.61
+      },
+      {
+        "q": "24Q3",
+        "p": 212.95
+      },
+      {
+        "q": "24Q4",
+        "p": 205.26
+      },
+      {
+        "q": "25Q1",
+        "p": 203.5
+      },
+      {
+        "q": "25Q2",
+        "p": 208.34
+      },
+      {
+        "q": "25Q3",
+        "p": 216.88
+      },
+      {
+        "q": "25Q4",
+        "p": 224.28
+      },
+      {
+        "q": "26Q1",
+        "p": 226.33
+      },
+      {
+        "q": "26Q2",
+        "p": 221.66
+      },
+      {
+        "q": "26Q3",
+        "p": 212.62
+      },
+      {
+        "q": "26Q4",
+        "p": 221.17
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

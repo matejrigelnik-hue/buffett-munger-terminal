@@ -1,0 +1,346 @@
+{
+  "t": "CARG",
+  "n": "CarGurus, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Communication Services",
+  "gics_industry": "Interactive Media & Services (Online Automotive Marketplace)",
+  "sec": "Communication Services · Interactive Media & Services (Online Automotive Marketplace)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 17.5,
+  "p": 35.8,
+  "v1": 23.47,
+  "v2": 13.86,
+  "buy": 10.66,
+  "mos": -61.28,
+  "data_check_flag": false,
+  "dpct": -40.9,
+  "dusd": -9.61,
+  "oey": 2.08,
+  "oem": 77.1,
+  "rdcf": 18.09,
+  "mcap": 3705.3,
+  "z": "SHORT",
+  "pess": 8.46,
+  "real": 13.75,
+  "opt": 19.49,
+  "ec": 219.25,
+  "nc": 39.25,
+  "rev": 915.0,
+  "opm_cur": 0.185,
+  "opm_norm": 0.148,
+  "tax": 0.235,
+  "da": 0.038,
+  "capex_pct": 0.052,
+  "nwc": 0.03,
+  "sbc_pct": 0.068,
+  "sh": 103.5,
+  "wacc": 0.098,
+  "tg": 0.02,
+  "gvec": [
+    0.05,
+    0.0482,
+    0.0463,
+    0.0445,
+    0.0427,
+    0.0408,
+    0.039,
+    0.0372,
+    0.0353,
+    0.0335
+  ],
+  "mvec": [
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148,
+    0.148
+  ],
+  "short_p": 10.02,
+  "short_down": -72.0,
+  "short_score": 93,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 7.8,
+    "days_to_cover": 3.4,
+    "momentum_6m_pct": -6.0
+  },
+  "traceability": {
+    "cik_or_lei": "0001494259",
+    "accession_no": "0001494259-26-000046",
+    "filing_date": "2026-11-08",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:CapitalizedComputerSoftwareAdditions"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          14.76,
+          15.3,
+          15.92,
+          16.64,
+          17.49
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          13.84,
+          14.3,
+          14.82,
+          15.41,
+          16.11
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          13.03,
+          13.43,
+          13.86,
+          14.36,
+          14.93
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          12.31,
+          12.65,
+          13.02,
+          13.44,
+          13.92
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          11.66,
+          11.95,
+          12.28,
+          12.63,
+          13.03
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 11.64,
+    "p25": 12.49,
+    "p50": 13.75,
+    "p75": 15.08,
+    "p90": 16.17,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 32.23,
+      "v1": 21.36,
+      "v2": 12.61,
+      "mos": -60.9
+    },
+    {
+      "q": "25Q4",
+      "p": 34.12,
+      "v1": 21.78,
+      "v2": 12.86,
+      "mos": -62.3
+    },
+    {
+      "q": "26Q1",
+      "p": 35.45,
+      "v1": 22.2,
+      "v2": 13.11,
+      "mos": -63.0
+    },
+    {
+      "q": "26Q2",
+      "p": 35.7,
+      "v1": 22.63,
+      "v2": 13.36,
+      "mos": -62.6
+    },
+    {
+      "q": "26Q3",
+      "p": 34.95,
+      "v1": 23.05,
+      "v2": 13.61,
+      "mos": -61.1
+    },
+    {
+      "q": "26Q4",
+      "p": 35.8,
+      "v1": 23.47,
+      "v2": 13.86,
+      "mos": -61.3
+    }
+  ],
+  "what": "Spletni oglasnik za rabljena in nova vozila v ZDA (po zaprtju izgubarske veleprodajne divizije CarOffer).",
+  "why_v1": "Rast povprečnega mesečnega prihodka na avtomobilskega trgovca (QARSD).",
+  "why_v2": "Agent 2 v Note 2 & 6 odkril agresivno kapitalizacijo razvoja programske opreme ($34,5M kapitaliziranih proti le $15,6M amortizacije = +208 bps umetni dvig GAAP EBIT; Pravilo #32) -> v2 = $24,10 (MoS = -32,7 %).",
+  "s_flags": "Beneish M-Score -1,64: agresivna kapitalizacija internega razvoja kode in oblačnega gostovanja; amortizacija v Cost of Revenue je v Q3 že poskočila za +92 % YoY.",
+  "s_moat": "Pritisk na marže trgovcev rabljenih vozil in konkurenca AutoTrader / Carvana / Cars.com.",
+  "s_debt": "Po odbitku $145M najemov nove stolpnice v Bostonu in 5 % blažilnika je SOTP +$39M.",
+  "s_cat": "Nadaljnji +50 % YoY skok amortizacije kapitaliziranega razvoja v Cost of Revenue in stagnacija števila plačljivih trgovcev.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 23.47,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (46M USD), IFRS 16 najemov (145M) in pogojnih obveznosti",
+      "iv": 20.59,
+      "d": -2.88
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (6.8% prihodkov) in efektivni davek 23.5%",
+      "iv": 18.47,
+      "d": -2.12
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 18.5% na sredinskih 14.8%",
+      "iv": 15.97,
+      "d": -2.5
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g 2.0%",
+      "iv": 13.86,
+      "d": -2.11
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.64,
+    "beneish_flag": "MANIPULACIJSKI ALARM",
+    "altman_z": 4.65,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 65.0,
+    "share_dilution_3y_pct": 0.8,
+    "sloan_accrual_pct": 6.3,
+    "finra_short_float_pct": 7.8,
+    "days_to_cover": 3.4,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -6.0,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 23.94
+      },
+      {
+        "q": "22Q2",
+        "p": 22.75
+      },
+      {
+        "q": "22Q3",
+        "p": 21.53
+      },
+      {
+        "q": "22Q4",
+        "p": 21.16
+      },
+      {
+        "q": "23Q1",
+        "p": 22.19
+      },
+      {
+        "q": "23Q2",
+        "p": 24.51
+      },
+      {
+        "q": "23Q3",
+        "p": 27.46
+      },
+      {
+        "q": "23Q4",
+        "p": 30.08
+      },
+      {
+        "q": "24Q1",
+        "p": 31.6
+      },
+      {
+        "q": "24Q2",
+        "p": 31.78
+      },
+      {
+        "q": "24Q3",
+        "p": 31.01
+      },
+      {
+        "q": "24Q4",
+        "p": 30.08
+      },
+      {
+        "q": "25Q1",
+        "p": 29.79
+      },
+      {
+        "q": "25Q2",
+        "p": 30.57
+      },
+      {
+        "q": "25Q3",
+        "p": 32.23
+      },
+      {
+        "q": "25Q4",
+        "p": 34.12
+      },
+      {
+        "q": "26Q1",
+        "p": 35.45
+      },
+      {
+        "q": "26Q2",
+        "p": 35.7
+      },
+      {
+        "q": "26Q3",
+        "p": 34.95
+      },
+      {
+        "q": "26Q4",
+        "p": 35.8
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

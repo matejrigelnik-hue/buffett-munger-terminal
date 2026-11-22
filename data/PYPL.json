@@ -1,0 +1,347 @@
+{
+  "t": "PYPL",
+  "n": "PayPal Holdings, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Financials",
+  "gics_industry": "Transaction & Payment Processing Services",
+  "sec": "Financials · Transaction & Payment Processing Services",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 24.2,
+  "p": 53.29,
+  "v1": 100.11,
+  "v2": 71.57,
+  "buy": 55.05,
+  "mos": 34.3,
+  "data_check_flag": false,
+  "dpct": -28.5,
+  "dusd": -28.54,
+  "oey": 8.41,
+  "oem": 3847.3,
+  "rdcf": 0.06,
+  "mcap": 45722.8,
+  "z": "BUY",
+  "pess": 41.55,
+  "real": 70.83,
+  "opt": 103.08,
+  "ec": 9191.4,
+  "nc": -5633.6,
+  "rev": 33172.0,
+  "opm_cur": 0.178,
+  "opm_norm": 0.162,
+  "tax": 0.21,
+  "da": 0.029,
+  "capex_pct": 0.026,
+  "nwc": 0.02,
+  "sbc_pct": 0.038,
+  "sh": 858.0,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.042,
+    0.0407,
+    0.0393,
+    0.038,
+    0.0366,
+    0.0353,
+    0.0339,
+    0.0326,
+    0.0312,
+    0.0299
+  ],
+  "mvec": [
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162,
+    0.162
+  ],
+  "short_p": 38.23,
+  "short_down": -28.3,
+  "short_score": 15,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 2.8,
+    "days_to_cover": 1.7,
+    "momentum_6m_pct": -8.4
+  },
+  "traceability": {
+    "cik_or_lei": "0001633917",
+    "accession_no": "0001633917-26-000051",
+    "filing_date": "2026-10-29",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:LongTermDebt"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          76.8,
+          80.12,
+          83.94,
+          88.4,
+          93.68
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          71.35,
+          74.14,
+          77.31,
+          80.99,
+          85.26
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          66.55,
+          68.9,
+          71.57,
+          74.62,
+          78.15
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          62.28,
+          64.29,
+          66.56,
+          69.11,
+          72.04
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          58.47,
+          60.2,
+          62.13,
+          64.3,
+          66.76
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 58.09,
+    "p25": 64.73,
+    "p50": 71.54,
+    "p75": 81.3,
+    "p90": 89.3,
+    "prob_above_price_pct": 97.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 59.13,
+      "v1": 91.1,
+      "v2": 65.13,
+      "mos": 10.1
+    },
+    {
+      "q": "25Q4",
+      "p": 56.73,
+      "v1": 92.9,
+      "v2": 66.42,
+      "mos": 17.1
+    },
+    {
+      "q": "26Q1",
+      "p": 53.89,
+      "v1": 94.7,
+      "v2": 67.71,
+      "mos": 25.6
+    },
+    {
+      "q": "26Q2",
+      "p": 51.83,
+      "v1": 96.51,
+      "v2": 68.99,
+      "mos": 33.1
+    },
+    {
+      "q": "26Q3",
+      "p": 51.4,
+      "v1": 98.31,
+      "v2": 70.28,
+      "mos": 36.7
+    },
+    {
+      "q": "26Q4",
+      "p": 53.29,
+      "v1": 100.11,
+      "v2": 71.57,
+      "mos": 34.3
+    }
+  ],
+  "what": "Globalno dvostransko digitalno plačilno omrežje (430M+ aktivnih računov: PayPal Branded Checkout, Braintree, Venmo) z masivnim odkupovanjem lastnih delnic.",
+  "why_v1": "Trguje pri 9,5 % Owner Earnings donosnosti; vodstvo v zadnjih 12 mesecih odkupilo 9,8 % vseh delnic v obtoku.",
+  "why_v2": "Agent 2 po vključitvi $13,47 mrd dolga iz Q3 2026, 5 % operativnega denarnega blažilnika in 100 % odštetju SBC potrdil v2 = $70,20 (MoS = +31,7 %).",
+  "s_flags": "Razkorak med Non-GAAP in GAAP dobičkom zaradi $1,25 mrd letnega SBC in stroškov prestrukturiranja.",
+  "s_moat": "Apple Pay in Google Pay na mobilnih telefonih odžirata tržni delež visokomaržnemu gumbu PayPal Branded Checkout.",
+  "s_debt": "SOTP čisti neto dolg po odštetju zaklenjenega 5 % operativnega blažilnika znaša -$5,63 mrd.",
+  "s_cat": "Padec transakcijske marže (Transaction Margin $) v negativno območje.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 100.11,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1659M USD), IFRS 16 najemov (680M) in pogojnih obveznosti",
+      "iv": 91.55,
+      "d": -8.56
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (3.8% prihodkov) in efektivni davek 21.0%",
+      "iv": 85.27,
+      "d": -6.28
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 17.8% na sredinskih 16.2%",
+      "iv": 77.85,
+      "d": -7.42
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 71.57,
+      "d": -6.28
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.51,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.42,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 115.0,
+    "share_dilution_3y_pct": -6.8,
+    "sloan_accrual_pct": -2.7,
+    "finra_short_float_pct": 2.8,
+    "days_to_cover": 1.7,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": -8.4,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 66.33
+      },
+      {
+        "q": "22Q2",
+        "p": 66.77
+      },
+      {
+        "q": "22Q3",
+        "p": 68.71
+      },
+      {
+        "q": "22Q4",
+        "p": 71.0
+      },
+      {
+        "q": "23Q1",
+        "p": 72.25
+      },
+      {
+        "q": "23Q2",
+        "p": 71.51
+      },
+      {
+        "q": "23Q3",
+        "p": 68.71
+      },
+      {
+        "q": "23Q4",
+        "p": 64.69
+      },
+      {
+        "q": "24Q1",
+        "p": 60.8
+      },
+      {
+        "q": "24Q2",
+        "p": 58.28
+      },
+      {
+        "q": "24Q3",
+        "p": 57.64
+      },
+      {
+        "q": "24Q4",
+        "p": 58.49
+      },
+      {
+        "q": "25Q1",
+        "p": 59.74
+      },
+      {
+        "q": "25Q2",
+        "p": 60.19
+      },
+      {
+        "q": "25Q3",
+        "p": 59.13
+      },
+      {
+        "q": "25Q4",
+        "p": 56.73
+      },
+      {
+        "q": "26Q1",
+        "p": 53.89
+      },
+      {
+        "q": "26Q2",
+        "p": 51.83
+      },
+      {
+        "q": "26Q3",
+        "p": 51.4
+      },
+      {
+        "q": "26Q4",
+        "p": 53.29
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

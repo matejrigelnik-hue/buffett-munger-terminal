@@ -1,0 +1,346 @@
+{
+  "t": "DHI",
+  "n": "D.R. Horton, Inc.",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Homebuilding (Entry-Level & Single-Family Residential)",
+  "sec": "Consumer Discretionary · Homebuilding (Entry-Level & Single-Family Residential)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 19.8,
+  "p": 145.44,
+  "v1": 230.27,
+  "v2": 137.09,
+  "buy": 105.45,
+  "mos": -5.74,
+  "data_check_flag": false,
+  "dpct": -40.5,
+  "dusd": -93.18,
+  "oey": 6.56,
+  "oem": 2652.7,
+  "rdcf": 4.18,
+  "mcap": 40417.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 78.94,
+  "real": 135.95,
+  "opt": 197.53,
+  "ec": 1597.83,
+  "nc": -5332.17,
+  "rev": 33043.4,
+  "opm_cur": 0.162,
+  "opm_norm": 0.128,
+  "tax": 0.24,
+  "da": 0.008,
+  "capex_pct": 0.01,
+  "nwc": 0.12,
+  "sbc_pct": 0.006,
+  "sh": 277.9,
+  "wacc": 0.098,
+  "tg": 0.02,
+  "gvec": [
+    0.035,
+    0.0341,
+    0.0332,
+    0.0323,
+    0.0313,
+    0.0304,
+    0.0295,
+    0.0286,
+    0.0277,
+    0.0268
+  ],
+  "mvec": [
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128,
+    0.128
+  ],
+  "short_p": 72.62,
+  "short_down": -50.1,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.6,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": -7.8
+  },
+  "traceability": {
+    "cik_or_lei": "0000882184",
+    "accession_no": "0000882184-26-000047",
+    "filing_date": "2026-11-12",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:InventoryRealEstate"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          147.37,
+          153.53,
+          160.59,
+          168.77,
+          178.36
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          136.93,
+          142.12,
+          148.03,
+          154.81,
+          162.65
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          127.68,
+          132.1,
+          137.09,
+          142.76,
+          149.26
+        ]
+      },
+      {
+        "wacc_pct": 10.3,
+        "ivs": [
+          119.43,
+          123.22,
+          127.47,
+          132.25,
+          137.7
+        ]
+      },
+      {
+        "wacc_pct": 10.8,
+        "ivs": [
+          112.05,
+          115.31,
+          118.95,
+          123.02,
+          127.62
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 111.51,
+    "p25": 123.41,
+    "p50": 138.7,
+    "p75": 154.67,
+    "p90": 172.17,
+    "prob_above_price_pct": 37.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 141.22,
+      "v1": 209.55,
+      "v2": 124.75,
+      "mos": -11.7
+    },
+    {
+      "q": "25Q4",
+      "p": 137.51,
+      "v1": 213.69,
+      "v2": 127.22,
+      "mos": -7.5
+    },
+    {
+      "q": "26Q1",
+      "p": 136.94,
+      "v1": 217.84,
+      "v2": 129.69,
+      "mos": -5.3
+    },
+    {
+      "q": "26Q2",
+      "p": 140.83,
+      "v1": 221.98,
+      "v2": 132.15,
+      "mos": -6.2
+    },
+    {
+      "q": "26Q3",
+      "p": 148.11,
+      "v1": 226.13,
+      "v2": 134.62,
+      "mos": -9.1
+    },
+    {
+      "q": "26Q4",
+      "p": 145.44,
+      "v1": 230.27,
+      "v2": 137.09,
+      "mos": -5.7
+    }
+  ],
+  "what": "Največji ameriški gradbinec stanovanjskih hiš po volumnu, osredotočen na cenovno dostopne prve domove in zemljiške opcije.",
+  "why_v1": "Strukturno pomanjkanje rabljenih hiš na ameriškem trgu.",
+  "why_v2": "Agent 2 uporabil NORMALIZED_CYCLICAL model: znižal maržo na 12,8 % zaradi stroškov subvencioniranja hipotekarnih obrestnih mer kupcem (rate buydowns) in 12 % vezave kapitala v parcelah -> v2 = $122,26 (MoS = -15,9 %).",
+  "s_flags": "Bruto marže so podprte z agresivnim subvencioniranjem hipotekarnih obrestnih mer kupcem.",
+  "s_moat": "Visoka občutljivost na 30-letne hipotekarne obrestne mere in brezposelnost.",
+  "s_debt": "SOTP neto dolg z obveznostmi za zemljiške opcije znaša -$5,33 mrd.",
+  "s_cat": "Rast odpovedi pogodb kupcev (Cancellation rate > 24 %).",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta USD)",
+      "iv": 230.27,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1652M USD), IFRS 16 najemov (320M) in pogojnih obveznosti",
+      "iv": 202.32,
+      "d": -27.95
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.6% prihodkov) in efektivni davek 24.0%",
+      "iv": 181.82,
+      "d": -20.5
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 16.2% na sredinskih 12.8%",
+      "iv": 157.59,
+      "d": -24.23
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.8% in g 2.0%",
+      "iv": 137.09,
+      "d": -20.5
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.4,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.25,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 92.0,
+    "share_dilution_3y_pct": -4.5,
+    "sloan_accrual_pct": 1.4,
+    "finra_short_float_pct": 2.6,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -7.8,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 129.62
+      },
+      {
+        "q": "22Q2",
+        "p": 138.23
+      },
+      {
+        "q": "22Q3",
+        "p": 145.58
+      },
+      {
+        "q": "22Q4",
+        "p": 148.44
+      },
+      {
+        "q": "23Q1",
+        "p": 145.52
+      },
+      {
+        "q": "23Q2",
+        "p": 138.16
+      },
+      {
+        "q": "23Q3",
+        "p": 129.7
+      },
+      {
+        "q": "23Q4",
+        "p": 123.94
+      },
+      {
+        "q": "24Q1",
+        "p": 123.39
+      },
+      {
+        "q": "24Q2",
+        "p": 128.06
+      },
+      {
+        "q": "24Q3",
+        "p": 135.63
+      },
+      {
+        "q": "24Q4",
+        "p": 142.59
+      },
+      {
+        "q": "25Q1",
+        "p": 146.04
+      },
+      {
+        "q": "25Q2",
+        "p": 145.08
+      },
+      {
+        "q": "25Q3",
+        "p": 141.22
+      },
+      {
+        "q": "25Q4",
+        "p": 137.51
+      },
+      {
+        "q": "26Q1",
+        "p": 136.94
+      },
+      {
+        "q": "26Q2",
+        "p": 140.83
+      },
+      {
+        "q": "26Q3",
+        "p": 148.11
+      },
+      {
+        "q": "26Q4",
+        "p": 145.44
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

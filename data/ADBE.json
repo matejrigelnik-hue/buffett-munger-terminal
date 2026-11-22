@@ -1,0 +1,347 @@
+{
+  "t": "ADBE",
+  "n": "Adobe Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Application Software (Creative Cloud & Document SaaS)",
+  "sec": "Information Technology · Application Software (Creative Cloud & Document SaaS)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 43.4,
+  "p": 217.71,
+  "v1": 448.38,
+  "v2": 332.98,
+  "buy": 256.14,
+  "mos": 52.95,
+  "data_check_flag": false,
+  "dpct": -25.7,
+  "dusd": -115.4,
+  "oey": 6.99,
+  "oem": 6021.4,
+  "rdcf": 0.72,
+  "mcap": 86104.3,
+  "z": "BUY",
+  "pess": 194.09,
+  "real": 327.61,
+  "opt": 482.61,
+  "ec": 5961.55,
+  "nc": -1938.45,
+  "rev": 23769.0,
+  "opm_cur": 0.365,
+  "opm_norm": 0.338,
+  "tax": 0.215,
+  "da": 0.023,
+  "capex_pct": 0.02,
+  "nwc": -0.01,
+  "sbc_pct": 0.076,
+  "sh": 395.5,
+  "wacc": 0.09,
+  "tg": 0.025,
+  "gvec": [
+    0.072,
+    0.0691,
+    0.0663,
+    0.0634,
+    0.0605,
+    0.0576,
+    0.0548,
+    0.0519,
+    0.049,
+    0.0461
+  ],
+  "mvec": [
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338,
+    0.338
+  ],
+  "short_p": 178.56,
+  "short_down": -18.0,
+  "short_score": 12,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.1,
+    "days_to_cover": 1.5,
+    "momentum_6m_pct": -19.4
+  },
+  "traceability": {
+    "cik_or_lei": "0000796343",
+    "accession_no": "0000796343-26-000064",
+    "filing_date": "2026-09-25",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:ShareBasedCompensation"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          356.83,
+          375.53,
+          397.6,
+          424.11,
+          456.49
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          329.29,
+          344.66,
+          362.58,
+          383.77,
+          409.19
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          305.47,
+          318.24,
+          332.98,
+          350.19,
+          370.51
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          284.67,
+          295.39,
+          307.65,
+          321.8,
+          338.31
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          266.36,
+          275.44,
+          285.74,
+          297.5,
+          311.08
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 269.32,
+    "p25": 297.7,
+    "p50": 331.21,
+    "p75": 374.64,
+    "p90": 411.25,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 242.56,
+      "v1": 408.03,
+      "v2": 303.01,
+      "mos": 24.9
+    },
+    {
+      "q": "25Q4",
+      "p": 235.25,
+      "v1": 416.1,
+      "v2": 309.01,
+      "mos": 31.4
+    },
+    {
+      "q": "26Q1",
+      "p": 223.65,
+      "v1": 424.17,
+      "v2": 315.0,
+      "mos": 40.8
+    },
+    {
+      "q": "26Q2",
+      "p": 212.34,
+      "v1": 432.24,
+      "v2": 320.99,
+      "mos": 51.2
+    },
+    {
+      "q": "26Q3",
+      "p": 206.05,
+      "v1": 440.31,
+      "v2": 326.99,
+      "mos": 58.7
+    },
+    {
+      "q": "26Q4",
+      "p": 217.71,
+      "v1": 448.38,
+      "v2": 332.98,
+      "mos": 52.9
+    }
+  ],
+  "what": "Svetovni industrijski standard za digitalno oblikovanje in dokumentne tokove (Creative Cloud, Photoshop, Acrobat PDF, Firefly AI) z 88 % bruto maržo.",
+  "why_v1": "Elitni ROIC (43,4 %) in 8,45 % Owner Earnings donosnost; trg v tečaj $217,71 vračunava skoraj ničelno rast.",
+  "why_v2": "Agent 2 po polnem odštetju $1,81 mrd SBC, rezervaciji za FTC spor in znižanju rasti na 7,2 % potrjuje v2 = $288,50 (MoS = +32,5 %).",
+  "s_flags": "Visok SBC (~$1,8 mrd/leto) in tožba FTC glede postopkov odpovedovanja letnih naročnin.",
+  "s_moat": "Konkurenca generativnih AI orodij za sliko/video (Canva, Midjourney, Figma) pri neprofesionalnih uporabnikih.",
+  "s_debt": "Zelo močna bilanca (-$1,94 mrd SOTP po 5 % blažilniku ob >$7,2 mrd letnih Owner Earnings).",
+  "s_cat": "Padec rasti Digital Media ARR pod +8 % YoY.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 448.38,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1188M USD), IFRS 16 najemov (540M) in pogojnih obveznosti",
+      "iv": 413.76,
+      "d": -34.62
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (7.6% prihodkov) in efektivni davek 21.5%",
+      "iv": 388.37,
+      "d": -25.39
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 36.5% na sredinskih 33.8%",
+      "iv": 358.37,
+      "d": -30.0
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.0% in g 2.5%",
+      "iv": 332.98,
+      "d": -25.39
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.62,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 6.8,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 121.0,
+    "share_dilution_3y_pct": -2.4,
+    "sloan_accrual_pct": -3.8,
+    "finra_short_float_pct": 2.1,
+    "days_to_cover": 1.5,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -19.4,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 269.89
+      },
+      {
+        "q": "22Q2",
+        "p": 266.62
+      },
+      {
+        "q": "22Q3",
+        "p": 271.14
+      },
+      {
+        "q": "22Q4",
+        "p": 280.55
+      },
+      {
+        "q": "23Q1",
+        "p": 289.46
+      },
+      {
+        "q": "23Q2",
+        "p": 292.49
+      },
+      {
+        "q": "23Q3",
+        "p": 286.85
+      },
+      {
+        "q": "23Q4",
+        "p": 273.61
+      },
+      {
+        "q": "24Q1",
+        "p": 257.19
+      },
+      {
+        "q": "24Q2",
+        "p": 243.2
+      },
+      {
+        "q": "24Q3",
+        "p": 235.75
+      },
+      {
+        "q": "24Q4",
+        "p": 235.56
+      },
+      {
+        "q": "25Q1",
+        "p": 239.78
+      },
+      {
+        "q": "25Q2",
+        "p": 243.55
+      },
+      {
+        "q": "25Q3",
+        "p": 242.56
+      },
+      {
+        "q": "25Q4",
+        "p": 235.25
+      },
+      {
+        "q": "26Q1",
+        "p": 223.65
+      },
+      {
+        "q": "26Q2",
+        "p": 212.34
+      },
+      {
+        "q": "26Q3",
+        "p": 206.05
+      },
+      {
+        "q": "26Q4",
+        "p": 217.71
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

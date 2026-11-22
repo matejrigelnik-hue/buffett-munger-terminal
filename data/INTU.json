@@ -1,0 +1,347 @@
+{
+  "t": "INTU",
+  "n": "Intuit Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Application Software (SMB Accounting & Tax FinTech)",
+  "sec": "Information Technology · Application Software (SMB Accounting & Tax FinTech)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 22.4,
+  "p": 270.44,
+  "v1": 654.29,
+  "v2": 464.62,
+  "buy": 357.4,
+  "mos": 71.8,
+  "data_check_flag": false,
+  "dpct": -29.0,
+  "dusd": -189.67,
+  "oey": 6.56,
+  "oem": 4910.5,
+  "rdcf": 1.06,
+  "mcap": 74911.9,
+  "z": "BUY",
+  "pess": 261.56,
+  "real": 455.01,
+  "opt": 686.91,
+  "ec": 3047.6,
+  "nc": -3632.4,
+  "rev": 21448.0,
+  "opm_cur": 0.345,
+  "opm_norm": 0.305,
+  "tax": 0.21,
+  "da": 0.025,
+  "capex_pct": 0.022,
+  "nwc": -0.01,
+  "sbc_pct": 0.088,
+  "sh": 277.0,
+  "wacc": 0.088,
+  "tg": 0.028,
+  "gvec": [
+    0.092,
+    0.0881,
+    0.0842,
+    0.0803,
+    0.0764,
+    0.0724,
+    0.0685,
+    0.0646,
+    0.0607,
+    0.0568
+  ],
+  "mvec": [
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305,
+    0.305
+  ],
+  "short_p": 240.64,
+  "short_down": -11.0,
+  "short_score": 12,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.6,
+    "days_to_cover": 1.4,
+    "momentum_6m_pct": -12.0
+  },
+  "traceability": {
+    "cik_or_lei": "0000896878",
+    "accession_no": "0000896878-26-000058",
+    "filing_date": "2026-10-22",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:ShareBasedCompensation"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.8,
+      2.3,
+      2.8,
+      3.3,
+      3.8
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          499.3,
+          529.81,
+          566.44,
+          611.19,
+          667.14
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          456.82,
+          481.58,
+          510.86,
+          545.98,
+          588.92
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          420.49,
+          440.86,
+          464.62,
+          492.71,
+          526.41
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          389.09,
+          406.03,
+          425.57,
+          448.37,
+          475.33
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          361.69,
+          375.92,
+          392.17,
+          410.93,
+          432.81
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 379.4,
+    "p25": 426.49,
+    "p50": 467.57,
+    "p75": 515.72,
+    "p90": 567.9,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 290.99,
+      "v1": 595.4,
+      "v2": 422.8,
+      "mos": 45.3
+    },
+    {
+      "q": "25Q4",
+      "p": 279.06,
+      "v1": 607.18,
+      "v2": 431.17,
+      "mos": 54.5
+    },
+    {
+      "q": "26Q1",
+      "p": 273.88,
+      "v1": 618.96,
+      "v2": 439.53,
+      "mos": 60.5
+    },
+    {
+      "q": "26Q2",
+      "p": 276.83,
+      "v1": 630.74,
+      "v2": 447.89,
+      "mos": 61.8
+    },
+    {
+      "q": "26Q3",
+      "p": 284.82,
+      "v1": 642.51,
+      "v2": 456.26,
+      "mos": 60.2
+    },
+    {
+      "q": "26Q4",
+      "p": 270.44,
+      "v1": 654.29,
+      "v2": 464.62,
+      "mos": 71.8
+    }
+  ],
+  "what": "Dominantni davčni in računovodski ekosistem za mala podjetja in potrošnike v ZDA (QuickBooks Online, TurboTax, Credit Karma, Mailchimp) z >80 % bruto maržo.",
+  "why_v1": "Močna cenovna moč, negativen obratni kapital in visoka retencija naročnikov v QuickBooks Online ekosistemu.",
+  "why_v2": "Agent 2 po 100 % odštetju $1,89 mrd letnega SBC (GAAP EBIT marža znižana na 30,5 %) in SOTP neto dolgu -$3,43 mrd potrjuje IV v2 = $382,60 (MoS = +41,5 %).",
+  "s_flags": "Visok strošek delniških nagrad zaposlenim (SBC ~8,8 % prihodkov) in cikličnost v segmentu Credit Karma.",
+  "s_moat": "Dolgoročni regulatorni pritisk za brezplačno državno oddajo davčnih napovedi in AI avtomatizacija knjigovodstva.",
+  "s_debt": "Zelo nizko bilančno tveganje (SOTP neto dolg le -0,65x letnega Owner Earnings).",
+  "s_cat": "Upočasnitev rasti QuickBooks Online pod +11 % YoY ali regulatorni poseg FTC v TurboTax.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 654.29,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (1072M USD), IFRS 16 najemov (480M) in pogojnih obveznosti",
+      "iv": 597.39,
+      "d": -56.9
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (8.8% prihodkov) in efektivni davek 21.0%",
+      "iv": 555.66,
+      "d": -41.73
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 34.5% na sredinskih 30.5%",
+      "iv": 506.35,
+      "d": -49.31
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.8% in g 2.8%",
+      "iv": 464.62,
+      "d": -41.73
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.71,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 6.45,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 124.0,
+    "share_dilution_3y_pct": -0.4,
+    "sloan_accrual_pct": -4.3,
+    "finra_short_float_pct": 1.6,
+    "days_to_cover": 1.4,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -12.0,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 358.65
+      },
+      {
+        "q": "22Q2",
+        "p": 368.41
+      },
+      {
+        "q": "22Q3",
+        "p": 374.05
+      },
+      {
+        "q": "22Q4",
+        "p": 370.33
+      },
+      {
+        "q": "23Q1",
+        "p": 356.14
+      },
+      {
+        "q": "23Q2",
+        "p": 335.13
+      },
+      {
+        "q": "23Q3",
+        "p": 314.09
+      },
+      {
+        "q": "23Q4",
+        "p": 299.77
+      },
+      {
+        "q": "24Q1",
+        "p": 295.72
+      },
+      {
+        "q": "24Q2",
+        "p": 300.71
+      },
+      {
+        "q": "24Q3",
+        "p": 309.51
+      },
+      {
+        "q": "24Q4",
+        "p": 315.53
+      },
+      {
+        "q": "25Q1",
+        "p": 314.09
+      },
+      {
+        "q": "25Q2",
+        "p": 304.66
+      },
+      {
+        "q": "25Q3",
+        "p": 290.99
+      },
+      {
+        "q": "25Q4",
+        "p": 279.06
+      },
+      {
+        "q": "26Q1",
+        "p": 273.88
+      },
+      {
+        "q": "26Q2",
+        "p": 276.83
+      },
+      {
+        "q": "26Q3",
+        "p": 284.82
+      },
+      {
+        "q": "26Q4",
+        "p": 270.44
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

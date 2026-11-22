@@ -1,0 +1,346 @@
+{
+  "t": "HD",
+  "n": "The Home Depot, Inc.",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Home Improvement Retail",
+  "sec": "Consumer Discretionary · Home Improvement Retail",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 27.8,
+  "p": 339.04,
+  "v1": 340.93,
+  "v2": 250.31,
+  "buy": 192.55,
+  "mos": -26.17,
+  "data_check_flag": false,
+  "dpct": -26.6,
+  "dusd": -90.62,
+  "oey": 4.14,
+  "oem": 13933.9,
+  "rdcf": 7.42,
+  "mcap": 336666.7,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 119.14,
+  "real": 244.29,
+  "opt": 393.51,
+  "ec": 0.0,
+  "nc": -62000.0,
+  "rev": 159500.0,
+  "opm_cur": 0.138,
+  "opm_norm": 0.136,
+  "tax": 0.24,
+  "da": 0.021,
+  "capex_pct": 0.022,
+  "nwc": 0.03,
+  "sbc_pct": 0.004,
+  "sh": 993.0,
+  "wacc": 0.085,
+  "tg": 0.025,
+  "gvec": [
+    0.042,
+    0.041,
+    0.0399,
+    0.0389,
+    0.0378,
+    0.0368,
+    0.0358,
+    0.0347,
+    0.0337,
+    0.0326
+  ],
+  "mvec": [
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136,
+    0.136
+  ],
+  "short_p": 109.61,
+  "short_down": -67.7,
+  "short_score": 35,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.2,
+    "short_float_pct": 1.1,
+    "days_to_cover": 1.4,
+    "momentum_6m_pct": 3.2
+  },
+  "traceability": {
+    "cik_or_lei": "0000354950",
+    "accession_no": "0000354950-26-000052",
+    "filing_date": "2026-11-14",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.5,
+        "ivs": [
+          272.49,
+          291.52,
+          314.36,
+          342.26,
+          377.14
+        ]
+      },
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          245.72,
+          261.16,
+          279.41,
+          301.31,
+          328.08
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          222.8,
+          235.49,
+          250.31,
+          267.81,
+          288.82
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          202.96,
+          213.52,
+          225.7,
+          239.91,
+          256.7
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          185.61,
+          194.48,
+          204.61,
+          216.3,
+          229.94
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 196.11,
+    "p25": 221.87,
+    "p50": 252.71,
+    "p75": 293.79,
+    "p90": 325.21,
+    "prob_above_price_pct": 8.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 300.72,
+      "v1": 310.25,
+      "v2": 227.78,
+      "mos": -24.3
+    },
+    {
+      "q": "25Q4",
+      "p": 318.51,
+      "v1": 316.38,
+      "v2": 232.29,
+      "mos": -27.1
+    },
+    {
+      "q": "26Q1",
+      "p": 335.54,
+      "v1": 322.52,
+      "v2": 236.79,
+      "mos": -29.4
+    },
+    {
+      "q": "26Q2",
+      "p": 344.75,
+      "v1": 328.66,
+      "v2": 241.3,
+      "mos": -30.0
+    },
+    {
+      "q": "26Q3",
+      "p": 343.0,
+      "v1": 334.79,
+      "v2": 245.8,
+      "mos": -28.3
+    },
+    {
+      "q": "26Q4",
+      "p": 339.04,
+      "v1": 340.93,
+      "v2": 250.31,
+      "mos": -26.2
+    }
+  ],
+  "what": "Največji svetovni trgovec za obnovo doma in gradbeni material (2.300+ veleblagovnic + SRS Distribution za profesionalne izvajalce).",
+  "why_v1": "Izjemen ekonomski jarek, 27,8 % ROIC in nepremagljiva logistična mreža.",
+  "why_v2": "Agent 2 po vključitvi -$65,88 mrd SOTP dolga z najemi (po prevzemu SRS za $18,25 mrd) ocenil v2 = $268,40 (MoS = -20,8 % — Vrhunsko podjetje, a trguje pri 24x P/E; NE SHORTAJ).",
+  "s_flags": "Povečanje finančnega dolga za $18,25 mrd ob prevzemu SRS Distribution.",
+  "s_moat": "Visoke hipotekarne obrestne mere zavirajo selitve in velike prenove hiš.",
+  "s_debt": "SOTP neto dolg z najemi znaša -$65,88 mrd (~2,6x EBITDA).",
+  "s_cat": "Padec primerljive prodaje v trgovinah (SSS) za >-3 % YoY.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 340.93,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (7975M USD), IFRS 16 najemov (8400M) in pogojnih obveznosti",
+      "iv": 313.74,
+      "d": -27.19
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 24.0%",
+      "iv": 293.81,
+      "d": -19.93
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 13.8% na sredinskih 13.6%",
+      "iv": 270.25,
+      "d": -23.56
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.5% in g 2.5%",
+      "iv": 250.31,
+      "d": -19.94
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.63,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.9,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 108.0,
+    "share_dilution_3y_pct": -1.9,
+    "sloan_accrual_pct": -1.4,
+    "finra_short_float_pct": 1.1,
+    "days_to_cover": 1.4,
+    "borrow_fee_pct": 0.2,
+    "momentum_6m_pct": 3.2,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 237.57
+      },
+      {
+        "q": "22Q2",
+        "p": 230.38
+      },
+      {
+        "q": "22Q3",
+        "p": 217.11
+      },
+      {
+        "q": "22Q4",
+        "p": 206.23
+      },
+      {
+        "q": "23Q1",
+        "p": 205.58
+      },
+      {
+        "q": "23Q2",
+        "p": 218.61
+      },
+      {
+        "q": "23Q3",
+        "p": 242.63
+      },
+      {
+        "q": "23Q4",
+        "p": 270.1
+      },
+      {
+        "q": "24Q1",
+        "p": 292.2
+      },
+      {
+        "q": "24Q2",
+        "p": 302.93
+      },
+      {
+        "q": "24Q3",
+        "p": 301.91
+      },
+      {
+        "q": "24Q4",
+        "p": 294.24
+      },
+      {
+        "q": "25Q1",
+        "p": 287.84
+      },
+      {
+        "q": "25Q2",
+        "p": 289.32
+      },
+      {
+        "q": "25Q3",
+        "p": 300.72
+      },
+      {
+        "q": "25Q4",
+        "p": 318.51
+      },
+      {
+        "q": "26Q1",
+        "p": 335.54
+      },
+      {
+        "q": "26Q2",
+        "p": 344.75
+      },
+      {
+        "q": "26Q3",
+        "p": 343.0
+      },
+      {
+        "q": "26Q4",
+        "p": 339.04
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

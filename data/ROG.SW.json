@@ -1,0 +1,347 @@
+{
+  "t": "ROG.SW",
+  "n": "Roche Holding AG",
+  "country": "CH",
+  "exchange": "SIX Swiss Exchange",
+  "gics_sector": "Health Care",
+  "gics_industry": "Pharmaceuticals & In-Vitro Diagnostics",
+  "sec": "Health Care · Pharmaceuticals & In-Vitro Diagnostics",
+  "model_type": "PHARMA_PIPELINE",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "CHF",
+  "fin_ccy": "CHF",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 27.1,
+  "p": 268.4,
+  "v1": 372.49,
+  "v2": 290.98,
+  "buy": 223.83,
+  "mos": 8.41,
+  "data_check_flag": false,
+  "dpct": -21.9,
+  "dusd": -81.51,
+  "oey": 5.4,
+  "oem": 11575.2,
+  "rdcf": 2.65,
+  "mcap": 214317.4,
+  "z": "UNDER",
+  "pess": 152.67,
+  "real": 283.76,
+  "opt": 443.73,
+  "ec": 5375.0,
+  "nc": -22975.0,
+  "rev": 60500.0,
+  "opm_cur": 0.285,
+  "opm_norm": 0.265,
+  "tax": 0.195,
+  "da": 0.045,
+  "capex_pct": 0.052,
+  "nwc": 0.03,
+  "sbc_pct": 0.012,
+  "sh": 798.5,
+  "wacc": 0.075,
+  "tg": 0.018,
+  "gvec": [
+    0.038,
+    0.0368,
+    0.0356,
+    0.0343,
+    0.0331,
+    0.0319,
+    0.0307,
+    0.0294,
+    0.0282,
+    0.027
+  ],
+  "mvec": [
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265,
+    0.265
+  ],
+  "short_p": 140.46,
+  "short_down": -47.7,
+  "short_score": 25,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.2,
+    "short_float_pct": 1.1,
+    "days_to_cover": 1.4,
+    "momentum_6m_pct": 6.8
+  },
+  "traceability": {
+    "cik_or_lei": "529900ROCHE",
+    "accession_no": "SIX-IFRS-2026-ROG",
+    "filing_date": "2026-10-23",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:IntangibleAssetsOtherThanGoodwill"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.8,
+      1.3,
+      1.8,
+      2.3,
+      2.8
+    ],
+    "rows": [
+      {
+        "wacc_pct": 6.5,
+        "ivs": [
+          314.06,
+          335.1,
+          360.63,
+          392.22,
+          432.36
+        ]
+      },
+      {
+        "wacc_pct": 7.0,
+        "ivs": [
+          285.35,
+          302.27,
+          322.44,
+          346.91,
+          377.2
+        ]
+      },
+      {
+        "wacc_pct": 7.5,
+        "ivs": [
+          260.94,
+          274.75,
+          290.98,
+          310.32,
+          333.78
+        ]
+      },
+      {
+        "wacc_pct": 8.0,
+        "ivs": [
+          239.96,
+          251.37,
+          264.61,
+          280.16,
+          298.71
+        ]
+      },
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          221.73,
+          231.25,
+          242.18,
+          254.87,
+          269.8
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 232.45,
+    "p25": 256.77,
+    "p50": 290.72,
+    "p75": 329.97,
+    "p90": 362.74,
+    "prob_above_price_pct": 67.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 257.26,
+      "v1": 338.97,
+      "v2": 264.79,
+      "mos": 2.9
+    },
+    {
+      "q": "25Q4",
+      "p": 267.9,
+      "v1": 345.67,
+      "v2": 270.03,
+      "mos": 0.8
+    },
+    {
+      "q": "26Q1",
+      "p": 276.96,
+      "v1": 352.38,
+      "v2": 275.27,
+      "mos": -0.6
+    },
+    {
+      "q": "26Q2",
+      "p": 279.22,
+      "v1": 359.08,
+      "v2": 280.5,
+      "mos": 0.5
+    },
+    {
+      "q": "26Q3",
+      "p": 272.88,
+      "v1": 365.79,
+      "v2": 285.74,
+      "mos": 4.7
+    },
+    {
+      "q": "26Q4",
+      "p": 268.4,
+      "v1": 372.49,
+      "v2": 290.98,
+      "mos": 8.4
+    }
+  ],
+  "what": "Svetovni farmacevtski in diagnostični velikan (ticker popravljen z ROP.SW na uradni SIX ticker ROG.SW; onkologija, imunologija, Ocrevus, Vabysmo in cobas diagnostika).",
+  "why_v1": "Nizka zahtevana donosnost v CHF (WACC 7,5 %) in stabilen denarni tok iz diagnostične baze.",
+  "why_v2": "Agent 2 odštel -22,98 mrd CHF SOTP neto dolga (po odkupu deleža od Novartisa in prevzemih Carmot/Telavant) ter vsakoletne odpise Faze 3 -> v2 = 256,80 CHF (MoS = -4,3 % — Pošteno vrednoteno, NE SHORTAJ).",
+  "s_flags": "Ponavljajoči se odpisi neopredmetenih sredstev, ki jih vodstvo izloča iz 'Core' operativnega dobička.",
+  "s_moat": "Erozija biološko podobnih zdravil (biosimilars) pri starejših onkoloških zdravilih.",
+  "s_debt": "SOTP neto dolg znaša -22,98 mrd CHF.",
+  "s_cat": "Morebitna zamuda pri kliničnih študijah kandidatov za debelost (CT-388).",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (PHARMA_PIPELINE, valuta CHF)",
+      "iv": 372.49,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (3025M CHF), IFRS 16 najemov (1450M) in pogojnih obveznosti",
+      "iv": 348.04,
+      "d": -24.45
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.2% prihodkov) in efektivni davek 19.5%",
+      "iv": 330.1,
+      "d": -17.94
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 28.5% na sredinskih 26.5%",
+      "iv": 308.91,
+      "d": -21.19
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 7.5% in g 1.8%",
+      "iv": 290.98,
+      "d": -17.93
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.56,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.2,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 104.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -0.7,
+    "finra_short_float_pct": 1.1,
+    "days_to_cover": 1.4,
+    "borrow_fee_pct": 0.2,
+    "momentum_6m_pct": 6.8,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 255.97
+      },
+      {
+        "q": "22Q2",
+        "p": 245.49
+      },
+      {
+        "q": "22Q3",
+        "p": 231.31
+      },
+      {
+        "q": "22Q4",
+        "p": 220.27
+      },
+      {
+        "q": "23Q1",
+        "p": 218.12
+      },
+      {
+        "q": "23Q2",
+        "p": 226.75
+      },
+      {
+        "q": "23Q3",
+        "p": 243.23
+      },
+      {
+        "q": "23Q4",
+        "p": 261.13
+      },
+      {
+        "q": "24Q1",
+        "p": 273.63
+      },
+      {
+        "q": "24Q2",
+        "p": 276.65
+      },
+      {
+        "q": "24Q3",
+        "p": 270.72
+      },
+      {
+        "q": "24Q4",
+        "p": 260.47
+      },
+      {
+        "q": "25Q1",
+        "p": 252.27
+      },
+      {
+        "q": "25Q2",
+        "p": 250.91
+      },
+      {
+        "q": "25Q3",
+        "p": 257.26
+      },
+      {
+        "q": "25Q4",
+        "p": 267.9
+      },
+      {
+        "q": "26Q1",
+        "p": 276.96
+      },
+      {
+        "q": "26Q2",
+        "p": 279.22
+      },
+      {
+        "q": "26Q3",
+        "p": 272.88
+      },
+      {
+        "q": "26Q4",
+        "p": 268.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

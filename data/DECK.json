@@ -1,0 +1,346 @@
+{
+  "t": "DECK",
+  "n": "Deckers Outdoor Corporation",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Footwear (HOKA & UGG Branded Apparel)",
+  "sec": "Consumer Discretionary · Footwear (HOKA & UGG Branded Apparel)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 38.5,
+  "p": 77.94,
+  "v1": 183.83,
+  "v2": 123.62,
+  "buy": 95.09,
+  "mos": 58.61,
+  "data_check_flag": false,
+  "dpct": -32.8,
+  "dusd": -60.21,
+  "oey": 7.12,
+  "oem": 750.4,
+  "rdcf": -0.68,
+  "mcap": 10545.3,
+  "z": "BUY",
+  "pess": 74.15,
+  "real": 121.9,
+  "opt": 176.52,
+  "ec": 1241.15,
+  "nc": 466.15,
+  "rev": 5577.0,
+  "opm_cur": 0.236,
+  "opm_norm": 0.202,
+  "tax": 0.225,
+  "da": 0.015,
+  "capex_pct": 0.022,
+  "nwc": 0.045,
+  "sbc_pct": 0.016,
+  "sh": 135.3,
+  "wacc": 0.092,
+  "tg": 0.025,
+  "gvec": [
+    0.068,
+    0.0654,
+    0.0627,
+    0.0601,
+    0.0575,
+    0.0549,
+    0.0522,
+    0.0496,
+    0.047,
+    0.0444
+  ],
+  "mvec": [
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202,
+    0.202
+  ],
+  "short_p": 68.22,
+  "short_down": -12.5,
+  "short_score": 12,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 3.4,
+    "days_to_cover": 1.9,
+    "momentum_6m_pct": -14.2
+  },
+  "traceability": {
+    "cik_or_lei": "0000910521",
+    "accession_no": "0000910521-26-000037",
+    "filing_date": "2026-10-24",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:OperatingIncomeLoss"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          132.02,
+          138.32,
+          145.75,
+          154.59,
+          165.32
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          122.51,
+          127.73,
+          133.78,
+          140.9,
+          149.39
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          114.26,
+          118.62,
+          123.62,
+          129.43,
+          136.26
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          107.03,
+          110.7,
+          114.88,
+          119.69,
+          125.25
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          100.65,
+          103.76,
+          107.28,
+          111.3,
+          115.9
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 101.92,
+    "p25": 111.87,
+    "p50": 124.47,
+    "p75": 138.5,
+    "p90": 152.55,
+    "prob_above_price_pct": 99.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 84.78,
+      "v1": 167.29,
+      "v2": 112.49,
+      "mos": 32.7
+    },
+    {
+      "q": "25Q4",
+      "p": 85.83,
+      "v1": 170.59,
+      "v2": 114.72,
+      "mos": 33.7
+    },
+    {
+      "q": "26Q1",
+      "p": 85.16,
+      "v1": 173.9,
+      "v2": 116.94,
+      "mos": 37.3
+    },
+    {
+      "q": "26Q2",
+      "p": 82.09,
+      "v1": 177.21,
+      "v2": 119.17,
+      "mos": 45.2
+    },
+    {
+      "q": "26Q3",
+      "p": 77.27,
+      "v1": 180.52,
+      "v2": 121.39,
+      "mos": 57.1
+    },
+    {
+      "q": "26Q4",
+      "p": 77.94,
+      "v1": 183.83,
+      "v2": 123.62,
+      "mos": 58.6
+    }
+  ],
+  "what": "Lastnik globalnih visokomaržnih obutvenih znamk HOKA in UGG z izjemno kapitalsko lahkotnostjo (38,5 % ROIC), 57 % bruto maržo in 0 USD finančnega dolga.",
+  "why_v1": "Močna organska rast znamke HOKA in trdnjavska bilanca z +$466M čiste presežne gotovine.",
+  "why_v2": "Agent 2 zavrnil projekcijo rekordne 23,6 % EBIT marže v neskončnost (Pravilo #7) in jo normaliziral na 20,2 % -> v2 = $102,40 (MoS = +31,4 %).",
+  "s_flags": "Trenutna operativna marža (23,6 %) je na cikličnem vrhu obutvene panoge.",
+  "s_moat": "Zaostritev konkurence v tekaški obutvi (On Holding, Nike, Brooks, New Balance).",
+  "s_debt": "Brez finančnega dolga (+$466M čiste neto gotovine po odbitku najemov trgovin).",
+  "s_cat": "Upočasnitev rasti znamke HOKA pod +12 % YoY.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 183.83,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (279M USD), IFRS 16 najemov (580M) in pogojnih obveznosti",
+      "iv": 165.77,
+      "d": -18.06
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.6% prihodkov) in efektivni davek 22.5%",
+      "iv": 152.52,
+      "d": -13.25
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 23.6% na sredinskih 20.2%",
+      "iv": 136.87,
+      "d": -15.65
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.5%",
+      "iv": 123.62,
+      "d": -13.25
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.69,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 7.85,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 108.0,
+    "share_dilution_3y_pct": -1.8,
+    "sloan_accrual_pct": -1.4,
+    "finra_short_float_pct": 3.4,
+    "days_to_cover": 1.9,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": -14.2,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 103.4
+      },
+      {
+        "q": "22Q2",
+        "p": 97.88
+      },
+      {
+        "q": "22Q3",
+        "p": 93.12
+      },
+      {
+        "q": "22Q4",
+        "p": 90.81
+      },
+      {
+        "q": "23Q1",
+        "p": 91.59
+      },
+      {
+        "q": "23Q2",
+        "p": 94.7
+      },
+      {
+        "q": "23Q3",
+        "p": 98.31
+      },
+      {
+        "q": "23Q4",
+        "p": 100.4
+      },
+      {
+        "q": "24Q1",
+        "p": 99.68
+      },
+      {
+        "q": "24Q2",
+        "p": 96.17
+      },
+      {
+        "q": "24Q3",
+        "p": 91.18
+      },
+      {
+        "q": "24Q4",
+        "p": 86.58
+      },
+      {
+        "q": "25Q1",
+        "p": 83.9
+      },
+      {
+        "q": "25Q2",
+        "p": 83.58
+      },
+      {
+        "q": "25Q3",
+        "p": 84.78
+      },
+      {
+        "q": "25Q4",
+        "p": 85.83
+      },
+      {
+        "q": "26Q1",
+        "p": 85.16
+      },
+      {
+        "q": "26Q2",
+        "p": 82.09
+      },
+      {
+        "q": "26Q3",
+        "p": 77.27
+      },
+      {
+        "q": "26Q4",
+        "p": 77.94
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

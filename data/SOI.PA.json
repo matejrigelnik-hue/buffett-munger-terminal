@@ -1,0 +1,347 @@
+{
+  "t": "SOI.PA",
+  "n": "Soitec SA",
+  "country": "FR",
+  "exchange": "Euronext Paris",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Semiconductor Materials (Engineered SOI & SmartSiC Wafers)",
+  "sec": "Information Technology · Semiconductor Materials (Engineered SOI & SmartSiC Wafers)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 16.2,
+  "p": 82.5,
+  "v1": 74.61,
+  "v2": 58.59,
+  "buy": 45.07,
+  "mos": -28.98,
+  "data_check_flag": false,
+  "dpct": -21.5,
+  "dusd": -16.02,
+  "oey": 3.92,
+  "oem": 115.6,
+  "rdcf": 10.17,
+  "mcap": 2945.3,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 30.52,
+  "real": 57.8,
+  "opt": 88.24,
+  "ec": 531.0,
+  "nc": -239.0,
+  "rev": 980.0,
+  "opm_cur": 0.195,
+  "opm_norm": 0.21,
+  "tax": 0.2,
+  "da": 0.11,
+  "capex_pct": 0.145,
+  "nwc": 0.06,
+  "sbc_pct": 0.015,
+  "sh": 35.7,
+  "wacc": 0.096,
+  "tg": 0.025,
+  "gvec": [
+    0.065,
+    0.0626,
+    0.0601,
+    0.0577,
+    0.0552,
+    0.0528,
+    0.0503,
+    0.0479,
+    0.0454,
+    0.043
+  ],
+  "mvec": [
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21,
+    0.21
+  ],
+  "short_p": 28.08,
+  "short_down": -66.0,
+  "short_score": 36,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 2,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.4,
+    "short_float_pct": 4.5,
+    "days_to_cover": 2.6,
+    "momentum_6m_pct": -28.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-SOI-PA",
+    "accession_no": "ESEF-2026-SOI-PA",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.6,
+        "ivs": [
+          63.08,
+          66.2,
+          69.83,
+          74.11,
+          79.24
+        ]
+      },
+      {
+        "wacc_pct": 9.1,
+        "ivs": [
+          58.19,
+          60.79,
+          63.78,
+          67.27,
+          71.37
+        ]
+      },
+      {
+        "wacc_pct": 9.6,
+        "ivs": [
+          53.91,
+          56.1,
+          58.59,
+          61.47,
+          64.81
+        ]
+      },
+      {
+        "wacc_pct": 10.1,
+        "ivs": [
+          50.14,
+          51.99,
+          54.09,
+          56.48,
+          59.24
+        ]
+      },
+      {
+        "wacc_pct": 10.6,
+        "ivs": [
+          46.78,
+          48.37,
+          50.15,
+          52.16,
+          54.46
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 46.16,
+    "p25": 51.45,
+    "p50": 59.02,
+    "p75": 66.25,
+    "p90": 72.66,
+    "prob_above_price_pct": 2.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 75.96,
+      "v1": 67.9,
+      "v2": 53.32,
+      "mos": -29.8
+    },
+    {
+      "q": "25Q4",
+      "p": 74.69,
+      "v1": 69.24,
+      "v2": 54.37,
+      "mos": -27.2
+    },
+    {
+      "q": "26Q1",
+      "p": 73.88,
+      "v1": 70.58,
+      "v2": 55.43,
+      "mos": -25.0
+    },
+    {
+      "q": "26Q2",
+      "p": 75.16,
+      "v1": 71.92,
+      "v2": 56.48,
+      "mos": -24.9
+    },
+    {
+      "q": "26Q3",
+      "p": 79.07,
+      "v1": 73.27,
+      "v2": 57.54,
+      "mos": -27.2
+    },
+    {
+      "q": "26Q4",
+      "p": 82.5,
+      "v1": 74.61,
+      "v2": 58.59,
+      "mos": -29.0
+    }
+  ],
+  "what": "Soitec SA (SOI.PA) — vodilno podjetje v panogi Semiconductor Materials (Engineered SOI & SmartSiC Wafers) (Euronext Paris), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti EUR (izkazi v EUR, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 16.2 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (21.0 %) ter preverbi Beneish M (-2.32) in Piotroski F (6/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (78 %), Beneish M-Score (-2.32) in Altman Z-Score (4.10).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Information Technology (Semiconductor Materials (Engineered SOI & SmartSiC Wafers)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (690M EUR) in najeme (45M EUR).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 74.61,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (49M EUR), IFRS 16 najemov (45M) in pogojnih obveznosti",
+      "iv": 69.8,
+      "d": -4.81
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.5% prihodkov) in efektivni davek 20.0%",
+      "iv": 66.28,
+      "d": -3.52
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 19.5% na sredinskih 21.0%",
+      "iv": 62.11,
+      "d": -4.17
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.6% in g 2.5%",
+      "iv": 58.59,
+      "d": -3.52
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.32,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.1,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 6,
+    "fcf_ni_ratio_pct": 78.0,
+    "share_dilution_3y_pct": 0.3,
+    "sloan_accrual_pct": 4.0,
+    "finra_short_float_pct": 4.5,
+    "days_to_cover": 2.6,
+    "borrow_fee_pct": 0.4,
+    "momentum_6m_pct": -28.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 48.33
+      },
+      {
+        "q": "22Q2",
+        "p": 53.52
+      },
+      {
+        "q": "22Q3",
+        "p": 59.88
+      },
+      {
+        "q": "22Q4",
+        "p": 65.3
+      },
+      {
+        "q": "23Q1",
+        "p": 68.01
+      },
+      {
+        "q": "23Q2",
+        "p": 67.39
+      },
+      {
+        "q": "23Q3",
+        "p": 64.35
+      },
+      {
+        "q": "23Q4",
+        "p": 60.83
+      },
+      {
+        "q": "24Q1",
+        "p": 58.96
+      },
+      {
+        "q": "24Q2",
+        "p": 59.99
+      },
+      {
+        "q": "24Q3",
+        "p": 63.78
+      },
+      {
+        "q": "24Q4",
+        "p": 68.92
+      },
+      {
+        "q": "25Q1",
+        "p": 73.45
+      },
+      {
+        "q": "25Q2",
+        "p": 75.89
+      },
+      {
+        "q": "25Q3",
+        "p": 75.96
+      },
+      {
+        "q": "25Q4",
+        "p": 74.69
+      },
+      {
+        "q": "26Q1",
+        "p": 73.88
+      },
+      {
+        "q": "26Q2",
+        "p": 75.16
+      },
+      {
+        "q": "26Q3",
+        "p": 79.07
+      },
+      {
+        "q": "26Q4",
+        "p": 82.5
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

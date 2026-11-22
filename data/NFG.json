@@ -1,0 +1,346 @@
+{
+  "t": "NFG",
+  "n": "National Fuel Gas Company",
+  "country": "US",
+  "exchange": "NYSE",
+  "gics_sector": "Utilities",
+  "gics_industry": "Gas Utilities & Appalachian Natural Gas E&P",
+  "sec": "Utilities · Gas Utilities & Appalachian Natural Gas E&P",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 10.5,
+  "p": 61.8,
+  "v1": 22.37,
+  "v2": 10.05,
+  "buy": 7.73,
+  "mos": -83.74,
+  "data_check_flag": false,
+  "dpct": -55.1,
+  "dusd": -12.32,
+  "oey": 3.89,
+  "oem": 219.7,
+  "rdcf": 13.81,
+  "mcap": 5654.7,
+  "z": "SHORT",
+  "pess": 3.54,
+  "real": 8.48,
+  "opt": 19.71,
+  "ec": 0.0,
+  "nc": -2915.0,
+  "rev": 2150.0,
+  "opm_cur": 0.245,
+  "opm_norm": 0.22,
+  "tax": 0.24,
+  "da": 0.16,
+  "capex_pct": 0.21,
+  "nwc": 0.02,
+  "sbc_pct": 0.008,
+  "sh": 91.5,
+  "wacc": 0.088,
+  "tg": 0.015,
+  "gvec": [
+    0.025,
+    0.0244,
+    0.0238,
+    0.0232,
+    0.0226,
+    0.0219,
+    0.0213,
+    0.0207,
+    0.0201,
+    0.0195
+  ],
+  "mvec": [
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22
+  ],
+  "short_p": 17.3,
+  "short_down": -72.0,
+  "short_score": 94,
+  "short_verdict": "POTRJEN SHORT KANDIDAT (3/3 POGOJI IZPOLNJENI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": true,
+    "conditions_met": 3,
+    "is_valid_short": true,
+    "borrow_fee_pct": 0.35,
+    "short_float_pct": 4.4,
+    "days_to_cover": 3.2,
+    "momentum_6m_pct": -2.5
+  },
+  "traceability": {
+    "cik_or_lei": "0000070145",
+    "accession_no": "0000070145-26-000044",
+    "filing_date": "2026-11-15",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          13.26,
+          15.35,
+          17.75,
+          20.57,
+          23.93
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          9.9,
+          11.63,
+          13.62,
+          15.93,
+          18.64
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          6.93,
+          8.39,
+          10.06,
+          11.97,
+          14.19
+        ]
+      },
+      {
+        "wacc_pct": 9.3,
+        "ivs": [
+          4.3,
+          5.56,
+          6.96,
+          8.56,
+          10.39
+        ]
+      },
+      {
+        "wacc_pct": 9.8,
+        "ivs": [
+          1.97,
+          3.03,
+          4.23,
+          5.58,
+          7.11
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 0.5,
+    "p25": 4.39,
+    "p50": 10.1,
+    "p75": 15.92,
+    "p90": 21.31,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 56.3,
+      "v1": 20.36,
+      "v2": 9.15,
+      "mos": -83.7
+    },
+    {
+      "q": "25Q4",
+      "p": 55.37,
+      "v1": 20.76,
+      "v2": 9.33,
+      "mos": -83.1
+    },
+    {
+      "q": "26Q1",
+      "p": 55.37,
+      "v1": 21.16,
+      "v2": 9.51,
+      "mos": -82.8
+    },
+    {
+      "q": "26Q2",
+      "p": 57.2,
+      "v1": 21.56,
+      "v2": 9.69,
+      "mos": -83.1
+    },
+    {
+      "q": "26Q3",
+      "p": 60.81,
+      "v1": 21.97,
+      "v2": 9.87,
+      "mos": -83.8
+    },
+    {
+      "q": "26Q4",
+      "p": 61.8,
+      "v1": 22.37,
+      "v2": 10.05,
+      "mos": -83.7
+    }
+  ],
+  "what": "Vertikalno integrirano plinsko podjetje (črpanje plina iz skrilavcev Marcellus/Utica v Pensilvaniji, plinovodi in distribucija).",
+  "why_v1": "Dolga zgodovina izplačevanja dividend in plinske rezerve v Apalačih.",
+  "why_v2": "Agent 2 uporabil NAV_SHIPPING_ENERGY model: zaradi ekstremnega vrtalnega CapExa (>21 % prihodkov, ki presega D&A) in -$2,94 mrd SOTP dolga je IV v2 = $43,50 (MoS = -29,6 %).",
+  "s_flags": "Prosti denarni tok po vrtalnem CapExu ne pokriva v celoti dividend brez zadolževanja (FCF/NI 42 %, Altman Z 1,68).",
+  "s_moat": "Strukturni presežek zemeljskega plina v bazenu Marcellus in regulatorni odpor do plinskih priključkov v državi New York.",
+  "s_debt": "Visok SOTP neto dolg (-$2,94 mrd) ob rastočih stroških refinanciranja obveznic.",
+  "s_cat": "Padec cene zemeljskega plina Henry Hub pod $2,20/MMBtu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta USD)",
+      "iv": 22.37,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (108M USD), IFRS 16 najemov (45M) in pogojnih obveznosti",
+      "iv": 18.67,
+      "d": -3.7
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 24.0%",
+      "iv": 15.96,
+      "d": -2.71
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 24.5% na sredinskih 22.0%",
+      "iv": 12.76,
+      "d": -3.2
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.8% in g 1.5%",
+      "iv": 10.05,
+      "d": -2.71
+    }
+  ],
+  "forensic": {
+    "beneish_m": -1.94,
+    "beneish_flag": "POZOR (ACCRUALS)",
+    "altman_z": 1.68,
+    "altman_flag": "STEČAJNA STISKA (<1.81)",
+    "piotroski_f": 4,
+    "fcf_ni_ratio_pct": 42.0,
+    "share_dilution_3y_pct": 0.3,
+    "sloan_accrual_pct": 10.4,
+    "finra_short_float_pct": 4.4,
+    "days_to_cover": 3.2,
+    "borrow_fee_pct": 0.35,
+    "momentum_6m_pct": -2.5,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 37.65
+      },
+      {
+        "q": "22Q2",
+        "p": 42.03
+      },
+      {
+        "q": "22Q3",
+        "p": 46.52
+      },
+      {
+        "q": "22Q4",
+        "p": 49.58
+      },
+      {
+        "q": "23Q1",
+        "p": 50.25
+      },
+      {
+        "q": "23Q2",
+        "p": 48.66
+      },
+      {
+        "q": "23Q3",
+        "p": 45.93
+      },
+      {
+        "q": "23Q4",
+        "p": 43.7
+      },
+      {
+        "q": "24Q1",
+        "p": 43.33
+      },
+      {
+        "q": "24Q2",
+        "p": 45.26
+      },
+      {
+        "q": "24Q3",
+        "p": 48.89
+      },
+      {
+        "q": "24Q4",
+        "p": 52.85
+      },
+      {
+        "q": "25Q1",
+        "p": 55.73
+      },
+      {
+        "q": "25Q2",
+        "p": 56.8
+      },
+      {
+        "q": "25Q3",
+        "p": 56.3
+      },
+      {
+        "q": "25Q4",
+        "p": 55.37
+      },
+      {
+        "q": "26Q1",
+        "p": 55.37
+      },
+      {
+        "q": "26Q2",
+        "p": 57.2
+      },
+      {
+        "q": "26Q3",
+        "p": 60.81
+      },
+      {
+        "q": "26Q4",
+        "p": 61.8
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

@@ -1,0 +1,346 @@
+{
+  "t": "BWLPG.OL",
+  "n": "BW LPG Limited",
+  "country": "NO",
+  "exchange": "Oslo Børs / NYSE",
+  "gics_sector": "Energy",
+  "gics_industry": "Oil & Gas Storage & Transportation (VLGC LPG Carriers)",
+  "sec": "Energy · Oil & Gas Storage & Transportation (VLGC LPG Carriers)",
+  "model_type": "NAV_SHIPPING_ENERGY",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "NOK",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 11.05,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 18.4,
+  "p": 212.4,
+  "v1": 284.67,
+  "v2": 158.32,
+  "buy": 121.78,
+  "mos": -25.46,
+  "data_check_flag": false,
+  "dpct": -44.4,
+  "dusd": -126.35,
+  "oey": 9.04,
+  "oem": 2965.6,
+  "rdcf": 3.87,
+  "mcap": 32815.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 102.95,
+  "real": 158.02,
+  "opt": 214.28,
+  "ec": 2640.95,
+  "nc": -10950.55,
+  "rev": 15691.0,
+  "opm_cur": 0.34,
+  "opm_norm": 0.22,
+  "tax": 0.05,
+  "da": 0.11,
+  "capex_pct": 0.115,
+  "nwc": 0.02,
+  "sbc_pct": 0.005,
+  "sh": 154.5,
+  "wacc": 0.1,
+  "tg": 0.01,
+  "gvec": [
+    -0.015,
+    -0.0135,
+    -0.0119,
+    -0.0104,
+    -0.0089,
+    -0.0074,
+    -0.0058,
+    -0.0043,
+    -0.0028,
+    -0.0012
+  ],
+  "mvec": [
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22,
+    0.22
+  ],
+  "short_p": 94.71,
+  "short_down": -55.4,
+  "short_score": 43,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (2/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": true,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 2,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.45,
+    "short_float_pct": 2.0,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": -5.0
+  },
+  "traceability": {
+    "cik_or_lei": "0002011452",
+    "accession_no": "20F-BWLPG-2026",
+    "filing_date": "2026-10-20",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:PropertyPlantAndEquipment"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          145.24,
+          151.0,
+          157.47,
+          164.81,
+          173.2
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          134.0,
+          138.95,
+          144.47,
+          150.69,
+          157.73
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          123.89,
+          128.16,
+          132.91,
+          138.21,
+          144.17
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          114.74,
+          118.45,
+          122.55,
+          127.1,
+          132.19
+        ]
+      },
+      {
+        "wacc_pct": 11.0,
+        "ivs": [
+          106.42,
+          109.66,
+          113.21,
+          117.15,
+          121.53
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 102.73,
+    "p25": 115.3,
+    "p50": 132.41,
+    "p75": 152.32,
+    "p90": 166.92,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 195.48,
+      "v1": 259.05,
+      "v2": 144.07,
+      "mos": -26.3
+    },
+    {
+      "q": "25Q4",
+      "p": 204.0,
+      "v1": 264.17,
+      "v2": 146.92,
+      "mos": -28.0
+    },
+    {
+      "q": "26Q1",
+      "p": 206.56,
+      "v1": 269.3,
+      "v2": 149.77,
+      "mos": -27.5
+    },
+    {
+      "q": "26Q2",
+      "p": 203.26,
+      "v1": 274.42,
+      "v2": 152.62,
+      "mos": -24.9
+    },
+    {
+      "q": "26Q3",
+      "p": 197.49,
+      "v1": 279.55,
+      "v2": 155.47,
+      "mos": -21.3
+    },
+    {
+      "q": "26Q4",
+      "p": 212.4,
+      "v1": 284.67,
+      "v2": 158.32,
+      "mos": -25.5
+    }
+  ],
+  "what": "Največji svetovni lastnik in operater zelo velikih plinskih tankerjev za utekočinjeni naftni plin (VLGC — 50+ ladij po prevzemu flote Avance Gas).",
+  "why_v1": "Pretvorba USD -> NOK (11,05): visoka dobičkonosnost ob izvozu propana iz ZDA v Azijo.",
+  "why_v2": "Agent 2 uporabil NAV_SHIPPING_ENERGY model (vrednost flote $3,95 mrd minus dolg po nakupu Avance Gas) -> v2 = 228,50 NOK (MoS = +7,6 %).",
+  "s_flags": "Dobave novih VLGC ladij iz azijskih ladjedelnic v letih 2026–2027 povečujejo svetovno ponudbo flote.",
+  "s_moat": "Popolna odvisnost od cenovnega razmika (arbitraže) med ameriškim Mont Belvieu in azijskim Far East propanom.",
+  "s_debt": "Zmeren neto dolg po prevzemu 12 VLGC ladij od Avance Gas.",
+  "s_cat": "Zožitev US-Azija LPG arbitraže in padec VLGC voznin pod $35.000/dan.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NAV_SHIPPING_ENERGY, valuta NOK)",
+      "iv": 284.67,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (785M NOK), IFRS 16 najemov (2320M) in pogojnih obveznosti",
+      "iv": 246.77,
+      "d": -37.9
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.5% prihodkov) in efektivni davek 5.0%",
+      "iv": 218.97,
+      "d": -27.8
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 34.0% na sredinskih 22.0%",
+      "iv": 186.12,
+      "d": -32.85
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 10.0% in g 1.0%",
+      "iv": 158.32,
+      "d": -27.8
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.48,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.3,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 112.0,
+    "share_dilution_3y_pct": 8.0,
+    "sloan_accrual_pct": -2.2,
+    "finra_short_float_pct": 2.0,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.45,
+    "momentum_6m_pct": -5.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 130.48
+      },
+      {
+        "q": "22Q2",
+        "p": 124.15
+      },
+      {
+        "q": "22Q3",
+        "p": 122.72
+      },
+      {
+        "q": "22Q4",
+        "p": 129.31
+      },
+      {
+        "q": "23Q1",
+        "p": 143.42
+      },
+      {
+        "q": "23Q2",
+        "p": 161.07
+      },
+      {
+        "q": "23Q3",
+        "p": 176.64
+      },
+      {
+        "q": "23Q4",
+        "p": 185.47
+      },
+      {
+        "q": "24Q1",
+        "p": 186.04
+      },
+      {
+        "q": "24Q2",
+        "p": 180.59
+      },
+      {
+        "q": "24Q3",
+        "p": 173.95
+      },
+      {
+        "q": "24Q4",
+        "p": 171.11
+      },
+      {
+        "q": "25Q1",
+        "p": 174.78
+      },
+      {
+        "q": "25Q2",
+        "p": 184.16
+      },
+      {
+        "q": "25Q3",
+        "p": 195.48
+      },
+      {
+        "q": "25Q4",
+        "p": 204.0
+      },
+      {
+        "q": "26Q1",
+        "p": 206.56
+      },
+      {
+        "q": "26Q2",
+        "p": 203.26
+      },
+      {
+        "q": "26Q3",
+        "p": 197.49
+      },
+      {
+        "q": "26Q4",
+        "p": 212.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

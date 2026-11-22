@@ -1,0 +1,347 @@
+{
+  "t": "GNTX",
+  "n": "Gentex Corporation",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Automobile Components (Electrochromic Mirrors & Vision Systems)",
+  "sec": "Consumer Discretionary · Automobile Components (Electrochromic Mirrors & Vision Systems)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 18.1,
+  "p": 18.75,
+  "v1": 36.93,
+  "v2": 25.49,
+  "buy": 19.61,
+  "mos": 35.95,
+  "data_check_flag": false,
+  "dpct": -31.0,
+  "dusd": -11.44,
+  "oey": 8.11,
+  "oem": 316.6,
+  "rdcf": -0.87,
+  "mcap": 3901.9,
+  "z": "BUY",
+  "pess": 15.48,
+  "real": 25.25,
+  "opt": 35.99,
+  "ec": 114.05,
+  "nc": -32.95,
+  "rev": 2618.9,
+  "opm_cur": 0.198,
+  "opm_norm": 0.172,
+  "tax": 0.175,
+  "da": 0.042,
+  "capex_pct": 0.048,
+  "nwc": 0.05,
+  "sbc_pct": 0.014,
+  "sh": 208.1,
+  "wacc": 0.095,
+  "tg": 0.02,
+  "gvec": [
+    0.038,
+    0.0369,
+    0.0358,
+    0.0347,
+    0.0336,
+    0.0325,
+    0.0314,
+    0.0303,
+    0.0292,
+    0.0281
+  ],
+  "mvec": [
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172,
+    0.172
+  ],
+  "short_p": 14.24,
+  "short_down": -24.1,
+  "short_score": 15,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.9,
+    "days_to_cover": 2.2,
+    "momentum_6m_pct": -17.8
+  },
+  "traceability": {
+    "cik_or_lei": "0000355811",
+    "accession_no": "0000355811-26-000039",
+    "filing_date": "2026-11-04",
+    "xbrl_tags": [
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:OperatingIncomeLoss",
+      "us-gaap:MarketableSecuritiesNoncurrent"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          27.21,
+          28.29,
+          29.53,
+          30.99,
+          32.71
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          25.42,
+          26.33,
+          27.37,
+          28.57,
+          29.96
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          23.85,
+          24.62,
+          25.49,
+          26.49,
+          27.64
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          22.46,
+          23.12,
+          23.85,
+          24.69,
+          25.64
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          21.22,
+          21.78,
+          22.41,
+          23.12,
+          23.93
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 21.33,
+    "p25": 23.4,
+    "p50": 25.55,
+    "p75": 28.23,
+    "p90": 30.82,
+    "prob_above_price_pct": 98.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 19.79,
+      "v1": 33.61,
+      "v2": 23.2,
+      "mos": 17.2
+    },
+    {
+      "q": "25Q4",
+      "p": 19.54,
+      "v1": 34.27,
+      "v2": 23.65,
+      "mos": 21.0
+    },
+    {
+      "q": "26Q1",
+      "p": 19.78,
+      "v1": 34.94,
+      "v2": 24.11,
+      "mos": 21.9
+    },
+    {
+      "q": "26Q2",
+      "p": 20.24,
+      "v1": 35.6,
+      "v2": 24.57,
+      "mos": 21.4
+    },
+    {
+      "q": "26Q3",
+      "p": 20.46,
+      "v1": 36.27,
+      "v2": 25.03,
+      "mos": 22.3
+    },
+    {
+      "q": "26Q4",
+      "p": 18.75,
+      "v1": 36.93,
+      "v2": 25.49,
+      "mos": 35.9
+    }
+  ],
+  "what": "Globalni monopolist (90 %+ tržni delež) pri samozatemnitvenih avtomobilskih vzvratnih ogledalih, Full Display Mirror (FDM) kamerah in letalskih oknih.",
+  "why_v1": "Trdnjavska bilanca z 0 USD finančnega dolga, visoko bruto maržo in stalnimi odkupi delnic.",
+  "why_v2": "Agent 2 odštel $36M odpisov startup naložb (Vaporsens), nižjo maržo prevzetega VOXX in padec prodaje na Kitajskem (-28 %) -> v2 = $23,19 (MoS = +23,7 %).",
+  "s_flags": "Ponavljajoči se odpisi v portfelju netržnih VC startup naložb ($36M v 9M 2026) in redčenje marže zaradi VOXX.",
+  "s_moat": "Padec prihodkov pri kitajskih OEM proizvajalcih in pri Volkswagnu v Nemčiji.",
+  "s_debt": "0 USD finančnega dolga (+$162M čiste presežne SOTP vrednosti).",
+  "s_cat": "Nadaljnja izguba tržnega deleža na Kitajskem ali novi odpisi v Technology Investments.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 36.93,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (131M USD), IFRS 16 najemov (42M) in pogojnih obveznosti",
+      "iv": 33.5,
+      "d": -3.43
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (1.4% prihodkov) in efektivni davek 17.5%",
+      "iv": 30.98,
+      "d": -2.52
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 19.8% na sredinskih 17.2%",
+      "iv": 28.01,
+      "d": -2.97
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.0%",
+      "iv": 25.49,
+      "d": -2.52
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.61,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 7.9,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 104.0,
+    "share_dilution_3y_pct": -3.1,
+    "sloan_accrual_pct": -0.7,
+    "finra_short_float_pct": 2.9,
+    "days_to_cover": 2.2,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": -17.8,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 26.08
+      },
+      {
+        "q": "22Q2",
+        "p": 26.13
+      },
+      {
+        "q": "22Q3",
+        "p": 25.5
+      },
+      {
+        "q": "22Q4",
+        "p": 24.25
+      },
+      {
+        "q": "23Q1",
+        "p": 22.74
+      },
+      {
+        "q": "23Q2",
+        "p": 21.47
+      },
+      {
+        "q": "23Q3",
+        "p": 20.85
+      },
+      {
+        "q": "23Q4",
+        "p": 20.96
+      },
+      {
+        "q": "24Q1",
+        "p": 21.6
+      },
+      {
+        "q": "24Q2",
+        "p": 22.3
+      },
+      {
+        "q": "24Q3",
+        "p": 22.64
+      },
+      {
+        "q": "24Q4",
+        "p": 22.36
+      },
+      {
+        "q": "25Q1",
+        "p": 21.55
+      },
+      {
+        "q": "25Q2",
+        "p": 20.55
+      },
+      {
+        "q": "25Q3",
+        "p": 19.79
+      },
+      {
+        "q": "25Q4",
+        "p": 19.54
+      },
+      {
+        "q": "26Q1",
+        "p": 19.78
+      },
+      {
+        "q": "26Q2",
+        "p": 20.24
+      },
+      {
+        "q": "26Q3",
+        "p": 20.46
+      },
+      {
+        "q": "26Q4",
+        "p": 18.75
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

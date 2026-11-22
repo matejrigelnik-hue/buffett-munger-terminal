@@ -1,0 +1,347 @@
+{
+  "t": "DPLM.L",
+  "n": "Diploma PLC",
+  "country": "GB",
+  "exchange": "London Stock Exchange",
+  "gics_sector": "Industrials",
+  "gics_industry": "Trading Companies & Distributors (Seals, Controls & Life Sciences)",
+  "sec": "Industrials · Trading Companies & Distributors (Seals, Controls & Life Sciences)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A2_GLOBAL",
+  "model_conf": "HIGH",
+  "price_ccy": "GBP",
+  "fin_ccy": "GBP",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 0.01,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 17.6,
+  "p": 42.8,
+  "v1": 40.98,
+  "v2": 30.16,
+  "buy": 23.2,
+  "mos": -29.53,
+  "data_check_flag": false,
+  "dpct": -26.4,
+  "dusd": -10.82,
+  "oey": 3.23,
+  "oem": 185.5,
+  "rdcf": 10.56,
+  "mcap": 5743.8,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 16.01,
+  "real": 29.52,
+  "opt": 45.59,
+  "ec": 16.0,
+  "nc": -514.0,
+  "rev": 1380.0,
+  "opm_cur": 0.198,
+  "opm_norm": 0.19,
+  "tax": 0.24,
+  "da": 0.025,
+  "capex_pct": 0.02,
+  "nwc": 0.04,
+  "sbc_pct": 0.008,
+  "sh": 134.2,
+  "wacc": 0.086,
+  "tg": 0.025,
+  "gvec": [
+    0.072,
+    0.0691,
+    0.0663,
+    0.0634,
+    0.0605,
+    0.0576,
+    0.0548,
+    0.0519,
+    0.049,
+    0.0461
+  ],
+  "mvec": [
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19,
+    0.19
+  ],
+  "short_p": 14.73,
+  "short_down": -65.6,
+  "short_score": 36,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.3,
+    "days_to_cover": 1.5,
+    "momentum_6m_pct": 12.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-DPLM-L",
+    "accession_no": "ESEF-2026-DPLM-L",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 7.6,
+        "ivs": [
+          32.61,
+          34.7,
+          37.19,
+          40.22,
+          43.99
+        ]
+      },
+      {
+        "wacc_pct": 8.1,
+        "ivs": [
+          29.67,
+          31.37,
+          33.36,
+          35.75,
+          38.66
+        ]
+      },
+      {
+        "wacc_pct": 8.6,
+        "ivs": [
+          27.14,
+          28.54,
+          30.16,
+          32.08,
+          34.38
+        ]
+      },
+      {
+        "wacc_pct": 9.1,
+        "ivs": [
+          24.95,
+          26.11,
+          27.46,
+          29.02,
+          30.85
+        ]
+      },
+      {
+        "wacc_pct": 9.6,
+        "ivs": [
+          23.04,
+          24.02,
+          25.13,
+          26.42,
+          27.92
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 23.52,
+    "p25": 26.52,
+    "p50": 30.06,
+    "p75": 33.48,
+    "p90": 38.13,
+    "prob_above_price_pct": 1.7
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 38.25,
+      "v1": 37.29,
+      "v2": 27.45,
+      "mos": -28.2
+    },
+    {
+      "q": "25Q4",
+      "p": 40.54,
+      "v1": 38.03,
+      "v2": 27.99,
+      "mos": -31.0
+    },
+    {
+      "q": "26Q1",
+      "p": 42.43,
+      "v1": 38.77,
+      "v2": 28.53,
+      "mos": -32.8
+    },
+    {
+      "q": "26Q2",
+      "p": 43.14,
+      "v1": 39.5,
+      "v2": 29.07,
+      "mos": -32.6
+    },
+    {
+      "q": "26Q3",
+      "p": 42.52,
+      "v1": 40.24,
+      "v2": 29.62,
+      "mos": -30.3
+    },
+    {
+      "q": "26Q4",
+      "p": 42.8,
+      "v1": 40.98,
+      "v2": 30.16,
+      "mos": -29.5
+    }
+  ],
+  "what": "Diploma PLC (DPLM.L) — vodilno podjetje v panogi Trading Companies & Distributors (Seals, Controls & Life Sciences) (London Stock Exchange), vrednoteno po specializirani predlogi DCF_COMPOUNDER v valuti GBP (izkazi v GBP, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 17.6 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (19.0 %) ter preverbi Beneish M (-2.58) in Piotroski F (8/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (108 %), Beneish M-Score (-2.58) in Altman Z-Score (5.40).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Industrials (Trading Companies & Distributors (Seals, Controls & Life Sciences)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (420M GBP) in najeme (75M GBP).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta GBP)",
+      "iv": 40.98,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (69M GBP), IFRS 16 najemov (75M) in pogojnih obveznosti",
+      "iv": 37.73,
+      "d": -3.25
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 24.0%",
+      "iv": 35.35,
+      "d": -2.38
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 19.8% na sredinskih 19.0%",
+      "iv": 32.54,
+      "d": -2.81
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 8.6% in g 2.5%",
+      "iv": 30.16,
+      "d": -2.38
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.58,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 5.4,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 108.0,
+    "share_dilution_3y_pct": 1.2,
+    "sloan_accrual_pct": -1.4,
+    "finra_short_float_pct": 1.3,
+    "days_to_cover": 1.5,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 12.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 29.33
+      },
+      {
+        "q": "22Q2",
+        "p": 28.09
+      },
+      {
+        "q": "22Q3",
+        "p": 26.45
+      },
+      {
+        "q": "22Q4",
+        "p": 25.52
+      },
+      {
+        "q": "23Q1",
+        "p": 26.12
+      },
+      {
+        "q": "23Q2",
+        "p": 28.41
+      },
+      {
+        "q": "23Q3",
+        "p": 31.77
+      },
+      {
+        "q": "23Q4",
+        "p": 35.14
+      },
+      {
+        "q": "24Q1",
+        "p": 37.46
+      },
+      {
+        "q": "24Q2",
+        "p": 38.22
+      },
+      {
+        "q": "24Q3",
+        "p": 37.63
+      },
+      {
+        "q": "24Q4",
+        "p": 36.53
+      },
+      {
+        "q": "25Q1",
+        "p": 35.92
+      },
+      {
+        "q": "25Q2",
+        "p": 36.49
+      },
+      {
+        "q": "25Q3",
+        "p": 38.25
+      },
+      {
+        "q": "25Q4",
+        "p": 40.54
+      },
+      {
+        "q": "26Q1",
+        "p": 42.43
+      },
+      {
+        "q": "26Q2",
+        "p": 43.14
+      },
+      {
+        "q": "26Q3",
+        "p": 42.52
+      },
+      {
+        "q": "26Q4",
+        "p": 42.8
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

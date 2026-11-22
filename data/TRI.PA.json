@@ -1,0 +1,347 @@
+{
+  "t": "TRI.PA",
+  "n": "Trigano S.A.",
+  "country": "FR",
+  "exchange": "Euronext Paris",
+  "gics_sector": "Consumer Discretionary",
+  "gics_industry": "Automobile Manufacturers (Recreational Vehicles & Motorhomes)",
+  "sec": "Consumer Discretionary · Automobile Manufacturers (Recreational Vehicles & Motorhomes)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 20.1,
+  "p": 125.6,
+  "v1": 347.66,
+  "v2": 206.76,
+  "buy": 159.05,
+  "mos": 64.62,
+  "data_check_flag": false,
+  "dpct": -40.5,
+  "dusd": -140.9,
+  "oey": 8.71,
+  "oem": 211.7,
+  "rdcf": -4.6,
+  "mcap": 2430.4,
+  "z": "BUY",
+  "pess": 130.17,
+  "real": 205.06,
+  "opt": 286.76,
+  "ec": 384.0,
+  "nc": 134.0,
+  "rev": 3920.0,
+  "opm_cur": 0.128,
+  "opm_norm": 0.096,
+  "tax": 0.25,
+  "da": 0.022,
+  "capex_pct": 0.025,
+  "nwc": 0.055,
+  "sbc_pct": 0.003,
+  "sh": 19.35,
+  "wacc": 0.094,
+  "tg": 0.018,
+  "gvec": [
+    0.032,
+    0.0311,
+    0.0303,
+    0.0294,
+    0.0286,
+    0.0277,
+    0.0269,
+    0.026,
+    0.0252,
+    0.0243
+  ],
+  "mvec": [
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096,
+    0.096
+  ],
+  "short_p": 119.76,
+  "short_down": -4.6,
+  "short_score": 12,
+  "short_verdict": "PODCENJENA TRDNJAVA — NE SHORTAJ (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.4,
+    "short_float_pct": 1.9,
+    "days_to_cover": 2.1,
+    "momentum_6m_pct": -11.2
+  },
+  "traceability": {
+    "cik_or_lei": "969500TRIGANO",
+    "accession_no": "ESEF-FR-2026-TRIGANO",
+    "filing_date": "2026-10-15",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:CashAndCashEquivalents"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.8,
+      1.3,
+      1.8,
+      2.3,
+      2.8
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.4,
+        "ivs": [
+          220.0,
+          228.18,
+          237.6,
+          248.57,
+          261.5
+        ]
+      },
+      {
+        "wacc_pct": 8.9,
+        "ivs": [
+          206.36,
+          213.23,
+          221.09,
+          230.13,
+          240.66
+        ]
+      },
+      {
+        "wacc_pct": 9.4,
+        "ivs": [
+          194.32,
+          200.16,
+          206.76,
+          214.29,
+          222.96
+        ]
+      },
+      {
+        "wacc_pct": 9.9,
+        "ivs": [
+          183.61,
+          188.6,
+          194.2,
+          200.54,
+          207.77
+        ]
+      },
+      {
+        "wacc_pct": 10.4,
+        "ivs": [
+          174.03,
+          178.32,
+          183.11,
+          188.48,
+          194.57
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 166.72,
+    "p25": 186.55,
+    "p50": 205.25,
+    "p75": 233.59,
+    "p90": 258.51,
+    "prob_above_price_pct": 100.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 137.37,
+      "v1": 316.37,
+      "v2": 188.15,
+      "mos": 37.0
+    },
+    {
+      "q": "25Q4",
+      "p": 138.56,
+      "v1": 322.63,
+      "v2": 191.87,
+      "mos": 38.5
+    },
+    {
+      "q": "26Q1",
+      "p": 136.53,
+      "v1": 328.89,
+      "v2": 195.59,
+      "mos": 43.3
+    },
+    {
+      "q": "26Q2",
+      "p": 130.76,
+      "v1": 335.14,
+      "v2": 199.32,
+      "mos": 52.4
+    },
+    {
+      "q": "26Q3",
+      "p": 122.79,
+      "v1": 341.4,
+      "v2": 203.04,
+      "mos": 65.4
+    },
+    {
+      "q": "26Q4",
+      "p": 125.6,
+      "v1": 347.66,
+      "v2": 206.76,
+      "mos": 64.6
+    }
+  ],
+  "what": "Vodilni evropski proizvajalec avtodomov in počitniških prikolic (>30 % tržni delež v EU; znamke Chausson, Challenger, Adria Mobil) z neto gotovino na bilanci.",
+  "why_v1": "Pri tečaju 125,60 EUR trguje pri <6,5x tekočem EBIT ob močnem sproščanju denarnega toka iz zalog šasij.",
+  "why_v2": "Agent 2 uporabil model NORMALIZED_CYCLICAL: znižal rekordno post-COVID EBIT maržo z 12,8 % na 10-letno sredinsko normalizirano maržo 9,6 % -> v2 = 165,40 EUR (MoS = +31,7 %).",
+  "s_flags": "Rekordni FCF v zadnjem letu je delno posledica enkratnega sproščanja zalog Stellantis šasij.",
+  "s_moat": "Ciklična trajna dobrina; visoke obrestne mere za potrošniške kredite lahko ohladijo povpraševanje po avtodomih.",
+  "s_debt": "Trdnjava (+134M EUR čiste presežne gotovine po 5 % operativnem blažilniku).",
+  "s_cat": "Padec naročil trgovcev za >15 % YoY in popusti pri čiščenju zalog modelnega leta.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta EUR)",
+      "iv": 347.66,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (196M EUR), IFRS 16 najemov (65M) in pogojnih obveznosti",
+      "iv": 305.39,
+      "d": -42.27
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.3% prihodkov) in efektivni davek 25.0%",
+      "iv": 274.39,
+      "d": -31.0
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 12.8% na sredinskih 9.6%",
+      "iv": 237.76,
+      "d": -36.63
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.4% in g 1.8%",
+      "iv": 206.76,
+      "d": -31.0
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.59,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 4.35,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 8,
+    "fcf_ni_ratio_pct": 118.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -3.2,
+    "finra_short_float_pct": 1.9,
+    "days_to_cover": 2.1,
+    "borrow_fee_pct": 0.4,
+    "momentum_6m_pct": -11.2,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 164.57
+      },
+      {
+        "q": "22Q2",
+        "p": 155.87
+      },
+      {
+        "q": "22Q3",
+        "p": 149.27
+      },
+      {
+        "q": "22Q4",
+        "p": 147.11
+      },
+      {
+        "q": "23Q1",
+        "p": 149.76
+      },
+      {
+        "q": "23Q2",
+        "p": 155.4
+      },
+      {
+        "q": "23Q3",
+        "p": 160.82
+      },
+      {
+        "q": "23Q4",
+        "p": 162.96
+      },
+      {
+        "q": "24Q1",
+        "p": 160.28
+      },
+      {
+        "q": "24Q2",
+        "p": 153.5
+      },
+      {
+        "q": "24Q3",
+        "p": 145.14
+      },
+      {
+        "q": "24Q4",
+        "p": 138.24
+      },
+      {
+        "q": "25Q1",
+        "p": 134.9
+      },
+      {
+        "q": "25Q2",
+        "p": 135.22
+      },
+      {
+        "q": "25Q3",
+        "p": 137.37
+      },
+      {
+        "q": "25Q4",
+        "p": 138.56
+      },
+      {
+        "q": "26Q1",
+        "p": 136.53
+      },
+      {
+        "q": "26Q2",
+        "p": 130.76
+      },
+      {
+        "q": "26Q3",
+        "p": 122.79
+      },
+      {
+        "q": "26Q4",
+        "p": 125.6
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

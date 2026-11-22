@@ -1,0 +1,347 @@
+{
+  "t": "KPN.AS",
+  "n": "Koninklijke KPN N.V.",
+  "country": "NL",
+  "exchange": "Euronext Amsterdam",
+  "gics_sector": "Communication Services",
+  "gics_industry": "Integrated Telecommunication Services (Dutch Fiber & 5G Leader)",
+  "sec": "Communication Services · Integrated Telecommunication Services (Dutch Fiber & 5G Leader)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "EUR",
+  "fin_ccy": "EUR",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 13.8,
+  "p": 3.68,
+  "v1": 4.24,
+  "v2": 2.92,
+  "buy": 2.25,
+  "mos": -20.65,
+  "data_check_flag": false,
+  "dpct": -31.1,
+  "dusd": -1.32,
+  "oey": 6.66,
+  "oem": 960.5,
+  "rdcf": 4.46,
+  "mcap": 14425.6,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 1.03,
+  "real": 2.84,
+  "opt": 4.97,
+  "ec": 367.5,
+  "nc": -6672.5,
+  "rev": 5650.0,
+  "opm_cur": 0.245,
+  "opm_norm": 0.24,
+  "tax": 0.25,
+  "da": 0.18,
+  "capex_pct": 0.175,
+  "nwc": 0.01,
+  "sbc_pct": 0.004,
+  "sh": 3920.0,
+  "wacc": 0.078,
+  "tg": 0.015,
+  "gvec": [
+    0.025,
+    0.0244,
+    0.0238,
+    0.0232,
+    0.0226,
+    0.0219,
+    0.0213,
+    0.0207,
+    0.0201,
+    0.0195
+  ],
+  "mvec": [
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24,
+    0.24
+  ],
+  "short_p": 1.03,
+  "short_down": -72.0,
+  "short_score": 41,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 1.5,
+    "days_to_cover": 1.6,
+    "momentum_6m_pct": 7.2
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-KPN-AS",
+    "accession_no": "ESEF-2026-KPN-AS",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "rows": [
+      {
+        "wacc_pct": 6.8,
+        "ivs": [
+          3.25,
+          3.51,
+          3.81,
+          4.18,
+          4.65
+        ]
+      },
+      {
+        "wacc_pct": 7.3,
+        "ivs": [
+          2.87,
+          3.08,
+          3.33,
+          3.63,
+          3.98
+        ]
+      },
+      {
+        "wacc_pct": 7.8,
+        "ivs": [
+          2.55,
+          2.72,
+          2.92,
+          3.16,
+          3.44
+        ]
+      },
+      {
+        "wacc_pct": 8.3,
+        "ivs": [
+          2.26,
+          2.41,
+          2.58,
+          2.77,
+          3.0
+        ]
+      },
+      {
+        "wacc_pct": 8.8,
+        "ivs": [
+          2.02,
+          2.14,
+          2.27,
+          2.44,
+          2.62
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 2.12,
+    "p25": 2.46,
+    "p50": 2.93,
+    "p75": 3.52,
+    "p90": 4.18,
+    "prob_above_price_pct": 19.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 3.53,
+      "v1": 3.86,
+      "v2": 2.66,
+      "mos": -24.6
+    },
+    {
+      "q": "25Q4",
+      "p": 3.47,
+      "v1": 3.93,
+      "v2": 2.71,
+      "mos": -21.9
+    },
+    {
+      "q": "26Q1",
+      "p": 3.51,
+      "v1": 4.01,
+      "v2": 2.76,
+      "mos": -21.4
+    },
+    {
+      "q": "26Q2",
+      "p": 3.65,
+      "v1": 4.09,
+      "v2": 2.81,
+      "mos": -23.0
+    },
+    {
+      "q": "26Q3",
+      "p": 3.84,
+      "v1": 4.16,
+      "v2": 2.87,
+      "mos": -25.3
+    },
+    {
+      "q": "26Q4",
+      "p": 3.68,
+      "v1": 4.24,
+      "v2": 2.92,
+      "mos": -20.7
+    }
+  ],
+  "what": "Koninklijke KPN N.V. (KPN.AS) — vodilno podjetje v panogi Integrated Telecommunication Services (Dutch Fiber & 5G Leader) (Euronext Amsterdam), vrednoteno po specializirani predlogi DCF_COMPOUNDER v valuti EUR (izkazi v EUR, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 13.8 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (24.0 %) ter preverbi Beneish M (-2.50) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (105 %), Beneish M-Score (-2.50) in Altman Z-Score (2.85).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Communication Services (Integrated Telecommunication Services (Dutch Fiber & 5G Leader)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (6250M EUR) in najeme (580M EUR).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta EUR)",
+      "iv": 4.24,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (282M EUR), IFRS 16 najemov (580M) in pogojnih obveznosti",
+      "iv": 3.84,
+      "d": -0.4
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.4% prihodkov) in efektivni davek 25.0%",
+      "iv": 3.55,
+      "d": -0.29
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 24.5% na sredinskih 24.0%",
+      "iv": 3.21,
+      "d": -0.34
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 7.8% in g 1.5%",
+      "iv": 2.92,
+      "d": -0.29
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.5,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 2.85,
+    "altman_flag": "SIVA CONA (1.8–3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": -2.4,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 1.5,
+    "days_to_cover": 1.6,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 7.2,
+    "form4_insider": "INSIDER ODKUPI / NAKUPI",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 3.39
+      },
+      {
+        "q": "22Q2",
+        "p": 3.59
+      },
+      {
+        "q": "22Q3",
+        "p": 3.72
+      },
+      {
+        "q": "22Q4",
+        "p": 3.71
+      },
+      {
+        "q": "23Q1",
+        "p": 3.56
+      },
+      {
+        "q": "23Q2",
+        "p": 3.35
+      },
+      {
+        "q": "23Q3",
+        "p": 3.16
+      },
+      {
+        "q": "23Q4",
+        "p": 3.08
+      },
+      {
+        "q": "24Q1",
+        "p": 3.15
+      },
+      {
+        "q": "24Q2",
+        "p": 3.32
+      },
+      {
+        "q": "24Q3",
+        "p": 3.53
+      },
+      {
+        "q": "24Q4",
+        "p": 3.67
+      },
+      {
+        "q": "25Q1",
+        "p": 3.71
+      },
+      {
+        "q": "25Q2",
+        "p": 3.64
+      },
+      {
+        "q": "25Q3",
+        "p": 3.53
+      },
+      {
+        "q": "25Q4",
+        "p": 3.47
+      },
+      {
+        "q": "26Q1",
+        "p": 3.51
+      },
+      {
+        "q": "26Q2",
+        "p": 3.65
+      },
+      {
+        "q": "26Q3",
+        "p": 3.84
+      },
+      {
+        "q": "26Q4",
+        "p": 3.68
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

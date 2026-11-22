@@ -1,0 +1,347 @@
+{
+  "t": "ERIC-B.ST",
+  "n": "Telefonaktiebolaget LM Ericsson",
+  "country": "SE",
+  "exchange": "Nasdaq Stockholm",
+  "gics_sector": "Information Technology",
+  "gics_industry": "Communications Equipment (5G Radio Access Networks & IPR)",
+  "sec": "Information Technology · Communications Equipment (5G Radio Access Networks & IPR)",
+  "model_type": "NORMALIZED_CYCLICAL",
+  "tier": "A1_EU_ESEF",
+  "model_conf": "HIGH",
+  "price_ccy": "SEK",
+  "fin_ccy": "SEK",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 12.8,
+  "p": 86.4,
+  "v1": 114.36,
+  "v2": 85.75,
+  "buy": 65.96,
+  "mos": -0.75,
+  "data_check_flag": false,
+  "dpct": -25.0,
+  "dusd": -28.61,
+  "oey": 5.74,
+  "oem": 16501.9,
+  "rdcf": 2.87,
+  "mcap": 287712.0,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 51.39,
+  "real": 84.8,
+  "opt": 122.0,
+  "ec": 29600.0,
+  "nc": -13600.0,
+  "rev": 248000.0,
+  "opm_cur": 0.105,
+  "opm_norm": 0.102,
+  "tax": 0.23,
+  "da": 0.035,
+  "capex_pct": 0.032,
+  "nwc": 0.04,
+  "sbc_pct": 0.008,
+  "sh": 3330.0,
+  "wacc": 0.092,
+  "tg": 0.02,
+  "gvec": [
+    0.028,
+    0.0275,
+    0.027,
+    0.0265,
+    0.026,
+    0.0256,
+    0.0251,
+    0.0246,
+    0.0241,
+    0.0236
+  ],
+  "mvec": [
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102,
+    0.102
+  ],
+  "short_p": 47.28,
+  "short_down": -45.3,
+  "short_score": 35,
+  "short_verdict": "OPOZORILO / NEPOPOLN SHORT (0/3 POGOJI)",
+  "short_gate": {
+    "cond1_overvalued": false,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 0,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.25,
+    "short_float_pct": 2.1,
+    "days_to_cover": 1.8,
+    "momentum_6m_pct": 24.0
+  },
+  "traceability": {
+    "cik_or_lei": "LEI-ERIC-B-ST",
+    "accession_no": "ESEF-2026-ERIC-B-ST",
+    "filing_date": "2026-11-10",
+    "xbrl_tags": [
+      "ifrs-full:Revenue",
+      "ifrs-full:ProfitLossFromOperatingActivities",
+      "ifrs-full:Borrowings"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.2,
+        "ivs": [
+          91.77,
+          95.76,
+          100.4,
+          105.85,
+          112.35
+        ]
+      },
+      {
+        "wacc_pct": 8.7,
+        "ivs": [
+          85.37,
+          88.7,
+          92.54,
+          96.98,
+          102.21
+        ]
+      },
+      {
+        "wacc_pct": 9.2,
+        "ivs": [
+          79.74,
+          82.55,
+          85.75,
+          89.43,
+          93.7
+        ]
+      },
+      {
+        "wacc_pct": 9.7,
+        "ivs": [
+          74.78,
+          77.16,
+          79.85,
+          82.93,
+          86.46
+        ]
+      },
+      {
+        "wacc_pct": 10.2,
+        "ivs": [
+          70.35,
+          72.39,
+          74.69,
+          77.28,
+          80.22
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 69.77,
+    "p25": 75.95,
+    "p50": 85.06,
+    "p75": 94.74,
+    "p90": 108.53,
+    "prob_above_price_pct": 47.3
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 84.21,
+      "v1": 104.07,
+      "v2": 78.03,
+      "mos": -7.3
+    },
+    {
+      "q": "25Q4",
+      "p": 81.86,
+      "v1": 106.13,
+      "v2": 79.58,
+      "mos": -2.8
+    },
+    {
+      "q": "26Q1",
+      "p": 81.14,
+      "v1": 108.18,
+      "v2": 81.12,
+      "mos": -0.0
+    },
+    {
+      "q": "26Q2",
+      "p": 83.06,
+      "v1": 110.24,
+      "v2": 82.66,
+      "mos": -0.5
+    },
+    {
+      "q": "26Q3",
+      "p": 87.21,
+      "v1": 112.3,
+      "v2": 84.21,
+      "mos": -3.4
+    },
+    {
+      "q": "26Q4",
+      "p": 86.4,
+      "v1": 114.36,
+      "v2": 85.75,
+      "mos": -0.8
+    }
+  ],
+  "what": "Telefonaktiebolaget LM Ericsson (ERIC-B.ST) — vodilno podjetje v panogi Communications Equipment (5G Radio Access Networks & IPR) (Nasdaq Stockholm), vrednoteno po specializirani predlogi NORMALIZED_CYCLICAL v valuti SEK (izkazi v SEK, FX=1.0).",
+  "why_v1": "Agent 1 (Krog 1) na podlagi 10-letne mediane ROIC 12.8 % in primarnih XBRL izkazov izračunal osnovni model v1.",
+  "why_v2": "Agent 2 (Krog 2) po 4-koračni reviziji SOTP bilance, najemov in normalizirane marže (10.2 %) ter preverbi Beneish M (-2.38) in Piotroski F (7/9) potrdil revidirano vrednost v2.",
+  "s_flags": "Preverba razmerja FCF/Net Income (104 %), Beneish M-Score (-2.38) in Altman Z-Score (3.15).",
+  "s_moat": "Stresni test konkurenčnega pritiska in cikličnosti v sektorju Information Technology (Communications Equipment (5G Radio Access Networks & IPR)).",
+  "s_debt": "SOTP obremenitev za 5 % operativni denarni blažilnik, finančni dolg (31500M SEK) in najeme (7200M SEK).",
+  "s_cat": "Kompresija operativne EBIT marže za >150 bps YoY ali poslabšanje konverzije prostega denarnega toka v naslednjem četrtletnem poročilu.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (NORMALIZED_CYCLICAL, valuta SEK)",
+      "iv": 114.36,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (12400M SEK), IFRS 16 najemov (7200M) in pogojnih obveznosti",
+      "iv": 105.78,
+      "d": -8.58
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (0.8% prihodkov) in efektivni davek 23.0%",
+      "iv": 99.48,
+      "d": -6.3
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 10.5% na sredinskih 10.2%",
+      "iv": 92.04,
+      "d": -7.44
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.2% in g 2.0%",
+      "iv": 85.75,
+      "d": -6.29
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.38,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 3.15,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 104.0,
+    "share_dilution_3y_pct": 0.0,
+    "sloan_accrual_pct": -0.7,
+    "finra_short_float_pct": 2.1,
+    "days_to_cover": 1.8,
+    "borrow_fee_pct": 0.25,
+    "momentum_6m_pct": 24.0,
+    "form4_insider": "NEVTRALNO (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 76.15
+      },
+      {
+        "q": "22Q2",
+        "p": 81.24
+      },
+      {
+        "q": "22Q3",
+        "p": 85.97
+      },
+      {
+        "q": "22Q4",
+        "p": 88.29
+      },
+      {
+        "q": "23Q1",
+        "p": 87.2
+      },
+      {
+        "q": "23Q2",
+        "p": 83.2
+      },
+      {
+        "q": "23Q3",
+        "p": 78.14
+      },
+      {
+        "q": "23Q4",
+        "p": 74.29
+      },
+      {
+        "q": "24Q1",
+        "p": 73.34
+      },
+      {
+        "q": "24Q2",
+        "p": 75.59
+      },
+      {
+        "q": "24Q3",
+        "p": 79.86
+      },
+      {
+        "q": "24Q4",
+        "p": 84.13
+      },
+      {
+        "q": "25Q1",
+        "p": 86.54
+      },
+      {
+        "q": "25Q2",
+        "p": 86.35
+      },
+      {
+        "q": "25Q3",
+        "p": 84.21
+      },
+      {
+        "q": "25Q4",
+        "p": 81.86
+      },
+      {
+        "q": "26Q1",
+        "p": 81.14
+      },
+      {
+        "q": "26Q2",
+        "p": 83.06
+      },
+      {
+        "q": "26Q3",
+        "p": 87.21
+      },
+      {
+        "q": "26Q4",
+        "p": 86.4
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}

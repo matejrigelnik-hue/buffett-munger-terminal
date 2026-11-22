@@ -1,0 +1,346 @@
+{
+  "t": "LQDT",
+  "n": "Liquidity Services, Inc.",
+  "country": "US",
+  "exchange": "NASDAQ",
+  "gics_sector": "Industrials",
+  "gics_industry": "Commercial Services & Supplies (B2B & Government Surplus Auctions)",
+  "sec": "Industrials · Commercial Services & Supplies (B2B & Government Surplus Auctions)",
+  "model_type": "DCF_COMPOUNDER",
+  "tier": "A1_SEC",
+  "model_conf": "HIGH",
+  "price_ccy": "USD",
+  "fin_ccy": "USD",
+  "fx_fin_to_price": 1.0,
+  "quote_unit_factor": 1.0,
+  "mcap_consistency_err_pct": 0.0,
+  "roic": 16.4,
+  "p": 31.87,
+  "v1": 25.0,
+  "v2": 17.23,
+  "buy": 13.25,
+  "mos": -45.94,
+  "data_check_flag": false,
+  "dpct": -31.1,
+  "dusd": -7.77,
+  "oey": 2.24,
+  "oem": 23.3,
+  "rdcf": 14.11,
+  "mcap": 1039.3,
+  "z": "OVERVALUED_QUALITY",
+  "pess": 11.19,
+  "real": 17.07,
+  "opt": 23.59,
+  "ec": 131.11,
+  "nc": 51.11,
+  "rev": 477.9,
+  "opm_cur": 0.088,
+  "opm_norm": 0.082,
+  "tax": 0.26,
+  "da": 0.025,
+  "capex_pct": 0.022,
+  "nwc": 0.02,
+  "sbc_pct": 0.025,
+  "sh": 32.61,
+  "wacc": 0.095,
+  "tg": 0.022,
+  "gvec": [
+    0.055,
+    0.053,
+    0.051,
+    0.049,
+    0.0469,
+    0.0449,
+    0.0429,
+    0.0409,
+    0.0389,
+    0.0368
+  ],
+  "mvec": [
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082,
+    0.082
+  ],
+  "short_p": 10.29,
+  "short_down": -67.7,
+  "short_score": 43,
+  "short_verdict": "PRECENJENA KAKOVOST — NE SHORTAJ (SAMO 1/3 POGOJ)",
+  "short_gate": {
+    "cond1_overvalued": true,
+    "cond2_deteriorating": false,
+    "cond3_catalyst_borrow": false,
+    "conditions_met": 1,
+    "is_valid_short": false,
+    "borrow_fee_pct": 0.3,
+    "short_float_pct": 2.4,
+    "days_to_cover": 2.0,
+    "momentum_6m_pct": 22.0
+  },
+  "traceability": {
+    "cik_or_lei": "0001235468",
+    "accession_no": "0001235468-26-000036",
+    "filing_date": "2026-11-19",
+    "xbrl_tags": [
+      "us-gaap:Revenues",
+      "us-gaap:AccountsPayableCurrent"
+    ],
+    "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100"
+  },
+  "sensitivity": {
+    "tg_cols_pct": [
+      1.2,
+      1.7,
+      2.2,
+      2.7,
+      3.2
+    ],
+    "rows": [
+      {
+        "wacc_pct": 8.5,
+        "ivs": [
+          18.29,
+          19.0,
+          19.81,
+          20.77,
+          21.9
+        ]
+      },
+      {
+        "wacc_pct": 9.0,
+        "ivs": [
+          17.16,
+          17.74,
+          18.42,
+          19.21,
+          20.13
+        ]
+      },
+      {
+        "wacc_pct": 9.5,
+        "ivs": [
+          16.16,
+          16.65,
+          17.23,
+          17.88,
+          18.62
+        ]
+      },
+      {
+        "wacc_pct": 10.0,
+        "ivs": [
+          15.28,
+          15.71,
+          16.18,
+          16.73,
+          17.35
+        ]
+      },
+      {
+        "wacc_pct": 10.5,
+        "ivs": [
+          14.49,
+          14.86,
+          15.27,
+          15.73,
+          16.25
+        ]
+      }
+    ]
+  },
+  "monte_carlo": {
+    "p10": 13.9,
+    "p25": 15.39,
+    "p50": 16.94,
+    "p75": 18.77,
+    "p90": 20.87,
+    "prob_above_price_pct": 0.0
+  },
+  "iv_history": [
+    {
+      "q": "25Q3",
+      "p": 27.93,
+      "v1": 22.75,
+      "v2": 15.68,
+      "mos": -43.9
+    },
+    {
+      "q": "25Q4",
+      "p": 29.21,
+      "v1": 23.2,
+      "v2": 15.99,
+      "mos": -45.3
+    },
+    {
+      "q": "26Q1",
+      "p": 31.0,
+      "v1": 23.65,
+      "v2": 16.3,
+      "mos": -47.4
+    },
+    {
+      "q": "26Q2",
+      "p": 32.6,
+      "v1": 24.1,
+      "v2": 16.61,
+      "mos": -49.0
+    },
+    {
+      "q": "26Q3",
+      "p": 33.35,
+      "v1": 24.55,
+      "v2": 16.92,
+      "mos": -49.3
+    },
+    {
+      "q": "26Q4",
+      "p": 31.87,
+      "v1": 25.0,
+      "v2": 17.23,
+      "mos": -45.9
+    }
+  ],
+  "what": "Operater spletnih B2B dražbenih tržnic za odprodajo presežnih zalog trgovcev in odslužene opreme občin (GovDeals, AllSurplus).",
+  "why_v1": "Kapitalsko lahek model dražb na komisijo (Consignment).",
+  "why_v2": "Agent 2 iz gotovine izločil $58M prehodnih obveznosti do prodajalcev na dražbah (Seller payables) -> v2 = $24,80 (MoS = -22,2 %).",
+  "s_flags": "Del poročane gotovine na bilanci predstavlja tuj denar prodajalcev na dražbah (Consignment payables).",
+  "s_moat": "Nizka konverzija bruto GMV v čisti GAAP operativni dobiček.",
+  "s_debt": "0 USD finančnega dolga (+$51M čiste presežne gotovine).",
+  "s_cat": "Ohlajanje cen rabljenih vozil in gradbene opreme na GovDeals.",
+  "steps": [
+    {
+      "step": "Izhodišče (v1)",
+      "desc": "Osnovni model Agenta 1 (DCF_COMPOUNDER, valuta USD)",
+      "iv": 25.0,
+      "d": 0.0
+    },
+    {
+      "step": "Korak 1 (SOTP & Najemi)",
+      "desc": "Odštetje 5% denarnega blažilnika (24M USD), IFRS 16 najemov (22M) in pogojnih obveznosti",
+      "iv": 22.67,
+      "d": -2.33
+    },
+    {
+      "step": "Korak 2 (100% SBC & Davek)",
+      "desc": "Polno odštetje SBC (2.5% prihodkov) in efektivni davek 26.0%",
+      "iv": 20.96,
+      "d": -1.71
+    },
+    {
+      "step": "Korak 3 (Normalizacija marže)",
+      "desc": "Normalizacija EBIT marže z 8.8% na sredinskih 8.2%",
+      "iv": 18.94,
+      "d": -2.02
+    },
+    {
+      "step": "Korak 4 (Tehtani v2 P/R/O)",
+      "desc": "Verjetnostno tehtanje (25% Pess / 50% Real / 25% Opt) pri WACC 9.5% in g 2.2%",
+      "iv": 17.23,
+      "d": -1.71
+    }
+  ],
+  "forensic": {
+    "beneish_m": -2.35,
+    "beneish_flag": "ČISTI IZKAZI",
+    "altman_z": 5.1,
+    "altman_flag": "TRDNA BILANCA (>3.0)",
+    "piotroski_f": 7,
+    "fcf_ni_ratio_pct": 105.0,
+    "share_dilution_3y_pct": -1.5,
+    "sloan_accrual_pct": -0.9,
+    "finra_short_float_pct": 2.4,
+    "days_to_cover": 2.0,
+    "borrow_fee_pct": 0.3,
+    "momentum_6m_pct": 22.0,
+    "form4_insider": "INSIDER PRODAJE (FORM 4)",
+    "price_history": [
+      {
+        "q": "22Q1",
+        "p": 22.96
+      },
+      {
+        "q": "22Q2",
+        "p": 23.23
+      },
+      {
+        "q": "22Q3",
+        "p": 22.43
+      },
+      {
+        "q": "22Q4",
+        "p": 21.08
+      },
+      {
+        "q": "23Q1",
+        "p": 20.0
+      },
+      {
+        "q": "23Q2",
+        "p": 19.92
+      },
+      {
+        "q": "23Q3",
+        "p": 21.13
+      },
+      {
+        "q": "23Q4",
+        "p": 23.34
+      },
+      {
+        "q": "24Q1",
+        "p": 25.82
+      },
+      {
+        "q": "24Q2",
+        "p": 27.78
+      },
+      {
+        "q": "24Q3",
+        "p": 28.69
+      },
+      {
+        "q": "24Q4",
+        "p": 28.58
+      },
+      {
+        "q": "25Q1",
+        "p": 27.95
+      },
+      {
+        "q": "25Q2",
+        "p": 27.55
+      },
+      {
+        "q": "25Q3",
+        "p": 27.93
+      },
+      {
+        "q": "25Q4",
+        "p": 29.21
+      },
+      {
+        "q": "26Q1",
+        "p": 31.0
+      },
+      {
+        "q": "26Q2",
+        "p": 32.6
+      },
+      {
+        "q": "26Q3",
+        "p": 33.35
+      },
+      {
+        "q": "26Q4",
+        "p": 31.87
+      }
+    ]
+  },
+  "reviewed_at": "2026-11-22"
+}
