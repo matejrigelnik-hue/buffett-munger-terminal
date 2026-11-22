@@ -1,5 +1,5 @@
 {
-  "updated_at": "22. 11. 2026 ob 09:26:05",
+  "updated_at": "2026-11-22 09:26 UTC",
   "epoch": 1795339565,
   "total_db_companies": 13947,
   "scanned_fundamentals": 261,
@@ -5061,6 +5061,175 @@
       "reviewed_at": "2026-11-22 09:21"
     },
     {
+      "t": "PCYO",
+      "n": "PURE CYCLE CORP",
+      "sec": "Global Equities · A1_SEC",
+      "tier": "A1_SEC",
+      "roic": 9.8,
+      "p": 25.0,
+      "v1": 23.0,
+      "v2": 15.64,
+      "buy": 10.95,
+      "mos": -59.85,
+      "dpct": -32.0,
+      "dusd": -7.36,
+      "oey": 6.38,
+      "oem": 240.0,
+      "rdcf": 11.2,
+      "mcap": 3200.0,
+      "z": "SHORT",
+      "pess": 10.17,
+      "real": 15.64,
+      "opt": 20.64,
+      "ec": 140.0,
+      "nc": -380.0,
+      "rev": 2100.0,
+      "tax": 0.22,
+      "da": 0.03,
+      "nwc": 0.05,
+      "sh": 128.0,
+      "wacc": 0.098,
+      "tg": 0.02,
+      "gvec": [
+        0.045,
+        0.045,
+        0.04,
+        0.035,
+        0.03
+      ],
+      "mvec": [
+        0.15,
+        0.15,
+        0.15,
+        0.15,
+        0.15
+      ],
+      "short_p": 8.45,
+      "short_down": -66.2,
+      "short_score": 84,
+      "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+      "what": "PURE CYCLE CORP (PCYO) — globalno podjetje iz baze perpetuum_buffett.db z 10-letno mediano ROIC 9.8%.",
+      "why_v1": "Agent 1 (Globalni Lovec) izračunal 10L DCF model v1 = $23.00 na podlagi ROIC 9.8% in FCF donosa 7.50%.",
+      "why_v2": "Agent 2 (Forenzični Presojevalec) po 4-koračni obremenitvi SOTP dolga, davkov in normalizaciji marže določil v2 = $15.64 (MoS -59.9%).",
+      "s_flags": "Forenzični rez Agenta 2 (-32.0%) zaradi SOTP obveznosti, SBC in ciklične normalizacije EBIT marže.",
+      "s_moat": "Stresni test kompresije marže ob ohlajanju povpraševanja in konkurenčnem pritisku.",
+      "s_debt": "Polna obremenitev za 5% operativni denarni blažilnik, najeme in finančni dolg.",
+      "s_cat": "Padec operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu.",
+      "steps": [
+        {
+          "step": "Izhodišče (v1)",
+          "desc": "Model Agenta 1 (Globalni Lovec)",
+          "iv": 23.0,
+          "d": 0.0
+        },
+        {
+          "step": "Korak 1 (SOTP & Delnice)",
+          "desc": "Obremenitev neto dolga, najemov in pogojnih obveznosti",
+          "iv": 19.69,
+          "d": -3.31
+        },
+        {
+          "step": "Korak 2 (Normalizacija marže & WACC)",
+          "desc": "Forenzična prilagoditev marže in WACC po 32 pravilih",
+          "iv": 15.64,
+          "d": -4.05
+        }
+      ],
+      "forensic": {
+        "beneish_m": -1.82,
+        "beneish_flag": "POZOR (ACCRUALS)",
+        "altman_z": 3.25,
+        "altman_flag": "TRDNA BILANCA (>3.0)",
+        "sloan_accrual_pct": 4.5,
+        "finra_short_float_pct": 7.8,
+        "days_to_cover": 3.4,
+        "form4_insider": "NEVTRALNO (FORM 4)",
+        "price_history": [
+          {
+            "q": "22Q1",
+            "p": 23.82
+          },
+          {
+            "q": "22Q2",
+            "p": 24.09
+          },
+          {
+            "q": "22Q3",
+            "p": 23.22
+          },
+          {
+            "q": "22Q4",
+            "p": 21.59
+          },
+          {
+            "q": "23Q1",
+            "p": 19.99
+          },
+          {
+            "q": "23Q2",
+            "p": 19.24
+          },
+          {
+            "q": "23Q3",
+            "p": 19.74
+          },
+          {
+            "q": "23Q4",
+            "p": 21.31
+          },
+          {
+            "q": "24Q1",
+            "p": 23.25
+          },
+          {
+            "q": "24Q2",
+            "p": 24.75
+          },
+          {
+            "q": "24Q3",
+            "p": 25.27
+          },
+          {
+            "q": "24Q4",
+            "p": 24.81
+          },
+          {
+            "q": "25Q1",
+            "p": 23.9
+          },
+          {
+            "q": "25Q2",
+            "p": 23.27
+          },
+          {
+            "q": "25Q3",
+            "p": 23.43
+          },
+          {
+            "q": "25Q4",
+            "p": 24.41
+          },
+          {
+            "q": "26Q1",
+            "p": 25.71
+          },
+          {
+            "q": "26Q2",
+            "p": 26.6
+          },
+          {
+            "q": "26Q3",
+            "p": 26.54
+          },
+          {
+            "q": "26Q4",
+            "p": 25.0
+          }
+        ]
+      },
+      "reviewed_at": "2026-11-22 09:26 UTC"
+    },
+    {
       "t": "EXPN.L",
       "n": "Experian plc",
       "sec": "Technology / Industrials · Compounder",
@@ -9467,14 +9636,6 @@
   ],
   "hunter_queue": [
     {
-      "t": "PCYO",
-      "n": "PURE CYCLE CORP",
-      "tier": "A1_SEC",
-      "roic": 9.8,
-      "fcf_y": 7.5,
-      "p": 25.0
-    },
-    {
       "t": "PTC",
       "n": "PTC INC.",
       "tier": "A1_SEC",
@@ -9748,6 +9909,12 @@
     }
   ],
   "agent_logs": [
+    {
+      "ts": "2026-11-22 09:26 UTC",
+      "ag": "Agent 3 · Short-Seller Kontra-Teza",
+      "t": "PCYO",
+      "msg": "[GitHub Cloud 24/7] Zaključen 3-agentni pregled za PURE CYCLE CORP (PCYO): Tečaj $25.00, v1 $23.00 -> v2 $15.64 (MoS -59.9%), Short tarča $8.45 (Score 84/100)."
+    },
     {
       "ts": "2026-11-22 09:21:46",
       "ag": "Agent 3 · Short-Seller Kontra-Teza",
