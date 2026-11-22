@@ -1,0 +1,27 @@
+name: Perpetuum 3-Agent 24/7 Cloud Autopilot
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-3agent-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run 3-Agent Forensic Cycle on Next Unreviewed Stock
+        run: python3 autopilot_github_runner.py
+
+      - name: Commit and Push Updated Live State & Terminal
+        run: |
+          git config user.name "Perpetuum 3-Agent Autopilot"
+          git config user.email "autopilot@buffett-munger-terminal.io"
+          git add live_state.json index.html
+          git diff --staged --quiet || git commit -m "Auto-analyze next stock via 24/7 GitHub Cloud Autopilot"
+          git push
