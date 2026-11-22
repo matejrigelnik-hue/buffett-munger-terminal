@@ -1,6 +1,6 @@
 {
   "version": "7.0.0",
-  "updated_at": "2026-11-22 09:51 UTC",
+  "updated_at": "2026-11-22 19:14 UTC",
   "mos_formula": "MoS (%) = (IV_v2 / Price - 1) * 100",
   "total_db_companies": 13547,
   "scanned_fundamentals": 215,
