@@ -1,27 +1,40 @@
-name: Perpetuum 3-Agent 24/7 Cloud Autopilot
+name: Perpetuum Pipeline CI & Build (v7.0)
 
 on:
+  push:
+    branches: [ main ]
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run-3agent-cycle:
+  test-and-build-pipeline:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run 3-Agent Forensic Cycle on Next Unreviewed Stock
-        run: python3 autopilot_github_runner.py
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-      - name: Commit and Push Updated Live State & Terminal
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run Pipeline Unit Tests (Currency, GICS, MoS Formula, 3/3 Short Gate)
+        run: pytest -v pipeline/tests/test_pipeline.py
+
+      - name: Build Audited Data (data/<ticker>.json, data/index.json, live_state.json, index.html)
+        run: python3 pipeline/build_state.py
+
+      - name: Commit and Push Verified Output
         run: |
-          git config user.name "Perpetuum 3-Agent Autopilot"
-          git config user.email "autopilot@buffett-munger-terminal.io"
-          git add live_state.json index.html
-          git diff --staged --quiet || git commit -m "Auto-analyze next stock via 24/7 GitHub Cloud Autopilot"
+          git config user.name "Perpetuum Pipeline CI"
+          git config user.email "ci@buffett-munger-terminal.io"
+          git add data/ live_state.json index.html
+          git diff --staged --quiet || git commit -m "CI: Verify pytest (7/7) and rebuild data/<ticker>.json + live_state.json + index.html"
           git push
