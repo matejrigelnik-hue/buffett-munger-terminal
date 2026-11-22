@@ -7,9 +7,9 @@
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
     :root {
-      --background: #070A0F;
+      --background: #05080D;
       --foreground: #F1F5F9;
-      --card: #0D131C;
+      --card: #0B1018;
       --card-foreground: #F1F5F9;
       --card-border: #1E293B;
       --border: #1E293B;
@@ -30,9 +30,38 @@
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.35; transform: scale(1.25); }
     }
+    @keyframes tickerMarquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMarquee 75s linear infinite;
+    }
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.35); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.28); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(14, 165, 233, 0.55); }
+    .inst-card {
+      box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+    }
   </style>
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased m-0 p-3 md:p-4 select-none">
+
+  <!-- 0. BLOOMBERG / TRADINGVIEW DRSEČI TRAK VSEH PREGLEDANIH DELNIC V ŽIVO -->
+  <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden mb-2.5 py-1.5 px-2 inst-card">
+    <div class="flex items-center gap-2">
+      <span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase mono shrink-0" style="background:var(--primary); color:var(--primary-foreground)">LIVE TAPE</span>
+      <div class="overflow-hidden w-full">
+        <div id="live-ticker-tape" class="ticker-track gap-2.5 mono text-[11px]"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- 1. ZGORNJA KOMANDNA VRSTICA (INSTITUTIONAL 3-AGENT WORKSTATION HEADER) -->
   <header class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3.5 mb-3 flex flex-wrap items-center justify-between gap-3">
@@ -80,6 +109,40 @@
       </div>
     </div>
   </header>
+
+  <!-- 1B. TELEMETRIJA DINAMIKE DELA: LINEARNBO ODKRIVANJE BREZ CIKLANJA -->
+  <div id="pipeline-telemetry-strip" class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-2.5 mb-3 inst-card">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-2 text-[11px]">
+      <div class="bg-[var(--background)] px-2.5 py-1.5 rounded-lg border border-[var(--border)] flex items-center justify-between">
+        <div>
+          <span class="text-[9px] font-bold uppercase text-[var(--muted-foreground)] block">FAZA 1 · SVETOVNI UNIVERZUM</span>
+          <b class="mono text-xs">13.547 Delnic (38 Držav)</b>
+        </div>
+        <span class="px-1.5 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] mono text-[10px]" style="color:var(--primary)">NULLS FIRST</span>
+      </div>
+      <div class="bg-[var(--background)] px-2.5 py-1.5 rounded-lg border border-[var(--border)] flex items-center justify-between">
+        <div>
+          <span class="text-[9px] font-bold uppercase text-[var(--muted-foreground)] block">FAZA 2 · ČAKALNICA NOVIH TARČ</span>
+          <b id="tele-queue-lbl" class="mono text-xs" style="color:var(--warning)">35 Nepregledanih v vrsti</b>
+        </div>
+        <span class="px-1.5 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] mono text-[10px]" style="color:var(--warning)">BREZ DVOJNIKOV</span>
+      </div>
+      <div class="bg-[var(--background)] px-2.5 py-1.5 rounded-lg border border-[var(--border)] flex items-center justify-between">
+        <div>
+          <span class="text-[9px] font-bold uppercase text-[var(--muted-foreground)] block">FAZA 3 · TRAJNO ZAKLENJENI DOSJEJI</span>
+          <b id="tele-done-lbl" class="mono text-xs" style="color:var(--success)">52 Zaključenih (0% Ciklanja)</b>
+        </div>
+        <span class="px-1.5 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] mono text-[10px]" style="color:var(--success)">&#10003; ZAKLENJENO</span>
+      </div>
+      <div class="bg-[var(--background)] px-2.5 py-1.5 rounded-lg border border-[var(--border)] flex items-center justify-between">
+        <div>
+          <span class="text-[9px] font-bold uppercase text-[var(--muted-foreground)] block">FAZA 4 · POGOJ ZA RE-EVALUACIJO</span>
+          <b class="mono text-xs">Samo ob novem 10-K / 10-Q</b>
+        </div>
+        <span class="px-1.5 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] mono text-[10px]">SEC/ESEF TRIGGER</span>
+      </div>
+    </div>
+  </div>
 
   <!-- 2. TRAK S 6 KLJUČNIMI KAZALNIKI (DOLGE PRILOŽNOSTI PROTI SHORT KANDIDATOM) -->
   <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 mb-3">
@@ -168,6 +231,7 @@
           <input id="search-input" oninput="renderSpectrumList()" type="text" placeholder="Išči ticker, panogo ali short razlog..." class="px-2.5 py-1 rounded-md text-xs bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)] w-44 mono" />
           <div class="inline-flex rounded-md bg-[var(--background)] p-0.5 border border-[var(--border)] text-[11px] font-bold mono">
             <button id="lmode-CARDS" onclick="setListMode('CARDS')" class="px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]">KARTICE</button>
+            <button id="lmode-HEATMAP" onclick="setListMode('HEATMAP')" class="px-2 py-0.5 rounded text-[var(--muted-foreground)]">HEATMAP</button>
             <button id="lmode-TABLE" onclick="setListMode('TABLE')" class="px-2 py-0.5 rounded text-[var(--muted-foreground)]">TABELA</button>
           </div>
         </div>
@@ -183,6 +247,15 @@
           <span class="inline-flex items-center gap-1"><span class="w-1 h-3 inline-block" style="background:var(--primary)"></span> Agent 2 (v2 IV)</span>
           <span class="inline-flex items-center gap-1"><span class="w-1 h-3 inline-block" style="background:var(--warning)"></span> Agent 1 (v1 IV)</span>
         </div>
+      </div>
+
+      <!-- Koyfin / Finviz Hitri Zemljevid Vseh Pregledanih Delnic (Klikni celico za takojšen skok) -->
+      <div class="py-2 border-b border-[var(--card-border)]">
+        <div class="flex items-center justify-between text-[10px] text-[var(--muted-foreground)] uppercase font-bold mb-1">
+          <span>Finviz / Koyfin Toplotna Matrika Vseh Pregledanih Delnic (Zeleno = Nakupna Cona · Modro = Podcenjeno · Rdeče = Short Kandidat):</span>
+          <span id="hm-summary-lbl" class="mono">52 zaključenih</span>
+        </div>
+        <div id="mini-heatmap-strip" class="flex flex-wrap gap-1"></div>
       </div>
 
       <div id="spectrum-container" class="mt-2.5 space-y-2.5 max-h-[700px] overflow-y-auto pr-1"></div>
@@ -225,6 +298,12 @@
           <div id="insp-short-target" class="text-sm md:text-base font-extrabold mt-0.5" style="color:var(--error)">$12.56</div>
           <div id="insp-short-down" class="text-[10px] font-bold mt-0.5" style="color:var(--error)">Padec: -32.7%</div>
         </div>
+      </div>
+
+      <!-- 5-OSNI FORENZIČNI PENTAGON ("SNOWFLAKE" RADAR: VREDNOST · JAREK · ČISTOST · BILANCA · DENARNI TOK) -->
+      <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-2.5 grid grid-cols-1 sm:grid-cols-12 gap-2.5 items-center">
+        <div id="insp-pentagon-box" class="sm:col-span-5 flex items-center justify-center"></div>
+        <div id="insp-pentagon-bars" class="sm:col-span-7 space-y-1.5 text-[11px] mono"></div>
       </div>
 
       <!-- 4 Zavihki znotraj 3-Agentnega Inšpektorja -->
@@ -1097,6 +1176,193 @@ let COMPANIES = [
       ]
     },
     "reviewed_at": "2026-11-21 16:22"
+  },
+  {
+    "t": "WAVE.PA",
+    "n": "Wavestone SA",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 12.85,
+    "p": 33.0,
+    "v1": 69.31,
+    "v2": 46.04,
+    "buy": 32.23,
+    "mos": 28.32,
+    "dpct": -33.6,
+    "dusd": -23.27,
+    "oey": 9.01,
+    "oem": 74.3,
+    "rdcf": -0.06,
+    "mcap": 824.3,
+    "z": "UNDER",
+    "pess": 26.47,
+    "real": 46.57,
+    "opt": 64.55,
+    "ec": 73.7,
+    "nc": 5.7,
+    "rev": 954.35,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 24.978,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1138,
+      0.1138,
+      0.1138,
+      0.1138,
+      0.1138
+    ],
+    "short_p": 25.15,
+    "short_down": -23.8,
+    "short_score": 28,
+    "short_verdict": "OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 12.8 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $69.31/delnico ob 9.01 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -33.6 % ($69.31 → $46.04); MoS = +28.3 % (PODCENJENO (0–30% MoS)).",
+    "s_flags": "Forenzični rez Agenta 2 (-33.6 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($33.00) trg vračunava -0.1 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša +5.73 M EUR.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 69.31,
+        "d": 48.52
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 9.54 M na 33.40 M EUR ter posodobitev razredčenih delnic na 24.978 M",
+        "iv": 67.13,
+        "d": -2.18
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 65.11,
+        "d": -2.02
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 59.48,
+        "d": -5.63
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 46.04,
+        "d": -13.44
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 46.04,
+        "d": -23.27
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 4.57,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 2.0,
+      "finra_short_float_pct": 3.5,
+      "days_to_cover": 1.5,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 50.7
+        },
+        {
+          "q": "22Q2",
+          "p": 48.25
+        },
+        {
+          "q": "22Q3",
+          "p": 44.83
+        },
+        {
+          "q": "22Q4",
+          "p": 41.63
+        },
+        {
+          "q": "23Q1",
+          "p": 39.79
+        },
+        {
+          "q": "23Q2",
+          "p": 39.86
+        },
+        {
+          "q": "23Q3",
+          "p": 41.45
+        },
+        {
+          "q": "23Q4",
+          "p": 43.49
+        },
+        {
+          "q": "24Q1",
+          "p": 44.72
+        },
+        {
+          "q": "24Q2",
+          "p": 44.36
+        },
+        {
+          "q": "24Q3",
+          "p": 42.47
+        },
+        {
+          "q": "24Q4",
+          "p": 39.87
+        },
+        {
+          "q": "25Q1",
+          "p": 37.66
+        },
+        {
+          "q": "25Q2",
+          "p": 36.63
+        },
+        {
+          "q": "25Q3",
+          "p": 36.81
+        },
+        {
+          "q": "25Q4",
+          "p": 37.48
+        },
+        {
+          "q": "26Q1",
+          "p": 37.59
+        },
+        {
+          "q": "26Q2",
+          "p": 36.37
+        },
+        {
+          "q": "26Q3",
+          "p": 33.77
+        },
+        {
+          "q": "26Q4",
+          "p": 33.0
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
   },
   {
     "t": "TRI.PA",
@@ -3434,6 +3700,193 @@ let COMPANIES = [
     "reviewed_at": "2026-11-21 16:22"
   },
   {
+    "t": "PLXS",
+    "n": "PLEXUS CORP",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A1_SEC",
+    "roic": 11.92,
+    "p": 189.89,
+    "v1": 269.49,
+    "v2": 174.77,
+    "buy": 122.34,
+    "mos": -8.65,
+    "dpct": -35.1,
+    "dusd": -94.72,
+    "oey": 2.6,
+    "oem": 134.2,
+    "rdcf": 18.22,
+    "mcap": 5152.1,
+    "z": "TRAP",
+    "pess": 95.91,
+    "real": 176.78,
+    "opt": 249.6,
+    "ec": 32.9,
+    "nc": -402.6,
+    "rev": 4964.96,
+    "tax": 0.23,
+    "da": 0.0155,
+    "nwc": 0.065,
+    "sh": 27.132,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001
+    ],
+    "short_p": 84.4,
+    "short_down": -55.6,
+    "short_score": 66,
+    "short_verdict": "TAKTIČNI SHORT / VALUE TRAP (AVOID LONG)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A1_SEC) in 10-letno mediano ROIC 11.9 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $269.49/delnico ob 2.60 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -35.1 % ($269.49 → $174.77); MoS = -8.7 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-35.1 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($189.89) trg vračunava +18.2 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -402.59 M USD.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 269.49,
+        "d": 188.64
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 49.65 M na 173.77 M USD ter posodobitev razredčenih delnic na 27.132 M",
+        "iv": 260.14,
+        "d": -9.35
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 251.46,
+        "d": -8.68
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 227.66,
+        "d": -23.8
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 174.77,
+        "d": -52.89
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 174.77,
+        "d": -94.72
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 4.3,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 5.1,
+      "finra_short_float_pct": 4.6,
+      "days_to_cover": 1.9,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 190.3
+        },
+        {
+          "q": "22Q2",
+          "p": 199.0
+        },
+        {
+          "q": "22Q3",
+          "p": 198.46
+        },
+        {
+          "q": "22Q4",
+          "p": 188.09
+        },
+        {
+          "q": "23Q1",
+          "p": 172.23
+        },
+        {
+          "q": "23Q2",
+          "p": 158.12
+        },
+        {
+          "q": "23Q3",
+          "p": 152.27
+        },
+        {
+          "q": "23Q4",
+          "p": 157.17
+        },
+        {
+          "q": "24Q1",
+          "p": 170.18
+        },
+        {
+          "q": "24Q2",
+          "p": 184.96
+        },
+        {
+          "q": "24Q3",
+          "p": 194.9
+        },
+        {
+          "q": "24Q4",
+          "p": 196.45
+        },
+        {
+          "q": "25Q1",
+          "p": 190.89
+        },
+        {
+          "q": "25Q2",
+          "p": 183.31
+        },
+        {
+          "q": "25Q3",
+          "p": 179.67
+        },
+        {
+          "q": "25Q4",
+          "p": 183.33
+        },
+        {
+          "q": "26Q1",
+          "p": 193.1
+        },
+        {
+          "q": "26Q2",
+          "p": 203.86
+        },
+        {
+          "q": "26Q3",
+          "p": 209.29
+        },
+        {
+          "q": "26Q4",
+          "p": 189.89
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
     "t": "IESC",
     "n": "IES Holdings, Inc.",
     "sec": "Technology / Industrials · Compounder",
@@ -5057,6 +5510,380 @@ let COMPANIES = [
     "reviewed_at": "2026-11-21 20:38"
   },
   {
+    "t": "EPRO-B.ST",
+    "n": "Electrolux Professional AB (publ)",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 11.95,
+    "p": 50.6,
+    "v1": 53.98,
+    "v2": 32.15,
+    "buy": 22.51,
+    "mos": -57.37,
+    "dpct": -40.4,
+    "dusd": -21.83,
+    "oey": 4.89,
+    "oem": 724.2,
+    "rdcf": 11.12,
+    "mcap": 14804.0,
+    "z": "SHORT",
+    "pess": 13.82,
+    "real": 32.65,
+    "opt": 49.49,
+    "ec": 121.0,
+    "nc": -3067.0,
+    "rev": 11860.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 292.57,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001
+    ],
+    "short_p": 12.16,
+    "short_down": -76.0,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 11.9 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $53.98/delnico ob 4.89 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -40.4 % ($53.98 → $32.15); MoS = -57.4 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-40.4 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($50.60) trg vračunava +11.1 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -3067.00 M SEK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 53.98,
+        "d": 37.79
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 118.60 M na 415.10 M SEK ter posodobitev razredčenih delnic na 292.570 M",
+        "iv": 52.02,
+        "d": -1.96
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 50.09,
+        "d": -1.93
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 44.82,
+        "d": -5.27
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 32.15,
+        "d": -12.67
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 32.15,
+        "d": -21.83
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 3.94,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 5.1,
+      "finra_short_float_pct": 9.6,
+      "days_to_cover": 4.0,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 26.24
+        },
+        {
+          "q": "22Q2",
+          "p": 31.24
+        },
+        {
+          "q": "22Q3",
+          "p": 35.41
+        },
+        {
+          "q": "22Q4",
+          "p": 37.2
+        },
+        {
+          "q": "23Q1",
+          "p": 36.15
+        },
+        {
+          "q": "23Q2",
+          "p": 33.19
+        },
+        {
+          "q": "23Q3",
+          "p": 30.17
+        },
+        {
+          "q": "23Q4",
+          "p": 28.93
+        },
+        {
+          "q": "24Q1",
+          "p": 30.42
+        },
+        {
+          "q": "24Q2",
+          "p": 34.2
+        },
+        {
+          "q": "24Q3",
+          "p": 38.79
+        },
+        {
+          "q": "24Q4",
+          "p": 42.43
+        },
+        {
+          "q": "25Q1",
+          "p": 44.05
+        },
+        {
+          "q": "25Q2",
+          "p": 43.83
+        },
+        {
+          "q": "25Q3",
+          "p": 42.99
+        },
+        {
+          "q": "25Q4",
+          "p": 43.13
+        },
+        {
+          "q": "26Q1",
+          "p": 45.26
+        },
+        {
+          "q": "26Q2",
+          "p": 49.22
+        },
+        {
+          "q": "26Q3",
+          "p": 53.69
+        },
+        {
+          "q": "26Q4",
+          "p": 50.6
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "EXPN.L",
+    "n": "Experian plc",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 14.2,
+    "p": 2811.0,
+    "v1": 28.38,
+    "v2": 16.86,
+    "buy": 11.8,
+    "mos": -66.77,
+    "dpct": -40.6,
+    "dusd": -11.52,
+    "oey": 5.98,
+    "oem": 1500.6,
+    "rdcf": 9.04,
+    "mcap": 25104.3,
+    "z": "SHORT",
+    "pess": 6.73,
+    "real": 17.11,
+    "opt": 26.48,
+    "ec": 0.0,
+    "nc": -6716.2,
+    "rev": 8825.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 893.075,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.2317,
+      0.2317,
+      0.2317,
+      0.2317,
+      0.2317
+    ],
+    "short_p": 5.92,
+    "short_down": -78.9,
+    "short_score": 97,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 14.2 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $28.38/delnico ob 5.98 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -40.6 % ($28.38 → $16.86); MoS = -66.8 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-40.6 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($28.11) trg vračunava +9.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -6716.25 M GBP.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 28.38,
+        "d": 19.86
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 88.25 M na 308.87 M GBP ter posodobitev razredčenih delnic na 893.075 M",
+        "iv": 27.63,
+        "d": -0.75
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 26.66,
+        "d": -0.97
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 23.68,
+        "d": -2.98
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 16.86,
+        "d": -6.82
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 16.86,
+        "d": -11.52
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 3.9,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 4.6,
+      "finra_short_float_pct": 10.7,
+      "days_to_cover": 4.5,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 1222.3
+        },
+        {
+          "q": "22Q2",
+          "p": 1184.03
+        },
+        {
+          "q": "22Q3",
+          "p": 1284.8
+        },
+        {
+          "q": "22Q4",
+          "p": 1528.81
+        },
+        {
+          "q": "23Q1",
+          "p": 1847.82
+        },
+        {
+          "q": "23Q2",
+          "p": 2133.84
+        },
+        {
+          "q": "23Q3",
+          "p": 2293.17
+        },
+        {
+          "q": "23Q4",
+          "p": 2293.22
+        },
+        {
+          "q": "24Q1",
+          "p": 2177.69
+        },
+        {
+          "q": "24Q2",
+          "p": 2042.21
+        },
+        {
+          "q": "24Q3",
+          "p": 1983.75
+        },
+        {
+          "q": "24Q4",
+          "p": 2050.74
+        },
+        {
+          "q": "25Q1",
+          "p": 2220.44
+        },
+        {
+          "q": "25Q2",
+          "p": 2415.06
+        },
+        {
+          "q": "25Q3",
+          "p": 2547.39
+        },
+        {
+          "q": "25Q4",
+          "p": 2570.96
+        },
+        {
+          "q": "26Q1",
+          "p": 2507.07
+        },
+        {
+          "q": "26Q2",
+          "p": 2434.03
+        },
+        {
+          "q": "26Q3",
+          "p": 2444.22
+        },
+        {
+          "q": "26Q4",
+          "p": 2811.0
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
     "t": "ACM",
     "n": "AECOM",
     "sec": "Technology / Industrials · Compounder",
@@ -5956,6 +6783,567 @@ let COMPANIES = [
     "reviewed_at": "2026-11-21 20:48"
   },
   {
+    "t": "NEWA-B.ST",
+    "n": "New Wave Group AB (publ)",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 12.4,
+    "p": 96.05,
+    "v1": 90.81,
+    "v2": 48.23,
+    "buy": 33.76,
+    "mos": -99.14,
+    "dpct": -46.9,
+    "dusd": -42.58,
+    "oey": 5.34,
+    "oem": 692.4,
+    "rdcf": 11.65,
+    "mcap": 12974.0,
+    "z": "SHORT",
+    "pess": 12.25,
+    "real": 49.21,
+    "opt": 82.26,
+    "ec": 146.7,
+    "nc": -4787.6,
+    "rev": 10746.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 135.075,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001
+    ],
+    "short_p": 10.78,
+    "short_down": -88.8,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 12.4 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $90.81/delnico ob 5.34 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -46.9 % ($90.81 → $48.23); MoS = -99.1 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-46.9 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($96.05) trg vračunava +11.7 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -4787.60 M SEK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 90.81,
+        "d": 63.57
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 107.46 M na 376.11 M SEK ter posodobitev razredčenih delnic na 135.075 M",
+        "iv": 87.21,
+        "d": -3.6
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 83.44,
+        "d": -3.77
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 73.09,
+        "d": -10.35
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 48.23,
+        "d": -24.86
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 48.23,
+        "d": -42.58
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 3.51,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 6.0,
+      "finra_short_float_pct": 14.1,
+      "days_to_cover": 5.9,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 60.33
+        },
+        {
+          "q": "22Q2",
+          "p": 62.11
+        },
+        {
+          "q": "22Q3",
+          "p": 59.1
+        },
+        {
+          "q": "22Q4",
+          "p": 53.37
+        },
+        {
+          "q": "23Q1",
+          "p": 48.48
+        },
+        {
+          "q": "23Q2",
+          "p": 47.76
+        },
+        {
+          "q": "23Q3",
+          "p": 52.57
+        },
+        {
+          "q": "23Q4",
+          "p": 61.66
+        },
+        {
+          "q": "24Q1",
+          "p": 71.8
+        },
+        {
+          "q": "24Q2",
+          "p": 79.5
+        },
+        {
+          "q": "24Q3",
+          "p": 82.73
+        },
+        {
+          "q": "24Q4",
+          "p": 81.94
+        },
+        {
+          "q": "25Q1",
+          "p": 79.63
+        },
+        {
+          "q": "25Q2",
+          "p": 78.91
+        },
+        {
+          "q": "25Q3",
+          "p": 81.74
+        },
+        {
+          "q": "25Q4",
+          "p": 87.84
+        },
+        {
+          "q": "26Q1",
+          "p": 94.83
+        },
+        {
+          "q": "26Q2",
+          "p": 99.6
+        },
+        {
+          "q": "26Q3",
+          "p": 100.05
+        },
+        {
+          "q": "26Q4",
+          "p": 96.05
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "EPI-B.ST",
+    "n": "Epiroc AB (publ)",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 19.48,
+    "p": 192.6,
+    "v1": 140.7,
+    "v2": 90.19,
+    "buy": 63.13,
+    "mos": -113.55,
+    "dpct": -35.9,
+    "dusd": -50.51,
+    "oey": 3.7,
+    "oem": 8787.3,
+    "rdcf": 13.34,
+    "mcap": 237180.5,
+    "z": "SHORT",
+    "pess": 46.45,
+    "real": 91.3,
+    "opt": 131.71,
+    "ec": 4284.1,
+    "nc": -17938.8,
+    "rev": 63918.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 1231.467,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.19,
+      0.19,
+      0.19,
+      0.19,
+      0.19
+    ],
+    "short_p": 40.88,
+    "short_down": -78.8,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 19.5 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $140.70/delnico ob 3.70 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -35.9 % ($140.70 → $90.19); MoS = -113.5 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-35.9 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($192.60) trg vračunava +13.3 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -17938.80 M SEK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 140.7,
+        "d": 98.49
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 639.18 M na 2237.13 M SEK ter posodobitev razredčenih delnic na 1231.467 M",
+        "iv": 136.92,
+        "d": -3.78
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 132.65,
+        "d": -4.27
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 119.82,
+        "d": -12.83
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 90.19,
+        "d": -29.63
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 90.19,
+        "d": -50.51
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 4.76,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 4.8,
+      "finra_short_float_pct": 14.1,
+      "days_to_cover": 5.9,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 99.13
+        },
+        {
+          "q": "22Q2",
+          "p": 118.2
+        },
+        {
+          "q": "22Q3",
+          "p": 134.46
+        },
+        {
+          "q": "22Q4",
+          "p": 141.84
+        },
+        {
+          "q": "23Q1",
+          "p": 138.39
+        },
+        {
+          "q": "23Q2",
+          "p": 127.36
+        },
+        {
+          "q": "23Q3",
+          "p": 115.69
+        },
+        {
+          "q": "23Q4",
+          "p": 110.51
+        },
+        {
+          "q": "24Q1",
+          "p": 115.61
+        },
+        {
+          "q": "24Q2",
+          "p": 129.63
+        },
+        {
+          "q": "24Q3",
+          "p": 147.03
+        },
+        {
+          "q": "24Q4",
+          "p": 161.11
+        },
+        {
+          "q": "25Q1",
+          "p": 167.64
+        },
+        {
+          "q": "25Q2",
+          "p": 167.0
+        },
+        {
+          "q": "25Q3",
+          "p": 163.78
+        },
+        {
+          "q": "25Q4",
+          "p": 164.06
+        },
+        {
+          "q": "26Q1",
+          "p": 171.85
+        },
+        {
+          "q": "26Q2",
+          "p": 186.75
+        },
+        {
+          "q": "26Q3",
+          "p": 203.91
+        },
+        {
+          "q": "26Q4",
+          "p": 192.6
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "STMPA.PA",
+    "n": "STMicroelectronics N.V.",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 20.64,
+    "p": 36.72,
+    "v1": 24.56,
+    "v2": 16.39,
+    "buy": 11.47,
+    "mos": -124.09,
+    "dpct": -33.3,
+    "dusd": -8.17,
+    "oey": 1.85,
+    "oem": 619.0,
+    "rdcf": 21.67,
+    "mcap": 33378.3,
+    "z": "SHORT",
+    "pess": 9.58,
+    "real": 16.57,
+    "opt": 22.82,
+    "ec": 4628.6,
+    "nc": 518.1,
+    "rev": 13669.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 908.994,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001
+    ],
+    "short_p": 9.1,
+    "short_down": -75.2,
+    "short_score": 93,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 20.6 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $24.56/delnico ob 1.85 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -33.3 % ($24.56 → $16.39); MoS = -124.1 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-33.3 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($36.72) trg vračunava +21.7 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša +518.10 M EUR.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 24.56,
+        "d": 17.2
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 136.69 M na 478.42 M EUR ter posodobitev razredčenih delnic na 908.994 M",
+        "iv": 23.75,
+        "d": -0.81
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 23.04,
+        "d": -0.71
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 21.09,
+        "d": -1.95
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 16.39,
+        "d": -4.7
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 16.39,
+        "d": -8.17
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 5.04,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 5.2,
+      "finra_short_float_pct": 14.7,
+      "days_to_cover": 6.2,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 21.36
+        },
+        {
+          "q": "22Q2",
+          "p": 19.9
+        },
+        {
+          "q": "22Q3",
+          "p": 17.92
+        },
+        {
+          "q": "22Q4",
+          "p": 16.8
+        },
+        {
+          "q": "23Q1",
+          "p": 17.57
+        },
+        {
+          "q": "23Q2",
+          "p": 20.38
+        },
+        {
+          "q": "23Q3",
+          "p": 24.41
+        },
+        {
+          "q": "23Q4",
+          "p": 28.28
+        },
+        {
+          "q": "24Q1",
+          "p": 30.73
+        },
+        {
+          "q": "24Q2",
+          "p": 31.27
+        },
+        {
+          "q": "24Q3",
+          "p": 30.38
+        },
+        {
+          "q": "24Q4",
+          "p": 29.19
+        },
+        {
+          "q": "25Q1",
+          "p": 28.9
+        },
+        {
+          "q": "25Q2",
+          "p": 30.06
+        },
+        {
+          "q": "25Q3",
+          "p": 32.35
+        },
+        {
+          "q": "25Q4",
+          "p": 34.75
+        },
+        {
+          "q": "26Q1",
+          "p": 36.14
+        },
+        {
+          "q": "26Q2",
+          "p": 35.95
+        },
+        {
+          "q": "26Q3",
+          "p": 34.53
+        },
+        {
+          "q": "26Q4",
+          "p": 36.72
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
     "t": "HD",
     "n": "HOME DEPOT, INC.",
     "sec": "Technology / Industrials · Compounder",
@@ -6141,6 +7529,193 @@ let COMPANIES = [
       ]
     },
     "reviewed_at": "2026-11-21 22:09"
+  },
+  {
+    "t": "WMG",
+    "n": "Warner Music Group Corp.",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A1_SEC",
+    "roic": 13.83,
+    "p": 32.72,
+    "v1": 24.93,
+    "v2": 14.03,
+    "buy": 9.82,
+    "mos": -133.16,
+    "dpct": -43.7,
+    "dusd": -10.9,
+    "oey": 4.39,
+    "oem": 769.1,
+    "rdcf": 12.96,
+    "mcap": 17521.1,
+    "z": "SHORT",
+    "pess": 4.6,
+    "real": 14.3,
+    "opt": 22.94,
+    "ec": 217.2,
+    "nc": -4193.7,
+    "rev": 7437.0,
+    "tax": 0.23,
+    "da": 0.0551,
+    "nwc": 0.065,
+    "sh": 535.485,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1441,
+      0.1441,
+      0.1441,
+      0.1441,
+      0.1441
+    ],
+    "short_p": 4.05,
+    "short_down": -87.6,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A1_SEC) in 10-letno mediano ROIC 13.8 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $24.93/delnico ob 4.39 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -43.7 % ($24.93 → $14.03); MoS = -133.2 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-43.7 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($32.72) trg vračunava +13.0 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -4193.70 M USD.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 24.93,
+        "d": 17.45
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 74.37 M na 260.30 M USD ter posodobitev razredčenih delnic na 535.485 M",
+        "iv": 24.15,
+        "d": -0.78
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 23.25,
+        "d": -0.9
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 20.65,
+        "d": -2.6
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 14.03,
+        "d": -6.62
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 14.03,
+        "d": -10.9
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 3.96,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 5.9,
+      "finra_short_float_pct": 16.6,
+      "days_to_cover": 7.0,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 17.13
+        },
+        {
+          "q": "22Q2",
+          "p": 15.54
+        },
+        {
+          "q": "22Q3",
+          "p": 14.47
+        },
+        {
+          "q": "22Q4",
+          "p": 14.91
+        },
+        {
+          "q": "23Q1",
+          "p": 17.2
+        },
+        {
+          "q": "23Q2",
+          "p": 20.74
+        },
+        {
+          "q": "23Q3",
+          "p": 24.37
+        },
+        {
+          "q": "23Q4",
+          "p": 26.86
+        },
+        {
+          "q": "24Q1",
+          "p": 27.6
+        },
+        {
+          "q": "24Q2",
+          "p": 26.84
+        },
+        {
+          "q": "24Q3",
+          "p": 25.53
+        },
+        {
+          "q": "24Q4",
+          "p": 24.81
+        },
+        {
+          "q": "25Q1",
+          "p": 25.38
+        },
+        {
+          "q": "25Q2",
+          "p": 27.16
+        },
+        {
+          "q": "25Q3",
+          "p": 29.36
+        },
+        {
+          "q": "25Q4",
+          "p": 30.95
+        },
+        {
+          "q": "26Q1",
+          "p": 31.25
+        },
+        {
+          "q": "26Q2",
+          "p": 30.36
+        },
+        {
+          "q": "26Q3",
+          "p": 29.11
+        },
+        {
+          "q": "26Q4",
+          "p": 32.72
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
   },
   {
     "t": "CLAS-B.ST",
@@ -7030,6 +8605,193 @@ let COMPANIES = [
     "reviewed_at": "2026-11-21 22:15"
   },
   {
+    "t": "BWLPG.OL",
+    "n": "BW LPG Limited",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 14.43,
+    "p": 212.4,
+    "v1": 44.26,
+    "v2": 27.53,
+    "buy": 19.27,
+    "mos": -671.64,
+    "dpct": -37.8,
+    "dusd": -16.73,
+    "oey": 1.06,
+    "oem": 347.9,
+    "rdcf": 30.2,
+    "mcap": 32826.0,
+    "z": "SHORT",
+    "pess": 13.22,
+    "real": 27.9,
+    "opt": 41.07,
+    "ec": 129.8,
+    "nc": -979.2,
+    "rev": 3527.02,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 154.548,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1403,
+      0.1403,
+      0.1403,
+      0.1403,
+      0.1403
+    ],
+    "short_p": 11.63,
+    "short_down": -94.5,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 14.4 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $44.26/delnico ob 1.06 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -37.8 % ($44.26 → $27.53); MoS = -671.6 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-37.8 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($212.40) trg vračunava +30.2 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -979.19 M NOK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 44.26,
+        "d": 30.98
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 35.27 M na 123.45 M NOK ter posodobitev razredčenih delnic na 154.548 M",
+        "iv": 42.9,
+        "d": -1.36
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 41.47,
+        "d": -1.43
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 37.29,
+        "d": -4.18
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 27.53,
+        "d": -9.76
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 27.53,
+        "d": -16.73
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 4.58,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 6.3,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 101.64
+        },
+        {
+          "q": "22Q2",
+          "p": 93.26
+        },
+        {
+          "q": "22Q3",
+          "p": 92.25
+        },
+        {
+          "q": "22Q4",
+          "p": 102.8
+        },
+        {
+          "q": "23Q1",
+          "p": 123.51
+        },
+        {
+          "q": "23Q2",
+          "p": 147.93
+        },
+        {
+          "q": "23Q3",
+          "p": 167.75
+        },
+        {
+          "q": "23Q4",
+          "p": 176.97
+        },
+        {
+          "q": "24Q1",
+          "p": 174.79
+        },
+        {
+          "q": "24Q2",
+          "p": 165.91
+        },
+        {
+          "q": "24Q3",
+          "p": 157.83
+        },
+        {
+          "q": "24Q4",
+          "p": 156.93
+        },
+        {
+          "q": "25Q1",
+          "p": 165.1
+        },
+        {
+          "q": "25Q2",
+          "p": 179.01
+        },
+        {
+          "q": "25Q3",
+          "p": 192.17
+        },
+        {
+          "q": "25Q4",
+          "p": 198.7
+        },
+        {
+          "q": "26Q1",
+          "p": 196.78
+        },
+        {
+          "q": "26Q2",
+          "p": 189.79
+        },
+        {
+          "q": "26Q3",
+          "p": 184.6
+        },
+        {
+          "q": "26Q4",
+          "p": 212.4
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
     "t": "VVV",
     "n": "VALVOLINE INC",
     "sec": "Technology / Industrials · Compounder",
@@ -7215,73 +8977,1195 @@ let COMPANIES = [
       ]
     },
     "reviewed_at": "2026-11-21 22:08"
+  },
+  {
+    "t": "HAFNI.OL",
+    "n": "Hafnia Limited",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 24.21,
+    "p": 86.7,
+    "v1": 15.36,
+    "v2": 9.83,
+    "buy": 6.88,
+    "mos": -782.02,
+    "dpct": -36.0,
+    "dusd": -5.53,
+    "oey": 0.92,
+    "oem": 432.9,
+    "rdcf": 32.16,
+    "mcap": 47248.6,
+    "z": "SHORT",
+    "pess": 5.02,
+    "real": 9.95,
+    "opt": 14.4,
+    "ec": 160.9,
+    "nc": -952.0,
+    "rev": 2771.22,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 544.967,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.214,
+      0.214,
+      0.214,
+      0.214,
+      0.214
+    ],
+    "short_p": 4.42,
+    "short_down": -94.9,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 24.2 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $15.36/delnico ob 0.92 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -36.0 % ($15.36 → $9.83); MoS = -782.0 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-36.0 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($86.70) trg vračunava +32.2 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -951.98 M NOK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 15.36,
+        "d": 10.76
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 27.71 M na 96.99 M NOK ter posodobitev razredčenih delnic na 544.967 M",
+        "iv": 14.97,
+        "d": -0.39
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 14.5,
+        "d": -0.47
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 13.08,
+        "d": -1.42
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 9.83,
+        "d": -3.25
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 9.83,
+        "d": -5.53
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 5.2,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 6.1,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 48.6
+        },
+        {
+          "q": "22Q2",
+          "p": 56.43
+        },
+        {
+          "q": "22Q3",
+          "p": 61.28
+        },
+        {
+          "q": "22Q4",
+          "p": 61.42
+        },
+        {
+          "q": "23Q1",
+          "p": 57.39
+        },
+        {
+          "q": "23Q2",
+          "p": 51.8
+        },
+        {
+          "q": "23Q3",
+          "p": 48.04
+        },
+        {
+          "q": "23Q4",
+          "p": 48.6
+        },
+        {
+          "q": "24Q1",
+          "p": 53.81
+        },
+        {
+          "q": "24Q2",
+          "p": 61.79
+        },
+        {
+          "q": "24Q3",
+          "p": 69.48
+        },
+        {
+          "q": "24Q4",
+          "p": 74.27
+        },
+        {
+          "q": "25Q1",
+          "p": 75.35
+        },
+        {
+          "q": "25Q2",
+          "p": 74.07
+        },
+        {
+          "q": "25Q3",
+          "p": 73.06
+        },
+        {
+          "q": "25Q4",
+          "p": 74.74
+        },
+        {
+          "q": "26Q1",
+          "p": 79.88
+        },
+        {
+          "q": "26Q2",
+          "p": 87.11
+        },
+        {
+          "q": "26Q3",
+          "p": 93.65
+        },
+        {
+          "q": "26Q4",
+          "p": 86.7
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "PRX.AS",
+    "n": "Prosus N.V.",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 23.82,
+    "p": 30.19,
+    "v1": 5.87,
+    "v2": 3.42,
+    "buy": 2.39,
+    "mos": -784.0,
+    "dpct": -41.7,
+    "dusd": -2.45,
+    "oey": 0.19,
+    "oem": 120.7,
+    "rdcf": 56.86,
+    "mcap": 64231.5,
+    "z": "SHORT",
+    "pess": 1.35,
+    "real": 3.47,
+    "opt": 5.37,
+    "ec": 15251.8,
+    "nc": -2941.5,
+    "rev": 9705.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 2127.575,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001,
+      0.1001
+    ],
+    "short_p": 1.19,
+    "short_down": -96.1,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 23.8 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $5.87/delnico ob 0.19 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -41.7 % ($5.87 → $3.42); MoS = -784.0 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-41.7 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($30.19) trg vračunava +56.9 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -2941.49 M EUR.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 5.87,
+        "d": 4.11
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 97.05 M na 339.67 M EUR ter posodobitev razredčenih delnic na 2127.575 M",
+        "iv": 5.65,
+        "d": -0.22
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 5.43,
+        "d": -0.22
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 4.84,
+        "d": -0.59
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 3.42,
+        "d": -1.42
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 3.42,
+        "d": -2.45
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 5.1,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 7.4,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 12.44
+        },
+        {
+          "q": "22Q2",
+          "p": 13.56
+        },
+        {
+          "q": "22Q3",
+          "p": 16.15
+        },
+        {
+          "q": "22Q4",
+          "p": 19.49
+        },
+        {
+          "q": "23Q1",
+          "p": 22.45
+        },
+        {
+          "q": "23Q2",
+          "p": 24.02
+        },
+        {
+          "q": "23Q3",
+          "p": 23.86
+        },
+        {
+          "q": "23Q4",
+          "p": 22.42
+        },
+        {
+          "q": "24Q1",
+          "p": 20.78
+        },
+        {
+          "q": "24Q2",
+          "p": 19.99
+        },
+        {
+          "q": "24Q3",
+          "p": 20.64
+        },
+        {
+          "q": "24Q4",
+          "p": 22.51
+        },
+        {
+          "q": "25Q1",
+          "p": 24.78
+        },
+        {
+          "q": "25Q2",
+          "p": 26.46
+        },
+        {
+          "q": "25Q3",
+          "p": 27.01
+        },
+        {
+          "q": "25Q4",
+          "p": 26.57
+        },
+        {
+          "q": "26Q1",
+          "p": 25.94
+        },
+        {
+          "q": "26Q2",
+          "p": 26.08
+        },
+        {
+          "q": "26Q3",
+          "p": 27.6
+        },
+        {
+          "q": "26Q4",
+          "p": 30.19
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "SAMPO-SEK.ST",
+    "n": "Sampo Oyj",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 13.74,
+    "p": 110.15,
+    "v1": 14.85,
+    "v2": 11.68,
+    "buy": 8.18,
+    "mos": -843.05,
+    "dpct": -21.3,
+    "dusd": -3.17,
+    "oey": 0.38,
+    "oem": 1103.6,
+    "rdcf": 44.36,
+    "mcap": 293546.3,
+    "z": "SHORT",
+    "pess": 9.07,
+    "real": 11.75,
+    "opt": 14.16,
+    "ec": 17750.5,
+    "nc": 14590.0,
+    "rev": 10650.0,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 2664.969,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.1467,
+      0.1467,
+      0.1467,
+      0.1467,
+      0.1467
+    ],
+    "short_p": 7.94,
+    "short_down": -92.8,
+    "short_score": 93,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 13.7 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $14.85/delnico ob 0.38 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -21.3 % ($14.85 → $11.68); MoS = -843.0 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-21.3 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($110.15) trg vračunava +44.4 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša +14590.00 M SEK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 14.85,
+        "d": 10.4
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 106.50 M na 372.75 M SEK ter posodobitev razredčenih delnic na 2664.969 M",
+        "iv": 14.49,
+        "d": -0.36
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 14.23,
+        "d": -0.26
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 13.46,
+        "d": -0.77
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 11.68,
+        "d": -1.78
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 11.68,
+        "d": -3.17
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.13,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 4.62,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 3.7,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 64.33
+        },
+        {
+          "q": "22Q2",
+          "p": 60.06
+        },
+        {
+          "q": "22Q3",
+          "p": 54.08
+        },
+        {
+          "q": "22Q4",
+          "p": 50.53
+        },
+        {
+          "q": "23Q1",
+          "p": 52.57
+        },
+        {
+          "q": "23Q2",
+          "p": 60.79
+        },
+        {
+          "q": "23Q3",
+          "p": 72.81
+        },
+        {
+          "q": "23Q4",
+          "p": 84.5
+        },
+        {
+          "q": "24Q1",
+          "p": 92.05
+        },
+        {
+          "q": "24Q2",
+          "p": 93.89
+        },
+        {
+          "q": "24Q3",
+          "p": 91.33
+        },
+        {
+          "q": "24Q4",
+          "p": 87.77
+        },
+        {
+          "q": "25Q1",
+          "p": 86.77
+        },
+        {
+          "q": "25Q2",
+          "p": 90.14
+        },
+        {
+          "q": "25Q3",
+          "p": 96.96
+        },
+        {
+          "q": "25Q4",
+          "p": 104.21
+        },
+        {
+          "q": "26Q1",
+          "p": 108.51
+        },
+        {
+          "q": "26Q2",
+          "p": 108.09
+        },
+        {
+          "q": "26Q3",
+          "p": 103.87
+        },
+        {
+          "q": "26Q4",
+          "p": 110.15
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "HAUTO.OL",
+    "n": "Höegh Autoliners ASA",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 31.49,
+    "p": 169.5,
+    "v1": 24.53,
+    "v2": 15.45,
+    "buy": 10.82,
+    "mos": -996.97,
+    "dpct": -37.0,
+    "dusd": -9.08,
+    "oey": 0.78,
+    "oem": 268.9,
+    "rdcf": 34.49,
+    "mcap": 34384.1,
+    "z": "SHORT",
+    "pess": 7.5,
+    "real": 15.65,
+    "opt": 23.01,
+    "ec": 229.2,
+    "nc": -755.0,
+    "rev": 1487.89,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 202.856,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.2454,
+      0.2454,
+      0.2454,
+      0.2454,
+      0.2454
+    ],
+    "short_p": 6.6,
+    "short_down": -96.1,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 31.5 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $24.53/delnico ob 0.78 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -37.0 % ($24.53 → $15.45); MoS = -997.0 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-37.0 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($169.50) trg vračunava +34.5 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -754.95 M NOK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 24.53,
+        "d": 17.17
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 14.88 M na 52.08 M NOK ter posodobitev razredčenih delnic na 202.856 M",
+        "iv": 23.91,
+        "d": -0.62
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 23.15,
+        "d": -0.76
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 20.81,
+        "d": -2.34
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 15.45,
+        "d": -5.36
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 15.45,
+        "d": -9.08
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 5.63,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 6.3,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 102.38
+        },
+        {
+          "q": "22Q2",
+          "p": 97.76
+        },
+        {
+          "q": "22Q3",
+          "p": 88.44
+        },
+        {
+          "q": "22Q4",
+          "p": 80.56
+        },
+        {
+          "q": "23Q1",
+          "p": 79.94
+        },
+        {
+          "q": "23Q2",
+          "p": 89.08
+        },
+        {
+          "q": "23Q3",
+          "p": 105.87
+        },
+        {
+          "q": "23Q4",
+          "p": 124.61
+        },
+        {
+          "q": "24Q1",
+          "p": 138.91
+        },
+        {
+          "q": "24Q2",
+          "p": 144.93
+        },
+        {
+          "q": "24Q3",
+          "p": 143.18
+        },
+        {
+          "q": "24Q4",
+          "p": 138.0
+        },
+        {
+          "q": "25Q1",
+          "p": 135.11
+        },
+        {
+          "q": "25Q2",
+          "p": 138.37
+        },
+        {
+          "q": "25Q3",
+          "p": 147.77
+        },
+        {
+          "q": "25Q4",
+          "p": 159.49
+        },
+        {
+          "q": "26Q1",
+          "p": 168.11
+        },
+        {
+          "q": "26Q2",
+          "p": 169.79
+        },
+        {
+          "q": "26Q3",
+          "p": 164.5
+        },
+        {
+          "q": "26Q4",
+          "p": 169.5
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "NFG",
+    "n": "NATIONAL FUEL GAS CO",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A1_SEC",
+    "roic": 10.47,
+    "p": 73.35,
+    "v1": 42.46,
+    "v2": 6.27,
+    "buy": 4.39,
+    "mos": -1070.37,
+    "dpct": -85.2,
+    "dusd": -36.19,
+    "oey": 7.25,
+    "oem": 514.8,
+    "rdcf": 8.49,
+    "mcap": 7098.1,
+    "z": "SHORT",
+    "pess": -23.33,
+    "real": 6.71,
+    "opt": 34.98,
+    "ec": 0.0,
+    "nc": -3389.8,
+    "rev": 2431.34,
+    "tax": 0.23,
+    "da": 0.08,
+    "nwc": 0.065,
+    "sh": 96.771,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.3705,
+      0.3705,
+      0.3705,
+      0.3705,
+      0.3705
+    ],
+    "short_p": 1.0,
+    "short_down": -98.6,
+    "short_score": 97,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A1_SEC) in 10-letno mediano ROIC 10.5 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $42.46/delnico ob 7.25 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -85.2 % ($42.46 → $6.27); MoS = -1070.4 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-85.2 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($73.35) trg vračunava +8.5 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -3389.78 M USD.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 42.46,
+        "d": 29.73
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 24.31 M na 85.09 M USD ter posodobitev razredčenih delnic na 96.771 M",
+        "iv": 41.09,
+        "d": -1.37
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 37.26,
+        "d": -3.83
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 25.16,
+        "d": -12.1
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 6.27,
+        "d": -18.89
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 6.27,
+        "d": -36.19
+      }
+    ],
+    "forensic": {
+      "beneish_m": -2.0,
+      "beneish_flag": "POZOR (ACCRUALS)",
+      "altman_z": 3.09,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 12.1,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 35.62
+        },
+        {
+          "q": "22Q2",
+          "p": 42.77
+        },
+        {
+          "q": "22Q3",
+          "p": 49.89
+        },
+        {
+          "q": "22Q4",
+          "p": 54.34
+        },
+        {
+          "q": "23Q1",
+          "p": 54.69
+        },
+        {
+          "q": "23Q2",
+          "p": 51.42
+        },
+        {
+          "q": "23Q3",
+          "p": 46.77
+        },
+        {
+          "q": "23Q4",
+          "p": 43.59
+        },
+        {
+          "q": "24Q1",
+          "p": 43.93
+        },
+        {
+          "q": "24Q2",
+          "p": 48.02
+        },
+        {
+          "q": "24Q3",
+          "p": 54.26
+        },
+        {
+          "q": "24Q4",
+          "p": 60.13
+        },
+        {
+          "q": "25Q1",
+          "p": 63.57
+        },
+        {
+          "q": "25Q2",
+          "p": 64.07
+        },
+        {
+          "q": "25Q3",
+          "p": 62.9
+        },
+        {
+          "q": "25Q4",
+          "p": 62.33
+        },
+        {
+          "q": "26Q1",
+          "p": 64.3
+        },
+        {
+          "q": "26Q2",
+          "p": 69.31
+        },
+        {
+          "q": "26Q3",
+          "p": 76.04
+        },
+        {
+          "q": "26Q4",
+          "p": 73.35
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
+  },
+  {
+    "t": "2020.OL",
+    "n": "2020 Bulkers Ltd.",
+    "sec": "Technology / Industrials · Compounder",
+    "tier": "A2_GLOBAL",
+    "roic": 13.54,
+    "p": 16.59,
+    "v1": 1.08,
+    "v2": 0.71,
+    "buy": 0.5,
+    "mos": -2230.8,
+    "dpct": -34.3,
+    "dusd": -0.37,
+    "oey": 0.72,
+    "oem": 150.2,
+    "rdcf": 35.34,
+    "mcap": 20733.5,
+    "z": "SHORT",
+    "pess": 0.4,
+    "real": 0.72,
+    "opt": 1.0,
+    "ec": 0.0,
+    "nc": -58.7,
+    "rev": 232.8,
+    "tax": 0.23,
+    "da": 0.032,
+    "nwc": 0.065,
+    "sh": 1249.757,
+    "wacc": 0.1,
+    "tg": 0.02,
+    "gvec": [
+      0.045,
+      0.045,
+      0.04,
+      0.04,
+      0.035
+    ],
+    "mvec": [
+      0.3822,
+      0.3822,
+      0.3822,
+      0.3822,
+      0.3822
+    ],
+    "short_p": 1.0,
+    "short_down": -94.0,
+    "short_score": 98,
+    "short_verdict": "AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT)",
+    "what": "Visokokakovostno podjetje v sektorju Technology / Industrials (Compounder) s primarnimi XBRL izkazi (A2_GLOBAL) in 10-letno mediano ROIC 13.5 %.",
+    "why_v1": "Agent 1 (Lovec) izračunal osnovno notranjo vrednost $1.08/delnico ob 0.72 % Owner Earnings donosnosti.",
+    "why_v2": "Agent 2 (Forenzični Revizor) po 4-koračni rekonciliaciji prilagodil IV za -34.3 % ($1.08 → $0.71); MoS = -2230.8 % (PRECENJENO / VALUE TRAP).",
+    "s_flags": "Forenzični rez Agenta 2 (-34.3 %) je razkril razliko med poročanim dobičkom in dejanskim Owner Earnings po polnem odštetju SBC, davkov in vzdrževalnega CapExa.",
+    "s_moat": "Pri trenutnem tečaju ($16.59) trg vračunava +35.3 % letno rast FCF skozi celotno desetletje; ob cikličnem obratu marže k 10-letni mediani se večkratnik vrednotenja skrči za 30–50 %.",
+    "s_debt": "SOTP čisti denarni položaj po odštetju 5 % operativnega denarnega blažilnika, finančnega dolga, ASC 842 najemov in pogojnih obveznosti znaša -58.74 M NOK.",
+    "s_cat": "Kompresija GAAP operativne EBIT marže za >150 bps YoY v naslednjem četrtletnem poročilu (10-Q), rast terjatev/zalog hitreje od prodaje in znižanje letnih smernic vodstva.",
+    "steps": [
+      {
+        "step": "Izhodišče (v1)",
+        "desc": "Osnovni model Agenta 1 (lovec-podcenjenih)",
+        "iv": 1.08,
+        "d": 0.75
+      },
+      {
+        "step": "Korak 1",
+        "desc": "Bilanca stanja SOTP in število razredčenih delnic: Povečanje hiddenorcontingentliabilities z 2.33 M na 20.33 M NOK ter posodobitev razredčenih delnic na 1249.757 M",
+        "iv": 1.04,
+        "d": -0.04
+      },
+      {
+        "step": "Korak 2",
+        "desc": "Strukturna efektivna davčna stopnja in obratni kapital: Dvig efektivne davčne stopnje na 23.0 % in višja vezava obratnega kapitala (NWC)",
+        "iv": 1.01,
+        "d": -0.03
+      },
+      {
+        "step": "Korak 3",
+        "desc": "Normalizacija operativne EBIT marže za cikel in amortizacijo: Znižanje 10-letnega vektorja EBIT marž za ~9 %",
+        "iv": 0.92,
+        "d": -0.09
+      },
+      {
+        "step": "Korak 4 (v2)",
+        "desc": "Mungerjeva inverzija rasti in višja zahtevana diskontna stopnja (WACC): Znižanje 10-letne rasti prihodkov za -100 bps in dvig realističnega WACC na 10.00 %",
+        "iv": 0.71,
+        "d": -0.21
+      },
+      {
+        "step": "Skupaj (v1 → v2)",
+        "desc": "Skupni učinek forenzične revizije Agenta 2",
+        "iv": 0.71,
+        "d": -0.37
+      }
+    ],
+    "forensic": {
+      "beneish_m": -1.58,
+      "beneish_flag": "MANIPULACIJSKI ALARM",
+      "altman_z": 4.6,
+      "altman_flag": "TRDNA BILANCA (>3.0)",
+      "sloan_accrual_pct": 5.8,
+      "finra_short_float_pct": 24.5,
+      "days_to_cover": 10.3,
+      "form4_insider": "NEVTRALNO (FORM 4)",
+      "price_history": [
+        {
+          "q": "22Q1",
+          "p": 10.39
+        },
+        {
+          "q": "22Q2",
+          "p": 10.47
+        },
+        {
+          "q": "22Q3",
+          "p": 9.78
+        },
+        {
+          "q": "22Q4",
+          "p": 8.78
+        },
+        {
+          "q": "23Q1",
+          "p": 8.11
+        },
+        {
+          "q": "23Q2",
+          "p": 8.26
+        },
+        {
+          "q": "23Q3",
+          "p": 9.36
+        },
+        {
+          "q": "23Q4",
+          "p": 11.07
+        },
+        {
+          "q": "24Q1",
+          "p": 12.78
+        },
+        {
+          "q": "24Q2",
+          "p": 13.94
+        },
+        {
+          "q": "24Q3",
+          "p": 14.28
+        },
+        {
+          "q": "24Q4",
+          "p": 14.01
+        },
+        {
+          "q": "25Q1",
+          "p": 13.6
+        },
+        {
+          "q": "25Q2",
+          "p": 13.58
+        },
+        {
+          "q": "25Q3",
+          "p": 14.2
+        },
+        {
+          "q": "25Q4",
+          "p": 15.32
+        },
+        {
+          "q": "26Q1",
+          "p": 16.46
+        },
+        {
+          "q": "26Q2",
+          "p": 17.1
+        },
+        {
+          "q": "26Q3",
+          "p": 16.98
+        },
+        {
+          "q": "26Q4",
+          "p": 16.59
+        }
+      ]
+    },
+    "reviewed_at": "2026-11-22 09:21"
   }
 ];
 
 let HUNTER_QUEUE = [
   {
-    "t": "WMG",
-    "n": "Warner Music Group Corp.",
+    "t": "PCYO",
+    "n": "PURE CYCLE CORP",
     "tier": "A1_SEC",
-    "roic": 13.8,
+    "roic": 9.8,
     "fcf_y": 7.5,
     "p": 25.0
   },
   {
-    "t": "PLXS",
-    "n": "PLEXUS CORP",
+    "t": "PTC",
+    "n": "PTC INC.",
     "tier": "A1_SEC",
-    "roic": 11.9,
+    "roic": 9.7,
     "fcf_y": 7.5,
     "p": 25.0
   },
   {
-    "t": "NFG",
-    "n": "NATIONAL FUEL GAS CO",
+    "t": "MOG-B",
+    "n": "MOOG INC.",
     "tier": "A1_SEC",
-    "roic": 10.5,
+    "roic": 9.3,
     "fcf_y": 7.5,
     "p": 25.0
   },
   {
-    "t": "CTO.DE",
-    "n": "Costco Wholesale Corporation",
-    "tier": "A2_GLOBAL",
-    "roic": 29.4,
-    "fcf_y": 2.08,
-    "p": 1019.8
+    "t": "FOR",
+    "n": "Forestar Group Inc.",
+    "tier": "A1_SEC",
+    "roic": 8.4,
+    "fcf_y": 7.5,
+    "p": 25.0
   },
   {
-    "t": "PRX.AS",
-    "n": "Prosus N.V.",
-    "tier": "A2_GLOBAL",
-    "roic": 23.8,
-    "fcf_y": 2.22,
-    "p": 30.19
+    "t": "KLIC",
+    "n": "KULICKE & SOFFA INDUSTRIES INC",
+    "tier": "A1_SEC",
+    "roic": 7.5,
+    "fcf_y": 7.5,
+    "p": 25.0
   },
   {
-    "t": "CIS.DE",
-    "n": "Cisco Systems, Inc.",
-    "tier": "A2_GLOBAL",
-    "roic": 20.8,
-    "fcf_y": 3.84,
-    "p": 84.42
+    "t": "GEF-B",
+    "n": "GREIF, INC",
+    "tier": "A1_SEC",
+    "roic": 7.3,
+    "fcf_y": 7.5,
+    "p": 25.0
   },
   {
-    "t": "EPI-B.ST",
-    "n": "Epiroc AB (publ)",
-    "tier": "A2_GLOBAL",
-    "roic": 19.5,
-    "fcf_y": 3.73,
-    "p": 192.6
+    "t": "UGI",
+    "n": "UGI CORP /PA/",
+    "tier": "A1_SEC",
+    "roic": 7.0,
+    "fcf_y": 7.5,
+    "p": 25.0
   },
   {
-    "t": "NVDA.SW",
-    "n": "NVIDIA Corporation",
-    "tier": "A2_GLOBAL",
-    "roic": 105.8,
-    "fcf_y": 3.48,
-    "p": 115.1
+    "t": "NJR",
+    "n": "NEW JERSEY RESOURCES CORP",
+    "tier": "A1_SEC",
+    "roic": 6.9,
+    "fcf_y": 7.5,
+    "p": 25.0
   },
   {
     "t": "ENEFI.BD",
@@ -7292,68 +10176,12 @@ let HUNTER_QUEUE = [
     "p": 186.0
   },
   {
-    "t": "NOVO-B.CO",
-    "n": "Novo Nordisk A/S",
-    "tier": "A2_GLOBAL",
-    "roic": 53.9,
-    "fcf_y": 7.5,
-    "p": 264.5
-  },
-  {
-    "t": "WAVE.PA",
-    "n": "Wavestone SA",
-    "tier": "A2_GLOBAL",
-    "roic": 12.8,
-    "fcf_y": 15.99,
-    "p": 33.0
-  },
-  {
     "t": "MPCC.OL",
     "n": "MPC Container Ships ASA",
     "tier": "A2_GLOBAL",
     "roic": 35.6,
     "fcf_y": 7.5,
     "p": 24.57
-  },
-  {
-    "t": "HAUTO.OL",
-    "n": "Höegh Autoliners ASA",
-    "tier": "A2_GLOBAL",
-    "roic": 31.5,
-    "fcf_y": 7.5,
-    "p": 169.5
-  },
-  {
-    "t": "1YD.DE",
-    "n": "Broadcom Inc.",
-    "tier": "A2_GLOBAL",
-    "roic": 22.8,
-    "fcf_y": 1.98,
-    "p": 285.45
-  },
-  {
-    "t": "HAFNI.OL",
-    "n": "Hafnia Limited",
-    "tier": "A2_GLOBAL",
-    "roic": 24.2,
-    "fcf_y": 7.5,
-    "p": 86.7
-  },
-  {
-    "t": "EXPN.L",
-    "n": "Experian plc",
-    "tier": "A2_GLOBAL",
-    "roic": 14.2,
-    "fcf_y": 6.14,
-    "p": 28.11
-  },
-  {
-    "t": "STMPA.PA",
-    "n": "STMicroelectronics N.V.",
-    "tier": "A2_GLOBAL",
-    "roic": 20.6,
-    "fcf_y": -0.16,
-    "p": 36.72
   },
   {
     "t": "CMBTO.OL",
@@ -7364,243 +10192,379 @@ let HUNTER_QUEUE = [
     "p": 158.4
   },
   {
-    "t": "WMT.DE",
-    "n": "Walmart Inc.",
+    "t": "AAF.L",
+    "n": "Airtel Africa Plc",
     "tier": "A2_GLOBAL",
-    "roic": 13.6,
-    "fcf_y": 1.59,
-    "p": 118.4
-  },
-  {
-    "t": "SAMPO-SEK.ST",
-    "n": "Sampo Oyj",
-    "tier": "A2_GLOBAL",
-    "roic": 13.7,
-    "fcf_y": 0.55,
-    "p": 110.15
-  },
-  {
-    "t": "BWLPG.OL",
-    "n": "BW LPG Limited",
-    "tier": "A2_GLOBAL",
-    "roic": 14.4,
+    "roic": 11.5,
     "fcf_y": 7.5,
-    "p": 212.4
+    "p": 2.74
   },
   {
-    "t": "ORC.DE",
-    "n": "Oracle Corporation",
+    "t": "NCC-B.ST",
+    "n": "NCC AB (publ)",
     "tier": "A2_GLOBAL",
-    "roic": 13.9,
+    "roic": 11.5,
     "fcf_y": 7.5,
-    "p": 93.92
+    "p": 184.2
   },
   {
-    "t": "2020.OL",
-    "n": "2020 Bulkers Ltd.",
+    "t": "SKA-B.ST",
+    "n": "Skanska AB (publ)",
     "tier": "A2_GLOBAL",
-    "roic": 13.5,
+    "roic": 11.4,
     "fcf_y": 7.5,
-    "p": 16.59
+    "p": 293.8
   },
   {
-    "t": "NEWA-B.ST",
-    "n": "New Wave Group AB (publ)",
+    "t": "IFX.SW",
+    "n": "Infineon Technologies AG",
     "tier": "A2_GLOBAL",
-    "roic": 12.4,
+    "roic": 11.2,
     "fcf_y": 7.5,
-    "p": 96.05
+    "p": 42.41
   },
   {
-    "t": "EPRO-B.ST",
-    "n": "Electrolux Professional AB (publ)",
+    "t": "SSAB-A.ST",
+    "n": "SSAB AB (publ)",
     "tier": "A2_GLOBAL",
-    "roic": 11.9,
+    "roic": 11.0,
     "fcf_y": 7.5,
-    "p": 50.6
+    "p": 86.44
+  },
+  {
+    "t": "LOUP.PA",
+    "n": "L.D.C. S.A.",
+    "tier": "A2_GLOBAL",
+    "roic": 11.0,
+    "fcf_y": 7.5,
+    "p": 104.0
+  },
+  {
+    "t": "SYSR.ST",
+    "n": "Systemair AB (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 11.0,
+    "fcf_y": 7.5,
+    "p": 83.8
+  },
+  {
+    "t": "DESN.SW",
+    "n": "Dottikon ES Holding AG",
+    "tier": "A2_GLOBAL",
+    "roic": 10.9,
+    "fcf_y": 7.5,
+    "p": 272.5
+  },
+  {
+    "t": "KPN.AS",
+    "n": "Koninklijke KPN N.V.",
+    "tier": "A2_GLOBAL",
+    "roic": 10.7,
+    "fcf_y": 7.5,
+    "p": 4.34
+  },
+  {
+    "t": "DPLM.L",
+    "n": "Diploma PLC",
+    "tier": "A2_GLOBAL",
+    "roic": 10.6,
+    "fcf_y": 7.5,
+    "p": 66.05
+  },
+  {
+    "t": "SUNB.L",
+    "n": "Sunbelt Rentals Holdings, Inc.",
+    "tier": "A2_GLOBAL",
+    "roic": 10.5,
+    "fcf_y": 7.5,
+    "p": 57.32
+  },
+  {
+    "t": "ESSITY-B.ST",
+    "n": "Essity AB (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 10.5,
+    "fcf_y": 7.5,
+    "p": 286.5
+  },
+  {
+    "t": "ERIC-B.ST",
+    "n": "Telefonaktiebolaget LM Ericsson (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 9.9,
+    "fcf_y": 7.5,
+    "p": 101.7
+  },
+  {
+    "t": "SPG.CO",
+    "n": "SP Group A/S",
+    "tier": "A2_GLOBAL",
+    "roic": 9.8,
+    "fcf_y": 7.5,
+    "p": 400.0
+  },
+  {
+    "t": "SKF-B.ST",
+    "n": "AB SKF (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 9.6,
+    "fcf_y": 7.5,
+    "p": 261.2
+  },
+  {
+    "t": "SOI.PA",
+    "n": "Soitec SA",
+    "tier": "A2_GLOBAL",
+    "roic": 9.5,
+    "fcf_y": 7.5,
+    "p": 96.3
+  },
+  {
+    "t": "TCM.CO",
+    "n": "TCM Group A/S",
+    "tier": "A2_GLOBAL",
+    "roic": 9.0,
+    "fcf_y": 7.5,
+    "p": 68.2
+  },
+  {
+    "t": "NIBE-B.ST",
+    "n": "NIBE Industrier AB (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 8.9,
+    "fcf_y": 7.5,
+    "p": 43.31
+  },
+  {
+    "t": "DBG.PA",
+    "n": "Derichebourg SA",
+    "tier": "A2_GLOBAL",
+    "roic": 8.9,
+    "fcf_y": 7.5,
+    "p": 7.49
+  },
+  {
+    "t": "ALLEI.ST",
+    "n": "Alleima AB (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 8.8,
+    "fcf_y": 7.5,
+    "p": 84.6
+  },
+  {
+    "t": "HUH1V.HE",
+    "n": "Huhtamäki Oyj",
+    "tier": "A2_GLOBAL",
+    "roic": 8.8,
+    "fcf_y": 7.5,
+    "p": 25.84
+  },
+  {
+    "t": "VCT.PA",
+    "n": "Vicat S.A.",
+    "tier": "A2_GLOBAL",
+    "roic": 8.4,
+    "fcf_y": 7.5,
+    "p": 62.9
+  },
+  {
+    "t": "CLA-B.ST",
+    "n": "Cloetta AB (publ)",
+    "tier": "A2_GLOBAL",
+    "roic": 8.4,
+    "fcf_y": 7.5,
+    "p": 62.15
+  },
+  {
+    "t": "BNJ.AS",
+    "n": "Banijay Group N.V.",
+    "tier": "A2_GLOBAL",
+    "roic": 8.3,
+    "fcf_y": 7.5,
+    "p": 7.26
   }
 ];
 
 let AGENT_LOGS = [
   {
-    "ts": "2026-11-21 22:15:17",
+    "ts": "2026-11-22 09:21:46",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "SECT-B.ST",
-    "msg": "Izdelana Short kontra-teza za Sectra AB (publ) (SECT-B.ST): Tečaj $330.20 -> Ciljna Short cena $27.07 (-91.8%). Short Score: 93/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "NFG",
+    "msg": "Izdelana Short kontra-teza za NATIONAL FUEL GAS CO (NFG): Tečaj $73.35 -> Ciljna Short cena $1.00 (-98.6%). Short Score: 97/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:15:17",
+    "ts": "2026-11-22 09:21:46",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "SECT-B.ST",
-    "msg": "Presojen model za Sectra AB (publ) (SECT-B.ST): v1 $62.94 -> v2 $44.39 (-29.5%). MoS v2 = -643.9% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "NFG",
+    "msg": "Presojen model za NATIONAL FUEL GAS CO (NFG): v1 $42.46 -> v2 $6.27 (-85.2%). MoS v2 = -1070.4% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:15:16",
+    "ts": "2026-11-22 09:21:45",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "SECT-B.ST",
-    "msg": "Odkrit kandidat Sectra AB (publ) (SECT-B.ST) iz svetovne baze: Tečaj $330.20 vs v1 IV $62.94 (MoS -424.6%). Predano Agentu 2 v presojo modela."
+    "t": "NFG",
+    "msg": "Odkrit kandidat NATIONAL FUEL GAS CO (NFG) iz svetovne baze: Tečaj $73.35 vs v1 IV $42.46 (MoS -72.7%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:10:54",
+    "ts": "2026-11-22 09:21:44",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "SGE.L",
-    "msg": "Izdelana Short kontra-teza za The Sage Group plc (SGE.L): Tečaj $11.29 -> Ciljna Short cena $1.66 (-85.3%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "PLXS",
+    "msg": "Izdelana Short kontra-teza za PLEXUS CORP (PLXS): Tečaj $189.89 -> Ciljna Short cena $84.40 (-55.6%). Short Score: 66/100 (TAKTIČNI SHORT / VALUE TRAP (AVOID LONG))."
   },
   {
-    "ts": "2026-11-21 22:10:54",
+    "ts": "2026-11-22 09:21:44",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "SGE.L",
-    "msg": "Presojen model za The Sage Group plc (SGE.L): v1 $7.88 -> v2 $4.68 (-40.6%). MoS v2 = -141.0% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "PLXS",
+    "msg": "Presojen model za PLEXUS CORP (PLXS): v1 $269.49 -> v2 $174.77 (-35.1%). MoS v2 = -8.7% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:10:53",
+    "ts": "2026-11-22 09:21:44",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "SGE.L",
-    "msg": "Odkrit kandidat The Sage Group plc (SGE.L) iz svetovne baze: Tečaj $11.29 vs v1 IV $7.88 (MoS -43.2%). Predano Agentu 2 v presojo modela."
+    "t": "PLXS",
+    "msg": "Odkrit kandidat PLEXUS CORP (PLXS) iz svetovne baze: Tečaj $189.89 vs v1 IV $269.49 (MoS +29.5%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:10:24",
+    "ts": "2026-11-22 09:21:43",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "IMB.L",
-    "msg": "Izdelana Short kontra-teza za Imperial Brands PLC (IMB.L): Tečaj $27.81 -> Ciljna Short cena $11.35 (-59.2%). Short Score: 46/100 (OPOZORILO DOLGI POZICIJI (LONG STRESS-TEST))."
+    "t": "WMG",
+    "msg": "Izdelana Short kontra-teza za Warner Music Group Corp. (WMG): Tečaj $32.72 -> Ciljna Short cena $4.05 (-87.6%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:10:24",
+    "ts": "2026-11-22 09:21:43",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "IMB.L",
-    "msg": "Presojen model za Imperial Brands PLC (IMB.L): v1 $55.80 -> v2 $32.84 (-41.1%). MoS v2 = +15.3% (POTRJENO PODCENJENO — ČAKA NAKUPNO MEJO <= 22.99 GBP)."
+    "t": "WMG",
+    "msg": "Presojen model za Warner Music Group Corp. (WMG): v1 $24.93 -> v2 $14.03 (-43.7%). MoS v2 = -133.2% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:10:23",
+    "ts": "2026-11-22 09:21:43",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "IMB.L",
-    "msg": "Odkrit kandidat Imperial Brands PLC (IMB.L) iz svetovne baze: Tečaj $27.81 vs v1 IV $55.80 (MoS +50.2%). Predano Agentu 2 v presojo modela."
+    "t": "WMG",
+    "msg": "Odkrit kandidat Warner Music Group Corp. (WMG) iz svetovne baze: Tečaj $32.72 vs v1 IV $24.93 (MoS -31.2%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:09:54",
+    "ts": "2026-11-22 09:21:42",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "HD",
-    "msg": "Izdelana Short kontra-teza za HOME DEPOT, INC. (HD): Tečaj $339.04 -> Ciljna Short cena $55.33 (-83.7%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "2020.OL",
+    "msg": "Izdelana Short kontra-teza za 2020 Bulkers Ltd. (2020.OL): Tečaj $16.59 -> Ciljna Short cena $1.00 (-94.0%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:09:54",
+    "ts": "2026-11-22 09:21:42",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "HD",
-    "msg": "Presojen model za HOME DEPOT, INC. (HD): v1 $242.83 -> v2 $145.53 (-40.1%). MoS v2 = -133.0% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "2020.OL",
+    "msg": "Presojen model za 2020 Bulkers Ltd. (2020.OL): v1 $1.08 -> v2 $0.71 (-34.3%). MoS v2 = -2230.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:09:53",
+    "ts": "2026-11-22 09:21:42",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "HD",
-    "msg": "Odkrit kandidat HOME DEPOT, INC. (HD) iz svetovne baze: Tečaj $339.04 vs v1 IV $242.83 (MoS -39.6%). Predano Agentu 2 v presojo modela."
+    "t": "2020.OL",
+    "msg": "Odkrit kandidat 2020 Bulkers Ltd. (2020.OL) iz svetovne baze: Tečaj $16.59 vs v1 IV $1.08 (MoS -1442.9%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:09:29",
+    "ts": "2026-11-22 09:21:42",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "ROP.SW",
-    "msg": "Izdelana Short kontra-teza za Roche Holding AG (ROP.SW): Tečaj $396.80 -> Ciljna Short cena $96.65 (-75.6%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "SAMPO-SEK.ST",
+    "msg": "Izdelana Short kontra-teza za Sampo Oyj (SAMPO-SEK.ST): Tečaj $110.15 -> Ciljna Short cena $7.94 (-92.8%). Short Score: 93/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:09:29",
+    "ts": "2026-11-22 09:21:42",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "ROP.SW",
-    "msg": "Presojen model za Roche Holding AG (ROP.SW): v1 $329.91 -> v2 $212.82 (-35.5%). MoS v2 = -86.5% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "SAMPO-SEK.ST",
+    "msg": "Presojen model za Sampo Oyj (SAMPO-SEK.ST): v1 $14.85 -> v2 $11.68 (-21.4%). MoS v2 = -843.0% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:09:29",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "ROP.SW",
-    "msg": "Odkrit kandidat Roche Holding AG (ROP.SW) iz svetovne baze: Tečaj $396.80 vs v1 IV $329.91 (MoS -20.3%). Predano Agentu 2 v presojo modela."
+    "t": "SAMPO-SEK.ST",
+    "msg": "Odkrit kandidat Sampo Oyj (SAMPO-SEK.ST) iz svetovne baze: Tečaj $110.15 vs v1 IV $14.85 (MoS -641.7%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:09:22",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "SGE.L",
-    "msg": "Izdelana Short kontra-teza za The Sage Group plc (SGE.L): Tečaj $11.29 -> Ciljna Short cena $1.00 (-91.1%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "EPRO-B.ST",
+    "msg": "Izdelana Short kontra-teza za Electrolux Professional AB (publ) (EPRO-B.ST): Tečaj $50.60 -> Ciljna Short cena $12.16 (-76.0%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:09:22",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "SGE.L",
-    "msg": "Presojen model za The Sage Group plc (SGE.L): v1 $0.08 -> v2 $0.05 (-37.5%). MoS v2 = -24000.4% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "EPRO-B.ST",
+    "msg": "Presojen model za Electrolux Professional AB (publ) (EPRO-B.ST): v1 $53.98 -> v2 $32.15 (-40.4%). MoS v2 = -57.4% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:09:21",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "SGE.L",
-    "msg": "Odkrit kandidat The Sage Group plc (SGE.L) iz svetovne baze: Tečaj $11.29 vs v1 IV $0.08 (MoS -14222.0%). Predano Agentu 2 v presojo modela."
+    "t": "EPRO-B.ST",
+    "msg": "Odkrit kandidat Electrolux Professional AB (publ) (EPRO-B.ST) iz svetovne baze: Tečaj $50.60 vs v1 IV $53.98 (MoS +6.3%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:08:53",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "CLAS-B.ST",
-    "msg": "Izdelana Short kontra-teza za Clas Ohlson AB (publ) (CLAS-B.ST): Tečaj $539.50 -> Ciljna Short cena $109.88 (-79.6%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "NEWA-B.ST",
+    "msg": "Izdelana Short kontra-teza za New Wave Group AB (publ) (NEWA-B.ST): Tečaj $96.05 -> Ciljna Short cena $10.78 (-88.8%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:08:53",
+    "ts": "2026-11-22 09:21:41",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "CLAS-B.ST",
-    "msg": "Presojen model za Clas Ohlson AB (publ) (CLAS-B.ST): v1 $352.25 -> v2 $228.80 (-35.0%). MoS v2 = -135.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "NEWA-B.ST",
+    "msg": "Presojen model za New Wave Group AB (publ) (NEWA-B.ST): v1 $90.81 -> v2 $48.23 (-46.9%). MoS v2 = -99.1% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:08:53",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "CLAS-B.ST",
-    "msg": "Odkrit kandidat Clas Ohlson AB (publ) (CLAS-B.ST) iz svetovne baze: Tečaj $539.50 vs v1 IV $352.25 (MoS -53.2%). Predano Agentu 2 v presojo modela."
+    "t": "NEWA-B.ST",
+    "msg": "Odkrit kandidat New Wave Group AB (publ) (NEWA-B.ST) iz svetovne baze: Tečaj $96.05 vs v1 IV $90.81 (MoS -5.8%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:08:45",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "IMB.L",
-    "msg": "Izdelana Short kontra-teza za Imperial Brands PLC (IMB.L): Tečaj $27.81 -> Ciljna Short cena $1.00 (-96.4%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "BWLPG.OL",
+    "msg": "Izdelana Short kontra-teza za BW LPG Limited (BWLPG.OL): Tečaj $212.40 -> Ciljna Short cena $11.63 (-94.5%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:08:45",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "IMB.L",
-    "msg": "Presojen model za Imperial Brands PLC (IMB.L): v1 $0.56 -> v2 $0.33 (-41.1%). MoS v2 = -8368.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "BWLPG.OL",
+    "msg": "Presojen model za BW LPG Limited (BWLPG.OL): v1 $44.26 -> v2 $27.53 (-37.8%). MoS v2 = -671.6% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:08:45",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "IMB.L",
-    "msg": "Odkrit kandidat Imperial Brands PLC (IMB.L) iz svetovne baze: Tečaj $27.81 vs v1 IV $0.56 (MoS -4883.5%). Predano Agentu 2 v presojo modela."
+    "t": "BWLPG.OL",
+    "msg": "Odkrit kandidat BW LPG Limited (BWLPG.OL) iz svetovne baze: Tečaj $212.40 vs v1 IV $44.26 (MoS -379.9%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:08:21",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "VVV",
-    "msg": "Izdelana Short kontra-teza za VALVOLINE INC (VVV): Tečaj $36.25 -> Ciljna Short cena $1.00 (-97.2%). Short Score: 98/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "STMPA.PA",
+    "msg": "Izdelana Short kontra-teza za STMicroelectronics N.V. (STMPA.PA): Tečaj $36.72 -> Ciljna Short cena $9.10 (-75.2%). Short Score: 93/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:08:21",
+    "ts": "2026-11-22 09:21:40",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "VVV",
-    "msg": "Presojen model za VALVOLINE INC (VVV): v1 $14.25 -> v2 $4.53 (-68.2%). MoS v2 = -699.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "STMPA.PA",
+    "msg": "Presojen model za STMicroelectronics N.V. (STMPA.PA): v1 $24.56 -> v2 $16.39 (-33.3%). MoS v2 = -124.1% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:08:21",
+    "ts": "2026-11-22 09:21:39",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "VVV",
-    "msg": "Odkrit kandidat VALVOLINE INC (VVV) iz svetovne baze: Tečaj $36.25 vs v1 IV $14.25 (MoS -154.4%). Predano Agentu 2 v presojo modela."
+    "t": "STMPA.PA",
+    "msg": "Odkrit kandidat STMicroelectronics N.V. (STMPA.PA) iz svetovne baze: Tečaj $36.72 vs v1 IV $24.56 (MoS -49.5%). Predano Agentu 2 v presojo modela."
   },
   {
-    "ts": "2026-11-21 22:03:22",
+    "ts": "2026-11-22 09:21:39",
     "ag": "Agent 3 · Short-Seller Kontra-Teza",
-    "t": "ENR.SW",
-    "msg": "Izdelana Short kontra-teza za Siemens Energy AG (ENR.SW): Tečaj $110.42 -> Ciljna Short cena $34.74 (-68.5%). Short Score: 93/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
+    "t": "EXPN.L",
+    "msg": "Izdelana Short kontra-teza za Experian plc (EXPN.L): Tečaj $28.11 -> Ciljna Short cena $5.92 (-78.9%). Short Score: 97/100 (AKTIVNI SHORT KANDIDAT (HIGH-CONVICTION SHORT))."
   },
   {
-    "ts": "2026-11-21 22:03:22",
+    "ts": "2026-11-22 09:21:39",
     "ag": "Agent 2 · Forenzični Presojevalec",
-    "t": "ENR.SW",
-    "msg": "Presojen model za Siemens Energy AG (ENR.SW): v1 $89.80 -> v2 $60.75 (-32.4%). MoS v2 = -81.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
+    "t": "EXPN.L",
+    "msg": "Presojen model za Experian plc (EXPN.L): v1 $28.38 -> v2 $16.86 (-40.6%). MoS v2 = -66.8% (PRECENJENO / VALUE TRAP — ZAVRNJENO V KROGU 2)."
   },
   {
-    "ts": "2026-11-21 22:03:22",
+    "ts": "2026-11-22 09:21:39",
     "ag": "Agent 1 · Globalni Lovec",
-    "t": "ENR.SW",
-    "msg": "Odkrit kandidat Siemens Energy AG (ENR.SW) iz svetovne baze: Tečaj $110.42 vs v1 IV $89.80 (MoS -23.0%). Predano Agentu 2 v presojo modela."
+    "t": "EXPN.L",
+    "msg": "Odkrit kandidat Experian plc (EXPN.L) iz svetovne baze: Tečaj $28.11 vs v1 IV $28.38 (MoS +0.9%). Predano Agentu 2 v presojo modela."
   }
 ];
 
@@ -7675,12 +10639,14 @@ function setZoneFilter(zf) {
 
 function setListMode(m) {
   LIST_MODE = m;
-  document.getElementById('lmode-CARDS').className = m === 'CARDS'
-    ? 'px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]'
-    : 'px-2 py-0.5 rounded text-[var(--muted-foreground)]';
-  document.getElementById('lmode-TABLE').className = m === 'TABLE'
-    ? 'px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]'
-    : 'px-2 py-0.5 rounded text-[var(--muted-foreground)]';
+  ['CARDS', 'HEATMAP', 'TABLE'].forEach(k => {
+    const b = document.getElementById('lmode-' + k);
+    if (b) {
+      b.className = (k === m)
+        ? 'px-2 py-0.5 rounded bg-[var(--card)] text-[var(--foreground)]'
+        : 'px-2 py-0.5 rounded text-[var(--muted-foreground)]';
+    }
+  });
   renderSpectrumList();
 }
 
@@ -7732,6 +10698,40 @@ function renderSpectrumList() {
 
   if (list.length === 0) {
     box.innerHTML = `<div class="p-6 text-center text-xs text-[var(--muted-foreground)]">Ni zadetkov za izbrani filter.</div>`;
+    return;
+  }
+
+  renderTickerTape();
+  renderMiniHeatmap();
+
+  if (LIST_MODE === 'HEATMAP') {
+    box.innerHTML = `
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-1">
+        ${list.map(c => {
+          const isSel = c.t === SEL_TICKER;
+          const isBuy = c.z === 'BUY';
+          const isUnder = c.mos > 0;
+          const bg = isBuy
+            ? 'rgba(16, 185, 129, 0.16)'
+            : (isUnder ? 'rgba(14, 165, 233, 0.14)' : (c.short_score >= 75 ? 'rgba(244, 63, 94, 0.16)' : 'rgba(245, 158, 11, 0.13)'));
+          const brd = isBuy ? 'var(--success)' : (isUnder ? 'var(--primary)' : (c.short_score >= 75 ? 'var(--error)' : 'var(--warning)'));
+          return `
+            <div onclick="selectCompany('${c.t}')" class="cursor-pointer rounded-xl p-2.5 border transition hover:scale-[1.01]" style="background:${bg}; border-color:${isSel ? 'var(--foreground)' : brd}">
+              <div class="flex items-center justify-between mono">
+                <b class="text-xs">${c.t}</b>
+                <span class="text-[11px] font-extrabold" style="color:${brd}">${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}%</span>
+              </div>
+              <div class="text-[11px] truncate text-[var(--muted-foreground)] mt-0.5">${c.n}</div>
+              <div class="flex items-center justify-between mono text-[10px] mt-1.5 pt-1 border-t border-[var(--card-border)]">
+                <span>P: <b>$${c.p.toFixed(1)}</b></span>
+                <span style="color:var(--primary)">v2: <b>$${c.v2.toFixed(1)}</b></span>
+                <span style="color:var(--error)">S: ${c.short_score}</span>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
     return;
   }
 
@@ -7957,7 +10957,137 @@ function renderInspector() {
   resetSim();
 }
 
+function renderTickerTape() {
+  const tape = document.getElementById('live-ticker-tape');
+  if (!tape) return;
+  const itemsHtml = COMPANIES.map(c => {
+    const clr = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+    const tag = c.z === 'BUY'
+      ? `BUY +${c.mos.toFixed(1)}%`
+      : (c.mos > 0 ? `UNDER +${c.mos.toFixed(1)}%` : `SHORT ${c.short_score}/100`);
+    return `
+      <span onclick="selectCompany('${c.t}'); switchView('WORKSTATION');" class="cursor-pointer inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] hover:border-[var(--primary)]">
+        <b>${c.t}</b>
+        <span class="text-[var(--muted-foreground)]">$${c.p.toFixed(2)}</span>
+        <span style="color:var(--primary)">v2:$${c.v2.toFixed(1)}</span>
+        <b style="color:${clr}">[${tag}]</b>
+      </span>
+    `;
+  }).join('');
+  tape.innerHTML = itemsHtml + itemsHtml;
+}
+
+function renderMiniHeatmap() {
+  const strip = document.getElementById('mini-heatmap-strip');
+  const sumLbl = document.getElementById('hm-summary-lbl');
+  const tDone = document.getElementById('tele-done-lbl');
+  const tQueue = document.getElementById('tele-queue-lbl');
+  if (sumLbl) sumLbl.textContent = `${COMPANIES.length} zaključenih dosjejev (0% ponavljanja)`;
+  if (tDone) tDone.textContent = `${COMPANIES.length} Zaključenih (0% Ciklanja)`;
+  if (tQueue) tQueue.textContent = `${HUNTER_QUEUE.length} Nepregledanih v vrsti`;
+  if (!strip) return;
+
+  strip.innerHTML = COMPANIES.map(c => {
+    const isSel = c.t === SEL_TICKER;
+    const isBuy = c.z === 'BUY';
+    const isUnder = c.mos > 0;
+    const bg = isBuy
+      ? 'rgba(16, 185, 129, 0.22)'
+      : (isUnder ? 'rgba(14, 165, 233, 0.18)' : (c.short_score >= 75 ? 'rgba(244, 63, 94, 0.20)' : 'rgba(245, 158, 11, 0.15)'));
+    const clr = isBuy ? 'var(--success)' : (isUnder ? 'var(--primary)' : (c.short_score >= 75 ? 'var(--error)' : 'var(--warning)'));
+    return `
+      <button onclick="selectCompany('${c.t}')" title="${c.t} (${c.n}) | Tečaj $${c.p.toFixed(2)} vs v2 $${c.v2.toFixed(2)} (MoS ${c.mos > 0 ? '+' : ''}${c.mos.toFixed(1)}%) | Short Score ${c.short_score}/100"
+        class="px-1.5 py-0.5 rounded text-[10px] mono font-bold border transition"
+        style="background:${bg}; color:${clr}; border-color:${isSel ? 'var(--foreground)' : clr}">
+        ${c.t} ${c.mos > 0 ? '+' + c.mos.toFixed(0) + '%' : 'S:' + c.short_score}
+      </button>
+    `;
+  }).join('');
+}
+
+function renderPentagonRadar(c) {
+  const pBox = document.getElementById('insp-pentagon-box');
+  const bBox = document.getElementById('insp-pentagon-bars');
+  if (!pBox || !bBox) return;
+
+  const fq = c.forensic || {};
+  const bm = fq.beneish_m ?? -2.45;
+  const az = fq.altman_z ?? 3.40;
+  const sl = fq.sloan_accrual_pct ?? -2.0;
+
+  // 5 osi (0..100)
+  const sVal = Math.max(10, Math.min(98, Math.round(50 + c.mos * 0.95)));
+  const sMoat = Math.max(15, Math.min(98, Math.round((c.roic || 18) * 2.2)));
+  const sClean = Math.max(12, Math.min(98, Math.round(bm < -2.22 ? 92 : (bm < -1.78 ? 64 : 26))));
+  const sBal = Math.max(12, Math.min(98, Math.round(az > 3.0 ? 90 : (az > 1.81 ? 62 : 25))));
+  const sCash = Math.max(12, Math.min(98, Math.round(Math.min(95, (c.oey || 5) * 6.2 - (sl > 5 ? 25 : 0)))));
+  const axes = [
+    { lbl: "VREDNOST", val: sVal },
+    { lbl: "JAREK (ROIC)", val: sMoat },
+    { lbl: "ČISTOST (M)", val: sClean },
+    { lbl: "BILANCA (Z)", val: sBal },
+    { lbl: "DENARNI TOK", val: sCash }
+  ];
+  const avgScore = Math.round(axes.reduce((a, b) => a + b.val, 0) / axes.length);
+  const polyClr = c.z === 'BUY' ? 'var(--success)' : (c.mos > 0 ? 'var(--primary)' : 'var(--error)');
+
+  const cx = 80, cy = 74, R = 52;
+  const ptFor = (idx, pct) => {
+    const ang = -Math.PI / 2 + (idx * 2 * Math.PI / 5);
+    const r = (pct / 100.0) * R;
+    return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
+  };
+
+  const gridRings = [0.35, 0.68, 1.0].map(level => {
+    const pts = [0,1,2,3,4].map(i => ptFor(i, level * 100).map(v => v.toFixed(1)).join(',')).join(' ');
+    return `<polygon points="${pts}" fill="none" stroke="var(--border)" stroke-width="1" />`;
+  }).join('');
+
+  const spokes = [0,1,2,3,4].map(i => {
+    const [x, y] = ptFor(i, 100);
+    const [lx, ly] = ptFor(i, 122);
+    return `
+      <line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1" />
+      <text x="${lx.toFixed(1)}" y="${(ly + 3).toFixed(1)}" text-anchor="middle" fill="var(--muted-foreground)" font-size="7.5" font-family="monospace">${axes[i].lbl}</text>
+    `;
+  }).join('');
+
+  const dataPts = axes.map((a, i) => ptFor(i, a.val).map(v => v.toFixed(1)).join(',')).join(' ');
+
+  pBox.innerHTML = `
+    <svg viewBox="0 0 160 150" class="w-36 h-34">
+      ${gridRings}
+      ${spokes}
+      <polygon points="${dataPts}" fill="${polyClr}" fill-opacity="0.26" stroke="${polyClr}" stroke-width="2" />
+      <text x="${cx}" y="${cy + 3}" text-anchor="middle" fill="var(--foreground)" font-size="11" font-weight="bold" font-family="monospace">${avgScore}/100</text>
+    </svg>
+  `;
+
+  bBox.innerHTML = `
+    <div class="flex items-center justify-between text-[10px] font-bold uppercase pb-1 border-b border-[var(--card-border)]">
+      <span>5-Osna Forenzična Ocena (Snowflake)</span>
+      <span style="color:${polyClr}">Skupaj: ${avgScore}/100</span>
+    </div>
+    ${axes.map(a => {
+      const cBar = a.val >= 75 ? 'var(--success)' : (a.val >= 50 ? 'var(--primary)' : 'var(--error)');
+      return `
+        <div>
+          <div class="flex justify-between text-[10px]">
+            <span class="text-[var(--muted-foreground)]">${a.lbl}</span>
+            <b style="color:${cBar}">${a.val}/100</b>
+          </div>
+          <div class="h-1.5 w-full rounded bg-[var(--card)] overflow-hidden mt-0.5">
+            <div class="h-full rounded" style="width:${a.val}%; background:${cBar}"></div>
+          </div>
+        </div>
+      `;
+    }).join('')}
+  `;
+}
+
 function renderSvgWaterfall(c) {
+  renderPentagonRadar(c);
+
   const items = [
     { lbl: "Agent 3 (Short)", val: c.short_p, clr: "var(--error)" },
     { lbl: "Meja 30% MoS", val: c.buy, clr: "var(--success)" },
@@ -7990,39 +11120,47 @@ function renderSvgWaterfall(c) {
     </svg>
   `;
 
-  // TradingView 5-letni grafikon gibanja tečaja proti pasovom vrednotenja (22Q1 -> 26Q4)
+  // TradingView 5-letni grafikon gibanja tečaja z osenčenimi pasovi vrednotenja (22Q1 -> 26Q4)
   const tvBox = document.getElementById('svg-tv-history-box');
   if (tvBox) {
     const hist = (c.forensic && c.forensic.price_history && c.forensic.price_history.length > 2)
       ? c.forensic.price_history
       : ["22Q1","22Q3","23Q1","23Q3","24Q1","24Q3","25Q1","25Q3","26Q1","26Q4"].map((q, i) => ({ q, p: Number((c.p * (0.82 + i * 0.02)).toFixed(2)) }));
     const allY = [...hist.map(h => h.p), c.v2, c.buy, c.short_p].filter(x => x > 0);
-    const minY = Math.min(...allY) * 0.88;
-    const maxY = Math.max(...allY) * 1.10;
+    const minY = Math.min(...allY) * 0.86;
+    const maxY = Math.max(...allY) * 1.12;
     const spanY = Math.max(1, maxY - minY);
-    const TW = 460, TH = 138, tL = 38, tR = 54, tT = 14, tB = 22;
+    const TW = 460, TH = 152, tL = 36, tR = 58, tT = 12, tB = 22;
     const pW = TW - tL - tR, pH = TH - tT - tB;
     const toY = v => tT + pH - ((Math.min(maxY, Math.max(minY, v)) - minY) / spanY) * pH;
     const toX = idx => tL + (idx / Math.max(1, hist.length - 1)) * pW;
 
     const pts = hist.map((h, i) => `${toX(i).toFixed(1)},${toY(h.p).toFixed(1)}`).join(' ');
     const yV2 = toY(c.v2), yBuy = toY(c.buy), yShort = toY(c.short_p);
+    const yBot = tT + pH;
 
     tvBox.innerHTML = `
-      <svg viewBox="0 0 ${TW} ${TH}" class="w-full h-32">
-        <line x1="${tL}" y1="${yV2}" x2="${TW - tR}" y2="${yV2}" stroke="var(--primary)" stroke-dasharray="4 3" stroke-width="1.2" />
-        <text x="${TW - tR + 3}" y="${yV2 + 3}" fill="var(--primary)" font-size="8.5" font-family="monospace">v2 $${c.v2.toFixed(0)}</text>
+      <svg viewBox="0 0 ${TW} ${TH}" class="w-full h-36">
+        <!-- Osenčena nakupna cona (<= Meja 30% MoS) -->
+        <rect x="${tL}" y="${Math.min(yBot, yBuy)}" width="${pW}" height="${Math.max(0, yBot - Math.min(yBot, yBuy))}" fill="var(--success)" opacity="0.10" />
+        <!-- Osenčen pas poštene vrednosti (Meja 30% -> Munger v2 IV) -->
+        <rect x="${tL}" y="${Math.min(yBuy, yV2)}" width="${pW}" height="${Math.max(0, Math.abs(yBuy - yV2))}" fill="var(--primary)" opacity="0.09" />
+        <!-- Osenčena cona precenjenosti (> Munger v2 IV) -->
+        <rect x="${tL}" y="${tT}" width="${pW}" height="${Math.max(0, yV2 - tT)}" fill="var(--error)" opacity="0.07" />
 
-        <line x1="${tL}" y1="${yBuy}" x2="${TW - tR}" y2="${yBuy}" stroke="var(--success)" stroke-dasharray="4 3" stroke-width="1.2" />
-        <text x="${TW - tR + 3}" y="${yBuy + 3}" fill="var(--success)" font-size="8.5" font-family="monospace">Buy $${c.buy.toFixed(0)}</text>
+        <line x1="${tL}" y1="${yV2}" x2="${TW - tR}" y2="${yV2}" stroke="var(--primary)" stroke-dasharray="4 3" stroke-width="1.3" />
+        <text x="${TW - tR + 3}" y="${yV2 + 3}" fill="var(--primary)" font-size="8.5" font-weight="bold" font-family="monospace">v2 $${c.v2.toFixed(0)}</text>
+
+        <line x1="${tL}" y1="${yBuy}" x2="${TW - tR}" y2="${yBuy}" stroke="var(--success)" stroke-dasharray="4 3" stroke-width="1.3" />
+        <text x="${TW - tR + 3}" y="${yBuy + 3}" fill="var(--success)" font-size="8.5" font-weight="bold" font-family="monospace">Buy $${c.buy.toFixed(0)}</text>
 
         <line x1="${tL}" y1="${yShort}" x2="${TW - tR}" y2="${yShort}" stroke="var(--error)" stroke-dasharray="3 3" stroke-width="1.1" />
         <text x="${TW - tR + 3}" y="${yShort + 3}" fill="var(--error)" font-size="8.5" font-family="monospace">Short $${c.short_p.toFixed(0)}</text>
 
-        <polyline fill="none" stroke="var(--foreground)" stroke-width="2" points="${pts}" />
-        <circle cx="${toX(hist.length - 1)}" cy="${toY(c.p)}" r="3.5" fill="var(--foreground)" />
+        <polyline fill="none" stroke="var(--foreground)" stroke-width="2.2" points="${pts}" />
+        <circle cx="${toX(hist.length - 1)}" cy="${toY(c.p)}" r="3.8" fill="var(--foreground)" />
         <text x="${tL}" y="${TH - 5}" fill="var(--muted-foreground)" font-size="8.5" font-family="monospace">${hist[0].q} ($${hist[0].p.toFixed(1)})</text>
-        <text x="${tL + pW/2}" y="${TH - 5}" text-anchor="middle" fill="var(--muted-foreground)" font-size="8.5" font-family="monospace">5-Letni Tržni Tečaj vs. Forenzični Pasovi</text>
+        <text x="${tL + pW/2}" y="${TH - 5}" text-anchor="middle" fill="var(--muted-foreground)" font-size="8.5" font-family="monospace">TradingView 5L Tečaj proti Forenzičnim Pasovom</text>
         <text x="${TW - tR}" y="${TH - 5}" text-anchor="end" fill="var(--foreground)" font-size="8.5" font-weight="bold" font-family="monospace">${hist[hist.length - 1].q} ($${c.p.toFixed(2)})</text>
       </svg>
     `;
@@ -8230,7 +11368,7 @@ function rebuildReviewedRegistry() {
     if (ck) REVIEWED_NAMES.add(ck);
   });
   try {
-    const saved = JSON.parse(localStorage.getItem('bm_reviewed_stocks_v5') || '[]');
+    const saved = JSON.parse(localStorage.getItem('bm_reviewed_stocks_v6') || '[]');
     saved.forEach(item => {
       if (item && item.t && !REVIEWED_TICKERS.has(item.t.toUpperCase())) {
         COMPANIES.push(item);
@@ -8241,7 +11379,6 @@ function rebuildReviewedRegistry() {
     });
   } catch (e) {}
   COMPANIES.sort((a, b) => b.mos - a.mos);
-  // Strogo izloči vse že pregledane delnice in dvojnike iz čakalne vrste HUNTER_QUEUE!
   const seenQueueNames = new Set();
   HUNTER_QUEUE = HUNTER_QUEUE.filter(q => {
     const tk = (q.t || '').toUpperCase();
@@ -8258,10 +11395,10 @@ rebuildReviewedRegistry();
 
 function saveNewlyReviewedStockToLocal(newComp) {
   try {
-    const saved = JSON.parse(localStorage.getItem('bm_reviewed_stocks_v5') || '[]');
+    const saved = JSON.parse(localStorage.getItem('bm_reviewed_stocks_v6') || '[]');
     if (!saved.some(x => x.t === newComp.t)) {
       saved.push(newComp);
-      localStorage.setItem('bm_reviewed_stocks_v5', JSON.stringify(saved));
+      localStorage.setItem('bm_reviewed_stocks_v6', JSON.stringify(saved));
     }
   } catch (e) {}
 }
@@ -8312,7 +11449,6 @@ function renderAgentsPanel() {
   }
 }
 
-// Sinhronizacija v živo z zalednim Python daemonom prek live_state.json na GitHubu (vsakih 15 sekund)
 async function syncFromLiveBackend() {
   try {
     let data = null;
@@ -8370,7 +11506,6 @@ function executeAgentCycleOnCandidate(ticker, keepSelection=false) {
   const tk = (q.t || '').toUpperCase();
   const ck = canonCompanyName(q.n);
 
-  // Če je bila delnica že kdaj pregledana, jo preskoči in nikoli ne ponovi!
   if (REVIEWED_TICKERS.has(tk) || (ck && REVIEWED_NAMES.has(ck))) {
     return;
   }
@@ -8434,7 +11569,7 @@ function executeAgentCycleOnCandidate(ticker, keepSelection=false) {
     ts: `Avtopilot ${nowStr}`,
     ag: "Agent 3 · Short-Seller Kontra-Teza",
     t: q.t,
-    msg: `ZAKLJUČEN PREGLED ${q.n} (${q.t}): v1 $${v1.toFixed(2)} -> v2 $${v2.toFixed(2)} (MoS ${mos > 0 ? '+' : ''}${mos}%), Short tarča $${short_p.toFixed(2)}. Trajno shranjeno med pregledane!`
+    msg: `ZAKLJUČEN PREGLED ${q.n} (${q.t}): v1 $${v1.toFixed(2)} -> v2 $${v2.toFixed(2)} (MoS ${mos > 0 ? '+' : ''}${mos}%), Short tarča $${short_p.toFixed(2)}. Trajno zaklenjeno med pregledane!`
   });
 
   renderSpectrumList();
